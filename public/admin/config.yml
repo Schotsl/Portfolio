@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: schotsl/portfolio-nuxt
   branch: development
   commit_messages:
     create: 📝 Created {{collection}} collection
