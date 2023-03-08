@@ -29,7 +29,7 @@ const headerActions = computed(() => {
 });
 
 useHead({
-  titleTemplate: `${props.error.statusCode} - ZonneVeranda`,
+  titleTemplate: `${props.error.statusCode} - Sjors van Holst`,
   script: [
     {
       src: "https://identity.netlify.com/v1/netlify-identity-widget.js",

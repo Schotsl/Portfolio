@@ -11,7 +11,7 @@ if (process.client && window.netlifyIdentity) {
 
 useHead({
   titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - ZonneVeranda` : "ZonneVeranda";
+    return titleChunk ? `${titleChunk} - Sjors van Holst` : "Sjors van Holst";
   },
   script: [
     {

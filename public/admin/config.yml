@@ -12,8 +12,8 @@ backend:
 media_folder: "public/images" # Media files will be stored in the repo under static/images/uploads
 public_folder: "images" # The src attribute for uploaded media will begin with /images/uploads
 
-site_url: "https://zonneveranda.netlify.app"
-logo_url: "https://zonneveranda.netlify.app/icon/favicon.svg"
+site_url: "https://portfolio-xwhvio.netlify.app"
+logo_url: "https://portfolio-xwhvio.netlify.app/icon/favicon.svg"
 
 collections:
   - name: "projects"

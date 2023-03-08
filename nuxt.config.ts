@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     provider: "netlify",
   },
   plausible: {
-    domain: "zonneveranda.nl",
+    domain: "sjorsvanholst.nl",
     apiHost: "https://plausible.hedium.nl",
   },
   vite: {
