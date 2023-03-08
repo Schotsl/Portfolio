@@ -1,11 +1,6 @@
 <script setup>
-const projectsImport = import.meta.glob("@/public/content/projects/*.json");
-const projectsArray = await Promise.all(
-  Object.keys(projectsImport).map(async (projectImport) => {
-    const projectObject = await projectImport[projectImport]();
-    return projectObject;
-  })
-);
+const projectQuery = await queryContent("projects");
+const projectResults = await projectQuery.find({});
 
 useHead({
   title: null,
@@ -19,5 +14,7 @@ useHead({
 </script>
 
 <template>
-  <project-list :projects="projectsArray"></project-list>
+  <project-list :projects="projectResults"></project-list>
 </template>
+
+<style lang="scss" scoped></style>

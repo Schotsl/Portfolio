@@ -1,7 +1,7 @@
 import eslintPlugin from "vite-plugin-eslint";
 
 export default defineNuxtConfig({
-  modules: ["@nuxt/image-edge", "@nuxtjs/plausible"],
+  modules: ["@nuxt/image-edge", "@nuxtjs/plausible", "@nuxt/content"],
   runtimeConfig: {
     public: {
       domain: "api.corvusconsultancy.nl",

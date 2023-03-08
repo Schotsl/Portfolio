@@ -1,6 +1,6 @@
 export interface Project {
-  street: string;
-  number: string;
-  postal: string;
-  city: string;
+  title: string;
+  cover: string;
+  video: string;
+  gif: string;
 }

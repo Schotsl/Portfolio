@@ -62,4 +62,23 @@ html {
   text-align: left;
   font-family: "Roboto", Helvetica, Arial, Lucida, sans-serif;
 }
+
+body {
+  display: flex;
+  background: #f5f5f5;
+  justify-content: center;
+
+  &::before {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    opacity: 0.1;
+    position: fixed;
+    background-size: cover;
+    background-image: url("/images/IMG_7590.jpeg");
+    background-position: center;
+  }
+}
 </style>
