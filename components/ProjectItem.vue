@@ -2,7 +2,7 @@
 
 <template>
   <li>
-    <div class="image-container" role="button" aria-label="Play GIF">
+    <div class="image-container" role="button" aria-label="Play gif">
       <img class="image-cover" src="/images/HvG.png" alt="Image description" />
       <img class="image-video" src="/videos/HvG.gif" alt="Image description" />
     </div>

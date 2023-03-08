@@ -33,14 +33,14 @@ collections:
         choose_url: false
         media_folder: "/public/images/projects"
         allow_multiple: false
-      - name: "GIF"
-        label: "GIF"
+      - name: "gif"
+        label: "gif"
         widget: "image"
         choose_url: false
         media_folder: "/public/images/projects"
         allow_multiple: false
-      - name: "Video"
-        label: "Video"
+      - name: "video"
+        label: "video"
         widget: "file"
         choose_url: false
         media_folder: "/public/videos/projects"
