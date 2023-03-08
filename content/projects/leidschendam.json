@@ -1,0 +1,24 @@
+{
+  "title": "Leidschendam",
+  "cover": "/public/images/projects/Leidschendam/2.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Leidschendam/1.png"
+    },
+    {
+      "image": "/public/images/projects/Leidschendam/2.png"
+    },
+    {
+      "image": "/public/images/projects/Leidschendam/3.png"
+    },
+    {
+      "image": "/public/images/projects/Leidschendam/4.png"
+    },
+    {
+      "image": "/public/images/projects/Leidschendam/5.png"
+    },
+    {
+      "image": "/public/images/projects/Leidschendam/6.png"
+    }
+  ]
+}

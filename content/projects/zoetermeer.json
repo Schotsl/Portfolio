@@ -1,0 +1,15 @@
+{
+  "title": "Zoetermeer",
+  "cover": "/public/images/projects/Zoetermeer/1.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Zoetermeer/1.png"
+    },
+    {
+      "image": "/public/images/projects/Zoetermeer/2.png"
+    },
+    {
+      "image": "/public/images/projects/Zoetermeer/3.png"
+    }
+  ]
+}

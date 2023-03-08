@@ -1,0 +1,21 @@
+{
+  "title": "Kaatsheuvel",
+  "cover": "/public/images/projects/Kaatsheuvel/1.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Kaatsheuvel/1.png"
+    },
+    {
+      "image": "/public/images/projects/Kaatsheuvel/2.png"
+    },
+    {
+      "image": "/public/images/projects/Kaatsheuvel/3.png"
+    },
+    {
+      "image": "/public/images/projects/Kaatsheuvel/4.png"
+    },
+    {
+      "image": "/public/images/projects/Kaatsheuvel/5.png"
+    }
+  ]
+}

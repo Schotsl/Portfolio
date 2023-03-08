@@ -1,0 +1,15 @@
+{
+  "title": "Hoorn",
+  "cover": "/public/images/projects/Hoorn/3.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Hoorn/1.png"
+    },
+    {
+      "image": "/public/images/projects/Hoorn/2.png"
+    },
+    {
+      "image": "/public/images/projects/Hoorn/3.png"
+    }
+  ]
+}

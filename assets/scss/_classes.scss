@@ -1,0 +1,66 @@
+.gutter,
+.gutter-horizontal {
+  padding-left: $gutter-sm;
+  padding-right: $gutter-sm;
+
+  @include md {
+    padding-left: $gutter-md;
+    padding-right: $gutter-md;
+  }
+
+  @include lg {
+    padding-left: $gutter-lg;
+    padding-right: $gutter-lg;
+  }
+
+  @include xl {
+    padding-left: $gutter-xl;
+    padding-right: $gutter-xl;
+  }
+
+  @include xxl {
+    padding-left: $gutter-xxl;
+    padding-right: $gutter-xxl;
+  }
+}
+
+.gutter,
+.gutter-vertical {
+  padding-top: $vertical-divider;
+  padding-bottom: $vertical-divider;
+}
+
+.title {
+  margin: 0 0 4vh; 
+}
+
+.shadow {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.remove-bullets {
+  margin: 0;
+  list-style-type: none;
+}
+
+.goofy {
+  background: #faf7ff;
+  background-size: 85%;
+  background-image: url("~/assets/svg/blob_1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset 0 0 6px rgb(204, 219, 232);
+}
+
+.global-lock {
+  overflow: hidden;
+}
+
+.mobile-lock {
+  overflow: hidden;
+
+  @include lg {
+    overflow: auto;
+  }
+}
+

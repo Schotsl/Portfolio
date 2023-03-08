@@ -1,0 +1,36 @@
+{
+  "title": "Breda",
+  "cover": "/public/images/projects/Breda/6.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Breda/1.png"
+    },
+    {
+      "image": "/public/images/projects/Breda/2.png"
+    },
+    {
+      "image": "/public/images/projects/Breda/3.png"
+    },
+    {
+      "image": "/public/images/projects/Breda/4.png"
+    },
+    {
+      "image": "/public/images/projects/Breda/5.png"
+    },
+    {
+      "image": "/public/images/projects/Breda/6.png"
+    },
+    {
+      "image": "/public/images/projects/Breda/7.png"
+    },
+    {
+      "image": "/public/images/projects/Breda/8.png"
+    },
+    {
+      "image": "/public/images/projects/Breda/9.png"
+    },
+    {
+      "image": "/public/images/projects/Breda/10.png"
+    }
+  ]
+}

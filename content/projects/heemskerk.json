@@ -1,0 +1,15 @@
+{
+  "title": "Heemskerk",
+  "cover": "/public/images/projects/Heemskerk/1.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Heemskerk/1.png"
+    },
+    {
+      "image": "/public/images/projects/Heemskerk/2.png"
+    },
+    {
+      "image": "/public/images/projects/Heemskerk/3.png"
+    }
+  ]
+}

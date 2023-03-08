@@ -1,0 +1,30 @@
+{
+  "title": "Onna",
+  "cover": "/public/images/projects/Onna/4.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Onna/1.png"
+    },
+    {
+      "image": "/public/images/projects/Onna/2.png"
+    },
+    {
+      "image": "/public/images/projects/Onna/3.png"
+    },
+    {
+      "image": "/public/images/projects/Onna/4.png"
+    },
+    {
+      "image": "/public/images/projects/Onna/5.png"
+    },
+    {
+      "image": "/public/images/projects/Onna/6.png"
+    },
+    {
+      "image": "/public/images/projects/Onna/7.png"
+    },
+    {
+      "image": "/public/images/projects/Onna/8.png"
+    }
+  ]
+}

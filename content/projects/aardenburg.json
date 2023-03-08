@@ -1,0 +1,27 @@
+{
+  "title": "Aardenburg",
+  "cover": "/public/images/projects/Aardenburg/4.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Aardenburg/1.png"
+    },
+    {
+      "image": "/public/images/projects/Aardenburg/2.png"
+    },
+    {
+      "image": "/public/images/projects/Aardenburg/3.png"
+    },
+    {
+      "image": "/public/images/projects/Aardenburg/4.png"
+    },
+    {
+      "image": "/public/images/projects/Aardenburg/5.png"
+    },
+    {
+      "image": "/public/images/projects/Aardenburg/6.png"
+    },
+    {
+      "image": "/public/images/projects/Aardenburg/7.png"
+    }
+  ]
+}

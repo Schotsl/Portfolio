@@ -1,8 +1,36 @@
-node_modules
-*.log*
+# System files
+.DS_Store
+
+# Environment files
+.env
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Cache folders
 .nuxt
 .nitro
 .cache
 .output
-.env
+.firebase
+
+# Compiled files
 dist
+
+# Other files
+node_modules
+
+# Local Netlify folder
+.netlify

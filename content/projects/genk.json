@@ -1,0 +1,15 @@
+{
+  "title": "Genk",
+  "cover": "/public/images/projects/Genk/1.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Genk/1.png"
+    },
+    {
+      "image": "/public/images/projects/Genk/2.png"
+    },
+    {
+      "image": "/public/images/projects/Genk/3.png"
+    }
+  ]
+}

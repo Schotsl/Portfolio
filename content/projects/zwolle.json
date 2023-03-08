@@ -1,0 +1,24 @@
+{
+  "title": "Zwolle",
+  "cover": "/public/images/projects/Zwolle/6.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Zwolle/1.png"
+    },
+    {
+      "image": "/public/images/projects/Zwolle/2.png"
+    },
+    {
+      "image": "/public/images/projects/Zwolle/3.png"
+    },
+    {
+      "image": "/public/images/projects/Zwolle/4.png"
+    },
+    {
+      "image": "/public/images/projects/Zwolle/5.png"
+    },
+    {
+      "image": "/public/images/projects/Zwolle/6.png"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Soest",
+  "cover": "/public/images/projects/Soest/1.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Soest/1.png"
+    },
+    {
+      "image": "/public/images/projects/Soest/2.png"
+    },
+    {
+      "image": "/public/images/projects/Soest/3.png"
+    },
+    {
+      "image": "/public/images/projects/Soest/4.png"
+    },
+    {
+      "image": "/public/images/projects/Soest/5.png"
+    }
+  ]
+}

@@ -1,2 +1,7 @@
-@import "~/assets/scss/_breakpoints.scss";
+@import "~/assets/scss/_variables.scss";
 @import "~/assets/scss/_mixins.scss";
+@import "~/assets/scss/_globals.scss";
+@import "~/assets/scss/_classes.scss";
+
+// TODO: Import using Nuxt 3 plugins instead of the entire CSS
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css";

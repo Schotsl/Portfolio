@@ -1,0 +1,24 @@
+{
+  "title": "Almere",
+  "cover": "/public/images/projects/Almere/1.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Almere/1.png"
+    },
+    {
+      "image": "/public/images/projects/Almere/2.png"
+    },
+    {
+      "image": "/public/images/projects/Almere/3.png"
+    },
+    {
+      "image": "/public/images/projects/Almere/4.png"
+    },
+    {
+      "image": "/public/images/projects/Almere/5.png"
+    },
+    {
+      "image": "/public/images/projects/Almere/6.png"
+    }
+  ]
+}

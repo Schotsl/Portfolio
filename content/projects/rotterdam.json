@@ -1,0 +1,18 @@
+{
+  "title": "Rotterdam",
+  "cover": "/public/images/projects/Rotterdam/3.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Rotterdam/1.png"
+    },
+    {
+      "image": "/public/images/projects/Rotterdam/2.png"
+    },
+    {
+      "image": "/public/images/projects/Rotterdam/3.png"
+    },
+    {
+      "image": "/public/images/projects/Rotterdam/4.png"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Ridderkerk",
+  "cover": "/public/images/projects/Ridderkerk/1.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Ridderkerk/1.png"
+    },
+    {
+      "image": "/public/images/projects/Ridderkerk/2.png"
+    },
+    {
+      "image": "/public/images/projects/Ridderkerk/3.png"
+    }
+  ]
+}

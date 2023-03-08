@@ -1,29 +1,33 @@
 {
-  "name": "portfolio-nuxt",
+  "name": "zonneveranda-nuxt",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "nuxt dev",
     "lint": "eslint './**/*' --fix",
     "check": "eslint './**/*'",
-    "build": "nuxt build",
+    "build": "nuxt generate",
     "start": "nuxt start",
     "preview": "nuxt preview",
-    "prepare": "nuxt prepare",
     "generate": "nuxt generate"
   },
   "devDependencies": {
+    "@nuxt/image-edge": "1.0.0-27913696.5d122a3",
     "@nuxtjs/eslint-config-typescript": "^10.0.0",
+    "@nuxtjs/plausible": "^0.2.0",
+    "@types/marked": "^4.0.8",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",
-    "esbuild": "^0.13.4",
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^9.0.1",
-    "nuxt": "^3.0.0-rc.14",
+    "nuxt": "3.1.1",
     "sass": "^1.51.0",
     "typescript": "^4.7.2",
     "vite-plugin-eslint": "^1.6.1"
+  },
+  "dependencies": {
+    "marked": "^4.2.12"
   }
 }

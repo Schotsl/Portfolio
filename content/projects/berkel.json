@@ -1,0 +1,30 @@
+{
+  "title": "Berkel",
+  "cover": "/public/images/projects/Berkel/6.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Berkel/1.png"
+    },
+    {
+      "image": "/public/images/projects/Berkel/2.png"
+    },
+    {
+      "image": "/public/images/projects/Berkel/3.png"
+    },
+    {
+      "image": "/public/images/projects/Berkel/4.png"
+    },
+    {
+      "image": "/public/images/projects/Berkel/5.png"
+    },
+    {
+      "image": "/public/images/projects/Berkel/6.png"
+    },
+    {
+      "image": "/public/images/projects/Berkel/7.png"
+    },
+    {
+      "image": "/public/images/projects/Berkel/8.png"
+    }
+  ]
+}

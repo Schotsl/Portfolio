@@ -1,0 +1,15 @@
+{
+  "title": "Schiedam",
+  "cover": "/public/images/projects/Schiedam/3.png",
+  "images": [
+    {
+      "image": "/public/images/projects/Schiedam/1.png"
+    },
+    {
+      "image": "/public/images/projects/Schiedam/2.png"
+    },
+    {
+      "image": "/public/images/projects/Schiedam/3.png"
+    }
+  ]
+}
