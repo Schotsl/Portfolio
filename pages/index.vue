@@ -1,5 +1,5 @@
 <script setup>
-const projectQuery = await queryContent("projects");
+const projectQuery = queryContent("projects");
 const projectResults = await projectQuery.find({});
 
 useHead({
