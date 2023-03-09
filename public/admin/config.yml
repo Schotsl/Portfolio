@@ -27,13 +27,16 @@ collections:
       - name: "title"
         label: "Titel"
         widget: "string"
-      - name: "Category"
-        label: "Category"
-        widget: "select"
-        options:
-          - { label: "Both", value: "both" }
-          - { label: "Design", value: "design" }
-          - { label: "Development", value: "development" }
+      - name: "categories"
+        label: "Categorieën"
+        widget: "list"
+        field:
+          widget: "select"
+          options:
+            - { label: "Both", value: "both" }
+            - { label: "Design", value: "design" }
+            - { label: "Development", value: "development" }
+
       - name: "cover"
         label: "Cover"
         widget: "image"
