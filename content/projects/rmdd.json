@@ -3,5 +3,8 @@
   "cover": "/public/images/projects/rmdd.jpg",
   "gif": "/public/images/projects/rmdd.gif",
   "video": "/public/videos/projects/rmdd.mp4",
-  "Category": "design"
+  "Category": "design",
+  "categories": [
+    "design"
+  ]
 }
