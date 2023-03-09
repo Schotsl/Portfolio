@@ -28,9 +28,11 @@ collections:
         label: "Titel"
         widget: "string"
       - name: "categories"
-        label: "Categorieën"
+        label: "Categories"
         widget: "list"
         field:
+          name: "category"
+          label: "Category"
           widget: "select"
           options:
             - { label: "Both", value: "both" }
