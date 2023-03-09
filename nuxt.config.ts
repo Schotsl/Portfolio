@@ -2,6 +2,23 @@ import eslintPlugin from "vite-plugin-eslint";
 
 export default defineNuxtConfig({
   modules: ["@nuxt/image-edge", "@nuxtjs/plausible", "@nuxt/content"],
+  nitro: {
+    prerender: {
+      routes: [
+        "/kruidenpower",
+        "/mailgun",
+        "/moderately-interesting",
+        "/overworked",
+        "/plausible",
+        "/rmdd",
+        "/ticketmain",
+        "/uberdeno",
+        "/uwuifier",
+        "/vormgeving-2",
+        "/zonneveranda",
+      ],
+    },
+  },
   runtimeConfig: {
     public: {
       domain: "api.corvusconsultancy.nl",
