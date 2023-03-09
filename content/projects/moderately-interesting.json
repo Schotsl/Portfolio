@@ -3,7 +3,6 @@
   "cover": "/public/images/projects/moderately-interesting.jpg",
   "gif": "/public/images/projects/moderately-interesting.gif",
   "video": "/public/videos/projects/moderately-interesting.mp4",
-  "Category": "both",
   "categories": [
     "design",
     "development"
