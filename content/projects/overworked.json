@@ -3,5 +3,9 @@
   "cover": "/public/images/projects/overworked.jpg",
   "gif": "/public/images/projects/overworked.gif",
   "video": "/public/videos/projects/overworked.mp4",
-  "Category": "both"
+  "Category": "both",
+  "categories": [
+    "design",
+    "development"
+  ]
 }
