@@ -18,6 +18,8 @@ const onLeave = () => {
 
 <template>
   <li class="project-item" @mouseover="onHover" @mouseleave="onLeave">
+    <project-categories :categories="project.categories"></project-categories>
+
     <div class="project-item-container" role="button" aria-label="Play gif">
       <img
         class="project-item-container-cover"
@@ -43,13 +45,14 @@ const onLeave = () => {
     position: absolute;
     transition: all 0.3s ease-in-out;
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .project-item-container {
     width: 100%;
     position: relative;
     transition: all 0.3s ease-in-out;
+    filter: brightness(0.6);
 
     &:before {
       top: 0;
@@ -62,8 +65,8 @@ const onLeave = () => {
       transition: opacity 0.3s ease-in-out;
       background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.4)
+        rgba(102, 102, 153, 0) 35%,
+        rgba(102, 102, 153, 0.65) 100%
       );
     }
 
@@ -75,7 +78,8 @@ const onLeave = () => {
   }
 
   &:hover {
-    .project-item-title {
+    .project-item-title,
+    .project-categories {
       opacity: 0;
     }
 
