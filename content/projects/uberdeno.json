@@ -3,5 +3,8 @@
   "cover": "/public/images/projects/uberdeno.jpg",
   "gif": "/public/images/projects/uberdeno.gif",
   "video": "/public/videos/projects/uberdeno.mp4",
-  "Category": "development"
+  "Category": "development",
+  "categories": [
+    "development"
+  ]
 }
