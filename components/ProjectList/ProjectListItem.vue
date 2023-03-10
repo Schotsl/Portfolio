@@ -28,17 +28,9 @@ const onLeave = () => {
       </div>
 
       <div class="project-item-title">
-        <h2 class="project-item-title-content">{{ props.project.title }}</h2>
+        <project-categories :categories="props.project.categories" />
 
-        <ul class="project-item-title-categories">
-          <li
-            v-for="category in props.project.categories"
-            :key="category"
-            class="project-categories-category"
-          >
-            {{ category }}
-          </li>
-        </ul>
+        <h2 class="project-item-title-content">{{ props.project.title }}</h2>
       </div>
     </a>
   </li>
@@ -62,37 +54,6 @@ const onLeave = () => {
 
       @include lg {
         font-size: 1.25rem;
-      }
-    }
-
-    .project-item-title-categories {
-      gap: 0.4rem;
-      margin: 0px;
-      display: flex;
-
-      list-style: none;
-      flex-direction: row;
-
-      .project-categories-category {
-        color: #ff1d63;
-        font-size: 0.95rem;
-        font-family: "Roboto Slab";
-
-        &::after {
-          content: ",";
-        }
-
-        &:last-child::after {
-          content: "";
-        }
-
-        @include md {
-          font-size: 0.85rem;
-        }
-
-        @include lg {
-          font-size: 0.65rem;
-        }
       }
     }
   }

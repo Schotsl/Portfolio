@@ -10,14 +10,9 @@ const projectResult = await projectQuery
   .where({ _file: projectFile })
   .findOne({});
 
-const titleElement = ref();
 const videoElement = ref();
 const videoSource = computed(() => {
   return projectResult.video.replace("/public", "");
-});
-
-onMounted(() => {
-  titleElement.value.scrollIntoView();
 });
 
 useHead({
@@ -38,18 +33,8 @@ useHead({
 
 <template>
   <section class="project-section">
-    <h1 ref="titleElement" class="project-title">{{ projectResult.title }}</h1>
-
     <section class="project-section">
-      <ul class="project-categories">
-        <li
-          v-for="category in projectResult.categories"
-          :key="category"
-          class="project-category"
-        >
-          {{ category }}
-        </li>
-      </ul>
+      <project-categories :categories="projectResult.categories" />
 
       <h2 class="project-subtitle">About {{ projectResult.title }}</h2>
 
@@ -60,18 +45,24 @@ useHead({
       ></div>
       <!-- eslint-enable vue/no-v-html -->
 
-      <ul class="project-actions">
-        <li class="project-action">
-          <a class="project-hyperlink" :href="projectResult.demo"
-            ><i class="fa-solid fa-link"></i> View Demo</a
-          >
-        </li>
-        <li class="project-action">
-          <a class="project-hyperlink" :href="projectResult.github"
-            ><i class="fa-brands fa-github"></i> View on GitHub</a
-          >
-        </li>
-      </ul>
+      <template v-if="projectResult.demo || projectResult.github">
+        <ul class="project-actions">
+          <template v-if="projectResult.demo">
+            <li class="project-action">
+              <a class="project-hyperlink" :href="projectResult.demo"
+                ><i class="fa-solid fa-link"></i> View Demo</a
+              >
+            </li>
+          </template>
+          <template v-if="projectResult.github">
+            <li class="project-action">
+              <a class="project-hyperlink" :href="projectResult.github"
+                ><i class="fa-brands fa-github"></i> View on GitHub</a
+              >
+            </li>
+          </template>
+        </ul>
+      </template>
     </section>
 
     <video
@@ -112,7 +103,11 @@ useHead({
 
   .project-section {
     color: #020230;
-    padding: 1.75rem 10vw;
+    padding: 1.75rem 1.5rem;
+
+    @include md {
+      padding: 1.75rem 10vw;
+    }
 
     .project-subtitle {
       color: #020230;
@@ -168,25 +163,19 @@ useHead({
           background: #e51a59;
         }
       }
-
-      .project-category {
-        color: #ff1d63;
-        margin: 0px;
-        font-weight: 600;
-
-        &::after {
-          content: ", ";
-        }
-
-        &:last-child::after {
-          content: "";
-        }
-      }
     }
 
     .project-actions {
       gap: 1rem;
       margin: 2rem 0;
+    }
+
+    .project-categories {
+      margin-top: 0px;
+
+      @include md {
+        margin-top: 1rem;
+      }
     }
   }
 }

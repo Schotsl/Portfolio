@@ -21,23 +21,5 @@ useHead({
 </script>
 
 <template>
-  <section>
-    <h1 class="project-title">Sjors van Holst</h1>
-    <project-list :projects="projectParsed"></project-list>
-  </section>
+  <project-list :projects="projectParsed"></project-list>
 </template>
-
-<style lang="scss" scoped>
-.project-title {
-  color: #c9d4df;
-  padding: 1.75rem 1.5rem 1.75rem;
-  background: #0d0c46;
-
-  font-size: 2rem;
-  font-family: "Roboto Slab";
-
-  @include md {
-    padding: 1.75rem 10vw;
-  }
-}
-</style>

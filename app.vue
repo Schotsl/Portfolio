@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 if (process.client && window.netlifyIdentity) {
   window.netlifyIdentity.on("init", (user) => {
     if (!user) {
@@ -9,9 +9,12 @@ if (process.client && window.netlifyIdentity) {
   });
 }
 
+const title = ref("Sjors van Holst");
+
 useHead({
-  titleTemplate: (titleChunk) => {
-    return titleChunk ? `${titleChunk} - Sjors van Holst` : "Sjors van Holst";
+  titleTemplate: (chunk) => {
+    title.value = chunk || title.value;
+    return title.value;
   },
   script: [
     {
@@ -53,10 +56,13 @@ useHead({
 
 <template>
   <div>
+    <other-header :title="title"></other-header>
+
     <main>
       <NuxtPage />
     </main>
-    <footer></footer>
+
+    <other-footer></other-footer>
   </div>
 </template>
 

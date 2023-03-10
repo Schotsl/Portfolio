@@ -8,11 +8,11 @@ const props = defineProps<{
 
 <template>
   <ul class="project-list">
-    <project-item
+    <project-list-item
       v-for="project in props.projects"
       :key="project.title"
       :project="project"
-    ></project-item>
+    ></project-list-item>
   </ul>
 </template>
 
