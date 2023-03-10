@@ -73,6 +73,8 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
+
+    z-index: -1;
     content: "";
     opacity: 0.1;
     position: fixed;

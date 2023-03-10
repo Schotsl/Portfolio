@@ -67,8 +67,8 @@ const onLeave = () => {
       transition: opacity 0.3s ease-in-out;
       background: linear-gradient(
         180deg,
-        rgba(102, 102, 153, 0) 35%,
-        rgba(102, 102, 153, 0.65) 100%
+        rgba(124, 27, 248, 0) 0%,
+        rgba(124, 27, 248, 0.2) 100%
       );
     }
 
