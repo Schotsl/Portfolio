@@ -67,6 +67,7 @@ useHead({
 </template>
 
 <style lang="scss">
+div,
 body,
 html {
   width: 100%;
