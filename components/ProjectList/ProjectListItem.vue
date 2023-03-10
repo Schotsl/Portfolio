@@ -5,24 +5,15 @@ const props = defineProps<{
   project: Project;
 }>();
 
-const source = ref(props.project.cover.replace("/public", ""));
+const hover = computed(() => props.project.gif.replace("/public", ""));
 const image = computed(() => {
-  // If source.value ends in gif returns null
   return {
     alt: "Image description",
-    src: source.value,
-    width: source.value.endsWith(".gif") ? null : 500,
-    height: source.value.endsWith(".gif") ? null : 266,
+    src: props.project.cover.replace("/public", ""),
+    width: 500,
+    height: 266,
   };
 });
-
-const onHover = () => {
-  source.value = props.project.gif.replace("/public", "");
-};
-
-const onLeave = () => {
-  source.value = props.project.cover.replace("/public", "");
-};
 </script>
 
 <template>
@@ -30,6 +21,7 @@ const onLeave = () => {
     <a :href="`/${props.project.slug}`">
       <div class="project-item-container" role="button" aria-label="Play gif">
         <atom-image :image="image" class="project-item-container-cover" />
+        <img :src="hover" class="project-item-container-hover" />
       </div>
 
       <div class="project-item-title">
@@ -78,9 +70,24 @@ const onLeave = () => {
       background: rgba(13, 12, 70, 0.85);
     }
 
-    .project-item-container-cover {
+    .project-item-container-cover,
+    .project-item-container-hover {
       width: 100%;
       display: block;
+    }
+
+    .project-item-container-hover {
+      display: none;
+    }
+
+    &:hover {
+      .project-item-container-hover {
+        display: block;
+      }
+
+      .project-item-container-cover {
+        display: none;
+      }
     }
   }
 
