@@ -5,10 +5,12 @@ const props = defineProps<{
   project: Project;
 }>();
 
-const hover = computed(() => props.project.gif.replace("/public", ""));
+const hoverSource = computed(() => props.project.gif.replace("/public", ""));
+const hoverAlt = computed(() => `A live preview of ${props.project.title}`);
+
 const image = computed(() => {
   return {
-    alt: "Image description",
+    alt: `A preview of ${props.project.title}`,
     src: props.project.cover.replace("/public", ""),
     width: 500,
     height: 266,
@@ -21,7 +23,11 @@ const image = computed(() => {
     <a :href="`/${props.project.slug}`">
       <div class="project-item-container" role="button" aria-label="Play gif">
         <atom-image :image="image" class="project-item-container-cover" />
-        <img :src="hover" class="project-item-container-hover" />
+        <img
+          :alt="hoverAlt"
+          :src="hoverSource"
+          class="project-item-container-hover"
+        />
       </div>
 
       <div class="project-item-title">
