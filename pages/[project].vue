@@ -62,14 +62,6 @@ useHead({
         class="project-content"
         v-html="marked.parse(projectResult.description)"
       ></div>
-      <div
-        class="project-content"
-        v-html="marked.parse(projectResult.description)"
-      ></div>
-      <div
-        class="project-content"
-        v-html="marked.parse(projectResult.description)"
-      ></div>
       <!-- eslint-enable vue/no-v-html -->
 
       <ul class="project-actions">

@@ -18,7 +18,7 @@ const onLeave = () => {
 
 <template>
   <li class="project-item" @mouseover="onHover" @mouseleave="onLeave">
-    <a :href="`/${props.project.slug}#content`">
+    <a :href="`/${props.project.slug}`">
       <div class="project-item-container" role="button" aria-label="Play gif">
         <img
           class="project-item-container-cover"
