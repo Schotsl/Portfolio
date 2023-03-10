@@ -7,11 +7,12 @@ const props = defineProps<{
 
 const source = ref(props.project.cover.replace("/public", ""));
 const image = computed(() => {
+  // If source.value ends in gif returns null
   return {
-    width: 500,
-    height: 266,
     alt: "Image description",
     src: source.value,
+    width: source.value.endsWith(".gif") ? null : 500,
+    height: source.value.endsWith(".gif") ? null : 266,
   };
 });
 
