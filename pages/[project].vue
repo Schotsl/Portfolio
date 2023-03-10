@@ -38,34 +38,44 @@ useHead({
     <video
       ref="videoElement"
       class="project-video"
-      autoplay
       loop
       muted
       controls
+      autoplay
     >
       <source :src="videoSource" type="video/mp4" />
     </video>
 
     <h1 class="project-title">{{ projectResult.title }}</h1>
 
-    <section class="project-content">
+    <section class="project-section">
       <ul class="project-categories">
-        <li>Design</li>
-        <li v-for="category in projectResult.categories" :key="category">
+        <li
+          v-for="category in projectResult.categories"
+          :key="category"
+          class="project-category"
+        >
           {{ category }}
         </li>
       </ul>
+
       <h2 class="project-subtitle">About {{ projectResult.title }}</h2>
+
       <!-- eslint-disable vue/no-v-html -->
-      <div v-html="marked.parse(projectResult.description)"></div>
+      <div
+        class="project-content"
+        v-html="marked.parse(projectResult.description)"
+      ></div>
       <!-- eslint-enable vue/no-v-html -->
 
-      <ul style="padding-top: 1rem">
-        <li>
-          <a :href="projectResult.demo">View Demo</a>
+      <ul class="project-actions">
+        <li class="project-action">
+          <a class="project-hyperlink" :href="projectResult.demo">View Demo</a>
         </li>
-        <li>
-          <a :href="projectResult.github">View on GitHub</a>
+        <li class="project-action">
+          <a class="project-hyperlink" :href="projectResult.github"
+            >View on GitHub</a
+          >
         </li>
       </ul>
     </section>
@@ -75,50 +85,69 @@ useHead({
 <style lang="scss" scoped>
 .project-section {
   font-family: "Roboto Slab";
+
   .project-video {
     width: 100%;
-    // margin: 7.5% 7.5% 0;
+    height: 100%;
     display: block;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
   }
 
   .project-title {
-    font-family: "Roboto Slab";
-    background: #0d0c46;
     color: #c9d4df;
-    margin: 0;
-    font-weight: 400;
+    padding: 1.75rem 10vw;
+    background: #0d0c46;
+
     font-size: 2rem;
-    padding: 1.75rem 7.5%;
+    font-family: "Roboto Slab";
   }
 
-  .project-subtitle {
-    margin: 0;
-
+  .project-section {
     color: #020230;
-    font-weight: 400;
-    font-size: 1.5rem;
-  }
+    padding: 1.75rem 10vw;
 
-  .project-content {
-    color: #020230;
-    padding: 1.75rem 7.5%;
-    background: #fff;
+    .project-subtitle {
+      color: #020230;
+      font-size: 1.5rem;
+    }
 
-    div {
+    .project-content {
       font-size: 0.85rem;
       font-family: "Open Sans";
     }
 
+    .project-actions,
     .project-categories {
-      gap: 0.5rem;
-      margin: 0 0 1.5rem;
-      li {
+      gap: 0.4rem;
+      margin: 0;
+      margin: 1.5rem 0;
+      display: flex;
+
+      font-size: 0.65rem;
+      list-style: none;
+      flex-direction: row;
+      text-transform: uppercase;
+
+      .project-action {
+        color: #fff;
         margin: 0px;
+        padding: 0.75rem 1.5rem;
+        background: #ff1d63;
+        transition: all 0.3s ease-in-out;
+
+        .project-hyperlink {
+          color: #fff;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+          background: #e51a59;
+        }
+      }
+
+      .project-category {
         color: #ff1d63;
-        font-size: 0.75rem;
+        margin: 0px;
         font-weight: 600;
-        text-transform: uppercase;
 
         &::after {
           content: ", ";
@@ -130,23 +159,9 @@ useHead({
       }
     }
 
-    ul {
+    .project-actions {
       gap: 1rem;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-
-      a {
-        background: #ff1d63;
-        padding: 0.75rem 1.5rem;
-        color: white;
-        font-size: 0.75rem;
-        text-decoration: none;
-
-        text-transform: uppercase;
-      }
+      margin: 2rem 0;
     }
   }
 }

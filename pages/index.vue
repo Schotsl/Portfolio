@@ -21,7 +21,9 @@ useHead({
 </script>
 
 <template>
-  <project-list :projects="projectParsed"></project-list>
+  <section>
+    <project-list :projects="projectParsed"></project-list>
+  </section>
 </template>
 
 <style lang="scss" scoped></style>

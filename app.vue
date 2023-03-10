@@ -78,8 +78,8 @@ body {
     content: "";
     opacity: 0.1;
     position: fixed;
-    background-size: cover;
-    background-image: url("/images/IMG_7590.jpeg");
+
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/001/255/498/small/retro-memphis-shapes-seamless-pattern-free-vector.jpg");
     background-position: center;
   }
 }

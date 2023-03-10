@@ -19,8 +19,6 @@ const onLeave = () => {
 <template>
   <li class="project-item" @mouseover="onHover" @mouseleave="onLeave">
     <a :href="`/${props.project.slug}`">
-      <project-categories :categories="project.categories"></project-categories>
-
       <div class="project-item-container" role="button" aria-label="Play gif">
         <img
           class="project-item-container-cover"
@@ -29,7 +27,19 @@ const onLeave = () => {
         />
       </div>
 
-      <h2 class="project-item-title">{{ props.project.title }}</h2>
+      <div class="project-item-title">
+        <h2 class="project-item-title-content">{{ props.project.title }}</h2>
+
+        <ul class="project-item-title-categories">
+          <li
+            v-for="category in props.project.categories"
+            :key="category"
+            class="project-categories-category"
+          >
+            {{ category }}
+          </li>
+        </ul>
+      </div>
     </a>
   </li>
 </template>
@@ -42,19 +52,42 @@ const onLeave = () => {
 
   .project-item-title {
     left: 1.5rem;
-    color: white;
     bottom: 1rem;
     position: absolute;
     transition: all 0.3s ease-in-out;
-    font-size: 1.5rem;
-    font-weight: 400;
+
+    .project-item-title-content {
+      color: white;
+      font-size: 1.5rem;
+      font-family: "Roboto Slab";
+    }
+
+    .project-item-title-categories {
+      gap: 0.35rem;
+      margin: 0;
+      display: flex;
+
+      list-style: none;
+      flex-direction: row;
+
+      .project-categories-category {
+        color: #ff1d63;
+        font-size: 0.65rem;
+        font-family: "Roboto Slab";
+
+        &::after {
+          content: ",";
+        }
+
+        &:last-child::after {
+          content: "";
+        }
+      }
+    }
   }
 
   .project-item-container {
-    width: 100%;
-    position: relative;
     transition: all 0.3s ease-in-out;
-    filter: brightness(0.6);
 
     &:before {
       top: 0;
@@ -64,17 +97,12 @@ const onLeave = () => {
       content: "";
       display: block;
       position: absolute;
-      transition: opacity 0.3s ease-in-out;
-      background: linear-gradient(
-        180deg,
-        rgba(124, 27, 248, 0) 0%,
-        rgba(124, 27, 248, 0.2) 100%
-      );
+      transition: opacity 0.2s ease-in-out;
+      background: rgba(13, 12, 70, 0.85);
     }
 
     .project-item-container-cover {
       width: 100%;
-      height: auto;
       display: block;
     }
   }
@@ -88,7 +116,7 @@ const onLeave = () => {
     .project-item-container {
       filter: brightness(1);
       transform: scale(1.05);
-      box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 2.5rem 0 rgba(0, 0, 0, 0.25);
 
       &:before {
         opacity: 0;

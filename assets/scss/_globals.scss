@@ -16,19 +16,18 @@ html {
     }
 
     a {
-      color: #3d3165;
+      color: #0300b6;
       margin: 0;
       display: block;
       text-decoration: none;
     
       &:hover {
-        color: #7c1bf8;
+        color: #01005b;
         text-decoration: underline;
       }
     }
 
     p a {
-      color: #7c1bf8;
       display: inline;
       text-decoration: underline;
     }
