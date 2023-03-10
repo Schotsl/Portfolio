@@ -14,7 +14,8 @@ useHead({
   meta: [
     {
       name: "description",
-      content: "",
+      content:
+        "Discover Sjors van Holst's projects and delve into the stories behind them on this website. Explore the development stack, challenges, and triumphs, and join us on our journey as we make new friends and learn valuable lessons along the way.",
     },
   ],
 });

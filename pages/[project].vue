@@ -20,7 +20,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content: "",
+      content: projectResult.description,
     },
   ],
 });
