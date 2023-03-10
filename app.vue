@@ -68,7 +68,8 @@ useHead({
 
 <style lang="scss">
 body,
-html {
+html,
+#__nuxt {
   width: 100%;
   height: 100%;
   margin: 0;
