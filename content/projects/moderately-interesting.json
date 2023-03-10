@@ -6,5 +6,7 @@
   "categories": [
     "Design",
     "Development"
-  ]
+  ],
+  "demo": "https://play.google.com/store/apps/details?id=com.serialpowered.moderately_interesting",
+  "description": "Moderately Interesting was my first publicly published project, created between 2016 and 2017 using [Processing for Android](https://android.processing.org). Through the [Processing Forum](https://discourse.processing.org), I received invaluable assistance in learning the fundamentals of programming in [Processing](https://processing.org/), which set me on the path that I continue to pursue today. I am forever grateful for their support!\n\nThe game's objective is to shoot oncoming space monsters while avoiding them. It includes a high score system with an online leaderboard. While most apps would use a WebSocket or POST request to submit high scores, \"Moderately Interesting\" required players to portforward their own router to connect to the server due to my lack of familiarity with web protocols.\n\nAlthough the app may not be my greatest work, and it is doubtful whether it would run on modern phones, I still cherish it as a personal accomplishment. It serves as a reminder of my progress and development, and I hope to someday recreate it using modern programming languages and technologies."
 }
