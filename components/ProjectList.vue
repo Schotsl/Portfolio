@@ -18,12 +18,23 @@ const props = defineProps<{
 
 <style lang="scss" scoped>
 .project-list {
-  gap: 2.5vw;
+  gap: 1.5rem;
   width: 80vw;
   margin: 0;
+  display: grid;
   padding: 10vw 0;
-  display: flex;
+
   list-style: none;
   flex-direction: row;
+
+  grid-template-columns: repeat(1, 1fr);
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include xxl {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 </style>

@@ -18,7 +18,7 @@ const onLeave = () => {
 
 <template>
   <li class="project-item" @mouseover="onHover" @mouseleave="onLeave">
-    <a :href="`/${props.project.slug}`">
+    <a :href="`/${props.project.slug}#content`">
       <div class="project-item-container" role="button" aria-label="Play gif">
         <img
           class="project-item-container-cover"
@@ -46,7 +46,7 @@ const onLeave = () => {
 
 <style lang="scss" scoped>
 .project-item {
-  width: 37.5vw;
+  // width: 37.5vw;
   margin: 0px;
   position: relative;
 
@@ -58,13 +58,21 @@ const onLeave = () => {
 
     .project-item-title-content {
       color: white;
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-family: "Roboto Slab";
+
+      @include lg {
+        font-size: 1.5rem;
+      }
+
+      @include xxl {
+        font-size: 1.25rem;
+      }
     }
 
     .project-item-title-categories {
       gap: 0.35rem;
-      margin: 0;
+      margin: 0px;
       display: flex;
 
       list-style: none;
@@ -72,7 +80,7 @@ const onLeave = () => {
 
       .project-categories-category {
         color: #ff1d63;
-        font-size: 0.65rem;
+        font-size: 1rem;
         font-family: "Roboto Slab";
 
         &::after {
@@ -81,6 +89,14 @@ const onLeave = () => {
 
         &:last-child::after {
           content: "";
+        }
+
+        @include lg {
+          font-size: 0.85rem;
+        }
+
+        @include xxl {
+          font-size: 0.75rem;
         }
       }
     }

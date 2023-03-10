@@ -10,16 +10,14 @@ const projectResult = await projectQuery
   .where({ _file: projectFile })
   .findOne({});
 
+const titleElement = ref();
 const videoElement = ref();
 const videoSource = computed(() => {
   return projectResult.video.replace("/public", "");
 });
 
 onMounted(() => {
-  const videoHeight = videoElement.value.clientHeight;
-  const videoHalf = Math.round(videoHeight / 2);
-
-  window.scroll(0, videoHalf);
+  titleElement.value.scrollIntoView();
 });
 
 useHead({
@@ -28,6 +26,11 @@ useHead({
     {
       name: "description",
       content: "",
+    },
+  ],
+  script: [
+    {
+      src: "/scroll.js",
     },
   ],
 });
@@ -46,7 +49,7 @@ useHead({
       <source :src="videoSource" type="video/mp4" />
     </video>
 
-    <h1 class="project-title">{{ projectResult.title }}</h1>
+    <h1 ref="titleElement" class="project-title">{{ projectResult.title }}</h1>
 
     <section class="project-section">
       <ul class="project-categories">
@@ -62,6 +65,14 @@ useHead({
       <h2 class="project-subtitle">About {{ projectResult.title }}</h2>
 
       <!-- eslint-disable vue/no-v-html -->
+      <div
+        class="project-content"
+        v-html="marked.parse(projectResult.description)"
+      ></div>
+      <div
+        class="project-content"
+        v-html="marked.parse(projectResult.description)"
+      ></div>
       <div
         class="project-content"
         v-html="marked.parse(projectResult.description)"
@@ -96,8 +107,10 @@ useHead({
 
   .project-title {
     color: #c9d4df;
-    padding: 1.75rem 10vw;
+    padding: 6.75rem 10vw 1.75rem;
     background: #0d0c46;
+
+    margin-top: -5rem;
 
     font-size: 2rem;
     font-family: "Roboto Slab";
@@ -113,8 +126,16 @@ useHead({
     }
 
     .project-content {
-      font-size: 0.85rem;
+      font-size: 1rem;
       font-family: "Open Sans";
+
+      @include md {
+        font-size: 0.95rem;
+      }
+
+      @include lg {
+        font-size: 0.85rem;
+      }
     }
 
     .project-actions,
@@ -124,10 +145,18 @@ useHead({
       margin: 1.5rem 0;
       display: flex;
 
-      font-size: 0.65rem;
+      font-size: 0.95rem;
       list-style: none;
       flex-direction: row;
       text-transform: uppercase;
+
+      @include md {
+        font-size: 0.85rem;
+      }
+
+      @include lg {
+        font-size: 0.65rem;
+      }
 
       .project-action {
         color: #fff;
