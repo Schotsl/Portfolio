@@ -46,7 +46,6 @@ const onLeave = () => {
 
 <style lang="scss" scoped>
 .project-item {
-  // width: 37.5vw;
   margin: 0px;
   position: relative;
 
@@ -58,20 +57,16 @@ const onLeave = () => {
 
     .project-item-title-content {
       color: white;
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-family: "Roboto Slab";
 
       @include lg {
-        font-size: 1.5rem;
-      }
-
-      @include xxl {
         font-size: 1.25rem;
       }
     }
 
     .project-item-title-categories {
-      gap: 0.35rem;
+      gap: 0.4rem;
       margin: 0px;
       display: flex;
 
@@ -80,7 +75,7 @@ const onLeave = () => {
 
       .project-categories-category {
         color: #ff1d63;
-        font-size: 1rem;
+        font-size: 0.95rem;
         font-family: "Roboto Slab";
 
         &::after {
@@ -91,12 +86,12 @@ const onLeave = () => {
           content: "";
         }
 
-        @include lg {
+        @include md {
           font-size: 0.85rem;
         }
 
-        @include xxl {
-          font-size: 0.75rem;
+        @include lg {
+          font-size: 0.65rem;
         }
       }
     }

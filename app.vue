@@ -52,9 +52,12 @@ useHead({
 </script>
 
 <template>
-  <main>
-    <NuxtPage />
-  </main>
+  <div>
+    <main>
+      <NuxtPage />
+    </main>
+    <footer></footer>
+  </div>
 </template>
 
 <style lang="scss">
@@ -86,5 +89,10 @@ body {
     background-image: url("https://static.vecteezy.com/system/resources/thumbnails/001/255/498/small/retro-memphis-shapes-seamless-pattern-free-vector.jpg");
     background-position: center;
   }
+}
+
+footer {
+  height: 3rem;
+  background: #0d0c46;
 }
 </style>

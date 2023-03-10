@@ -38,10 +38,6 @@ useHead({
 
 <template>
   <section class="project-section">
-    <video ref="videoElement" class="project-video" loop muted autoplay>
-      <source :src="videoSource" type="video/mp4" />
-    </video>
-
     <h1 ref="titleElement" class="project-title">{{ projectResult.title }}</h1>
 
     <section class="project-section">
@@ -77,6 +73,17 @@ useHead({
         </li>
       </ul>
     </section>
+
+    <video
+      ref="videoElement"
+      class="project-video"
+      loop
+      muted
+      autoplay
+      controls
+    >
+      <source :src="videoSource" type="video/mp4" />
+    </video>
   </section>
 </template>
 
@@ -88,6 +95,8 @@ useHead({
     width: 100%;
     height: 100%;
     display: block;
+    padding: 3rem 0 0;
+    background: #0d0c46;
   }
 
   .project-title {
