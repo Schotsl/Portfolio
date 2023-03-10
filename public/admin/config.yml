@@ -27,6 +27,7 @@ collections:
       - name: "title"
         label: "Titel"
         widget: "string"
+
       - name: "categories"
         label: "Categories"
         widget: "list"
@@ -45,15 +46,31 @@ collections:
         choose_url: false
         media_folder: "/public/images/projects"
         allow_multiple: false
+
       - name: "gif"
         label: "gif"
         widget: "image"
         choose_url: false
         media_folder: "/public/images/projects"
         allow_multiple: false
+
       - name: "video"
         label: "video"
         widget: "file"
         choose_url: false
         media_folder: "/public/videos/projects"
         allow_multiple: false
+
+      - name: "demo"
+        label: "Demo"
+        widget: "string"
+        required: false
+
+      - name: "github"
+        label: "Github"
+        widget: "string"
+        required: false
+
+      - name: "description"
+        label: "Description"
+        widget: "markdown"
