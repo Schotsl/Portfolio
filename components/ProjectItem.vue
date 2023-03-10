@@ -18,17 +18,19 @@ const onLeave = () => {
 
 <template>
   <li class="project-item" @mouseover="onHover" @mouseleave="onLeave">
-    <project-categories :categories="project.categories"></project-categories>
+    <a :href="`/${props.project.slug}`">
+      <project-categories :categories="project.categories"></project-categories>
 
-    <div class="project-item-container" role="button" aria-label="Play gif">
-      <img
-        class="project-item-container-cover"
-        alt="Image description"
-        :src="source"
-      />
-    </div>
+      <div class="project-item-container" role="button" aria-label="Play gif">
+        <img
+          class="project-item-container-cover"
+          alt="Image description"
+          :src="source"
+        />
+      </div>
 
-    <h2 class="project-item-title">{{ props.project.title }}</h2>
+      <h2 class="project-item-title">{{ props.project.title }}</h2>
+    </a>
   </li>
 </template>
 

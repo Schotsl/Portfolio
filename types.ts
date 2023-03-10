@@ -3,5 +3,6 @@ export interface Project {
   title: string;
   cover: string;
   video: string;
+  slug: string;
   gif: string;
 }
