@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 const projectQuery = queryContent("projects");
 const projectResults = await projectQuery.find({});
 const projectParsed = projectResults.map((project) => {

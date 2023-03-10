@@ -6,3 +6,10 @@ export interface Project {
   slug: string;
   gif: string;
 }
+
+export interface Image {
+  alt: string;
+  src: string;
+  width?: number;
+  height?: number;
+}

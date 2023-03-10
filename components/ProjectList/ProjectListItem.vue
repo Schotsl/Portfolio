@@ -5,6 +5,15 @@ const props = defineProps<{
   project: Project;
 }>();
 
+const image = computed(() => {
+  return {
+    width: 500,
+    height: 266,
+    alt: "Image description",
+    src: props.project.cover.replace("/public", ""),
+  };
+});
+
 const source = ref(props.project.cover.replace("/public", ""));
 
 const onHover = () => {
@@ -20,11 +29,7 @@ const onLeave = () => {
   <li class="project-item" @mouseover="onHover" @mouseleave="onLeave">
     <a :href="`/${props.project.slug}`">
       <div class="project-item-container" role="button" aria-label="Play gif">
-        <img
-          class="project-item-container-cover"
-          alt="Image description"
-          :src="source"
-        />
+        <atom-image :image="image" class="project-item-container-cover" />
       </div>
 
       <div class="project-item-title">

@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import { marked } from "marked";
 
 const projectRoute = useRoute();
@@ -21,11 +21,6 @@ useHead({
     {
       name: "description",
       content: "",
-    },
-  ],
-  script: [
-    {
-      src: "/scroll.js",
     },
   ],
 });

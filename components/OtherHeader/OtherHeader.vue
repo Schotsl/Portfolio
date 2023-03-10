@@ -15,7 +15,11 @@ const isIndex = router.currentRoute.value.path === "/";
   <header>
     <h1 class="project-title">
       <template v-if="!isIndex">
-        <button class="project-button" @click="back">
+        <button
+          class="project-button"
+          aria-label="Back to the previous page"
+          @click="back"
+        >
           <i class="project-icon fa fa-arrow-left"></i>
         </button>
       </template>
