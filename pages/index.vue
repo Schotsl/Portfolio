@@ -9,6 +9,14 @@ const projectParsed = projectResults.map((project) => {
   return { ...project, slug: slugResult };
 });
 
+const projectLinks = projectParsed.map((project) => {
+  return {
+    rel: "preload",
+    as: "image",
+    href: project.gif.replace("/public", ""),
+  };
+});
+
 useHead({
   title: null,
   meta: [
@@ -17,6 +25,7 @@ useHead({
       content: "",
     },
   ],
+  link: projectLinks,
 });
 </script>
 
