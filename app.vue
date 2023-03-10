@@ -69,8 +69,10 @@ useHead({
 <style lang="scss">
 body,
 html {
-  color: #3d3165;
+  width: 100%;
+  height: 100%;
   margin: 0;
+
   position: relative;
   text-align: left;
   font-family: "Roboto", Helvetica, Arial, Lucida, sans-serif;
