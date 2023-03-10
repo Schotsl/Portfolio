@@ -43,18 +43,18 @@ const onLeave = () => {
 
   .project-item-title {
     left: 1.5rem;
-    bottom: 1rem;
+    bottom: 1.5rem;
     position: absolute;
     transition: all 0.3s ease-in-out;
 
     .project-item-title-content {
       color: white;
-      font-size: 1.5rem;
+      font-size: 1.25rem;
       font-family: "Roboto Slab";
+    }
 
-      @include lg {
-        font-size: 1.25rem;
-      }
+    @include lg {
+      bottom: 1.1rem;
     }
   }
 

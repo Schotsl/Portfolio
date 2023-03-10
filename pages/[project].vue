@@ -32,7 +32,7 @@ useHead({
 </script>
 
 <template>
-  <section class="project-section">
+  <section class="project-container">
     <section class="project-section">
       <project-categories :categories="projectResult.categories" />
 
@@ -79,14 +79,14 @@ useHead({
 </template>
 
 <style lang="scss" scoped>
-.project-section {
+.project-container {
   font-family: "Roboto Slab";
 
   .project-video {
     width: 100%;
     height: 100%;
     display: block;
-    padding: 3rem 0 0;
+    padding: 1.5rem 0 0;
     background: #0d0c46;
   }
 
@@ -106,7 +106,7 @@ useHead({
     padding: 1.75rem 1.5rem;
 
     @include md {
-      padding: 1.75rem 10vw;
+      padding: 3.25rem 10vw 3.5rem;
     }
 
     .project-subtitle {
@@ -167,15 +167,11 @@ useHead({
 
     .project-actions {
       gap: 1rem;
-      margin: 2rem 0;
+      margin: 2rem 0 0;
     }
 
     .project-categories {
-      margin-top: 0px;
-
-      @include md {
-        margin-top: 1rem;
-      }
+      margin: 0 0 1.5rem;
     }
   }
 }
