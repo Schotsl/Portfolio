@@ -5,16 +5,15 @@ const props = defineProps<{
   project: Project;
 }>();
 
+const source = ref(props.project.cover.replace("/public", ""));
 const image = computed(() => {
   return {
     width: 500,
     height: 266,
     alt: "Image description",
-    src: props.project.cover.replace("/public", ""),
+    src: source.value,
   };
 });
-
-const source = ref(props.project.cover.replace("/public", ""));
 
 const onHover = () => {
   source.value = props.project.gif.replace("/public", "");
