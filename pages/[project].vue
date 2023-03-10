@@ -38,14 +38,7 @@ useHead({
 
 <template>
   <section class="project-section">
-    <video
-      ref="videoElement"
-      class="project-video"
-      loop
-      muted
-      controls
-      autoplay
-    >
+    <video ref="videoElement" class="project-video" loop muted autoplay>
       <source :src="videoSource" type="video/mp4" />
     </video>
 

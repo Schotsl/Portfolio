@@ -40,6 +40,10 @@ useHead({
       rel: "manifest",
       href: "/icon/site.webmanifest",
     },
+    {
+      rel: "stylesheet",
+      href: "https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab:wght@600;700&display=swap",
+    },
   ],
   htmlAttrs: {
     lang: "nl",
