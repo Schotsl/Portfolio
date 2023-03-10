@@ -1,12 +1,13 @@
 {
-  "title": "Plausible",
-  "cover": "/public/images/projects/plausible.jpg",
+  "demo": "https://deno.land/x/plausible@v2.0.2",
+  "github": "https://github.com/Schotsl/Plausible",
   "gif": "/public/images/projects/plausible.gif",
+  "cover": "/public/images/projects/plausible.jpg",
+  "title": "Plausible",
   "video": "/public/videos/projects/plausible.mp4",
+  "short": "I wrote a Deno package for Plausible, a website analytics service that respects user privacy. With help from David Brands, I strictly and fully typed the project!",
   "categories": [
     "Development"
   ],
-  "description": "I am a big fan of [Plausible](https://plausible.io/), a website analytics service that respects user privacy, and I use it on all of my websites. The best part is that it's free when self-hosted, which in my case means asking [Wouter de Bruijn](http://wouterdebruijn.nl/) to host it for me. Last year, Plausible released a [beta API](https://plausible.io/docs/stats-api), which got me excited about integrating it into my Discord bot and live stat counter for the [Uwuifier](https://sjorsvanholst/uwuifier) website.\n\nAs a Deno enthusiast, I encountered a problem that I encounter all too often: no Plausible package for Deno existed. So, I wrote one myself. The Plausible API is simple, so I was able to cover it completely. With [David Brands](http://dbrands.dev)' assistance, I strictly and fully typed the project.\n\nIronically, I never got around to using the package myself. Nonetheless, I enjoyed working on it, creating the logo, publishing the package, and considering it \"done.\" I would also like to give a shoutout to [NPM](https://www.npmjs.com/) for releasing the Plausible package name to me, as the previous owner had reserved it nine years prior and had not used it since then.",
-  "github": "https://github.com/Schotsl/Plausible",
-  "demo": "https://deno.land/x/plausible@v2.0.2"
+  "description": "I am a big fan of [Plausible](https://plausible.io/), a website analytics service that respects user privacy, and I use it on all of my websites. The best part is that it's free when self-hosted, which in my case means asking [Wouter de Bruijn](http://wouterdebruijn.nl/) to host it for me. Last year, Plausible released a [beta API](https://plausible.io/docs/stats-api), which got me excited about integrating it into my Discord bot and live stat counter for the [Uwuifier](https://sjorsvanholst/uwuifier) website.\n\nAs a Deno enthusiast, I encountered a problem that I encounter all too often: no Plausible package for Deno existed. So, I wrote one myself. The Plausible API is simple, so I was able to cover it completely. With [David Brands](http://dbrands.dev)' assistance, I strictly and fully typed the project.\n\nIronically, I never got around to using the package myself. Nonetheless, I enjoyed working on it, creating the logo, publishing the package, and considering it \"done.\" I would also like to give a shoutout to [NPM](https://www.npmjs.com/) for releasing the Plausible package name to me, as the previous owner had reserved it nine years prior and had not used it since then."
 }
