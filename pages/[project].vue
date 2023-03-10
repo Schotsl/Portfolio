@@ -70,11 +70,13 @@ useHead({
 
       <ul class="project-actions">
         <li class="project-action">
-          <a class="project-hyperlink" :href="projectResult.demo">View Demo</a>
+          <a class="project-hyperlink" :href="projectResult.demo"
+            ><i class="fa-solid fa-link"></i> View Demo</a
+          >
         </li>
         <li class="project-action">
           <a class="project-hyperlink" :href="projectResult.github"
-            >View on GitHub</a
+            ><i class="fa-brands fa-github"></i> View on GitHub</a
           >
         </li>
       </ul>
