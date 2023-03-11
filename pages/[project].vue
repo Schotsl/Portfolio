@@ -18,6 +18,10 @@ const videoSource = computed(() => {
   return projectResult.video.replace("/public", "");
 });
 
+const videoPoster = computed(() => {
+  return projectResult.thumbnail_cover.replace("/public", "");
+});
+
 const deliverableSource = computed(() => {
   return projectResult.deliverable.replace("/public", "");
 });
@@ -113,6 +117,7 @@ useHead({
       muted
       autoplay
       controls
+      :poster="videoPoster"
     >
       <source :src="videoSource" type="video/mp4" />
     </video>
