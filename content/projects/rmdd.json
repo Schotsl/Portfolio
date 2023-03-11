@@ -1,12 +1,13 @@
 {
-  "demo": "/downloads/rmdd.pdf",
+  "demo": "",
+  "thumbnail_cover": "/public/images/projects/rmdd-thumbnail.webp",
+  "thumbnail_video": "/public/images/projects/rmdd-thumbnail.mp4",
   "title": "RMDD",
   "video": "/public/videos/projects/rmdd.mp4",
-  "thumbnail_video": "/public/images/projects/rmdd-thumbnail.mp4",
-  "thumbnail_cover": "/public/images/projects/rmdd-thumbnail.webp",
+  "short": "RMDD is a school project I completed that combines my academic work and personal project. I used IBM's Carbon Design system to create a mobile and desktop interface for Presently, customising elements like side navigation bar. Excited to see the design in practice using Nuxt 3 & Expo.",
   "categories": [
     "Design"
   ],
   "description": "RMDD, which stands for Response Multi Device Design, was a school project that I completed during my second year of studies. Our assignment was to create a website or service that would work seamlessly across different devices. At the time, I had already developed the backend for [Presently](https://sjorsvanholst/presently), a service that enables users to manage presentations on multiple screens within a building.\n\nWith the RMDD project, I saw the opportunity to combine my academic work and personal project, killing two birds with one stone. I decided to design a mobile and desktop interface for Presently. To achieve this, I utilised [IBM's Carbon Design system](https://carbondesignsystem.com/) as a starting point. However, I had to customise a lot of elements to ensure they fit my project's requirements. This included adding elements like a side navigation bar, which was not present in Carbon Design.\n\nUsing Carbon Design as a foundation, I created a design that incorporated all of the backend features that Presently currently supports. I'm very proud of the final design, and I plan on implementing it in [Nuxt 3](https://nuxt.com/) and [Expo](https://expo.io/). I'm excited to see how the design will work in practice and look forward to its implementation.",
-  "short": "RMDD is a school project I completed that combines my academic work and personal project. I used IBM's Carbon Design system to create a mobile and desktop interface for Presently, customising elements like side navigation bar. Excited to see the design in practice using Nuxt 3 & Expo."
+  "deliverable": "/public/downloads/rmdd.pdf"
 }
