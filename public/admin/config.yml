@@ -36,20 +36,19 @@ collections:
           label: "Category"
           widget: "select"
           options:
-            - { label: "Both", value: "both" }
-            - { label: "Design", value: "design" }
-            - { label: "Development", value: "development" }
+            - { label: "Design", value: "Design" }
+            - { label: "Development", value: "Development" }
 
-      - name: "cover"
-        label: "Cover"
+      - name: "Thumbnail afbeelding"
+        label: "thumbnail_cover"
         widget: "image"
         choose_url: false
         media_folder: "/public/images/projects"
         allow_multiple: false
 
-      - name: "gif"
-        label: "gif"
-        widget: "image"
+      - name: "Thumbnail video"
+        label: "thumbnail_video"
+        widget: "file"
         choose_url: false
         media_folder: "/public/images/projects"
         allow_multiple: false
@@ -68,6 +67,11 @@ collections:
 
       - name: "github"
         label: "Github"
+        widget: "string"
+        required: false
+
+      - name: "deliverable"
+        label: "Deliverable"
         widget: "string"
         required: false
 
