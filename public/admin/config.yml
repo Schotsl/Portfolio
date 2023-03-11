@@ -39,15 +39,15 @@ collections:
             - { label: "Design", value: "Design" }
             - { label: "Development", value: "Development" }
 
-      - name: "Thumbnail afbeelding"
-        label: "thumbnail_cover"
+      - name: "thumbnail_cover"
+        label: "Thumbnail afbeelding"
         widget: "image"
         choose_url: false
         media_folder: "/public/images/projects"
         allow_multiple: false
 
-      - name: "Thumbnail video"
-        label: "thumbnail_video"
+      - name: "thumbnail_video"
+        label: "Thumbnail video"
         widget: "file"
         choose_url: false
         media_folder: "/public/images/projects"
@@ -72,8 +72,10 @@ collections:
 
       - name: "deliverable"
         label: "Deliverable"
-        widget: "string"
-        required: false
+        widget: "file"
+        choose_url: false
+        media_folder: "/public/downloads"
+        allow_multiple: false
 
       - name: "short"
         label: "Short"
