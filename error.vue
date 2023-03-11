@@ -14,9 +14,9 @@ if (process.client && window.netlifyIdentity) {
   });
 }
 
-const props = defineProps({ error: Object });
+const props = defineProps({ error });
 const content = computed(() => {
-  return props.error!.statusCode === "404" ? content404 : content500;
+  return props.error.statusCode === "404" ? content404 : content500;
 });
 
 useHead({

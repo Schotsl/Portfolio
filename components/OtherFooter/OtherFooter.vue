@@ -4,7 +4,8 @@
 
 <style lang="scss" scoped>
 .other-footer {
-  height: 3em;
+  position: relative;
+  min-height: 3em;
   background: #0d0c46;
 }
 </style>
