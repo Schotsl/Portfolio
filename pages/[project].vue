@@ -13,8 +13,13 @@ const projectResult = await projectQuery
   .findOne();
 
 const videoElement = ref();
+
 const videoSource = computed(() => {
   return projectResult.video.replace("/public", "");
+});
+
+const deliverableSource = computed(() => {
+  return projectResult.deliverable.replace("/public", "");
 });
 
 const clickedDemo = () => {
@@ -23,6 +28,12 @@ const clickedDemo = () => {
 
 const clickedGithub = () => {
   context.$plausible.trackEvent(`Clicked GitHub for ${projectResult.title}`);
+};
+
+const clickedDeliverable = () => {
+  context.$plausible.trackEvent(
+    `Clicked deliverable for ${projectResult.title}`
+  );
 };
 
 useHead({
@@ -50,7 +61,13 @@ useHead({
       ></div>
       <!-- eslint-enable vue/no-v-html -->
 
-      <template v-if="projectResult.demo || projectResult.github">
+      <template
+        v-if="
+          projectResult.demo ||
+          projectResult.github ||
+          projectResult.deliverable
+        "
+      >
         <ul class="project-actions">
           <template v-if="projectResult.demo">
             <li class="project-action">
@@ -71,6 +88,17 @@ useHead({
                 target="_blank"
                 @click="clickedGithub"
                 ><i class="fa-brands fa-github"></i> View on GitHub</a
+              >
+            </li>
+          </template>
+          <template v-if="projectResult.deliverable">
+            <li class="project-action">
+              <a
+                class="project-hyperlink"
+                :href="deliverableSource"
+                target="_blank"
+                @click="clickedDeliverable"
+                ><i class="fa-solid fa-file"></i> View deliverable</a
               >
             </li>
           </template>

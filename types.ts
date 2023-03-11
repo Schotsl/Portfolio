@@ -1,6 +1,7 @@
 export interface Project {
   thumbnail_video: string;
   thumbnail_cover: string;
+  deliverable: string;
   categories: string[];
   title: string;
   video: string;
