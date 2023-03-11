@@ -31,7 +31,7 @@ const hoverSource = computed(() =>
       <div
         class="project-item-container"
         role="button"
-        aria-label="Play gif"
+        aria-label="Play video preview"
         @mouseover="onHover"
         @mouseleave="onLeave"
       >

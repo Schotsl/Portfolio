@@ -69,14 +69,21 @@ useHead({
 <style lang="scss">
 body,
 html,
-#__nuxt {
+#__nuxt,
+#__nuxt > div {
   width: 100%;
   height: 100%;
   margin: 0;
+  display: flex;
 
   position: relative;
   text-align: left;
   font-family: "Roboto", Helvetica, Arial, Lucida, sans-serif;
+  flex-direction: column;
+}
+
+#__nuxt > div > main {
+  flex: 1;
 }
 
 body {
@@ -98,10 +105,5 @@ body {
     background-image: url("/images/pattern.jpg");
     background-position: center;
   }
-}
-
-footer {
-  height: 3rem;
-  background: #0d0c46;
 }
 </style>

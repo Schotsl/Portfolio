@@ -14,3 +14,17 @@ export interface Image {
   width?: number;
   height?: number;
 }
+
+export interface Action {
+  link: string;
+  label: string;
+
+  hash?: string;
+  icon?: string;
+  image?: Image;
+  target?: string;
+  button?: boolean;
+
+  hover?: Palet;
+  normal?: Palet;
+}
