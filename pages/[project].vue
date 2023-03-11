@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { marked } from "marked";
 
+const context = useNuxtApp();
+
 const projectRoute = useRoute();
 const projectSlug = projectRoute.params.project;
 const projectFile = `projects/${projectSlug}.json`;
@@ -14,6 +16,14 @@ const videoElement = ref();
 const videoSource = computed(() => {
   return projectResult.video.replace("/public", "");
 });
+
+const clickedDemo = () => {
+  context.$plausible.trackEvent(`Clicked demo for ${projectResult.title}`);
+};
+
+const clickedGithub = () => {
+  context.$plausible.trackEvent(`Clicked GitHub for ${projectResult.title}`);
+};
 
 useHead({
   title: projectResult.title,
@@ -44,14 +54,20 @@ useHead({
         <ul class="project-actions">
           <template v-if="projectResult.demo">
             <li class="project-action">
-              <a class="project-hyperlink" :href="projectResult.demo"
+              <a
+                class="project-hyperlink"
+                :href="projectResult.demo"
+                @click="clickedDemo"
                 ><i class="fa-solid fa-link"></i> View Demo</a
               >
             </li>
           </template>
           <template v-if="projectResult.github">
             <li class="project-action">
-              <a class="project-hyperlink" :href="projectResult.github"
+              <a
+                class="project-hyperlink"
+                :href="projectResult.github"
+                @click="clickedGithub"
                 ><i class="fa-brands fa-github"></i> View on GitHub</a
               >
             </li>
