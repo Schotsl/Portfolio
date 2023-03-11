@@ -10,6 +10,10 @@ const projectResult = await projectQuery
   .where({ _file: projectFile })
   .findOne({});
 
+if (!projectResult) {
+  throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
+}
+
 const videoElement = ref();
 const videoSource = computed(() => {
   return projectResult.video.replace("/public", "");
