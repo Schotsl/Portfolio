@@ -1,30 +1,4 @@
-<script lang="ts" setup>
-import { marked } from "marked";
-
-const projectRoute = useRoute();
-const projectSlug = projectRoute.params.project;
-const projectFile = `projects/${projectSlug}.json`;
-
-const projectQuery = queryContent("projects");
-const projectResult = await projectQuery
-  .where({ _file: projectFile })
-  .findOne({});
-
-const videoElement = ref();
-const videoSource = computed(() => {
-  return projectResult.video.replace("/public", "");
-});
-
-useHead({
-  title: projectResult.title,
-  meta: [
-    {
-      name: "description",
-      content: projectResult.description,
-    },
-  ],
-});
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <h1>asdfasdfs</h1>
