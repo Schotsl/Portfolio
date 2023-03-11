@@ -8,11 +8,7 @@ const projectFile = `projects/${projectSlug}.json`;
 const projectQuery = queryContent("projects");
 const projectResult = await projectQuery
   .where({ _file: projectFile })
-  .findOne({});
-
-if (!projectResult) {
-  throw createError({ statusCode: 404, statusMessage: "Page Not Found" });
-}
+  .findOne();
 
 const videoElement = ref();
 const videoSource = computed(() => {
