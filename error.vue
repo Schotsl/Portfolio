@@ -4,17 +4,7 @@ import { marked } from "marked";
 import content404 from "~/content/404.json";
 import content500 from "~/content/500.json";
 
-if (process.client && window.netlifyIdentity) {
-  window.netlifyIdentity.on("init", (user) => {
-    if (!user) {
-      window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-      });
-    }
-  });
-}
-
-const props = defineProps({ error });
+const props = defineProps({ error: Object });
 const content = computed(() => {
   return props.error.statusCode === "404" ? content404 : content500;
 });
@@ -56,7 +46,7 @@ useHead({
     },
   ],
   htmlAttrs: {
-    lang: "nl",
+    lang: "en",
   },
 });
 </script>
