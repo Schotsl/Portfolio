@@ -5,8 +5,8 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
-        "/404.html",
-        "/500.html",
+        "/404",
+        "/500",
         "/kruidenpower",
         "/mailgun",
         "/moderately-interesting",
