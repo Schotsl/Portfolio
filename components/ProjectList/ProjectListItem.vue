@@ -7,7 +7,12 @@ const props = defineProps<{
 }>();
 
 const onHover = () => {
+  video.value.play();
+};
+
+const onLeave = () => {
   video.value.currentTime = 0;
+  video.value.pause();
 };
 
 const coverAlt = computed(() => `A preview of ${props.project.title}`);
@@ -28,19 +33,14 @@ const hoverSource = computed(() =>
         role="button"
         aria-label="Play gif"
         @mouseover="onHover"
+        @mouseleave="onLeave"
       >
         <img
           :src="coverSource"
           :alt="coverAlt"
           class="project-item-container-cover"
         />
-        <video
-          ref="video"
-          class="project-item-container-hover"
-          loop
-          muted
-          autoplay
-        >
+        <video ref="video" class="project-item-container-hover" loop muted>
           <source :src="hoverSource" type="video/mp4" />
         </video>
       </div>
