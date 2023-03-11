@@ -40,7 +40,13 @@ const hoverSource = computed(() =>
           :alt="coverAlt"
           class="project-item-container-cover"
         />
-        <video ref="video" class="project-item-container-hover" loop muted>
+        <video
+          ref="video"
+          :poster="coverSource"
+          class="project-item-container-hover"
+          loop
+          muted
+        >
           <source :src="hoverSource" type="video/mp4" />
         </video>
       </div>
