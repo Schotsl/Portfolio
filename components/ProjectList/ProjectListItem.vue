@@ -1,33 +1,48 @@
 <script lang="ts" setup>
 import { Project } from "../types.ts";
 
+const video = ref();
 const props = defineProps<{
   project: Project;
 }>();
 
-const hoverSource = computed(() => props.project.gif.replace("/public", ""));
-const hoverAlt = computed(() => `A live preview of ${props.project.title}`);
+const onHover = () => {
+  video.value.currentTime = 0;
+};
 
-const image = computed(() => {
-  return {
-    alt: `A preview of ${props.project.title}`,
-    src: props.project.cover.replace("/public", ""),
-    width: 500,
-    height: 266,
-  };
-});
+const coverAlt = computed(() => `A preview of ${props.project.title}`);
+const coverSource = computed(() =>
+  props.project.thumbnail_cover.replace("/public", "")
+);
+
+const hoverSource = computed(() =>
+  props.project.thumbnail_video.replace("/public", "")
+);
 </script>
 
 <template>
-  <li class="project-item" @mouseover="onHover" @mouseleave="onLeave">
+  <li class="project-item">
     <a :href="`/${props.project.slug}`">
-      <div class="project-item-container" role="button" aria-label="Play gif">
-        <atom-image :image="image" class="project-item-container-cover" />
+      <div
+        class="project-item-container"
+        role="button"
+        aria-label="Play gif"
+        @mouseover="onHover"
+      >
         <img
-          :alt="hoverAlt"
-          :src="hoverSource"
-          class="project-item-container-hover"
+          :src="coverSource"
+          :alt="coverAlt"
+          class="project-item-container-cover"
         />
+        <video
+          ref="video"
+          class="project-item-container-hover"
+          loop
+          muted
+          autoplay
+        >
+          <source :src="hoverSource" type="video/mp4" />
+        </video>
       </div>
 
       <div class="project-item-title">

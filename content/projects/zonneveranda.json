@@ -1,8 +1,8 @@
 {
   "title": "ZonneVeranda",
-  "cover": "/public/images/projects/zonneveranda.jpg",
-  "gif": "/public/images/projects/zonneveranda.gif",
   "video": "/public/videos/projects/zonneveranda.mp4",
+  "thumbnail_video": "/public/images/projects/zonneveranda-thumbnail.mp4",
+  "thumbnail_cover": "/public/images/projects/zonneveranda-thumbnail.webp",
   "categories": [
     "Design",
     "Development"

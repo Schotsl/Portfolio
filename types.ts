@@ -1,7 +1,8 @@
 export interface Project {
+  thumbnail_video: string;
+  thumbnail_cover: string;
   categories: string[];
   title: string;
-  cover: string;
   video: string;
   slug: string;
   gif: string;

@@ -1,10 +1,10 @@
 {
   "demo": "https://deno.land/x/mailgun@v1.1.1",
   "github": "https://github.com/Schotsl/Mailgun",
-  "gif": "/public/images/projects/mailgun.gif",
-  "cover": "/public/images/projects/mailgun.jpg",
-  "title": "Mailgun",
   "video": "/public/videos/projects/mailgun.mp4",
+  "thumbnail_video": "/public/images/projects/mailgun-thumbnail.mp4",
+  "thumbnail_cover": "/public/images/projects/mailgun-thumbnail.webp",
+  "title": "Mailgun",
   "short": "Mailgun API wrapper for Deno: Developed to send emails from deploy instances and bypass SMTP port blocking. Fully typed, straightforward test script. 4 stars on GitHub. Helping others with my code is fulfilling!",
   "categories": [
     "Development"

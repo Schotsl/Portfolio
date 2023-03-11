@@ -1,10 +1,10 @@
 {
   "demo": "https://deno.land/x/plausible@v2.0.2",
   "github": "https://github.com/Schotsl/Plausible",
-  "gif": "/public/images/projects/plausible.gif",
-  "cover": "/public/images/projects/plausible.jpg",
-  "title": "Plausible",
   "video": "/public/videos/projects/plausible.mp4",
+  "thumbnail_video": "/public/images/projects/plausible-thumbnail.mp4",
+  "thumbnail_cover": "/public/images/projects/plausible-thumbnail.webp",
+  "title": "Plausible",
   "short": "I wrote a Deno package for Plausible, a website analytics service that respects user privacy. With help from David Brands, I strictly and fully typed the project!",
   "categories": [
     "Development"

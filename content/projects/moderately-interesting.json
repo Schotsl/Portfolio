@@ -1,8 +1,8 @@
 {
   "title": "Moderately Interesting",
-  "cover": "/public/images/projects/moderately-interesting.jpg",
-  "gif": "/public/images/projects/moderately-interesting.gif",
   "video": "/public/videos/projects/moderately-interesting.mp4",
+  "thumbnail_video": "/public/images/projects/moderately-interesting-thumbnail.mp4",
+  "thumbnail_cover": "/public/images/projects/moderately-interesting-thumbnail.webp",
   "categories": [
     "Design",
     "Development"

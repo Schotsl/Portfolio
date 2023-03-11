@@ -1,8 +1,8 @@
 {
   "title": "RMDD",
-  "cover": "/public/images/projects/rmdd.jpg",
-  "gif": "/public/images/projects/rmdd.gif",
   "video": "/public/videos/projects/rmdd.mp4",
+  "thumbnail_video": "/public/images/projects/rmdd-thumbnail.mp4",
+  "thumbnail_cover": "/public/images/projects/rmdd-thumbnail.webp",
   "categories": [
     "Design"
   ],

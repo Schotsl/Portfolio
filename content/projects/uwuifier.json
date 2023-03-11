@@ -1,10 +1,10 @@
 {
   "demo": "https://uwuifier.com/",
   "github": "https://github.com/Schotsl/Uwuifier",
-  "gif": "/public/images/projects/uwuifier.gif",
-  "cover": "/public/images/projects/uwuifier.jpg",
-  "title": "Uwuifier",
   "video": "/public/videos/projects/uwuifier.mp4",
+  "thumbnail_video": "/public/images/projects/uwuifier-thumbnail.mp4",
+  "thumbnail_cover": "/public/images/projects/uwuifier-thumbnail.webp",
+  "title": "Uwuifier",
   "short": "Uwuifier is a project I created in high school, with help from friends, to create an NPM and Deno package and an Android app that turns sentences into \"cuter\" or more anime-like versions. It has 5K+ downloads and 100K+ views! Written in Expo, Deno, and Vue 3.",
   "categories": [
     "Design",

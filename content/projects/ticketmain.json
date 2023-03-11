@@ -1,8 +1,8 @@
 {
   "title": "Ticketmain",
-  "cover": "/public/images/projects/ticketmain.jpg",
-  "gif": "/public/images/projects/ticketmain.gif",
   "video": "/public/videos/projects/ticketmain.mp4",
+  "thumbnail_video": "/public/images/projects/ticketmain-thumbnail.mp4",
+  "thumbnail_cover": "/public/images/projects/ticketmain-thumbnail.webp",
   "categories": [
     "Development"
   ],

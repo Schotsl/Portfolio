@@ -1,8 +1,8 @@
 {
   "title": "Uberdeno",
-  "cover": "/public/images/projects/uberdeno.jpg",
-  "gif": "/public/images/projects/uberdeno.gif",
   "video": "/public/videos/projects/uberdeno.mp4",
+  "thumbnail_video": "/public/images/projects/uberdeno-thumbnail.mp4",
+  "thumbnail_cover": "/public/images/projects/uberdeno-thumbnail.webp",
   "categories": [
     "Development"
   ],
