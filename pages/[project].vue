@@ -57,6 +57,7 @@ useHead({
               <a
                 class="project-hyperlink"
                 :href="projectResult.demo"
+                target="_blank"
                 @click="clickedDemo"
                 ><i class="fa-solid fa-link"></i> View Demo</a
               >
@@ -67,6 +68,7 @@ useHead({
               <a
                 class="project-hyperlink"
                 :href="projectResult.github"
+                target="_blank"
                 @click="clickedGithub"
                 ><i class="fa-brands fa-github"></i> View on GitHub</a
               >
