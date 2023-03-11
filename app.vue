@@ -95,7 +95,7 @@ body {
     opacity: 0.1;
     position: fixed;
 
-    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/001/255/498/small/retro-memphis-shapes-seamless-pattern-free-vector.jpg");
+    background-image: url("/images/pattern.jpg");
     background-position: center;
   }
 }
