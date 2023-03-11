@@ -30,7 +30,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content: projectResult.description,
+      content: projectResult.short,
     },
   ],
 });
