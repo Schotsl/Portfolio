@@ -1,13 +1,13 @@
 {
   "demo": "https://deno.land/x/mailgun@v1.1.1",
   "github": "https://github.com/Schotsl/Mailgun",
-  "video": "/public/videos/projects/mailgun.mp4",
-  "thumbnail_video": "/public/images/projects/mailgun-thumbnail.mp4",
   "thumbnail_cover": "/public/images/projects/mailgun-thumbnail.webp",
+  "thumbnail_video": "/public/images/projects/mailgun-thumbnail.mp4",
   "title": "Mailgun",
-  "short": "Mailgun API wrapper for Deno: Developed to send emails from deploy instances and bypass SMTP port blocking. Fully typed, straightforward test script. 4 stars on GitHub. Helping others with my code is fulfilling!",
+  "video": "/public/videos/projects/mailgun.mp4",
+  "short": "Mailgun API wrapper for Deno. Developed to send emails from Deno deploy instances and bypass SMTP port blocking. Fully typed, straightforward test script. 4 stars on GitHub. Helping others with my code is fulfilling!",
   "categories": [
     "Development"
   ],
-  "description": "As a passionate user of [Deno](https://deno.land/) and [Deno Deploy](https://deno.com/deploy), I faced a challenge when attempting to send emails from my deploy instances due to the platform blocking commonly used SMTP ports. After exploring options, I turned to [Mailgun's REST API](https://documentation.mailgun.com/en/latest/api_reference.html) which enabled me to bypass this issue. However, I couldn't find an existing Mailgun package for Deno, and NPM support in Deno was limited at the time.\n\nTo overcome this obstacle, I developed my own Mailgun API wrapper. While this package only covers the mail sending aspect of Mailgun's extensive API, it is fully typed and features a straightforward test script. I take pride in the fact that this project is considered \"done,\" which is a rare achievement for personal projects. The GitHub repository has received four stars, although this isn’t a lot. It's fulfilling to know that my code is helping others."
+  "description": "As a passionate user of [Deno](https://deno.land/) and [Deno Deploy](https://deno.com/deploy) I faced a challenge when attempting to send emails from my deploy instances due to the platform blocking of commonly used SMTP ports. After exploring options, I turned to [Mailgun's REST API](https://documentation.mailgun.com/en/latest/api_reference.html) which enabled me to bypass this issue. However, I couldn't find an existing Mailgun package for Deno, and NPM support in Deno was limited at the time.\n\nTo overcome this obstacle, I developed my own Mailgun API wrapper. While this package only covers the mail sending aspect of Mailgun's extensive API, it is fully typed and features a straightforward test script. I take pride in the fact that this project is considered \"done,\" which is a rare achievement for personal projects. The GitHub repository has received four stars. It's fulfilling to know that my code is helping others."
 }
