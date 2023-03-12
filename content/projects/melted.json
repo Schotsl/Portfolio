@@ -3,8 +3,8 @@
   "categories": [
     "Development"
   ],
-  "thumbnail_cover": "/public/images/projects/melted_thumbnail.webp",
-  "thumbnail_video": "/public/images/projects/melted_thumbnail.mp4",
+  "thumbnail_cover": "/public/images/projects/melted-thumbnail.webp",
+  "thumbnail_video": "/public/images/projects/melted-thumbnail.mp4",
   "video": "/public/videos/projects/melted.mp4",
   "demo": "https://schotsl.github.io/HvG/",
   "short": "A 2D multiplayer puzzle game created by college students join forces with a friend to solve the mystery of melted ice cream and find a missing kid in Melted. Discover the excitement and joy of creating a passion project with friends.",

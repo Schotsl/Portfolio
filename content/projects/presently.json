@@ -1,7 +1,7 @@
 {
   "github": "https://github.com/Schotsl/Presently-deploy",
-  "thumbnail_cover": "/public/images/projects/presently_thumbnail.webp",
-  "thumbnail_video": "/public/images/projects/kruidenpower_thumbnail.mp4",
+  "thumbnail_cover": "/public/images/projects/presently-thumbnail.webp",
+  "thumbnail_video": "/public/images/projects/presently-thumbnail.mp4",
   "title": "Presently",
   "video": "/public/videos/projects/presently.mp4",
   "short": "Discover how I developed Presently, a cost-effective solution for displaying PowerPoints on TV screens. Collaborating with Wouter de Bruijn. Explore Presently's features and potential uses for small businesses.",
