@@ -64,6 +64,7 @@ const hoverSource = computed(() =>
 .project-item {
   margin: 0px;
   position: relative;
+  aspect-ratio: 960/510;
 
   .project-item-title {
     left: 1.5rem;
