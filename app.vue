@@ -22,8 +22,8 @@ const title = ref("Sjors van Holst");
 const route = useRoute();
 const runtime = useRuntimeConfig();
 
-const pathURL = `${runtime.method}://${runtime.domain}`;
-const fullURL = `${pathURL}/${route.path}`;
+const pathURL = `${runtime.public.method}://${runtime.public.domain}`;
+const fullURL = route.path === "/" ? pathURL : `${pathURL}${route.path}`;
 
 useHead({
   titleTemplate: (chunk) => {

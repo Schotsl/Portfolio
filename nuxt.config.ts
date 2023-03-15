@@ -22,8 +22,10 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
-    domain: "sjorsvanholst.nl",
-    method: "https",
+    public: {
+      domain: "sjorsvanholst.nl",
+      method: "https",
+    },
   },
   image: {
     provider: "netlify",
