@@ -126,6 +126,7 @@ body {
     opacity: 0.1;
     position: fixed;
 
+    background-image: url("/images/pattern.jpg");
     background-position: center;
   }
 }
