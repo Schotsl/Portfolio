@@ -19,6 +19,12 @@ const title = ref("Sjors van Holst");
 // <meta name="msapplication-TileColor" content="#ffc40d">
 // <meta name="theme-color" content="#ffffff">
 
+const route = useRoute();
+const runtime = useRuntimeConfig();
+
+const pathURL = `${runtime.method}://${runtime.domain}`;
+const fullURL = `${pathURL}/${route.path}`;
+
 useHead({
   titleTemplate: (chunk) => {
     title.value = chunk || title.value;
@@ -40,6 +46,10 @@ useHead({
     },
   ],
   link: [
+    {
+      rel: "canonical",
+      href: fullURL,
+    },
     {
       rel: "apple-touch-icon",
       href: "/icon/apple-touch-icon.png",
@@ -125,7 +135,6 @@ body {
     opacity: 0.1;
     position: fixed;
 
-    background-image: url("/images/pattern.jpg");
     background-position: center;
   }
 }

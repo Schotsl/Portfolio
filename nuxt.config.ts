@@ -22,11 +22,8 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
-    public: {
-      domain: "api.corvusconsultancy.nl",
-      method: "https",
-      version: "v1",
-    },
+    domain: "sjorsvanholst.nl",
+    method: "https",
   },
   image: {
     provider: "netlify",
