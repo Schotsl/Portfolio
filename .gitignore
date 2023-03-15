@@ -1,10 +1,8 @@
+# System files
 .DS_Store
-node_modules
-/dist
 
-# local env files
-.env.local
-.env.*.local
+# Environment files
+.env
 
 # Log files
 npm-debug.log*
@@ -20,3 +18,19 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Cache folders
+.nuxt
+.nitro
+.cache
+.output
+.firebase
+
+# Compiled files
+dist
+
+# Other files
+node_modules
+
+# Local Netlify folder
+.netlify

@@ -1,0 +1,14 @@
+{
+  "demo": "https://uwuifier.com/",
+  "github": "https://github.com/Schotsl/Uwuifier",
+  "thumbnail_cover": "/public/images/projects/uwuifier-thumbnail.webp",
+  "thumbnail_video": "/public/images/projects/uwuifier-thumbnail.mp4",
+  "title": "Uwuifier",
+  "video": "/public/videos/projects/uwuifier.mp4",
+  "short": "Uwuifier is a project I created in high school, with help from friends, to create a NPM and Deno package and an Android app that turns sentences into \"cuter\" or more anime-like versions. It has 5K+ downloads and 100K+ views! Written in Expo, Deno, and Vue 3.",
+  "categories": [
+    "Design",
+    "Development"
+  ],
+  "description": "In high school, I used to see a lot of memes around UwU. It basically changes a sentence to sound “cuter” or more anime-like, so “Hello, how are you today” would become “Hewwo how awe you today?”. For fun, I decided to create an [NPM package](https://www.npmjs.com/package/uwuifier) that would do this automatically, inspired by a Chrome extension created by leafysweetsgarden that no longer exists. Once I got the package up and running, a few friends of mine joined the project, [David Brands](https://davidbrands.dev/), [Wouter de Bruijn](http://wouterdebruijn.nl/), and Kerim Demirci.\n\nOne thing led to another, and before we knew it, we had published a NPM and [Deno package](https://deno.land/x/uwuifier@v4.0.6). I also published a [Uwuifier Android app](https://play.google.com/store/apps/details?id=com.sjorsvanholst.uwuifier) on the Play Store and we had the [Uwuifier website](http://uwuifier.com/) up and running. The Play Store app has over 5K downloads with a rounded average of 5 stars, and the website has more than 100K views!\n\nI find it very funny that my most “successful” project is a translator for a niche community that I’m not even a part of. However, I'm really glad that I took the time to develop this silly idea into an application. The Uwuifier app is written in [Expo](http://expo.io/), the package itself in [Deno](https://deno.land/), and the website in [Vue 3](https://vuejs.org/). I plan on redesigning the website and launching an iOS app to attract more visitors. I’m very grateful to be surrounded by friends with such a passion for programming who are always there to help me out with anything!"
+}

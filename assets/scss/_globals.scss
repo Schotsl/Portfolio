@@ -1,0 +1,76 @@
+html {
+  font-size: calc(15px + 0.390625vw);
+  overflow-x: hidden;
+
+  body {
+    font-size: 1rem;
+    font-weight: 400;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #7c1bf8;
+      margin: 0;
+
+      span {
+        color: #b4aec9;
+      }
+    }
+
+    a {
+      color: #0300b6;
+      margin: 0;
+      display: block;
+      text-decoration: none;
+    
+      &:hover {
+        color: #01005b;
+        text-decoration: underline;
+      }
+    }
+
+    p a {
+      display: inline;
+      text-decoration: underline;
+    }
+
+    .fa-solid,
+    .fa-brands {
+      margin: 0 0.35rem 0 0;
+    }
+
+    ul,
+    ol {
+      margin: 1rem 0 0 1rem;
+      padding: 0;
+      display: flex;
+
+      flex-wrap: wrap;
+      flex-direction: column;
+      
+      list-style-type: circle;
+
+      li {
+        margin: 0 0 0.5rem;
+      }
+    }
+
+    ol {
+      list-style: none;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+
+      span {
+        display: block;
+      }
+    }
+  }
+}

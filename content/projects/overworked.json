@@ -1,0 +1,14 @@
+{
+  "demo": "https://play.google.com/store/apps/details?id=app.overworked.overworked",
+  "github": "https://github.com/Schotsl/Overworked-vue",
+  "thumbnail_cover": "/public/images/projects/overworked-thumbnail.webp",
+  "thumbnail_video": "/public/images/projects/overworked-thumbnail.mp4",
+  "title": "Overworked",
+  "video": "/public/videos/projects/overworked.mp4",
+  "short": "Overworked is a workout app which enables users to create a workout schedule, track the weights they use during workout, and share their progress with friends. Developed with Ionic Vue and Uberdeno, it provides a social element to motivate users. Refactoring with Expo and Supabase is planned.",
+  "categories": [
+    "Design",
+    "Development"
+  ],
+  "description": "My friend [Martin Goes](https://www.linkedin.com/in/martin-goes-623933160) and I used to keep track of the weights we used during our workouts in a spreadsheet, which was quite inconvenient. Determined to find a better solution, I teamed up with [Wouter de Bruijn](https://wouterdebruijn.nl/) during a work vacation on Terschelling to create an app that enables users to create a workout schedule, track the weights they use and share their progress with friends.\n\nThe app's social aspect is its most significant selling point. As someone who previously used Strava and currently uses Apple Activities, I find motivation in the social element of working out. It's motivating to receive recognition from friends for completing a running session, and I enjoy comparing my progress with theirs. This is the vision behind Overworked, which would for example inform users when their friends achieve a personal best or have a workout streak.\n\nWe developed the app using [Ionic Vue](https://ionicframework.com/docs/vue/overview) and my [Uberdeno](https://sjorsvanholst/uberdeno) framework as the backend. However, we soon discovered that Ionic was more challenging than we anticipated. I later learned about [Supabase](http://supabase.com/), which is easier to use than Uberdeno, and we now plan to refactor the app using [Expo](https://expo.dev/) and Supabase.\n\nWorking on the app was an incredibly enjoyable experience, and I continue to use it frequently. I'm grateful to Wouter de Bruijn for collaborating with me on the project, and I'm incredibly proud of what we created in 4 days."
+}

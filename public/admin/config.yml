@@ -1,0 +1,87 @@
+backend:
+  name: git-gateway
+  repo: schotsl/portfolio-nuxt
+  branch: development
+  commit_messages:
+    create: 📝 Created {{collection}} collection
+    update: 📝 Updated {{collection}} collection
+    delete: 🔥 Deleted {{collection}} collection
+    uploadMedia: 🍱 Uploaded “{{path}}”
+    deleteMedia: 🔥 Deleted “{{path}}”
+    openAuthoring: "{{message}}"
+
+media_folder: "public/images" # Media files will be stored in the repo under static/images/uploads
+public_folder: "images" # The src attribute for uploaded media will begin with /images/uploads
+
+site_url: "https://portfolio-xwhvio.netlify.app"
+logo_url: "https://portfolio-xwhvio.netlify.app/icon/favicon.svg"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    create: true
+    editor: { preview: false }
+    folder: "content/projects"
+    extension: "json"
+    fields:
+      - name: "title"
+        label: "Titel"
+        widget: "string"
+
+      - name: "categories"
+        label: "Categories"
+        widget: "list"
+        field:
+          name: "category"
+          label: "Category"
+          widget: "select"
+          options:
+            - { label: "Design", value: "Design" }
+            - { label: "Development", value: "Development" }
+
+      - name: "thumbnail_cover"
+        label: "Thumbnail afbeelding"
+        widget: "image"
+        choose_url: false
+        media_folder: "/public/images/projects"
+        allow_multiple: false
+
+      - name: "thumbnail_video"
+        label: "Thumbnail video"
+        widget: "file"
+        choose_url: false
+        media_folder: "/public/images/projects"
+        allow_multiple: false
+
+      - name: "video"
+        label: "video"
+        widget: "file"
+        choose_url: false
+        media_folder: "/public/videos/projects"
+        allow_multiple: false
+
+      - name: "demo"
+        label: "Demo"
+        widget: "string"
+        required: false
+
+      - name: "github"
+        label: "Github"
+        widget: "string"
+        required: false
+
+      - name: "deliverable"
+        label: "Deliverable"
+        widget: "file"
+        required: false
+        choose_url: false
+        media_folder: "/public/downloads"
+        allow_multiple: false
+
+      - name: "short"
+        label: "Short"
+        widget: "string"
+
+      - name: "description"
+        label: "Description"
+        widget: "markdown"

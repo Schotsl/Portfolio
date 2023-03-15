@@ -1,0 +1,13 @@
+{
+  "demo": "",
+  "thumbnail_cover": "/public/images/projects/vormgeving-2-thumbnail.webp",
+  "thumbnail_video": "/public/images/projects/vormgeving-2-thumbnail.mp4",
+  "title": "Vormgeving 2",
+  "video": "/public/videos/projects/vormgeving-2.mp4",
+  "short": "Design project for the Gemeente Rotterdam about cleaning up the city. Responsive design for desktop & mobile. Gained understanding of responsive design & creating designs within a brand style. Great learning experience!",
+  "categories": [
+    "Design"
+  ],
+  "description": "During my second year of secondary vocational education CMD, I took a class called Vormgeving 2 where we were tasked with designing a website for a campaign about cleaning up the city of Rotterdam. The content was already provided to us in the form of images, quotes, text, and videos, and our job was to create a design around this content in the style of the Gemeente Rotterdam.\n\nAs part of the project, we had to make sure the designs were responsive, meaning they would work well on both desktop and mobile devices. We also included annotations about how the design would scale on different screen sizes. We had a total of two weeks to design the wireframes and website.\n\nLooking back, I do wish I had experimented more with the designs. I feel like they ended up being a bit too plain and could have been more engaging. However, I am still proud of the project and believe it could be used in the real world.\n\nOverall, the project was a great learning experience for me. I gained a better understanding of responsive design and how to create a design that fits within a given brand style. Even though it may not be the most exciting project, I believe it helped me to develop important skills that I can apply in future projects.",
+  "deliverable": "/public/downloads/vormgeving-2.pdf"
+}

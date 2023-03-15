@@ -1,0 +1,12 @@
+{
+  "title": "Uberdeno",
+  "video": "/public/videos/projects/uberdeno.mp4",
+  "thumbnail_video": "/public/images/projects/uberdeno-thumbnail.mp4",
+  "thumbnail_cover": "/public/images/projects/uberdeno-thumbnail.webp",
+  "categories": [
+    "Development"
+  ],
+  "github": "https://github.com/Schotsl/Uberdeno",
+  "description": "I used to consider Uberdeno to be my magnum opus. It’s a [Deno](https://deno.land/) framework that includes many features, such as an ORM, a collection, controller, entity, mapper, repository, and router design. It also includes various services for interacting with [CloudConvert](http://cloudconvert.com/), [Discord](http://discord.com/), [Philips Hue](https://www.philips-hue.com/), [Mailgun](https://www.mailgun.com/), [MySQL](https://www.mysql.com/), and [DigitalOcean Spaces](https://www.digitalocean.com/products/spaces).\n\nI wrote this package in the early days of Deno, when there weren’t many frameworks around. Uberdeno builds MySQL queries automatically and allows you to step in when you want to write something yourself, ensuring a quick response time from the database. It was built from the ground up to run on [Deno Deploy](https://deno.com/deploy).\n\nI'm still very proud of Uberdeno, and it's in use in all of my database-connected projects. The project got me to where I am now and still forms the beating heart of all my projects. Everything still runs with high uptime and fast response time, although the type support can be shaky.\n\nRecently, I've been considering switching most of my projects to [Supabase](http://supabase.com/), which will cut out a lot of functionality from Uberdeno. However, I plan to keep some design patterns such as the controller structures, services and validation. I'm excited to see what Uberdeno will become once I merge it with Supabase.",
+  "short": "Uberdeno is a Deno framework with an ORM, controller, entity, mapper, repository & router design. It also includes services for CloudConvert, Discord, Philips Hue, Mailgun & DigitalOcean Spaces. Built from the ground up to run on Deno Deploy & powering my projects with high uptime & fast response time."
+}
