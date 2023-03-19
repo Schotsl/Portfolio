@@ -1,15 +1,7 @@
 import eslintPlugin from "vite-plugin-eslint";
 
 export default defineNuxtConfig({
-  modules: [
-    "@nuxt/image-edge",
-    "@nuxtjs/plausible",
-    "@nuxt/content",
-    "nuxt-delay-hydration",
-  ],
-  delayHydration: {
-    mode: "manual",
-  },
+  modules: ["@nuxt/image-edge", "@nuxtjs/plausible", "@nuxt/content"],
   nitro: {
     prerender: {
       routes: [
@@ -34,6 +26,9 @@ export default defineNuxtConfig({
       domain: "sjorsvanholst.nl",
       method: "https",
     },
+  },
+  render: {
+    injectScripts: false,
   },
   image: {
     provider: "netlify",
