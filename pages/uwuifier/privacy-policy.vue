@@ -43,16 +43,14 @@ useHead({
 
 <template>
   <div>
-    <other-header :title="'Sjors van Holst'"></other-header>
-
     <main>
       <section class="project-section">
-        <project-categories :categories="['Oops']" />
+        <project-categories :categories="['Uwuifier', 'Privacy policy']" />
 
         <h2 class="project-subtitle">Privacy policy for Uwuifier</h2>
 
         <div class="project-content">
-          Last updated: <strong>Wed 23 Aug 23:33</strong>
+          <p>Last updated: <strong>Wed 23 Aug 23:33</strong></p>
 
           <h2 class="project-subtitle">1. Introduction</h2>
           <p>
