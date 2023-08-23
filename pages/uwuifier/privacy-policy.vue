@@ -1,9 +1,4 @@
 <script setup>
-import { marked } from "marked";
-
-import content404 from "~/content/404.json";
-import content500 from "~/content/500.json";
-
 useHead({
   titleTemplate: () => {
     return "Sjors van Holst";
@@ -52,7 +47,7 @@ useHead({
 
     <main>
       <section class="project-section">
-        <project-categories :categories="[content.title]" />
+        <project-categories :categories="['Oops']" />
 
         <h2 class="project-subtitle">Privacy policy for Uwuifier</h2>
 
