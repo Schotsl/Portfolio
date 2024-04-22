@@ -1,34 +1,33 @@
 {
-  "name": "portfolio-nuxt",
-  "version": "0.0.0",
-  "private": true,
+  "name": "Portfolio",
+  "version": "1.0.0",
+  "private": false,
   "scripts": {
-    "dev": "nuxt dev",
-    "lint": "eslint './**/*' --fix",
-    "check": "eslint './**/*'",
-    "build": "nuxt generate",
-    "start": "nuxt start",
-    "preview": "nuxt preview",
-    "generate": "nuxt generate"
-  },
-  "devDependencies": {
-    "@nuxt/content": "^2.5.2",
-    "@nuxt/image-edge": "1.0.0-27913696.5d122a3",
-    "@nuxtjs/eslint-config-typescript": "^10.0.0",
-    "@nuxtjs/plausible": "^0.2.0",
-    "@types/marked": "^4.0.8",
-    "@typescript-eslint/eslint-plugin": "^5.26.0",
-    "@typescript-eslint/parser": "^5.26.0",
-    "eslint": "^8.16.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^9.0.1",
-    "nuxt": "^3.2.3",
-    "sass": "^1.51.0",
-    "typescript": "^4.7.2",
-    "vite-plugin-eslint": "^1.6.1"
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start",
+    "build": "next build",
+    "format": "prettier --write --ignore-path .gitignore .",
+    "format:check": "prettier --check --ignore-path .gitignore ."
   },
   "dependencies": {
-    "marked": "^4.2.12"
+    "@sentry/nextjs": "^7.105.0",
+    "autoprefixer": "10.4.19",
+    "encoding": "^0.1.13",
+    "next": "14.1.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sass": "^1.74.1",
+    "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.4",
+    "@types/react": "18.2.74",
+    "@types/react-dom": "18.2.24",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.1.4",
+    "eslint-config-prettier": "^9.1.0",
+    "next-plausible": "^3.12.0",
+    "prettier": "^3.2.5"
   }
 }
