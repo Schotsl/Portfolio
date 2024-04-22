@@ -19,7 +19,7 @@ module.exports = withPlausibleProxy()(
       org: "sjors-van-holst-0c97a3b77",
       silent: true,
       release: "1.0.0",
-      project: "toolenburgerplas",
+      project: "portfolio",
     },
     {
       disableLogger: true,
