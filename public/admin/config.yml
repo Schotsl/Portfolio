@@ -10,7 +10,6 @@ backend:
     uploadMedia: 🍱 Uploaded “{{path}}”
     deleteMedia: 🔥 Deleted “{{path}}”
     openAuthoring: "{{message}}"
-  repository_branch: main
 
 media_folder: "public/images"
 public_folder: "images"
