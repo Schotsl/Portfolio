@@ -2,7 +2,7 @@ backend:
   name: github
   repo: schotsl/decap
   branch: main
-  base_url: https://sjorsvanholst.nl
+  base_url: https://sjorsvanholst.nl/
   commit_messages:
     create: 📝 Created {{collection}} collection
     update: 📝 Updated {{collection}} collection
@@ -19,214 +19,15 @@ site_url: "https://zonneveranda.netlify.app"
 logo_url: "https://zonneveranda.netlify.app/icon/favicon.svg"
 
 collections:
-  - name: "pages"
-    label: "Pagina's"
-    editor: { preview: false }
-    files:
-      - name: "home"
-        file: "content/index.json"
-        label: "Home"
-        extension: "json"
-        fields:
-          - name: O3CHzY
-            label: Header
-            widget: object
-            summary: "{{fields.title}} {{fields.subtitle}}"
-            fields:
-              - name: title
-                label: Title
-                widget: string
-              - name: subtitle
-                label: Subtitle
-                widget: string
-                required: false
-              - name: content
-                label: Inhoud
-                widget: markdown
-                required: false
-              - name: image
-                label: Afbeelding
-                widget: image
-                required: false
-                choose_url: false
-                media_folder: "/public/images/index"
-                allow_multiple: false
-              - name: actions
-                label: Call to actions
-                widget: list
-                summary: "{{fields.label}}"
-                fields:
-                  - name: "href"
-                    label: "Link"
-                    widget: "string"
-                  - name: "label"
-                    label: "Label"
-                    widget: "string"
-                  - name: "target"
-                    label: "Target"
-                    widget: "select"
-                    default: "_self"
-                    options:
-                      - { label: "Extern", value: "_blank" }
-                      - { label: "Intern", value: "_self" }
-
-          - name: xE3dqZ
-            label: 1e rij
-            widget: object
-            summary: "{{fields.title}} {{fields.subtitle}}"
-            fields:
-              - name: title
-                label: Title
-                widget: string
-              - name: subtitle
-                label: Subtitle
-                widget: string
-                required: false
-              - name: image
-                label: Afbeelding
-                widget: image
-                choose_url: false
-                media_folder: "/public/images/index"
-                allow_multiple: false
-              - name: content
-                label: Inhoud
-                widget: markdown
-              - name: actions
-                label: Call to actions
-                widget: list
-                summary: "{{fields.label}}"
-                fields:
-                  - name: "href"
-                    label: "Link"
-                    widget: "string"
-                  - name: "label"
-                    label: "Label"
-                    widget: "string"
-                  - name: "target"
-                    label: "Target"
-                    widget: "select"
-                    default: "_self"
-                    options:
-                      - { label: "Extern", value: "_blank" }
-                      - { label: "Intern", value: "_self" }
-
-          - name: QZFs1Q
-            label: 2e rij
-            widget: object
-            summary: "{{fields.title}} {{fields.subtitle}}"
-            fields:
-              - name: title
-                label: Title
-                widget: string
-              - name: subtitle
-                label: Subtitle
-                widget: string
-                required: false
-              - name: image
-                label: Afbeelding
-                widget: image
-                choose_url: false
-                media_folder: "/public/images/index"
-                allow_multiple: false
-              - name: content
-                label: Inhoud
-                widget: markdown
-              - name: actions
-                label: Call to actions
-                widget: list
-                summary: "{{fields.label}}"
-                fields:
-                  - name: "href"
-                    label: "Link"
-                    widget: "string"
-                  - name: "label"
-                    label: "Label"
-                    widget: "string"
-                  - name: "target"
-                    label: "Target"
-                    widget: "select"
-                    default: "_self"
-                    options:
-                      - { label: "Extern", value: "_blank" }
-                      - { label: "Intern", value: "_self" }
-
-          - name: iKXpt9
-            label: 3e rij
-            widget: object
-            summary: "{{fields.title}} {{fields.subtitle}}"
-            fields:
-              - name: title
-                label: Title
-                widget: string
-              - name: subtitle
-                label: Subtitle
-                widget: string
-                required: false
-              - name: image
-                label: Afbeelding
-                widget: image
-                choose_url: false
-                media_folder: "/public/images/index"
-                allow_multiple: false
-              - name: content
-                label: Inhoud
-                widget: markdown
-              - name: actions
-                label: Call to actions
-                widget: list
-                summary: "{{fields.label}}"
-                fields:
-                  - name: "href"
-                    label: "Link"
-                    widget: "string"
-                  - name: "label"
-                    label: "Label"
-                    widget: "string"
-                  - name: "target"
-                    label: "Target"
-                    widget: "select"
-                    default: "_self"
-                    options:
-                      - { label: "Extern", value: "_blank" }
-                      - { label: "Intern", value: "_self" }
-
-          - name: ocnisl
-            label: Contact
-            widget: object
-            summary: "{{fields.title}}"
-            fields:
-              - name: title
-                label: Title
-                widget: string
-              - name: content
-                label: Inhoud
-                widget: markdown
-              - name: phone
-                label: Telefoon
-                widget: string
-              - name: email
-                label: E-mail
-                widget: string
-              - name: address
-                label: Address
-                widget: object
-                fields:
-                  - name: street
-                    label: Straat
-                    widget: string
-                  - name: number
-                    label: Nummer
-                    widget: string
-                  - name: postal
-                    label: Postcode
-                    widget: string
-                  - name: city
-                    label: Stad
-                    widget: string
-              - name: "image"
-                label: "Afbeelding"
-                widget: "image"
-                required: false
-                choose_url: false
-                media_folder: "/public/images/index"
-                allow_multiple: false
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
+      - { label: "Body", name: "body", widget: "markdown" }
