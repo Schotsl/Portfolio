@@ -9,6 +9,10 @@ module.exports = withPlausibleProxy()(
       async rewrites() {
         return [
           {
+            source: "/downloads/:path*",
+            destination: "https://gqdzsrtumnxtfwgryfmj.supabase.co/storage/v1/object/public/:path*",
+          },
+          {
             source: "/:path*",
             destination: "/",
           },
