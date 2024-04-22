@@ -10,7 +10,8 @@ module.exports = withPlausibleProxy()(
         return [
           {
             source: "/downloads/:path*",
-            destination: "https://gqdzsrtumnxtfwgryfmj.supabase.co/storage/v1/object/public/portfolio/:path*",
+            destination:
+              "https://gqdzsrtumnxtfwgryfmj.supabase.co/storage/v1/object/public/portfolio/:path*",
           },
           {
             source: "/:path*",
