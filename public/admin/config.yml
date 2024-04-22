@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: schotsl/decap
+  repo: schotsl/portfolio
   branch: main
-  base_url: https://sjorsvanholst.nl/
+  base_url: https://decap-sjors-van-holst.vercel.app/
   commit_messages:
     create: 📝 Created {{collection}} collection
     update: 📝 Updated {{collection}} collection
