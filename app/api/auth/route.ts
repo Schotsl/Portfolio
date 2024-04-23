@@ -2,7 +2,7 @@ import { randomBytes } from "crypto";
 import { AuthorizationCode } from "simple-oauth2";
 import { NextRequest, NextResponse } from "next/server";
 
-export const oauthConfig = {
+const oauthConfig = {
   client: {
     id: process.env.OAUTH_CLIENT_ID!,
     secret: process.env.OAUTH_CLIENT_SECRET!,
@@ -14,7 +14,7 @@ export const oauthConfig = {
   },
 };
 
-/** An endpoint to start an OAuth2 authentication */
+// I've based this code of but changed it to work with app router https://github.com/digitalinteraction/vercel-netlify-cms-github
 export async function GET(req: NextRequest) {
   const host = req.headers.get("host");
   const code = new AuthorizationCode(oauthConfig);

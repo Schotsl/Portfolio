@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { AuthorizationCode } from "simple-oauth2";
 
-export const oauthConfig = {
+const oauthConfig = {
   client: {
     id: process.env.OAUTH_CLIENT_ID!,
     secret: process.env.OAUTH_CLIENT_SECRET!,
@@ -13,7 +13,7 @@ export const oauthConfig = {
   },
 };
 
-/** An endpoint to finish an OAuth2 authentication */
+// I've based this code of but changed it to work with app router https://github.com/digitalinteraction/vercel-netlify-cms-github
 export async function GET(req: NextRequest) {
   const host = req.headers.get("host");
   const code = req.nextUrl.searchParams.get("code")!;
