@@ -1,0 +1,10 @@
+{
+  "title": "Test",
+  "description": "Test",
+  "image": "https://test.test",
+  "link": "https://test.test",
+  "tags": [
+    "test"
+  ],
+  "order": 0
+}
