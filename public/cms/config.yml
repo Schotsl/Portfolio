@@ -15,4 +15,18 @@ media_folder: "public/images"
 public_folder: "images"
 
 site_url: "https://portfolio-two-mu-45.vercel.app/"
-logo_url: "https://portfolio-two-mu-45.vercel.app/favicon.svg"
+logo_url: "https://portfolio-two-mu-45.vercel.app/favicon-431x431.png"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "public/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Link", name: "link", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Order", name: "order", widget: "number", value: 0 }
