@@ -1,8 +1,8 @@
 backend:
   name: github
   repo: schotsl/portfolio
-  branch: main
-  base_url: https://decap-sjors-van-holst.vercel.app/
+  base_url: https://portfolio-two-mu-45.vercel.app/
+  auth_endpoint: api/auth
   commit_messages:
     create: 📝 Created {{collection}} collection
     update: 📝 Updated {{collection}} collection
@@ -14,19 +14,5 @@ backend:
 media_folder: "public/images"
 public_folder: "images"
 
-site_url: "https://zonneveranda.netlify.app"
-logo_url: "https://zonneveranda.netlify.app/icon/favicon.svg"
-
-collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "_posts/blog"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
-      - { label: "Body", name: "body", widget: "markdown" }
+site_url: "https://portfolio-two-mu-45.vercel.app/"
+logo_url: "https://portfolio-two-mu-45.vercel.app/favicon.svg"
