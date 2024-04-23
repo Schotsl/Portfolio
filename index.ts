@@ -86,22 +86,19 @@ export function auth(req: NextRequest) {
 /** An endpoint to finish an OAuth2 authentication */
 export async function callback(req: NextRequest) {
   const host = req.headers.get("host");
-  const code = req.nextUrl.searchParams.get("code");
+  const code = req.nextUrl.searchParams.get("code")!;
 
-  const authorizationCode = new AuthorizationCode(oauthConfig);
-
-  const accessToken = await authorizationCode.getToken({
+  const authCode = new AuthorizationCode(oauthConfig);
+  const authToken = await authCode.getToken({
     code,
     redirect_uri: `https://${host}/api/callback`,
-  });
+  })!;
 
-  console.debug("callback host=%o", host);
-
-  const { token } = authorizationCode.createToken(accessToken);
+  // const { token } = authCode.createToken(authToken);
 
   new NextResponse(
     renderResponse("success", {
-      token: token.token.access_token,
+      token: authToken.token.access_token,
       provider: "github",
     }),
     {
