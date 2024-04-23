@@ -15,7 +15,6 @@
     "@sentry/nextjs": "^7.105.0",
     "@types/simple-oauth2": "^5.0.7",
     "autoprefixer": "10.4.19",
-    "dedent": "^1.5.3",
     "encoding": "^0.1.13",
     "next": "14.1.4",
     "react": "18.2.0",

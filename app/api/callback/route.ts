@@ -1,5 +1,5 @@
-import { NextRequest, NextResponse } from "next/server";
 import { AuthorizationCode } from "simple-oauth2";
+import { NextRequest, NextResponse } from "next/server";
 
 const oauthConfig = {
   client: {

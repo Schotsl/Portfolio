@@ -22,9 +22,10 @@ logo_url: "https://portfolio-two-mu-45.vercel.app/favicon-431x431.png"
 collections:
   - name: "projects"
     label: "Projects"
-    folder: "public/projects"
     create: true
-    slug: "{{slug}}"
+    editor: { preview: false }
+    folder: "content/projects"
+    extension: "json"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
