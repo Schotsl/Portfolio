@@ -96,7 +96,7 @@ export async function callback(req: NextRequest) {
 
   // const { token } = authCode.createToken(authToken);
 
-  new NextResponse(
+  return new NextResponse(
     renderResponse("success", {
       token: authToken.token.access_token,
       provider: "github",
