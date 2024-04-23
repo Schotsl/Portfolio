@@ -15,6 +15,9 @@ module.exports = withPlausibleProxy()(
           },
         ];
       },
+      experimental: {
+        allowMiddlewareResponseBody: true,
+      },
     },
     {
       org: "sjors-van-holst-0c97a3b77",
