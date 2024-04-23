@@ -30,42 +30,7 @@ export function randomState() {
 
 /** Render a html response with a script to finish a client-side github authentication */
 export function renderResponse(status: "success" | "error", content: any) {
-  return dedent`
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <title>Authorizing ...</title>
-    </head>
-    <body>
-      <p id="message"></p>
-      <script>
-        // Output a message to the user
-        function sendMessage(message) {
-          document.getElementById("message").innerText = message;
-          document.title = message
-        }
-
-        // Handle a window message by sending the auth to the "opener"
-        function receiveMessage(message) {
-          console.debug("receiveMessage", message);
-          window.opener.postMessage(
-            'authorization:github:${status}:${JSON.stringify(content)}',
-            message.origin
-          );
-          window.removeEventListener("message", receiveMessage, false);
-          sendMessage("Authorized, closing ...");
-        }
-
-        sendMessage("Authorizing ...");
-        window.addEventListener("message", receiveMessage, false);
-
-        console.debug("postMessage", "authorizing:github", "*")
-        window.opener.postMessage("authorizing:github", "*");
-      </script>
-    </body>
-  </html>
-  `;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Authorizing...</title></head><body><p id="message"></p><script>function sendMessage(message){document.getElementById("message").innerText=message;document.title=message}function receiveMessage(message){window.opener.postMessage('authorization:github:${status}:${JSON.stringify(content)}',message.origin);window.removeEventListener("message",receiveMessage,false);sendMessage("Authorized, closing...");}sendMessage("Authorizing...");window.addEventListener("message",receiveMessage,false);window.opener.postMessage("authorizing:github","*");</script></body></html>`;
 }
 
 /** An endpoint to start an OAuth2 authentication */
