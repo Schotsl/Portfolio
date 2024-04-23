@@ -13,10 +13,6 @@ module.exports = withPlausibleProxy()(
             destination:
               "https://gqdzsrtumnxtfwgryfmj.supabase.co/storage/v1/object/public/portfolio/:path*",
           },
-          {
-            source: "/:path*",
-            destination: "/",
-          },
         ];
       },
     },
