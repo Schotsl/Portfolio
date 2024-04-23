@@ -1,7 +1,7 @@
 import styles from "./Image.module.scss";
 
 import fs from "fs";
-import sizeOf from "buffer-image-size";
+import sharp from "sharp";
 import NextImage from "next/image";
 
 type ImageProps = {
@@ -11,22 +11,17 @@ type ImageProps = {
   quality?: number;
 };
 
-const toBase64 = (value: string) =>
-  typeof window === "undefined"
-    ? Buffer.from(value).toString("base64")
-    : window.btoa(value);
-
 export default async function Image({ src, alt, sizes, quality = 75 }: ImageProps) {
-  const image = fs.readFileSync(`${process.cwd()}/public/${src}`);
+  const imagePath = `${process.cwd()}/public/${src}`;
+  const imageBuffer = fs.readFileSync(imagePath);
 
-  const { width, height } = sizeOf(image);
+  const imageSharp = sharp(imageBuffer);  
+  const imageResized = await imageSharp.resize(8).toBuffer();
 
-  const imageUrl = `https://portfolio-two-mu-45.vercel.app/_next/image?url=${src}&w=16&q=75`;
-  const imageResponse = await fetch(imageUrl);
+  const { width, height } = await imageSharp.metadata();
 
-  const blurBuffer = await imageResponse.arrayBuffer();
-  const blurBase64 = Buffer.from(blurBuffer).toString("base64");
-  const blurSVG = `
+  const ImageBase64 = imageResized.toString("base64");
+  const ImageSVG = `
     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'>
       <filter id="blur" x="0%" y="0%" width="100%" height="100%">
           <feGaussianBlur in="SourceGraphic" stdDeviation="0.5"/>
@@ -35,9 +30,12 @@ export default async function Image({ src, alt, sizes, quality = 75 }: ImageProp
         </feComponentTransfer>
       </filter>
 
-      <image preserveAspectRatio='none' filter='url(#blur)' x='0' y='0' height='100%' width='100%' href='data:image/avif;base64,${blurBase64}' />
+      <image preserveAspectRatio='none' filter='url(#blur)' x='0' y='0' height='100%' width='100%' href='data:image/avif;base64,${ImageBase64}' />
     </svg>
   `;
+
+  const blurBuffer = Buffer.from(ImageSVG);
+  const blurBase64 = blurBuffer.toString("base64"); 
 
   return (
     <NextImage
@@ -49,7 +47,7 @@ export default async function Image({ src, alt, sizes, quality = 75 }: ImageProp
       quality={quality}
       className={styles.image}
       placeholder="blur"
-      blurDataURL={`data:image/svg+xml;base64,${toBase64(blurSVG)}`}
+      blurDataURL={`data:image/svg+xml;base64,${blurBase64}`}
     />
   );
 }

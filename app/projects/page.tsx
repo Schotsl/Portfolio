@@ -16,7 +16,7 @@ export default async function Page() {
       <h1>Test</h1>
       <ul>
         {projectsObjects.map((project) => (
-          <li key={project.id}>
+          <li key={project.title}>
             <h2>{project.title}</h2>
 
             <Image src={project.image} alt={project.title} />
