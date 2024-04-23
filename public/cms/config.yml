@@ -29,7 +29,12 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Image", name: "image", widget: "image" }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          default: "public/images/test.jpg",
+        }
       - { label: "Link", name: "link", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Order", name: "order", widget: "number", value: 0 }
