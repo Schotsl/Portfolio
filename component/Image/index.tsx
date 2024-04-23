@@ -21,12 +21,7 @@ export default async function Image({ src, alt, sizes, quality = 75 }: ImageProp
 
   const { width, height } = sizeOf(image);
 
-  const baseUrl =
-    process.env.NODE_ENV === "development"
-      ? "http://localhost:3000/"
-      : process.env.NEXT_PUBLIC_DOMAIN;
-
-  const imageUrl = `${baseUrl}/_next/image?url=${src}&w=16&q=75`;
+  const imageUrl = `https://portfolio-two-mu-45.vercel.app/_next/image?url=${src}&w=16&q=75`;
   const imageResponse = await fetch(imageUrl);
 
   const blurBuffer = await imageResponse.arrayBuffer();
