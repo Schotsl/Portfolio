@@ -1,8 +1,10 @@
 backend:
   name: github
   repo: schotsl/portfolio
+
   base_url: https://portfolio-two-mu-45.vercel.app/
   auth_endpoint: api/auth
+
   commit_messages:
     create: 📝 Created {{collection}} collection
     update: 📝 Updated {{collection}} collection
