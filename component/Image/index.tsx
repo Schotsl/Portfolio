@@ -1,8 +1,6 @@
-import styles from "./Image.module.scss";
-
 import fs from "fs";
 import sharp from "sharp";
-import NextImage from "next/image";
+import ImageClient from "./Client";
 
 type ImageProps = {
   src: string;
@@ -11,11 +9,16 @@ type ImageProps = {
   quality?: number;
 };
 
-export default async function Image({ src, alt, sizes, quality = 75 }: ImageProps) {
+export default async function Image({
+  src,
+  alt,
+  sizes,
+  quality = 75,
+}: ImageProps) {
   const imagePath = `${process.cwd()}/public/${src}`;
   const imageBuffer = fs.readFileSync(imagePath);
 
-  const imageSharp = sharp(imageBuffer);  
+  const imageSharp = sharp(imageBuffer);
   const imageResized = await imageSharp.resize(8).toBuffer();
 
   const { width, height } = await imageSharp.metadata();
@@ -35,19 +38,17 @@ export default async function Image({ src, alt, sizes, quality = 75 }: ImageProp
   `;
 
   const blurBuffer = Buffer.from(ImageSVG);
-  const blurBase64 = blurBuffer.toString("base64"); 
+  const blurBase64 = blurBuffer.toString("base64");
 
   return (
-    <NextImage
+    <ImageClient
       src={src}
       alt={alt}
       sizes={sizes}
-      width={width}
-      height={height}
+      width={width!}
+      height={height!}
+      base64={blurBase64}
       quality={quality}
-      className={styles.image}
-      placeholder="blur"
-      blurDataURL={`data:image/svg+xml;base64,${blurBase64}`}
     />
   );
 }

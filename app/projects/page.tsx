@@ -19,7 +19,7 @@ export default async function Page() {
           <li key={project.title}>
             <h2>{project.title}</h2>
 
-            <Image src={project.image} alt={project.title} />
+            <Image src={project.image} alt={project.title} sizes={"200px"} />
             <p>{project.description}</p>
           </li>
         ))}
