@@ -10,7 +10,7 @@ const policies = `
   style-src 'self' 'unsafe-inline';
   object-src 'none';
   worker-src 'self' blob:;
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js
+  script-src 'self' 'unsafe-eval' 'unsafe-inline';
   default-src 'self';
   form-action 'self';
   frame-ancestors 'none';
