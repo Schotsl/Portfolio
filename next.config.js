@@ -4,16 +4,17 @@ const { withPlausibleProxy } = require("next-plausible");
 const { withSentryConfig } = require("@sentry/nextjs");
 
 const policies = `
-    default-src 'self';
-    script-src 'self' 'unsafe-eval' 'unsafe-inline';
-    style-src 'self' 'unsafe-inline';
-    img-src 'self' blob: data:;
-    font-src 'self';
-    object-src 'none';
-    base-uri 'self';
-    form-action 'self';
-    frame-ancestors 'none';
-    upgrade-insecure-requests;
+  default-src 'self';
+  script-src 'self' 'unsafe-eval' 'unsafe-inline';
+  worker-src 'self' blob:;
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' blob: data:;
+  font-src 'self';
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self';
+  frame-ancestors 'none';
+  upgrade-insecure-requests;
 `;
 
 module.exports = withPlausibleProxy()(
@@ -22,15 +23,15 @@ module.exports = withPlausibleProxy()(
       async headers() {
         return [
           {
-            source: '/(.*)',
+            source: "/(.*)",
             headers: [
               {
-                key: 'Content-Security-Policy',
-                value: policies.replace(/\n/g, ''),
+                key: "Content-Security-Policy",
+                value: policies.replace(/\n/g, ""),
               },
             ],
           },
-        ]
+        ];
       },
       async rewrites() {
         return [
