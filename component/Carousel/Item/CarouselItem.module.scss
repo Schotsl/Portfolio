@@ -1,0 +1,43 @@
+@import "@/styles/mixins";
+
+.item {
+  --carousel-item-width: 80vw;
+  --carousel-item-margin: 10vw;
+
+  @include respond-to-md {
+    --carousel-item-width: 46rem;
+    --carousel-item-margin: calc(100vw - (var(--carousel-item-width) / 2));
+  }
+
+  position: relative;
+  min-width: var(--carousel-item-width);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+  scroll-snap-align: center;
+
+  &:first-of-type {
+    margin-left: var(--carousel-item-margin);
+  }
+
+  &:last-of-type {
+    margin-right: var(--carousel-item-margin);
+  }
+
+  &--active {
+    transform: scale(1.05);
+
+    .item__video {
+      display: block;
+    }
+  }
+
+  &__video {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: absolute;
+    object-fit: cover;
+  }
+}

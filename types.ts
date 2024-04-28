@@ -8,5 +8,6 @@ export type Image = {
 
 export type Project = {
   title: string;
+  video: string;
   image: Image;
 };

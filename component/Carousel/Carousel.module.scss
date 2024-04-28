@@ -2,13 +2,9 @@
 
 .carousel {
   --carousel-item-gap: 2rem;
-  --carousel-item-width: 80vw;
-  --carousel-item-margin: 10vw;
 
   @include respond-to-md {
     --carousel-item-gap: 4rem;
-    --carousel-item-width: 46rem;
-    --carousel-item-margin: calc(100vw - (var(--carousel-item-width) / 2));
   }
 
   gap: var(--carousel-item-gap);
@@ -20,24 +16,4 @@
   overflow-x: scroll;
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
-
-  &__item {
-    min-width: var(--carousel-item-width);
-    transition: transform 0.2s ease-in-out;
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-
-    scroll-snap-align: center;
-
-    &:first-of-type {
-      margin-left: var(--carousel-item-margin);
-    }
-
-    &:last-of-type {
-      margin-right: var(--carousel-item-margin);
-    }
-
-    &--active {
-      transform: scale(1.05);
-    }
-  }
 }

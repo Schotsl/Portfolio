@@ -2,7 +2,7 @@
 
 import styles from "./Carousel.module.scss";
 
-import Image from "@/component/Image";
+import CarouselItem from "./Item";
 
 import { Project } from "@/types";
 import { useEffect, useRef, useState } from "react";
@@ -34,7 +34,7 @@ export default function Carousel({ projects }: CarouselProps) {
       const scrollLeft = carousel.current.scrollLeft;
       const scrollItem = carousel.current.scrollWidth / projects.length;
       const scrollIndex = Math.round(scrollLeft / scrollItem);
-      
+
       setSlide(scrollIndex);
     }
   }
@@ -42,16 +42,12 @@ export default function Carousel({ projects }: CarouselProps) {
   return (
     <ul className={styles.carousel} ref={carousel} onScroll={onScroll}>
       {projects.map((project, index) => (
-        <li
+        <CarouselItem
           key={index}
-          className={
-            index === slide
-              ? `${styles.carousel__item} ${styles["carousel__item--active"]}`
-              : `${styles.carousel__item}`
-          }
-        >
-          <Image image={project.image} sizes={"46rem"} />
-        </li>
+          index={index}
+          active={index === slide}
+          project={project}
+        />
       ))}
     </ul>
   );
