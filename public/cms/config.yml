@@ -27,10 +27,10 @@ collections:
     folder: "content/projects"
     extension: "json"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
+      - { name: "title", label: "Title", widget: "string" }
       - {
-          label: "Image",
           name: "image",
+          label: "Image",
           widget: "image",
           media_folder: "public/images/projects",
         }
