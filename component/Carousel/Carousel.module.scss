@@ -1,29 +1,43 @@
-$carousel-item-width: 46rem;
+@import "@/styles/mixins";
 
 .carousel {
-  gap: 2rem;
-  width: 100vw;
-  margin: 4rem 0 0;
-  display: flex;
+  --carousel-item-gap: 2rem;
+  --carousel-item-width: 80vw;
+  --carousel-item-margin: 10vw;
 
-  overflow-x: auto;
+  @include respond-to-md {
+    --carousel-item-gap: 4rem;
+    --carousel-item-width: 46rem;
+    --carousel-item-margin: calc(100vw - (var(--carousel-item-width) / 2));
+  }
+
+  gap: var(--carousel-item-gap);
+  width: 100vw;
+  display: flex;
+  min-height: 36rem;
+  align-items: center;
+
+  overflow-x: scroll;
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
 
   &__item {
+    min-width: var(--carousel-item-width);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
     scroll-snap-align: center;
 
-    min-width: 46rem;
-    box-shadow:
-      0 4px 6px rgba(0, 0, 0, 0.15),
-      0 1px 3px rgba(0, 0, 0, 0.1);
-
     &:first-of-type {
-      margin-left: calc((100vw - #{$carousel-item-width}) / 2);
+      margin-left: var(--carousel-item-margin);
     }
 
     &:last-of-type {
-      margin-right: calc((100vw - #{$carousel-item-width}) / 2);
+      margin-right: var(--carousel-item-margin);
+    }
+
+    &--active {
+      transform: scale(1.05);
     }
   }
 }
