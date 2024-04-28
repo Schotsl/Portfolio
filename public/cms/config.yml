@@ -13,8 +13,8 @@ backend:
     deleteMedia: 🔥 Deleted “{{path}}”
     openAuthoring: "{{message}}"
 
-media_folder: "public/images"
-public_folder: "public/images"
+media_folder: "content/images"
+public_folder: "content/images"
 
 site_url: "https://portfolio-two-mu-45.vercel.app/"
 logo_url: "https://portfolio-two-mu-45.vercel.app/favicon-431x431.png"
@@ -32,6 +32,7 @@ collections:
           name: "image",
           label: "Image",
           widget: "image",
-          media_folder: "images",
+          media_folder: "/content/projects/images",
+          public_folder: "/content/projects/images",
           choose_url: false,
         }
