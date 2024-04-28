@@ -10,7 +10,7 @@ const policies = `
   style-src 'self';
   object-src 'none';
   worker-src 'self' blob:;
-  script-src 'self' 'unsafe-eval';
+  script-src 'self' 'unsafe-eval' 'unsafe-inline';
   default-src 'self';
   form-action 'self';
   frame-ancestors 'none';
