@@ -11,7 +11,7 @@ const policies = `
   object-src 'none';
   worker-src 'self' blob:;
   script-src 'self' 'unsafe-eval' 'unsafe-inline';
-  default-src 'self' https://api.github.com;
+  default-src 'self' blob: https://api.github.com;
   form-action 'self';
   frame-ancestors 'none';
   upgrade-insecure-requests;
