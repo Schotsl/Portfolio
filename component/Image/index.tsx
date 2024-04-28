@@ -10,14 +10,14 @@ import { useState } from "react";
 type ImageProps = {
   image: ImageType;
   sizes: string;
-  quality: number;
+  quality?: number;
   className?: string;
 };
 
 export default function Image({
   image: { src, alt, blur, width, height },
   sizes,
-  quality,
+  quality = 75,
   className,
 }: ImageProps) {
   const [loading, setLoading] = useState(true);
