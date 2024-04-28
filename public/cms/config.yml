@@ -33,4 +33,5 @@ collections:
           label: "Image",
           widget: "image",
           media_folder: "projects",
+          choose_url: false,
         }
