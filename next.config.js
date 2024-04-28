@@ -7,7 +7,7 @@ const policies = `
   img-src 'self' blob: data:;
   font-src 'self';
   base-uri 'self';
-  style-src 'self';
+  style-src 'self' 'unsafe-inline';
   object-src 'none';
   worker-src 'self' blob:;
   script-src 'self' 'unsafe-eval' 'unsafe-inline';
