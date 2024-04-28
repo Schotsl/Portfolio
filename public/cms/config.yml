@@ -32,6 +32,6 @@ collections:
           name: "image",
           label: "Image",
           widget: "image",
-          media_folder: "projects",
+          media_folder: "/public/images/projects",
           choose_url: false,
         }
