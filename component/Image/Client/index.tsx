@@ -9,23 +9,29 @@ import { useState } from "react";
 type ImageClientProps = {
   src: string;
   alt: string;
+  sizes: string;
   width: number;
   height: number;
   base64: string;
   quality: number;
-  sizes?: string;
+  className?: string;
 };
 
 export default function ImageClient({
   src,
   alt,
+  sizes,
   width,
   height,
   base64,
-  sizes,
   quality,
+  className,
 }: ImageClientProps) {
   const [loading, setLoading] = useState(true);
+
+  function onLoad() {
+    setLoading(false);
+  }
 
   return (
     <div className={styles.image}>
@@ -35,9 +41,9 @@ export default function ImageClient({
         sizes={sizes}
         width={width}
         height={height}
-        onLoad={() => setLoading(false)}
+        onLoad={onLoad}
         quality={quality}
-        className={styles.image__image}
+        className={`${styles.image__image} ${className}`}
       />
 
       {loading && (

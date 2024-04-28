@@ -5,8 +5,9 @@ import ImageClient from "./Client";
 type ImageProps = {
   src: string;
   alt: string;
-  sizes?: string;
+  sizes: string;
   quality?: number;
+  className?: string;
 };
 
 export default async function Image({
@@ -14,6 +15,7 @@ export default async function Image({
   alt,
   sizes,
   quality = 75,
+  className,
 }: ImageProps) {
   const imagePath = `${process.cwd()}/public/${src}`;
   const imageBuffer = fs.readFileSync(imagePath);
@@ -49,6 +51,7 @@ export default async function Image({
       height={height!}
       base64={blurBase64}
       quality={quality}
+      className={className}
     />
   );
 }
