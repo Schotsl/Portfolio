@@ -5,9 +5,9 @@ const { withSentryConfig } = require("@sentry/nextjs");
 
 const policies = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline';
+  script-src 'self' 'unsafe-eval';
   worker-src 'self' blob:;
-  style-src 'self' 'unsafe-inline';
+  style-src 'self';
   img-src 'self' blob: data:;
   font-src 'self';
   object-src 'none';
