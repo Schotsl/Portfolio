@@ -28,12 +28,17 @@ collections:
     extension: "json"
     fields:
       - { name: "title", label: "Title", widget: "string" }
-      - { name: "alt", label: "Alt", widget: "string" }
-      - {
-          name: "image",
-          label: "Image",
-          widget: "image",
-          media_folder: "/public/content/project/images",
-          public_folder: "/content/project/images",
-          choose_url: false,
-        }
+      - name: "image"
+        label: "Image"
+        widget: "object"
+        summary: "{{fields.alt}}"
+        fields:
+          - { name: "alt", label: "Alt", widget: "string" }
+          - {
+              name: "image",
+              label: "Image",
+              widget: "image",
+              choose_url: false,
+              media_folder: "/public/content/project/images",
+              public_folder: "/content/project/images",
+            }
