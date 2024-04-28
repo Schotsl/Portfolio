@@ -6,14 +6,13 @@ $carousel-item-width: 46rem;
   margin: 4rem 0 0;
   display: flex;
 
-  scroll-snap-type: x mandatory;
   overflow-x: auto;
-
-  //  Hide scrollbar
   scrollbar-width: none;
+  scroll-snap-type: x mandatory;
 
   &__item {
     scroll-snap-align: center;
+
     min-width: 46rem;
     box-shadow:
       0 4px 6px rgba(0, 0, 0, 0.15),

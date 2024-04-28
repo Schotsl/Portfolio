@@ -1,7 +1,14 @@
+import Carousel from "@/component/Carousel";
+
+import { Project } from "@/types";
+import { getCollection } from "@/helper";
+
 export default async function Page() {
+  const projects = await getCollection<Project>("project");
+
   return (
     <main>
-      <h1>Test</h1>
+      <Carousel projects={projects} />
     </main>
   );
 }

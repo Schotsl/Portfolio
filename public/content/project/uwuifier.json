@@ -1,5 +1,7 @@
 {
   "title": "Uwuifier",
-  "alt": "Uwuifier",
-  "image": "/content/project/images/uwuifier.png"
+  "image": {
+    "alt": "Uwuifier",
+    "src": "/content/project/images/uwuifier.png"
+  }
 }

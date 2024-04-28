@@ -1,5 +1,7 @@
 {
   "title": "ZonneVeranda",
-  "alt": "ZonneVeranda",
-  "image": "/content/project/images/zonneveranda.png"
+  "image": {
+    "alt": "ZonneVeranda",
+    "src": "/content/project/images/zonneveranda.png"
+  }
 }

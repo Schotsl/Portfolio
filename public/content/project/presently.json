@@ -1,5 +1,7 @@
 {
   "title": "Presently",
-  "alt": "Presently",
-  "image": "/content/project/images/presently.png"
+  "image": {
+    "alt": "Presently",
+    "src": "/content/project/images/presently.png"
+  }
 }

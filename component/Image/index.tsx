@@ -1,57 +1,66 @@
-import fs from "fs";
-import sharp from "sharp";
-import ImageClient from "./Client";
+"use client";
+
+import styles from "./Image.module.scss";
+
+import NextImage from "next/image";
+
+import { Image as ImageType } from "@/types";
+import { useState } from "react";
 
 type ImageProps = {
-  src: string;
-  alt: string;
+  image: ImageType;
   sizes: string;
-  quality?: number;
+  quality: number;
   className?: string;
 };
 
-export default async function Image({
-  src,
-  alt,
+export default function Image({
+  image: { src, alt, blur, width, height },
   sizes,
-  quality = 75,
+  quality,
   className,
 }: ImageProps) {
-  const imagePath = `${process.cwd()}/public/${src}`;
-  const imageBuffer = fs.readFileSync(imagePath);
+  const [loading, setLoading] = useState(true);
 
-  const imageSharp = sharp(imageBuffer);
-  const imageResized = await imageSharp.resize(8).toBuffer();
-
-  const { width, height } = await imageSharp.metadata();
-
-  const ImageBase64 = imageResized.toString("base64");
-  const ImageSVG = `
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'>
-      <filter id="blur" x="0%" y="0%" width="100%" height="100%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="0.5"/>
-          <feComponentTransfer>
-          <feFuncA type="discrete" tableValues="1 1"/>
-        </feComponentTransfer>
-      </filter>
-
-      <image preserveAspectRatio='none' filter='url(#blur)' x='0' y='0' height='100%' width='100%' href='data:image/avif;base64,${ImageBase64}' />
-    </svg>
-  `;
-
-  const blurBuffer = Buffer.from(ImageSVG);
-  const blurBase64 = blurBuffer.toString("base64");
+  function onLoad() {
+    setLoading(false);
+  }
 
   return (
-    <ImageClient
-      src={src}
-      alt={alt}
-      sizes={sizes}
-      width={width!}
-      height={height!}
-      base64={blurBase64}
-      quality={quality}
-      className={className}
-    />
+    <div className={styles.image}>
+      <NextImage
+        src={src}
+        alt={alt}
+        sizes={sizes}
+        width={width}
+        height={height}
+        onLoad={onLoad}
+        quality={quality}
+        className={`${styles.image__image} ${className}`}
+      />
+
+      {loading && (
+        <div className={styles.image__overlay}>
+          {/* eslint-disable-next-line */}
+          <img
+            src={`data:image/svg+xml;base64,${blur}`}
+            alt={alt}
+            className={styles.image__overlay__blur}
+          />
+
+          <div className={styles.image__overlay__loader}>
+            <div className={styles.image__overlay__loader__dot}></div>
+            <div className={styles.image__overlay__loader__dot}></div>
+            <div className={styles.image__overlay__loader__dot}></div>
+            <div className={styles.image__overlay__loader__dot}></div>
+            <div className={styles.image__overlay__loader__dot}></div>
+            <div className={styles.image__overlay__loader__dot}></div>
+            <div className={styles.image__overlay__loader__dot}></div>
+            <div className={styles.image__overlay__loader__dot}></div>
+            <div className={styles.image__overlay__loader__dot}></div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
