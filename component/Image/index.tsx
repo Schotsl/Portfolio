@@ -15,8 +15,6 @@ export default async function Image({
   sizes,
   quality = 75,
 }: ImageProps) {
-  console.log("Creating image blur");
-
   const imagePath = `${process.cwd()}/public/${src}`;
   const imageBuffer = fs.readFileSync(imagePath);
 
