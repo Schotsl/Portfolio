@@ -14,7 +14,7 @@ backend:
     openAuthoring: "{{message}}"
 
 media_folder: "public/images"
-public_folder: "images"
+public_folder: "public/images"
 
 site_url: "https://portfolio-two-mu-45.vercel.app/"
 logo_url: "https://portfolio-two-mu-45.vercel.app/favicon-431x431.png"
@@ -28,4 +28,9 @@ collections:
     extension: "json"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
+      - {
+          label: "Image",
+          name: "image",
+          widget: "image",
+          media_folder: "public/images/projects",
+        }
