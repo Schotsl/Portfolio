@@ -43,7 +43,7 @@ export async function getImage(src: string, alt: string): Promise<Image> {
   const ImageSVG = `
     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'>
       <filter id="blur" x="0%" y="0%" width="100%" height="100%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="0.5"/>
+          <feGaussianBlur in="SourceGraphic" stdDeviation="0.25"/>
           <feComponentTransfer>
           <feFuncA type="discrete" tableValues="1 1"/>
         </feComponentTransfer>
