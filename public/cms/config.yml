@@ -35,7 +35,7 @@ collections:
         fields:
           - { name: "alt", label: "Alt", widget: "string" }
           - {
-              name: "image",
+              name: "src",
               label: "Image",
               widget: "image",
               choose_url: false,
