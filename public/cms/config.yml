@@ -45,3 +45,13 @@ collections:
               media_folder: "/public/content/project/images",
               public_folder: "/content/project/images",
             }
+      - name: "categories"
+        label: "Categories"
+        widget: "list"
+        fields:
+          - {
+              label: "Category",
+              name: "category",
+              widget: "select",
+              options: ["Design", "Development", "Entertainment"],
+            }
