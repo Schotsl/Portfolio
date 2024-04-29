@@ -19,7 +19,11 @@ export default function CarouselItem({
   const player = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (active && player.current) {
+    if (!player.current) {
+      return;
+    }
+
+    if (active) {
       player.current.play();
     } else if (player.current) {
       player.current.pause();
@@ -35,7 +39,7 @@ export default function CarouselItem({
       }
     >
       <a href={`/${slug}`}>
-      <video className={styles.item__video} ref={player} muted autoPlay loop>
+        <video className={styles.item__video} ref={player} muted autoPlay loop>
           <source src={video} type="video/mp4" />
         </video>
 

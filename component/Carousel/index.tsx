@@ -17,16 +17,18 @@ export default function Carousel({ projects }: CarouselProps) {
   const carousel = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
-    // Center the carousel on load
-    if (carousel.current) {
-      const carouselWidth = carousel.current.offsetWidth;
-      const carouselHalf = carouselWidth / 2;
-
-      carousel.current.scrollTo({
-        left: carouselHalf,
-        behavior: "smooth",
-      });
+    if (!carousel.current) {
+      return;
     }
+    
+    // Center the carousel on load
+    const carouselWidth = carousel.current.offsetWidth;
+    const carouselHalf = carouselWidth / 2;
+
+    carousel.current.scrollTo({
+      left: carouselHalf,
+      behavior: "smooth",
+    });
   }, []);
 
   function onScroll() {
