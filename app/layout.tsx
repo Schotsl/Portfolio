@@ -12,6 +12,7 @@ const url = "https://toolenburgerplas.nl/banner-1200x630.png";
 const title = "Sjors van Holst";
 const description = "Ik ben Sjors van Holst";
 
+export const dynamic = "force-static";
 export const metadata: Metadata = {
   title,
   description,
