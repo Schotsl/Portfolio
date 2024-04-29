@@ -1,7 +1,7 @@
 import styles from "./Jumper.module.scss";
 
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Jumper() {
   return (
