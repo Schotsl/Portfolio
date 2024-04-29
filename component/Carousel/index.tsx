@@ -20,7 +20,7 @@ export default function Carousel({ projects }: CarouselProps) {
     if (!carousel.current) {
       return;
     }
-    
+
     // Center the carousel on load
     const carouselWidth = carousel.current.offsetWidth;
     const carouselHalf = carouselWidth / 2;

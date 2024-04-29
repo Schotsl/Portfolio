@@ -32,14 +32,14 @@ module.exports = withPlausibleProxy()(
             ],
           },
           {
-            source: "/videos/:path*",
+            source: "\/videos\/.*",
             headers: [
               {
                 key: "Cache-Control",
                 value: "public, max-age=31536000, immutable",
               },
             ],
-          }
+          },
         ];
       },
       async rewrites() {

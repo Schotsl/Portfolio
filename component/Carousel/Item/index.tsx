@@ -23,13 +23,17 @@ export default function CarouselItem({
       return;
     }
 
-    if (active) {
-      player.current.play();
-    } else if (player.current) {
-      player.current.pause();
-      player.current.currentTime = 0;
-    }
-  }, [active]);
+    const updatePlay = async () => {
+      if (active) {
+        await player.current!.play();
+      } else if (player.current) {
+        player.current.pause();
+        player.current.currentTime = 0;
+      }
+    };
+
+    updatePlay();
+  }, [active, ]);
 
   return (
     <li
