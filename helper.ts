@@ -27,7 +27,7 @@ export async function getCollection<T>(path: string): Promise<T[]> {
         const category = categoryObject.category;
         const categoryLower = category.toLowerCase();
         return categoryLower;
-      })
+      });
 
       itemParsed.categories = categoriesMapped.sort();
     }

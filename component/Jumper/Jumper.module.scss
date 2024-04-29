@@ -1,0 +1,11 @@
+.jumper {
+  gap: 0.5rem;
+  width: 100%;
+  display: flex;
+  font-size: 1.25rem;
+  align-items: center;
+
+  &__icon {
+    font-size: 1rem;
+  }
+}

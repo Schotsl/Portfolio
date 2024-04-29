@@ -5,7 +5,7 @@ import useTypewriter from "react-typewriter-hook";
 
 import { useEffect, useState } from "react";
 
-export function Header() {
+export default function Header() {
   const [count, setCount] = useState(23433);
 
   const subtitle = useTypewriter("A great developer, a pretty good designer");

@@ -54,8 +54,13 @@ menu {
 }
 
 a {
-  cursor: pointer;
   color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 * {

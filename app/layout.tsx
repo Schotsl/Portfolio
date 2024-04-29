@@ -2,9 +2,14 @@ import "./layout.scss";
 
 import PlausibleProvider from "next-plausible";
 
+import { config } from '@fortawesome/fontawesome-svg-core'
 import { Metadata } from "next";
-import { Open_Sans, Montserrat } from "next/font/google";
 import { ReactNode } from "react";
+import { Open_Sans, Montserrat } from "next/font/google";
+
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+config.autoAddCss = false
 
 const alt = "Een foto van de Toolenburgerplas in Hoofddorp.";
 const url = "https://toolenburgerplas.nl/banner-1200x630.png";
