@@ -6,7 +6,7 @@
 
   @include respond-to-md {
     --carousel-item-width: 46rem;
-    --carousel-item-margin: calc(100vw - (var(--carousel-item-width) / 2));
+    --carousel-item-margin: calc((100vw - var(--carousel-item-width)) / 2);
   }
 
   position: relative;
@@ -54,7 +54,7 @@
   }
 
   &--active {
-    transform: scale(1.05);
+    // transform: scale(1.05);
 
     .item__video {
       display: block;

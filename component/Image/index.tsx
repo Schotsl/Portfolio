@@ -11,6 +11,7 @@ type ImageProps = {
   image: ImageType;
   sizes: string;
   quality?: number;
+  priority?: boolean;
   className?: string;
 };
 
@@ -18,6 +19,7 @@ export default function Image({
   image: { src, alt, blur, width, height },
   sizes,
   quality = 75,
+  priority = false,
   className,
 }: ImageProps) {
   const [loading, setLoading] = useState(true);
@@ -36,6 +38,7 @@ export default function Image({
         height={height}
         onLoad={onLoad}
         quality={quality}
+        priority={priority}
         className={`${styles.image__image} ${className}`}
       />
 

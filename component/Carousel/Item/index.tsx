@@ -38,6 +38,7 @@ export default function CarouselItem({
         <Image
           image={image}
           sizes={"(min-width: 768px) 46rem, 80vw"}
+          priority={index === 0}
           className={styles.item__image}
         />
 
