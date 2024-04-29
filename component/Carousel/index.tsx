@@ -12,11 +12,23 @@ type CarouselProps = {
 };
 
 export default function Carousel({ projects }: CarouselProps) {
-  const [slide, setSlide] = useState(0);
+  const [index, setIndex] = useState(0);
 
   const carousel = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
+    const indexCurrent = getIndex();
+
+    // Update the index if it's different
+    if (indexCurrent !== index) {
+      setIndex(indexCurrent);
+    }
+
+    // Don't slide if the user is already on a different index
+    if (indexCurrent !== 0) {
+      return;
+    }
+
     if (!carousel.current) {
       return;
     }
@@ -31,23 +43,34 @@ export default function Carousel({ projects }: CarouselProps) {
     });
   }, []);
 
-  function onScroll() {
-    if (carousel.current) {
-      const scrollLeft = carousel.current.scrollLeft;
-      const scrollItem = carousel.current.scrollWidth / projects.length;
-      const scrollIndex = Math.round(scrollLeft / scrollItem);
+  function getIndex() {
+    if (!carousel.current) {
+      return 0;
+    }
 
-      setSlide(scrollIndex);
+    const scrollLeft = carousel.current.scrollLeft;
+    const scrollItem = carousel.current.scrollWidth / projects.length;
+    const scrollIndex = Math.round(scrollLeft / scrollItem);
+
+    return scrollIndex;
+  }
+
+  function onScroll() {
+    const indexCurrent = getIndex();
+
+    // Only update the index if it's different
+    if (indexCurrent !== index) {
+      setIndex(indexCurrent);
     }
   }
 
   return (
     <ul className={styles.carousel} ref={carousel} onScroll={onScroll}>
-      {projects.map((project, index) => (
+      {projects.map((project, projectIndex) => (
         <CarouselItem
-          key={index}
-          index={index}
-          active={index === slide}
+          key={projectIndex}
+          index={projectIndex}
+          active={projectIndex === index}
           project={project}
         />
       ))}
