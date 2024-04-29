@@ -6,5 +6,10 @@
   "image": {
     "alt": "Presently",
     "src": "/content/project/images/presently.png"
-  }
+  },
+  "categories": [
+    {
+      "category": "Design"
+    }
+  ]
 }
