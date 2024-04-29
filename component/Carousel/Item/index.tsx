@@ -1,7 +1,7 @@
 import styles from "./CarouselItem.module.scss";
 
 import { Project } from "@/types";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Image from "@/component/Image";
 
@@ -18,22 +18,28 @@ export default function CarouselItem({
 }: CarouselItemProps) {
   const player = useRef<HTMLVideoElement>(null);
 
+  const [updating, setUpdating] = useState(false);
+
   useEffect(() => {
-    if (!player.current) {
+    if (!player.current || updating) {
       return;
     }
 
     const updatePlay = async () => {
+      setUpdating(true);
+
       if (active) {
         await player.current!.play();
       } else if (player.current) {
         player.current.pause();
         player.current.currentTime = 0;
       }
+
+      setUpdating(false);
     };
 
     updatePlay();
-  }, [active, ]);
+  }, [active, updating]);
 
   return (
     <li
