@@ -29,7 +29,10 @@ export default function Image({
   }
 
   return (
-    <div className={`${styles.image} ${className}`} style={{ aspectRatio: `${width}/${height}` }}>
+    <div
+      style={{ aspectRatio: `${width}/${height}` }}
+      className={`${styles.image} ${className}`}
+    >
       <NextImage
         src={src}
         alt={alt}

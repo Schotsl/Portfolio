@@ -1,28 +1,54 @@
 "use client";
 
 import styles from "./Header.module.scss";
-import useTypewriter from "react-typewriter-hook";
+
 import Image from "@/component/Image";
+import useTypewriter from "react-typewriter-hook";
 
 import { Image as ImageType } from "@/types";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 type HeaderProps = {
   banner: ImageType;
-}
+};
 
-export default function Header({ banner}: HeaderProps) {
+const sentences = [
+  "A great developer, a pretty good designer",
+  "Being laughed at while playing VR outside",
+];
+
+export default function Header({ banner }: HeaderProps) {
   const [count, setCount] = useState(23433);
+  const [index, setIndex] = useState(0);
 
-  const subtitle = useTypewriter("A great developer, a pretty good designer");
+  const sentence = sentences[index];
+  const subtitle = useTypewriter(sentence);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCount(count + Math.floor(Math.random() * 10));
+      setCount((previous) => {
+        const countIncrease = Math.floor(Math.random() * 10);
+        const countNext = previous + countIncrease;
+
+        return countNext;
+      });
     }, 100);
 
     return () => clearInterval(interval);
   });
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((previous) => {
+        const indexNew = previous + 1;
+        const indexNext = indexNew >= sentences.length ? 0 : indexNew;
+
+        return indexNext;
+      });
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <header className={styles.header}>

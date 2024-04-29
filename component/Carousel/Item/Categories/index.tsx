@@ -38,10 +38,10 @@ export function CarouselItemCategoriesItem({
 
   return (
     <li className={styles.categories__category}>
-        <div
-          className={`${styles.categories__category__dot} ${getCategory(category)}`}
-        ></div>
-        {category}
+      <div
+        className={`${styles.categories__category__dot} ${getCategory(category)}`}
+      ></div>
+      {category}
     </li>
   );
 }
