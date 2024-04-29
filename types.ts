@@ -12,4 +12,5 @@ export type Project = {
   intro: string;
   video: string;
   image: Image;
+  categories?: string[];
 };

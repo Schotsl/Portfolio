@@ -16,11 +16,20 @@ export async function getCollection<T>(path: string): Promise<T[]> {
     const itemObject = fs.readFileSync(itemPath, "utf8");
     const itemParsed = JSON.parse(itemObject);
 
-    if (itemParsed.image) {
-      itemParsed.image = await getImage(
-        itemParsed.image.src,
-        itemParsed.image.alt,
-      );
+    const { image, categories } = itemParsed;
+
+    if (image) {
+      itemParsed.image = await getImage(image.src, image.alt);
+    }
+
+    if (categories) {
+      const categoriesMapped = categories.map((categoryObject: any) => {
+        const category = categoryObject.category;
+        const categoryLower = category.toLowerCase();
+        return categoryLower;
+      })
+
+      itemParsed.categories = categoriesMapped.sort();
     }
 
     return itemParsed as T;
