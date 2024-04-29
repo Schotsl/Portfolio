@@ -29,7 +29,7 @@ export default function Image({
   }
 
   return (
-    <div className={styles.image} style={{ aspectRatio: `${width}/${height}` }}>
+    <div className={`${styles.image} ${className}`} style={{ aspectRatio: `${width}/${height}` }}>
       <NextImage
         src={src}
         alt={alt}
@@ -39,7 +39,7 @@ export default function Image({
         onLoad={onLoad}
         quality={quality}
         priority={priority}
-        className={`${styles.image__image} ${className}`}
+        className={styles.image__image}
       />
 
       {loading && (
