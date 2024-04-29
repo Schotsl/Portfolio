@@ -35,16 +35,16 @@ export default function CarouselItem({
       }
     >
       <a href={`/${slug}`}>
+      <video className={styles.item__video} ref={player} muted autoPlay loop>
+          <source src={video} type="video/mp4" />
+        </video>
+
         <Image
           image={image}
           sizes={"(min-width: 768px) 46rem, 80vw"}
           priority={index === 0}
           className={styles.item__image}
         />
-
-        <video className={styles.item__video} ref={player} muted autoPlay loop>
-          <source src={video} type="video/mp4" />
-        </video>
 
         <div className={styles.item__overlay}>
           <h2 className={styles.item__overlay__title}>{title}</h2>
