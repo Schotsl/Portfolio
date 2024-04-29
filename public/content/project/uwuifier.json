@@ -6,5 +6,13 @@
   "image": {
     "alt": "Uwuifier",
     "src": "/content/project/images/uwuifier.png"
-  }
+  },
+  "categories": [
+    {
+      "category": "Design"
+    },
+    {
+      "category": "Development"
+    }
+  ]
 }

@@ -4,6 +4,7 @@ import { Project } from "@/types";
 import { useEffect, useRef, useState } from "react";
 
 import Image from "@/component/Image";
+import CarouselItemCategories from "./Categories";
 
 type CarouselItemProps = {
   index: number;
@@ -14,7 +15,7 @@ type CarouselItemProps = {
 export default function CarouselItem({
   index,
   active,
-  project: { slug, title, intro, video, image },
+  project: { slug, title, intro, video, image, categories },
 }: CarouselItemProps) {
   const player = useRef<HTMLVideoElement>(null);
 
@@ -61,6 +62,13 @@ export default function CarouselItem({
         />
 
         <div className={styles.item__overlay}>
+          {categories && (
+            <CarouselItemCategories
+              className={styles.item__overlay__categories}
+              categories={categories}
+            />
+          )}
+
           <h2 className={styles.item__overlay__title}>{title}</h2>
           <p className={styles.item__overlay__content}>{intro}</p>
         </div>

@@ -48,6 +48,10 @@
     flex-direction: column;
     justify-content: flex-end;
 
+    &__categories {
+      margin-bottom: auto;
+    }
+
     &__content {
       max-width: 80%;
     }

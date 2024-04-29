@@ -1,0 +1,27 @@
+.categories {
+  gap: 1rem;
+  display: flex;
+  justify-content: flex-start;
+
+  &__category {
+    padding: 0.5rem 0.75rem;
+    border: 2px solid #fff;
+    border-radius: 2.5rem;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &--design {
+      background-color: rgba(255, 99, 71, 0.5);
+    }
+
+    &--development {
+      background-color: rgba(30, 144, 255, 0.5);
+    }
+
+    &--entertainment {
+      background-color: rgba(148, 0, 211, 0.5);
+    }
+  }
+}
