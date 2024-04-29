@@ -49,13 +49,13 @@ export const metadata: Metadata = {
 const openSans = Open_Sans({
   weight: ["400", "700", "600"],
   subsets: ["latin"],
-  variable: '--font-open-sans',
+  variable: "--font-open-sans",
 });
 
 const montserrat = Montserrat({
   weight: ["400", "600"],
   subsets: ["latin"],
-  variable: '--font-montserrat',
+  variable: "--font-montserrat",
 });
 
 export default async function RootLayout({
@@ -70,10 +70,7 @@ export default async function RootLayout({
       selfHosted={true}
       customDomain="https://plausible.hedium.nl"
     >
-      <html
-        lang="en"
-        className={`${openSans.variable} ${montserrat.variable}`}
-      >
+      <html lang="en" className={`${openSans.variable} ${montserrat.variable}`}>
         <head>
           <link
             rel="apple-touch-icon"

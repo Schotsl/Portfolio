@@ -7,7 +7,9 @@ export type Image = {
 };
 
 export type Project = {
+  slug: string;
   title: string;
+  intro: string;
   video: string;
   image: Image;
 };

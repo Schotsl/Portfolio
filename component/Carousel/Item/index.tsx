@@ -14,16 +14,16 @@ type CarouselItemProps = {
 export default function CarouselItem({
   index,
   active,
-  project,
+  project: { slug, title, intro, video, image },
 }: CarouselItemProps) {
-  const video = useRef<HTMLVideoElement>(null);
+  const player = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    if (active && video.current) {
-      video.current.play();
-    } else if (video.current) {
-      video.current.pause();
-      video.current.currentTime = 0;
+    if (active && player.current) {
+      player.current.play();
+    } else if (player.current) {
+      player.current.pause();
+      player.current.currentTime = 0;
     }
   }, [active]);
 
@@ -34,24 +34,20 @@ export default function CarouselItem({
         active ? `${styles.item} ${styles["item--active"]}` : `${styles.item}`
       }
     >
-      <a href="/uwuifier">
+      <a href={`/${slug}`}>
         <Image
-          image={project.image}
+          image={image}
           sizes={"(min-width: 768px) 46rem, 80vw"}
           className={styles.item__image}
         />
 
-        <video ref={video} muted autoPlay className={styles.item__video}>
-          <source src={project.video} type="video/mp4" />
+        <video className={styles.item__video} ref={player} muted autoPlay loop>
+          <source src={video} type="video/mp4" />
         </video>
 
         <div className={styles.item__overlay}>
-          <h2 className={styles.item__overlay__title}>{project.title}</h2>
-          <p className={styles.item__overlay__content}>
-            Lorum ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            tristique, odio ac fermentum semper, sapien mi ultrices odio, nec
-            ultricies ligula elit sit amet nunc. Nullam auctor, odio ac
-          </p>
+          <h2 className={styles.item__overlay__title}>{title}</h2>
+          <p className={styles.item__overlay__content}>{intro}</p>
         </div>
       </a>
     </li>
