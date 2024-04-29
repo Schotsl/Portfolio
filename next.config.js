@@ -31,6 +31,15 @@ module.exports = withPlausibleProxy()(
               },
             ],
           },
+          {
+            source: "/videos/:path*",
+            headers: [
+              {
+                key: "Cache-Control",
+                value: "public, max-age=31536000, immutable",
+              },
+            ],
+          }
         ];
       },
       async rewrites() {
@@ -41,12 +50,6 @@ module.exports = withPlausibleProxy()(
               "https://gqdzsrtumnxtfwgryfmj.supabase.co/storage/v1/object/public/portfolio/:path*",
           },
           {
-            headers: [
-              {
-                key: "Cache-Control",
-                value: "public, max-age=31536000, immutable",
-              },
-            ],
             source: "/videos/:path*",
             destination:
               "https://gqdzsrtumnxtfwgryfmj.supabase.co/storage/v1/object/public/videos/:path*",
