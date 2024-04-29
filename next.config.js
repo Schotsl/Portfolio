@@ -23,15 +23,6 @@ module.exports = withPlausibleProxy()(
       async headers() {
         return [
           {
-            source: "/(.*)",
-            headers: [
-              {
-                key: "Content-Security-Policy",
-                value: policies.replace(/\n/g, ""),
-              },
-            ],
-          },
-          {
             source: "/videos/:path*",
             headers: [
               {
