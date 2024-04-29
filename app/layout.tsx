@@ -3,7 +3,7 @@ import "./layout.scss";
 import PlausibleProvider from "next-plausible";
 
 import { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Open_Sans, Montserrat } from "next/font/google";
 import { ReactNode } from "react";
 
 const alt = "Een foto van de Toolenburgerplas in Hoofddorp.";
@@ -49,6 +49,13 @@ export const metadata: Metadata = {
 const openSans = Open_Sans({
   weight: ["400", "700", "600"],
   subsets: ["latin"],
+  variable: '--font-open-sans',
+});
+
+const montserrat = Montserrat({
+  weight: ["400", "600"],
+  subsets: ["latin"],
+  variable: '--font-montserrat',
 });
 
 export default async function RootLayout({
@@ -63,7 +70,10 @@ export default async function RootLayout({
       selfHosted={true}
       customDomain="https://plausible.hedium.nl"
     >
-      <html lang="en" className={openSans.className}>
+      <html
+        lang="en"
+        className={`${openSans.variable} ${montserrat.variable}`}
+      >
         <head>
           <link
             rel="apple-touch-icon"

@@ -20,10 +20,10 @@ export default function CarouselItem({
 
   useEffect(() => {
     if (active && video.current) {
-      video.current.currentTime = 0;
       video.current.play();
     } else if (video.current) {
       video.current.pause();
+      video.current.currentTime = 0;
     }
   }, [active]);
 
@@ -34,15 +34,26 @@ export default function CarouselItem({
         active ? `${styles.item} ${styles["item--active"]}` : `${styles.item}`
       }
     >
-      <Image
-        image={project.image}
-        sizes={"(min-width: 768px) 46rem, 80vw"}
-        className={styles.item__image}
-      />
+      <a href="/uwuifier">
+        <Image
+          image={project.image}
+          sizes={"(min-width: 768px) 46rem, 80vw"}
+          className={styles.item__image}
+        />
 
-      <video ref={video} muted autoPlay className={styles.item__video}>
-        <source src={project.video} type="video/mp4" />
-      </video>
+        <video ref={video} muted autoPlay className={styles.item__video}>
+          <source src={project.video} type="video/mp4" />
+        </video>
+
+        <div className={styles.item__overlay}>
+          <h2 className={styles.item__overlay__title}>{project.title}</h2>
+          <p className={styles.item__overlay__content}>
+            Lorum ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            tristique, odio ac fermentum semper, sapien mi ultrices odio, nec
+            ultricies ligula elit sit amet nunc. Nullam auctor, odio ac
+          </p>
+        </div>
+      </a>
     </li>
   );
 }

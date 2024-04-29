@@ -4,6 +4,7 @@
 body {
   color: #000;
   margin: 0;
+  font-family: var(--font-montserrat);
 }
 
 main {
@@ -19,7 +20,9 @@ h4,
 h5,
 h6 {
   margin: 0px;
+
   font-weight: 400;
+  font-family: var(--font-open-sans);
 }
 
 h2 {
@@ -48,4 +51,13 @@ menu {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
 }
