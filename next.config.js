@@ -32,7 +32,7 @@ module.exports = withPlausibleProxy()(
             ],
           },
           {
-            source: "\/videos\/.*",
+            source: "/videos/:path*",
             headers: [
               {
                 key: "Cache-Control",
