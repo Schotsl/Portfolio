@@ -3,12 +3,11 @@
   color: #fff;
 
   &__image {
-    position: absolute;
-    top: -14rem;
+    top: 0;
     left: 0rem;
-    z-index: -1;
-    width: 150vw;
     filter: brightness(50%);
+    z-index: -3;
+    position: absolute;
   }
 
   &__title {
@@ -23,6 +22,7 @@
   &__content {
     font-size: 2rem;
   }
+
   &::before,
   &::after {
     top: 30rem;
@@ -30,23 +30,32 @@
     width: 150vw;
     height: 100%;
     content: "";
+    z-index: -2;
     position: absolute;
     transform: rotate(4deg);
     background: #fff;
   }
 
-  // &::before {
-  //   // Add dropshadow
-  //   box-shadow: 0 0 10rem rgba(0, 0, 0, 1);
-  // }
-
   &::after {
-    margin-top: -1px;
-    // Add inner shadow
-    box-shadow: inset 0 0 10rem rgba(0, 0, 0, 0.5);
-    background: linear-gradient(90deg, blue, transparent),
-      url(https://grainy-gradients.vercel.app/noise.svg);
-    filter: contrast(170%) brightness(200%);
     height: 6rem;
+    margin: -2px 0 0;
+    animation: gradient 30s ease infinite;
+    background: linear-gradient(270deg, #2e3192, #1bffff);
+    background-size: 200% 200%;
+
+    z-index: -1;
+    box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.5);
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
   }
 }

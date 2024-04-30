@@ -1,0 +1,18 @@
+{
+  "title": "Uwuifier",
+  "video": "/videos/uwuifier-min.mp4",
+  "slug": "uwuifier",
+  "intro": "Uwuifier is a fun app that turns any text into \"uwu\" or \"owo\" style, adding playful expressions and cute phrases to your messages. It's perfect for livening up conversations with a whimsical twist.",
+  "image": {
+    "alt": "Uwuifier",
+    "src": "/content/project/images/uwuifier.png"
+  },
+  "categories": [
+    {
+      "category": "Design"
+    },
+    {
+      "category": "Development"
+    }
+  ]
+}
