@@ -43,8 +43,9 @@
     background: linear-gradient(270deg, #3eb6de 0, #2f80ed);
     background-size: 200% 200%;
 
+    border: 4px solid #d0eef9;
+
     z-index: -1;
-    box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.25);
 
     @keyframes gradient {
       0% {

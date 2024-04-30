@@ -1,0 +1,17 @@
+@import "@/styles/mixins";
+
+.project {
+  &__content {
+    max-width: 32rem;
+  }
+
+  &__list {
+    --carousel-item-gap: 2rem;
+
+    gap: var(--carousel-item-gap);
+    width: 100%;
+    margin: 2rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,22 @@
+.categories {
+  gap: 0.5rem;
+  display: flex;
+
+  &__category {
+    color: #2f80ed;
+
+    font-family: var(--font-open-sans);
+    font-weight: 800;
+    text-transform: uppercase;
+
+    &::after {
+      content: ",";
+    }
+
+    &:last-of-type {
+      &::after {
+        content: "";
+      }
+    }
+  }
+}

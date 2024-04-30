@@ -1,4 +1,4 @@
-import styles from "./CarouselItem.module.scss";
+import styles from "./ProjectItem.module.scss";
 
 import { Project } from "@/types";
 import { useEffect, useRef, useState } from "react";
@@ -6,45 +6,50 @@ import { useEffect, useRef, useState } from "react";
 import Image from "@/component/Image";
 import Categories from "@/component/Categories";
 
-type CarouselItemProps = {
+type ProjectItemProps = {
   index: number;
-  active: boolean;
   project: Project;
 };
 
-export default function CarouselItem({
+export default function ProjectItem({
   index,
-  active,
-  project: { slug, title, intro, video, image, categories },
-}: CarouselItemProps) {
+  project: { slug, title, video, image, categories },
+}: ProjectItemProps) {
   const player = useRef<HTMLVideoElement>(null);
+  const container = useRef<HTMLLIElement>(null);
 
-  const [updating, setUpdating] = useState(false);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
-    if (!player.current || updating) {
-      return;
-    }
+    const playerCurrent = player.current!;
+    const containerCurrent = container.current!;
 
-    const updatePlay = async () => {
-      setUpdating(true);
+    const handleMouseEnter = () => {
+      setActive(true);
 
-      if (active) {
-        await player.current!.play();
-      } else if (player.current) {
-        player.current.pause();
-        player.current.currentTime = 0;
-      }
-
-      setUpdating(false);
+      playerCurrent.play();
     };
 
-    updatePlay();
-  }, [active, updating]);
+    const handleMouseLeave = () => {
+      setActive(false);
+
+      playerCurrent.pause();
+      playerCurrent.currentTime = 0;
+    };
+
+    containerCurrent.addEventListener("mouseenter", handleMouseEnter);
+    containerCurrent.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      containerCurrent.removeEventListener("mouseenter", handleMouseEnter);
+      containerCurrent.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
 
   return (
     <li
       key={index}
+      ref={container}
       className={
         active ? `${styles.item} ${styles["item--active"]}` : `${styles.item}`
       }
@@ -62,15 +67,13 @@ export default function CarouselItem({
         />
 
         <div className={styles.item__overlay}>
+          <h2 className={styles.item__overlay__title}>{title}</h2>
           {categories && (
             <Categories
               className={styles.item__overlay__categories}
               categories={categories}
             />
           )}
-
-          <h2 className={styles.item__overlay__title}>{title}</h2>
-          <p className={styles.item__overlay__content}>{intro}</p>
         </div>
       </a>
     </li>
