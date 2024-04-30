@@ -40,11 +40,11 @@
     height: 6rem;
     margin: -2px 0 0;
     animation: gradient 30s ease infinite;
-    background: linear-gradient(270deg, #2e3192, #1bffff);
+    background: linear-gradient(270deg, #3eb6de 0, #2f80ed);
     background-size: 200% 200%;
 
     z-index: -1;
-    box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.25);
 
     @keyframes gradient {
       0% {

@@ -62,12 +62,14 @@ export default function CarouselItem({
         />
 
         <div className={styles.item__overlay}>
-          {categories && (
-            <CarouselItemCategories
-              className={styles.item__overlay__categories}
-              categories={categories}
-            />
-          )}
+          {/*
+            {categories && (
+              <CarouselItemCategories
+                className={styles.item__overlay__categories}
+                categories={categories}
+              />
+            )}
+          */}
 
           <h2 className={styles.item__overlay__title}>{title}</h2>
           <p className={styles.item__overlay__content}>{intro}</p>

@@ -1,0 +1,12 @@
+.about {
+  gap: 3rem;
+  width: 100%;
+  display: flex;
+  margin: 8rem 0 0;
+
+  &__image {
+    min-width: 22rem !important;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+}

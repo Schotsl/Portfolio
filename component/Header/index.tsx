@@ -15,6 +15,7 @@ type HeaderProps = {
 const sentences = [
   "A great developer, a pretty good designer",
   "Being laughed at while playing VR outside",
+  "Creating yet another GitHub repository",
 ];
 
 export default function Header({ banner }: HeaderProps) {
