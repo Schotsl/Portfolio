@@ -43,7 +43,7 @@ module.exports = withPlausibleProxy()(
           {
             source: "/videos/:path*",
             destination:
-              "https://gqdzsrtumnxtfwgryfmj.supabase.co/storage/v1/object/public/videos/:path*",
+              "https://res.cloudinary.com/dgbpor7gw/video/upload/v1714582259/:path*",
           },
         ];
       },
