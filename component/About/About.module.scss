@@ -1,12 +1,24 @@
+@import "@/styles/mixins";
+
 .about {
   gap: 3rem;
   width: 100%;
   margin: 8rem 0;
   display: flex;
+  flex-direction: column;
+
+  @include respond-to-lg {
+    flex-direction: row;
+  }
 
   &__image {
     width: 22rem;
+    height: 22rem;
     overflow: hidden;
     border-radius: 100%;
+
+    @include respond-to-lg {
+      min-width: 22rem;
+    }
   }
 }
