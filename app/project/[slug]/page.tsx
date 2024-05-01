@@ -5,9 +5,9 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const projects = await getCollection<Project>("project");
-  const projectsSlug = projects.map((project) => {
-    project.slug;
-  });
+  const projectsSlug = projects.map((project) => ({
+    slug: project.slug,
+  }));
 
   return projectsSlug;
 }
