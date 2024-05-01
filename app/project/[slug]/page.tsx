@@ -5,12 +5,14 @@ export const dynamicParams = false;
 
 export async function generateStaticParams() {
   const projects = await getCollection<Project>("project");
-  const projectsSlug = projects.map((project) => project.slug);
+  const projectsSlug = projects.map((project) => {
+    project.slug;
+  });
 
   return projectsSlug;
 }
 
-export default async function Page({ params }: { params: Project }) {
+export default async function Page({ params }: { params: { slug: string } }) {
   const projects = await getCollection<Project>("project");
   const project = projects.find((project) => project.slug === params.slug);
 
