@@ -9,7 +9,7 @@ export default async function About() {
 
   return (
     <div className={styles.about}>
-      <Image className={styles.about__image} image={banner} sizes={"30rem"} />
+      <Image className={styles.about__image} image={banner} sizes={"24rem"} />
 
       <section className={styles.about__section}>
         <h2 className={styles.about__section__title}>About Me</h2>
