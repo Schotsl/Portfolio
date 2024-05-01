@@ -5,10 +5,7 @@ type CategoriesProps = {
   className?: string;
 };
 
-export default function Categories({
-  categories,
-  className,
-}: CategoriesProps) {
+export default function Categories({ categories, className }: CategoriesProps) {
   return (
     <ul className={`${styles.categories} ${className}`}>
       {categories.map((category, index) => (
