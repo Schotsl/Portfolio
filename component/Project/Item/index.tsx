@@ -54,7 +54,7 @@ export default function ProjectItem({
         active ? `${styles.item} ${styles["item--active"]}` : `${styles.item}`
       }
     >
-      <a href={`/${slug}`}>
+      <a href={`/project/${slug}`}>
         <video className={styles.item__video} ref={player} muted autoPlay loop>
           <source src={video} type="video/mp4" />
         </video>
