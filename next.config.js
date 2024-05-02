@@ -43,7 +43,7 @@ module.exports = withPlausibleProxy()(
           {
             source: "/videos/:path*",
             destination:
-              "https://res.cloudinary.com/dgbpor7gw/video/upload/v1714582259/:path*",
+              "https://portfolio-686e22ba.b-cdn.net/:path*",
           },
         ];
       },
