@@ -24,39 +24,22 @@
     font-size: 2rem;
   }
 
-  &::before,
-  &::after {
-    top: 30rem;
-    left: -25vw;
-    width: 150vw;
-    height: 100%;
-    content: "";
-    z-index: -2;
+  &__waves {
+    left: 0;
     position: absolute;
-    transform: rotate(4deg);
-    background: #fff;
-  }
 
-  &::after {
-    height: 6rem;
-    margin: -2px 0 0;
-    animation: gradient 30s ease infinite;
-    background: linear-gradient(270deg, #3eb6de 0, #2f80ed);
-    background-size: 200% 200%;
+    &__wave {
+      top: 0;
+      left: 0;
+      width: 100vw;
+      position: absolute;
 
-    border: 4px solid #d0eef9;
-
-    z-index: -1;
-
-    @keyframes gradient {
-      0% {
-        background-position: 0% 50%;
+      &:nth-of-type(2) {
+        top: 9rem;
       }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
+
+      &:nth-of-type(3) {
+        top: 14rem;
       }
     }
   }
