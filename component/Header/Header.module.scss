@@ -6,7 +6,7 @@
     top: 0;
     left: 0rem;
     width: 100%;
-    filter: brightness(50%);
+    // filter: brightness(50%);
     z-index: -3;
     position: absolute;
   }
@@ -26,21 +26,8 @@
 
   &__waves {
     left: 0;
+    width: 100vw;
+    height: 0;
     position: absolute;
-
-    &__wave {
-      top: 0;
-      left: 0;
-      width: 100vw;
-      position: absolute;
-
-      &:nth-of-type(2) {
-        top: 9rem;
-      }
-
-      &:nth-of-type(3) {
-        top: 14rem;
-      }
-    }
   }
 }
