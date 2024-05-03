@@ -9,71 +9,58 @@ serve(async (req: Request) => {
     return new Response("ok", { headers: corsHeaders });
   }
 
-  const supabaseClient = createClient(
+  const adminClient = createClient(
     Deno.env.get("SUPABASE_URL") ?? "",
-    Deno.env.get("SUPABASE_ANON_KEY") ?? "",
-    {
-      global: { headers: { Authorization: req.headers.get("Authorization")! } },
-      auth: {
-        persistSession: false,
-      },
-    },
+    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
   );
 
-  const updateStatistics = async () => {
-    const domains = [
-      "kruidenpower.nl",
-      "lxframes.com",
-      "meesterproef.sjorsvanholst.nl",
-      "nicoletrompetter.nl",
-      "overworked.app",
-      "presently.dev",
-      "sjorsvanholst.nl",
-      "toolenburgerplas.nl",
-      "uwuifier.com",
-      "wanneer-naar-terschelling.nl",
-      "zonneveranda.nl",
-    ];
+  const domains = [
+    "kruidenpower.nl",
+    "lxframes.com",
+    "meesterproef.sjorsvanholst.nl",
+    "nicoletrompetter.nl",
+    "overworked.app",
+    "presently.dev",
+    "sjorsvanholst.nl",
+    "toolenburgerplas.nl",
+    "uwuifier.com",
+    "wanneer-naar-terschelling.nl",
+    "zonneveranda.nl",
+  ];
 
-    const domainsPromises = domains.map((domain) => fetchPlausible(domain));
-    const domainsValues = await Promise.all(domainsPromises);
+  const domainsPromises = domains.map((domain) => fetchPlausible(domain));
+  const domainsValues = await Promise.all(domainsPromises);
 
-    const pageviews = domainsValues.reduce(
-      (previous, current) => previous + current,
-      0,
-    );
+  const pageviews = domainsValues.reduce(
+    (previous, current) => previous + current,
+    0,
+  );
 
-    // If we call a unneeded update the websocket will trigger so we need to check if the data has changed
-    const { data: totalData, error: totalError } = await supabaseClient
-      .from("statistics")
-      .select("pageviews")
-      .eq("id", "c6fe3380-993e-42bf-91fb-a4806b4f8844")
-      .single();
+  // If we call a unneeded update the websocket will trigger so we need to check if the data has changed
+  const { data: totalData, error: totalError } = await adminClient
+    .from("statistics")
+    .select("pageviews")
+    .eq("id", "c6fe3380-993e-42bf-91fb-a4806b4f8844")
+    .single();
 
-    if (totalError) {
-      throw totalError;
-    }
+  if (totalError) {
+    throw totalError;
+  }
 
-    if (
-      totalData &&
-      totalData.pageviews === pageviews
-    ) {
-      return;
-    }
+  if (totalData && totalData.pageviews === pageviews) {
+    return;
+  }
 
-    const { error: updateError } = await supabaseClient
-      .from("statistics")
-      .update({
-        pageviews,
-      })
-      .eq("id", "c6fe3380-993e-42bf-91fb-a4806b4f8844");
+  const { error: updateError } = await adminClient
+    .from("statistics")
+    .update({
+      pageviews,
+    })
+    .eq("id", "c6fe3380-993e-42bf-91fb-a4806b4f8844");
 
-    if (updateError) {
-      throw updateError;
-    }
-  };
-
-  await updateStatistics();
+  if (updateError) {
+    throw updateError;
+  }
 
   return new Response(JSON.stringify({}), {
     headers: { ...corsHeaders, "Content-Type": "application/json" },

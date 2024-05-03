@@ -7,8 +7,7 @@ export async function fetchPlausible(domain: string) {
     throw new Error("Missing required environment variables");
   }
 
-  const plausibleUrl =
-    `${plausibleHost}/api/v1/stats/aggregate?site_id=${domain}&period=30d&metrics=pageviews`;
+  const plausibleUrl = `${plausibleHost}/api/v1/stats/aggregate?site_id=${domain}&period=30d&metrics=pageviews`;
 
   const plausibleResponse = await fetch(plausibleUrl, {
     headers: {

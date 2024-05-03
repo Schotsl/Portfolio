@@ -42,8 +42,7 @@ module.exports = withPlausibleProxy()(
           },
           {
             source: "/videos/:path*",
-            destination:
-              "https://portfolio-686e22ba.b-cdn.net/:path*",
+            destination: "https://portfolio-686e22ba.b-cdn.net/:path*",
           },
         ];
       },

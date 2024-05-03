@@ -8,6 +8,7 @@ import useTypewriter from "react-typewriter-hook";
 import { Image as ImageType } from "@/types";
 import { useEffect, useState, useRef } from "react";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import { useCount } from "@/context/CountContext";
 
 type HeaderProps = {
   banner: ImageType;
@@ -20,24 +21,12 @@ const sentences = [
 ];
 
 export default function Header({ banner }: HeaderProps) {
-  const [count, setCount] = useState(23433);
+  const { global } = useCount();
+
   const [index, setIndex] = useState(0);
 
   const sentence = sentences[index];
   const subtitle = useTypewriter(sentence);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((previous) => {
-        const countIncrease = Math.floor(Math.random() * 10);
-        const countNext = previous + countIncrease;
-
-        return countNext;
-      });
-    }, 100);
-
-    return () => clearInterval(interval);
-  });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -59,7 +48,7 @@ export default function Header({ banner }: HeaderProps) {
       <h1 className={styles.header__title}>Sjors van Holst</h1>
       <h2 className={styles.header__subtitle}>{subtitle}</h2>
       <p className={styles.header__content}>
-        This month I&apos;ve informed over {count} people
+        This month I&apos;ve informed over {global} people
       </p>
 
       <div className={styles.header__waves}>

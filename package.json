@@ -16,6 +16,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@openlab/vercel-netlify-cms-github": "^1.1.1",
     "@sentry/nextjs": "^7.105.0",
+    "@supabase/auth-helpers-nextjs": "^0.10.0",
     "@types/simple-oauth2": "^5.0.7",
     "autoprefixer": "10.4.19",
     "encoding": "^0.1.13",
