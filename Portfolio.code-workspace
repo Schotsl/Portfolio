@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "name": "Next",
+      "path": "./",
+    },
+    {
+      "name": "Supabase",
+      "path": "supabase/functions",
+    },
+  ],
+  "settings": {
+    "files.exclude": {
+      "supabase/functions/": true,
+    },
+  },
+}
