@@ -6,7 +6,7 @@ import Image from "@/component/Image";
 import useTypewriter from "react-typewriter-hook";
 
 import { Image as ImageType } from "@/types";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import { useCount } from "@/context/CountContext";
 

@@ -1,10 +1,13 @@
 .image {
   position: relative;
+  object-fit: cover;
 
   &__image {
     width: 100%;
     height: 100%;
     display: block;
+    object-fit: inherit;
+    object-position: inherit;
   }
 
   &__overlay {
@@ -18,6 +21,8 @@
       width: 100%;
       height: 100%;
       position: relative;
+      object-fit: inherit;
+      object-position: inherit;
 
       &__blur {
         width: 100%;

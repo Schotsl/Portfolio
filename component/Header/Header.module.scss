@@ -6,9 +6,11 @@
     top: 0;
     left: 0rem;
     width: 100%;
-    // filter: brightness(50%);
     z-index: -3;
+    overflow: hidden;
     position: absolute;
+    max-height: 32rem;
+    object-position: 0 calc(-10vw + 5rem);
   }
 
   &__title {
