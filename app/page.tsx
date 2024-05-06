@@ -1,10 +1,11 @@
 import styles from "./page.module.scss";
 
 import Header from "@/component/Header";
-import Jumper from "@/component/Jumper";
+import Button from "@/component/Button";
 import Carousel from "@/component/Carousel";
 import Project from "@/component/Project";
 
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Project as ProjectType } from "@/types";
 import { getCollection, getImage } from "@/helper";
 
@@ -20,7 +21,13 @@ export default async function Page() {
     <main className={styles.main}>
       <Header banner={banner} />
       <Carousel projects={projects} />
-      <Jumper />
+
+      <Button
+        href="#main"
+        label="View all my projects"
+        icon={faArrowDown}
+      />
+
       <About />
       <Project projects={projects} />
     </main>
