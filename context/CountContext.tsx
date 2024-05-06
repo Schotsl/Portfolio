@@ -7,14 +7,17 @@ import {
   ReactNode,
   useState,
   useEffect,
+  useRef,
 } from "react";
 
 type CountContextType = {
-  global: number;
+  smooth: number;
+  length: number;
 };
 
 const CountContext = createContext<CountContextType>({
-  global: 0,
+  smooth: 0,
+  length: 0,
 });
 
 export const useCount = () => {
@@ -22,13 +25,54 @@ export const useCount = () => {
 };
 
 type CountProviderProps = {
+  initial: number;
   children: ReactNode;
 };
 
-export const CountProvider = ({ children }: CountProviderProps) => {
-  const [global, setGlobal] = useState(0);
+const UPDATE_INTERVAL = 10000;
 
+export const CountProvider = ({ initial, children }: CountProviderProps) => {
   const supabase = createClientComponentClient();
+
+  const [smooth, setSmooth] = useState(0);
+  const [smoothInterval, setSmoothInterval] = useState<NodeJS.Timeout | null>();
+
+  const smoothRef = useRef(smooth);
+
+  smoothRef.current = smooth;
+
+  const scheduleSmooth = (updated: number, old: number) => {
+    if (smoothInterval) {
+      clearInterval(smoothInterval);
+    }
+
+    const timestamp = Date.now();
+    const difference = updated - old;
+
+    const interval = setInterval(() => {
+      setSmooth(() => {
+        const elapsed = Date.now() - timestamp;
+        const progress = elapsed / UPDATE_INTERVAL;
+
+        // If we've reached the target interval
+        if (progress >= 1) {
+          clearInterval(interval);
+
+          return updated;
+        }
+
+        // Otherwise increase the value using easing
+        const easing = 1 - Math.pow(1 - progress, 6);
+        const increased = Math.round(old + difference * easing);
+
+        return increased;
+      });
+    }, 10);
+
+    setSmoothInterval(interval);
+
+    return () => clearInterval(interval);
+  };
 
   const subscribeCount = () => {
     const channel = supabase
@@ -41,8 +85,11 @@ export const CountProvider = ({ children }: CountProviderProps) => {
           schema: "public",
         },
         (payload: any) => {
-          setGlobal(payload.new.pageviews);
-        },
+          const pageviewsNew = payload.new.pageviews;
+          const pageviewsOld = smoothRef.current;
+
+          scheduleSmooth(pageviewsNew, pageviewsOld);
+        }
       )
       .subscribe();
 
@@ -51,26 +98,19 @@ export const CountProvider = ({ children }: CountProviderProps) => {
     };
   };
 
-  const loadCount = async () => {
-    const { data } = await supabase
-      .from("statistics")
-      .select("id,pageviews")
-      .eq("id", "c6fe3380-993e-42bf-91fb-a4806b4f8844")
-      .single();
-
-    if (!data) {
-      setGlobal(0);
-    } else {
-      setGlobal(data.pageviews);
-    }
-  };
-
   useEffect(() => {
-    loadCount();
-    subscribeCount();
-  });
+    scheduleSmooth(initial, 0);
+
+    // We'll only start listening for changes after the initial value has been set
+    setTimeout(() => subscribeCount(), UPDATE_INTERVAL);
+  }, []);
+
+  const lengthString = initial.toString();
+  const length = lengthString.length;
 
   return (
-    <CountContext.Provider value={{ global }}>{children}</CountContext.Provider>
+    <CountContext.Provider value={{ smooth, length }}>
+      {children}
+    </CountContext.Provider>
   );
 };

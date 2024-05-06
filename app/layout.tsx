@@ -3,9 +3,11 @@ import "./layout.scss";
 import PlausibleProvider from "next-plausible";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { cookies } from "next/headers";
 import { Metadata } from "next";
 import { ReactNode } from "react";
 import { Open_Sans, Montserrat } from "next/font/google";
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { CountProvider } from "@/context/CountContext";
@@ -18,7 +20,7 @@ const url = "https://toolenburgerplas.nl/banner-1200x630.png";
 const title = "Sjors van Holst";
 const description = "Ik ben Sjors van Holst";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   title,
   description,
@@ -65,11 +67,32 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
+const supabase = createServerComponentClient({ cookies });
+
+async function loadCount() {
+  console.log(
+    "FETCH STATISTICS ===================================================",
+  );
+
+  const { data } = await supabase
+    .from("statistics")
+    .select("id,pageviews")
+    .eq("id", "c6fe3380-993e-42bf-91fb-a4806b4f8844")
+    .single();
+
+  if (!data) {
+    return 0;
+  }
+
+  return data.pageviews;
+}
+
 export default async function RootLayout({
   children,
 }: {
   children: ReactNode;
 }) {
+  const count = await loadCount();
   return (
     <PlausibleProvider
       domain="sjorsvanholst.nl"
@@ -77,7 +100,7 @@ export default async function RootLayout({
       selfHosted={true}
       customDomain="https://plausible.hedium.nl"
     >
-      <CountProvider>
+      <CountProvider initial={count}>
         <html
           lang="en"
           className={`${openSans.variable} ${montserrat.variable}`}

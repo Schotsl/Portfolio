@@ -21,7 +21,7 @@ const sentences = [
 ];
 
 export default function Header({ banner }: HeaderProps) {
-  const { global } = useCount();
+  const { smooth } = useCount();
 
   const [index, setIndex] = useState(0);
 
@@ -48,7 +48,7 @@ export default function Header({ banner }: HeaderProps) {
       <h1 className={styles.header__title}>Sjors van Holst</h1>
       <h2 className={styles.header__subtitle}>{subtitle}</h2>
       <p className={styles.header__content}>
-        This month I&apos;ve informed over {global} people
+        This month I&apos;ve informed over {Math.round(smooth)} people
       </p>
 
       <div className={styles.header__waves}>
