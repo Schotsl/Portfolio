@@ -51,7 +51,12 @@ export default function Header({
           : `${styles.header}`
       }
     >
-      <Image image={banner} className={styles.header__image} sizes={"100vw"} />
+      <Image
+        image={banner}
+        sizes={"100vw"}
+        priority={true}
+        className={styles.header__image}
+      />
 
       <div className={styles.header__content}>
         <h1 className={styles.header__content__title}>{title}</h1>
