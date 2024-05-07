@@ -1,58 +1,82 @@
+import About from "@/component/About";
 import Header from "@/component/Header";
 import Button from "@/component/Button";
 import Carousel from "@/component/Carousel";
 import Project from "@/component/Project";
 
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { CountProvider } from "@/context/CountContext";
 import { Project as ProjectType } from "@/types";
 import { getCollection, getImage } from "@/helper";
-
-import About from "@/component/About";
 
 import styles from "./page.module.scss";
 import banner from "@/public/content/shared/banner.json";
 import content from "@/public/content/pages/home/index.json";
+import supabase from "@/utils/supabase";
 
-export const dynamic = "force-static";
+export const revalidate = 86400;
+
+async function loadCount() {
+  console.log("Loading count");
+
+  const { data, error } = await supabase
+    .from("statistics")
+    .select("pageviews")
+    .eq("id", "c6fe3380-993e-42bf-91fb-a4806b4f8844")
+    .single();
+
+  if (error) {
+    throw error;
+  }
+
+  if (!data) {
+    return 0;
+  }
+
+  return data.pageviews;
+}
 
 export default async function Page() {
+  const count = await loadCount();
   const about = await getImage(content.about.image);
   const projects = await getCollection<ProjectType>("project");
 
   const bannerImage = await getImage(banner.image);
   const bannerTitle = banner.title;
   const bannerTaglines = content.banner.taglines.map(
-    (tagline) => tagline.tagline,
+    (tagline) => tagline.tagline
   );
 
   const bannerSlugs = content.banner.projects.map((project) => project.project);
   const bannerProjects = projects.filter((project) =>
-    bannerSlugs.includes(project.slug),
+    bannerSlugs.includes(project.slug)
   );
 
   return (
-    <main className={styles.main}>
-      <Header
-        title={bannerTitle}
-        banner={bannerImage}
-        sentences={bannerTaglines}
-      />
+    <CountProvider initial={count}>
+      <main className={styles.main}>
+        <Header
+          title={bannerTitle}
+          banner={bannerImage}
+          sentences={bannerTaglines}
+        />
 
-      <Carousel items={bannerProjects} />
+        <Carousel items={bannerProjects} />
 
-      <Button href="#main" label="View all my projects" icon={faArrowDown} />
+        <Button href="#main" label="View all my projects" icon={faArrowDown} />
 
-      <About
-        title={content.about.title}
-        content={content.about.content}
-        image={about}
-      />
+        <About
+          title={content.about.title}
+          content={content.about.content}
+          image={about}
+        />
 
-      <Project
-        title={content.project.title}
-        content={content.project.content}
-        projects={projects}
-      />
-    </main>
+        <Project
+          title={content.project.title}
+          content={content.project.content}
+          projects={projects}
+        />
+      </main>
+    </CountProvider>
   );
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import { supabase } from "@/utils/supabase";
 import {
   createContext,
   useContext,
@@ -9,6 +8,8 @@ import {
   useEffect,
   useRef,
 } from "react";
+
+import supabase from "@/utils/supabase";
 
 type CountContextType = {
   smooth: number;
@@ -87,7 +88,7 @@ export const CountProvider = ({ initial, children }: CountProviderProps) => {
           const pageviewsOld = smoothRef.current;
 
           scheduleSmooth(pageviewsNew, pageviewsOld);
-        },
+        }
       )
       .subscribe();
 
@@ -98,9 +99,7 @@ export const CountProvider = ({ initial, children }: CountProviderProps) => {
 
   useEffect(() => {
     scheduleSmooth(initial, 0);
-
-    // We'll only start listening for changes after the initial value has been set
-    setTimeout(() => subscribeCount(), UPDATE_INTERVAL);
+    subscribeCount();
   }, []);
 
   const lengthString = initial.toString();

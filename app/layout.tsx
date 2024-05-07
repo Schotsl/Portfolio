@@ -3,13 +3,11 @@ import "./layout.scss";
 import PlausibleProvider from "next-plausible";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
-import { supabase } from "@/utils/supabase";
 import { Metadata } from "next";
 import { ReactNode } from "react";
 import { Open_Sans, Montserrat } from "next/font/google";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import { CountProvider } from "@/context/CountContext";
 
 config.autoAddCss = false;
 
@@ -18,10 +16,6 @@ const url = "https://toolenburgerplas.nl/banner-1200x630.png";
 
 const title = "Sjors van Holst";
 const description = "Ik ben Sjors van Holst";
-
-export const dynamic = "force-dynamic";
-export const runtime = "edge";
-export const preferredRegion = "fra1";
 
 export const metadata: Metadata = {
   title,
@@ -69,30 +63,11 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
-async function loadCount() {
-  console.log(
-    "FETCH STATISTICS ==================================================="
-  );
-
-  const { data } = await supabase
-    .from("statistics")
-    .select("id,pageviews")
-    .eq("id", "c6fe3380-993e-42bf-91fb-a4806b4f8844")
-    .single();
-
-  if (!data) {
-    return 0;
-  }
-
-  return data.pageviews;
-}
-
 export default async function RootLayout({
   children,
 }: {
   children: ReactNode;
 }) {
-  const count = await loadCount();
   return (
     <PlausibleProvider
       domain="sjorsvanholst.nl"
@@ -100,44 +75,35 @@ export default async function RootLayout({
       selfHosted={true}
       customDomain="https://plausible.hedium.nl"
     >
-      <CountProvider initial={count}>
-        <html
-          lang="en"
-          className={`${openSans.variable} ${montserrat.variable}`}
-        >
-          <head>
-            <link
-              rel="apple-touch-icon"
-              sizes="180x180"
-              href="/apple-touch-icon.png"
-            />
-            <link
-              rel="icon"
-              type="image/png"
-              sizes="32x32"
-              href="/favicon-32x32.png"
-            />
-            <link
-              rel="icon"
-              type="image/png"
-              sizes="16x16"
-              href="/favicon-16x16.png"
-            />
+      <html lang="en" className={`${openSans.variable} ${montserrat.variable}`}>
+        <head>
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+          />
 
-            <link rel="manifest" href="/site.webmanifest" />
-            <link
-              rel="mask-icon"
-              href="/safari-pinned-tab.svg"
-              color="#5bbad5"
-            />
+          <link rel="manifest" href="/site.webmanifest" />
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 
-            <meta name="msapplication-TileColor" content="#ffffff" />
-            <meta name="theme-color" content="#ffffff" />
-          </head>
+          <meta name="msapplication-TileColor" content="#ffffff" />
+          <meta name="theme-color" content="#ffffff" />
+        </head>
 
-          <body>{children}</body>
-        </html>
-      </CountProvider>
+        <body>{children}</body>
+      </html>
     </PlausibleProvider>
   );
 }

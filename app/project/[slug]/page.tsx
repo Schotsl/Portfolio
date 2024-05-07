@@ -8,9 +8,6 @@ import { marked } from "marked";
 import Header from "@/component/Header";
 import Carousel from "@/component/Carousel";
 
-export const dynamic = "force-static";
-export const dynamicParams = false;
-
 export async function generateStaticParams() {
   const projects = await getCollection<Project>("project");
   const projectsSlug = projects.map((project) => ({
