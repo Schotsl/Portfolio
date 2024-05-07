@@ -1,8 +1,18 @@
 {
-  "title": "ZonneVeranda",
   "slug": "zonneveranda",
-  "video": "/videos/zonneveranda-min.mp4?v=863d9ecc",
   "intro": "The ZonneVeranda website, which I designed, effectively presents their solar energy solutions through a user-friendly and visually appealing interface. It highlights key products like the solar-equipped PowerPort and various installations for enhancing residential spaces sustainably.",
+  "tagline": "Test",
+  "title": "ZonneVeranda",
+  "images": [
+    {
+      "image": {
+        "alt": "Test",
+        "src": "/content/project/images/zonneveranda.png"
+      }
+    }
+  ],
+  "content": "Test",
+  "video": "/videos/zonneveranda-min.mp4?v=863d9ecc",
   "image": {
     "alt": "ZonneVeranda",
     "src": "/content/project/images/zonneveranda.png"
