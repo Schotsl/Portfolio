@@ -20,6 +20,53 @@ site_url: "https://portfolio-two-mu-45.vercel.app/"
 logo_url: "https://portfolio-two-mu-45.vercel.app/favicon-431x431.png"
 
 collections:
+  - name: "pages"
+    label: "Pages"
+    editor: { preview: false }
+    files:
+      - name: "home"
+        file: "content/index.json"
+        label: "Home"
+        extension: "json"
+        fields:
+          - name: taglines
+            label: Taglines
+            widget: list
+            fields:
+              - { name: "tagline", label: "Tagline", widget: "string" }
+          - name: "Projects"
+            label: "Projects"
+            widget: "relation"
+            collection: "project"
+            value_field: "title"
+            search_fields: ["title"]
+            display_fields: ["title"]
+          - name: "about"
+            label: "About"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "content", label: "Content", widget: "markdown" }
+              - name: "image"
+                label: "Image"
+                widget: "object"
+                summary: "{{fields.alt}}"
+                fields:
+                  - { name: "alt", label: "Alt", widget: "string" }
+                  - {
+                      name: "src",
+                      label: "Image",
+                      widget: "image",
+                      choose_url: false,
+                      media_folder: "/public/content/project/images",
+                      public_folder: "/content/project/images",
+          - name: "project"
+            label: "Project"
+            widget: "object"
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "content", label: "Content", widget: "markdown" }
+
   - name: "project"
     label: "Projects"
     create: true
