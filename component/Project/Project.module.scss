@@ -2,6 +2,12 @@
 
 .project {
   width: 100%;
+  position: relative;
+
+  &__waves {
+    top: 8rem;
+    margin: 0 -8rem;
+  }
 
   &__content {
     max-width: 32rem;

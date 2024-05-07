@@ -2,6 +2,7 @@
 
 import styles from "./Project.module.scss";
 
+import Waves from "../Waves";
 import ProjectItem from "./Item";
 
 import { Project } from "@/types";
@@ -18,6 +19,8 @@ export default function Projects({ projects }: ProjectProps) {
         You&apos;ve already seen my most recent and favorite work at the top of
         the website, here are more projects worth sharing!
       </p>
+
+      <Waves className={styles.project__waves} />
 
       <ul className={styles.project__list}>
         {projects.map((project, index) => (
