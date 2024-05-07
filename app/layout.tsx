@@ -20,6 +20,8 @@ const title = "Sjors van Holst";
 const description = "Ik ben Sjors van Holst";
 
 export const dynamic = "force-dynamic";
+export const preferredRegion = "fra1";
+
 export const metadata: Metadata = {
   title,
   description,
@@ -68,7 +70,7 @@ const montserrat = Montserrat({
 
 async function loadCount() {
   console.log(
-    "FETCH STATISTICS ===================================================",
+    "FETCH STATISTICS ==================================================="
   );
 
   const { data } = await supabase
