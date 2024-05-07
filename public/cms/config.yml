@@ -60,6 +60,7 @@ collections:
                       choose_url: false,
                       media_folder: "/public/content/project/images",
                       public_folder: "/content/project/images",
+                    }
           - name: "project"
             label: "Project"
             widget: "object"
