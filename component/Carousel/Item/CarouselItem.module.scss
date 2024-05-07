@@ -28,6 +28,7 @@
     top: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
     display: none;
     position: absolute;
     object-fit: cover;
@@ -38,6 +39,7 @@
     color: #fff;
     width: 100%;
     height: 100%;
+    z-index: 2;
     opacity: 0;
     padding: 2rem;
     display: flex;
@@ -62,10 +64,6 @@
 
     .item__video {
       display: block;
-    }
-
-    .item__image {
-      // opacity: 0;
     }
   }
 
