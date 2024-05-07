@@ -6,7 +6,7 @@
   @include respond-to-md {
     --carousel-item-gap: 4rem;
   }
-
+  opacity: 0;
   gap: var(--carousel-item-gap);
   width: 100vw;
   margin: 0 0 0 -8rem;
