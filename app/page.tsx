@@ -27,7 +27,7 @@ export default async function Page() {
           "Creating yet another GitHub repository",
         ]}
       />
-      <Carousel projects={projects} />
+      <Carousel items={projects} />
 
       <Button href="#main" label="View all my projects" icon={faArrowDown} />
 

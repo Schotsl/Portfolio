@@ -67,9 +67,11 @@
     }
   }
 
-  &:hover {
-    .item__overlay {
-      opacity: 1;
+  &__link {
+    &:hover {
+      .item__overlay {
+        opacity: 1;
+      }
     }
   }
 }

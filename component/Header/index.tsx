@@ -2,21 +2,27 @@
 
 import styles from "./Header.module.scss";
 
+import Waves from "../Waves";
 import Image from "@/component/Image";
 import useTypewriter from "react-typewriter-hook";
 
 import { Image as ImageType } from "@/types";
 import { useEffect, useState } from "react";
 import { useCount } from "@/context/CountContext";
-import Waves from "../Waves";
 
 type HeaderProps = {
   small?: boolean;
+  title?: string;
   banner: ImageType;
   sentences: string[];
 };
 
-export default function Header({ small, banner, sentences }: HeaderProps) {
+export default function Header({
+  small,
+  title = "Sjors van Holst",
+  banner,
+  sentences,
+}: HeaderProps) {
   const { smooth } = useCount();
 
   const [index, setIndex] = useState(0);
@@ -48,7 +54,7 @@ export default function Header({ small, banner, sentences }: HeaderProps) {
       <Image image={banner} className={styles.header__image} sizes={"100vw"} />
 
       <div className={styles.header__content}>
-        <h1 className={styles.header__content__title}>Sjors van Holst</h1>
+        <h1 className={styles.header__content__title}>{title}</h1>
         <h2 className={styles.header__content__subtitle}>{subtitle}</h2>
         {/* <p className={styles.header__content__content}>
           This month I&apos;ve informed over {Math.round(smooth)} people

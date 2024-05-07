@@ -16,10 +16,21 @@ export async function getCollection<T>(path: string): Promise<T[]> {
     const itemObject = fs.readFileSync(itemPath, "utf8");
     const itemParsed = JSON.parse(itemObject);
 
-    const { image, categories } = itemParsed;
+    const { image, images, categories } = itemParsed;
 
     if (image) {
       itemParsed.image = await getImage(image.src, image.alt);
+    }
+
+    if (images) {
+      const imagesPromises = images.map((imageObject: any) => {
+        const image = imageObject.image;
+        const imagePromise = getImage(image.src, image.alt);
+
+        return imagePromise;
+      });
+      
+      itemParsed.images = await Promise.all(imagesPromises);
     }
 
     if (categories) {

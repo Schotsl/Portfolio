@@ -4,14 +4,14 @@ import styles from "./Carousel.module.scss";
 
 import CarouselItem from "./Item";
 
-import { Project } from "@/types";
+import { Image, CarouselItem as CarouselItemType } from "@/types";
 import { useEffect, useRef, useState } from "react";
 
 type CarouselProps = {
-  projects: Project[];
+  items: CarouselItemType[];
 };
 
-export default function Carousel({ projects }: CarouselProps) {
+export default function Carousel({ items }: CarouselProps) {
   const [index, setIndex] = useState(0);
 
   const carousel = useRef<HTMLUListElement>(null);
@@ -49,7 +49,7 @@ export default function Carousel({ projects }: CarouselProps) {
     }
 
     const scrollLeft = carousel.current.scrollLeft;
-    const scrollItem = carousel.current.scrollWidth / projects.length;
+    const scrollItem = carousel.current.scrollWidth / items.length;
     const scrollIndex = Math.round(scrollLeft / scrollItem);
 
     return scrollIndex;
@@ -66,12 +66,12 @@ export default function Carousel({ projects }: CarouselProps) {
 
   return (
     <ul className={styles.carousel} ref={carousel} onScroll={onScroll}>
-      {projects.map((project, projectIndex) => (
+      {items.map((item, itemIndex) => (
         <CarouselItem
-          key={projectIndex}
-          index={projectIndex}
-          active={projectIndex === index}
-          project={project}
+          key={itemIndex}
+          item={item}
+          index={itemIndex}
+          active={itemIndex === index}
         />
       ))}
     </ul>
