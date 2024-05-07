@@ -1,6 +1,6 @@
 "use client";
 
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import { supabase } from "@/utils/supabase";
 import {
   createContext,
   useContext,
@@ -32,8 +32,6 @@ type CountProviderProps = {
 const UPDATE_INTERVAL = 10000;
 
 export const CountProvider = ({ initial, children }: CountProviderProps) => {
-  const supabase = createClientComponentClient();
-
   const [smooth, setSmooth] = useState(0);
   const [smoothInterval, setSmoothInterval] = useState<NodeJS.Timeout | null>();
 

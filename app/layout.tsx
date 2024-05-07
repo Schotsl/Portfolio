@@ -3,11 +3,10 @@ import "./layout.scss";
 import PlausibleProvider from "next-plausible";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
-import { cookies } from "next/headers";
+import { supabase } from "@/utils/supabase";
 import { Metadata } from "next";
 import { ReactNode } from "react";
 import { Open_Sans, Montserrat } from "next/font/google";
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { CountProvider } from "@/context/CountContext";
@@ -66,8 +65,6 @@ const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat",
 });
-
-const supabase = createServerComponentClient({ cookies });
 
 async function loadCount() {
   console.log(
