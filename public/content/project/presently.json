@@ -1,7 +1,17 @@
 {
-  "title": "Presently",
   "slug": "presently",
   "intro": "Presently is a simple digital signage tool for schools that allows easy management of information displays. It's designed to be straightforward and affordable, helping schools keep their communities updated efficiently.",
+  "tagline": "Let's go!",
+  "title": "Presently",
+  "images": [
+    {
+      "image": {
+        "src": "/content/project/images/presently.png",
+        "alt": "Presently"
+      }
+    }
+  ],
+  "content": "This is a test",
   "video": "/videos/presently-min.mp4?v=22df4306",
   "image": {
     "alt": "Presently",
