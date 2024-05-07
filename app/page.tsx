@@ -56,7 +56,7 @@ export default async function Page() {
         <Header
           title={bannerTitle}
           banner={bannerImage}
-          sentences={bannerTaglines}
+          taglines={bannerTaglines}
         />
 
         <Carousel items={bannerProjects} />

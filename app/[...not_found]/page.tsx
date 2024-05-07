@@ -22,7 +22,7 @@ export default async function Page() {
         small={true}
         title={bannerTitle}
         banner={bannerImage}
-        sentences={bannerTaglines}
+        taglines={bannerTaglines}
       />
 
       <h2 className={styles.main__title}>{content.title}</h2>

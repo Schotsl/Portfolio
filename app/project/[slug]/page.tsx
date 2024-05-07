@@ -40,7 +40,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <main className={styles.main}>
-      <Header title={bannerTitle} banner={bannerImage} sentences={[tagline]} />
+      <Header title={bannerTitle} banner={bannerImage} taglines={[tagline]} />
 
       <Carousel items={items} />
 
