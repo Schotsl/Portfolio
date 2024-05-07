@@ -10,6 +10,7 @@ import { getCollection, getImage } from "@/helper";
 import About from "@/component/About";
 
 import styles from "./page.module.scss";
+import banner from "@/public/content/shared/banner.json";
 import content from "@/public/content/home/index.json";
 
 export const dynamic = "force-static";
@@ -18,19 +19,25 @@ export default async function Page() {
   const about = await getImage(content.about.image);
   const projects = await getCollection<ProjectType>("project");
 
-  const bannerImage = await getImage({ src: "/images/banner.png", alt: "Me" });
+  const bannerImage = await getImage(banner.image);
+  const bannerTitle = banner.title;
   const bannerTaglines = content.banner.taglines.map(
-    (tagline) => tagline.tagline
+    (tagline) => tagline.tagline,
   );
 
   const bannerSlugs = content.banner.projects.map((project) => project.project);
   const bannerProjects = projects.filter((project) =>
-    bannerSlugs.includes(project.slug)
+    bannerSlugs.includes(project.slug),
   );
 
   return (
     <main className={styles.main}>
-      <Header banner={bannerImage} sentences={bannerTaglines} />
+      <Header
+        title={bannerTitle}
+        banner={bannerImage}
+        sentences={bannerTaglines}
+      />
+
       <Carousel items={bannerProjects} />
 
       <Button href="#main" label="View all my projects" icon={faArrowDown} />

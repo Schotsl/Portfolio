@@ -29,7 +29,7 @@ export async function getCollection<T>(path: string): Promise<T[]> {
 
         return imagePromise;
       });
-      
+
       itemParsed.images = await Promise.all(imagesPromises);
     }
 
@@ -50,7 +50,13 @@ export async function getCollection<T>(path: string): Promise<T[]> {
   return collectionResolved;
 }
 
-export async function getImage({ src, alt }: {src: string, alt: string}): Promise<Image> {
+export async function getImage({
+  src,
+  alt,
+}: {
+  src: string;
+  alt: string;
+}): Promise<Image> {
   const imagePath = `${process.cwd()}/public/${src}`;
   const imageBuffer = fs.readFileSync(imagePath);
 

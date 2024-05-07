@@ -24,6 +24,23 @@ collections:
     label: "Pages"
     editor: { preview: false }
     files:
+      - name: "404"
+        file: "public/content/pages/404.json"
+        label: "404"
+        extension: "json"
+        fields:
+          - name: "banner"
+            label: "Banner"
+            widget: "object"
+            fields:
+              - name: taglines
+                label: Taglines
+                widget: list
+                fields:
+                  - { name: "tagline", label: "Tagline", widget: "string" }
+          - { name: "title", label: "Title", widget: "string" }
+          - { name: "content", label: "Content", widget: "markdown" }
+
       - name: "home"
         file: "public/content/home/index.json"
         label: "Home"

@@ -1,4 +1,5 @@
 import styles from "./page.module.scss";
+import header from "@/public/content/shared/banner.json";
 
 import { getCollection, getImage } from "@/helper";
 import { Project } from "@/types";
@@ -18,12 +19,13 @@ import Carousel from "@/component/Carousel";
 // }
 
 export default async function Page({ params }: { params: { slug: string } }) {
+  const bannerImage = await getImage(header.image);
+
   const projects = await getCollection<Project>("project");
   const project = projects.find((project) => project.slug === params.slug)!;
 
   const { video, image, title, tagline, intro, content } = project;
 
-  const banner = await getImage({ src: "/images/banner.png", alt: "Me" });
   const images = project.images.map((image) => ({
     image,
   }));
@@ -38,7 +40,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <main className={styles.main}>
-      <Header title={title} banner={banner} sentences={[tagline]} />
+      <Header title={title} banner={bannerImage} sentences={[tagline]} />
 
       <Carousel items={items} />
 

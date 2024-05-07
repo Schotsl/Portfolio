@@ -25,4 +25,4 @@ export type CarouselItem = {
   intro?: string;
   video?: string;
   categories?: string[];
-}
+};

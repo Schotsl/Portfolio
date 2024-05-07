@@ -2,20 +2,24 @@ import { getImage } from "@/helper";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 import Header from "@/component/Header";
-
-import styles from "./page.module.scss";
 import Button from "@/component/Button";
 
+import styles from "./page.module.scss";
+import banner from "@/public/content/shared/banner.json";
+
 export default async function Page() {
-  const banner = await getImage({ src: "/images/banner.png", alt: "Me" });
+  const bannerImage = await getImage(banner.image);
+  const bannerTitle = banner.title;
 
   return (
     <main className={styles.main}>
       <Header
-        banner={banner}
         small={true}
+        title={bannerTitle}
+        banner={bannerImage}
         sentences={["Looking for this page"]}
       />
+
       <h2 className={styles.main__title}>This page could not be found</h2>
       <p className={styles.main__content}>
         It appears that this page doesn&apos;t exist. The link you followed may
