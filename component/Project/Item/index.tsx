@@ -55,7 +55,14 @@ export default function ProjectItem({
       }
     >
       <a href={`/project/${slug}`}>
-        <video className={styles.item__video} ref={player} muted autoPlay loop>
+        <video
+          ref={player}
+          loop
+          muted
+          autoPlay
+          preload="none"
+          className={styles.item__video}
+        >
           <source src={video} type="video/mp4" />
         </video>
 

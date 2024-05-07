@@ -70,7 +70,13 @@ function CarouselItemInner({
   return (
     <>
       {video && (
-        <video className={styles.item__video} ref={player} muted autoPlay loop>
+        <video
+          ref={player}
+          loop
+          muted
+          preload="none"
+          className={styles.item__video}
+        >
           <source src={video} type="video/mp4" />
         </video>
       )}
