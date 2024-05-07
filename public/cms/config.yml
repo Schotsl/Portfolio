@@ -30,9 +30,29 @@ collections:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "slug", label: "Slug", widget: "string" }
       - { name: "intro", label: "Intro", widget: "text" }
-      - { name: "video", label: "Video", widget: "string" }
+      - { name: "tagline", label: "Tagline", widget: "string" }
+      - { name: "content", label: "Content", widget: "markdown" }
+      - name: "images"
+        label: "Images"
+        widget: "list"
+        fields:
+          - name: "image"
+            label: "Image"
+            widget: "object"
+            summary: "{{fields.alt}}"
+            fields:
+              - { name: "alt", label: "Alt", widget: "string" }
+              - {
+                  name: "src",
+                  label: "Image",
+                  widget: "image",
+                  choose_url: false,
+                  media_folder: "/public/content/project/images",
+                  public_folder: "/content/project/images",
+                }
+      - { name: "video", label: "Cover image", widget: "string" }
       - name: "image"
-        label: "Image"
+        label: "Cover image"
         widget: "object"
         summary: "{{fields.alt}}"
         fields:
