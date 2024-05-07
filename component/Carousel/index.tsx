@@ -9,9 +9,10 @@ import { useEffect, useRef, useState } from "react";
 
 type CarouselProps = {
   items: CarouselItemType[];
+  center?: boolean;
 };
 
-export default function Carousel({ items }: CarouselProps) {
+export default function Carousel({ items, center }: CarouselProps) {
   const [index, setIndex] = useState(0);
 
   const carousel = useRef<HTMLUListElement>(null);
@@ -22,6 +23,11 @@ export default function Carousel({ items }: CarouselProps) {
     // Update the index if it's different
     if (indexCurrent !== index) {
       setIndex(indexCurrent);
+    }
+
+    // Center the carousel if requested
+    if (!center) {
+      return;
     }
 
     // Don't slide if the user is already on a different index
