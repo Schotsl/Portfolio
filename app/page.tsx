@@ -14,7 +14,7 @@ import banner from "@/public/content/shared/banner.json";
 import content from "@/public/content/pages/home/index.json";
 import supabase from "@/utils/supabase";
 
-export const revalidate = 86400;
+export const revalidate = 1;
 
 async function loadCount() {
   console.log("Loading count");
