@@ -13,7 +13,7 @@ export default async function Page() {
   const bannerImage = await getImage(banner.image);
   const bannerTitle = banner.title;
   const bannerTaglines = content.banner.taglines.map(
-    (tagline) => tagline.tagline
+    (tagline) => tagline.tagline,
   );
 
   return (
