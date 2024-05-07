@@ -11,16 +11,12 @@ import { useCount } from "@/context/CountContext";
 import Waves from "../Waves";
 
 type HeaderProps = {
+  small?: boolean;
   banner: ImageType;
+  sentences: string[];
 };
 
-const sentences = [
-  "A great developer, a pretty good designer",
-  "Being laughed at while playing VR outside",
-  "Creating yet another GitHub repository",
-];
-
-export default function Header({ banner }: HeaderProps) {
+export default function Header({ small, banner, sentences }: HeaderProps) {
   const { smooth } = useCount();
 
   const [index, setIndex] = useState(0);
@@ -42,7 +38,13 @@ export default function Header({ banner }: HeaderProps) {
   }, []);
 
   return (
-    <header className={styles.header}>
+    <header
+      className={
+        small
+          ? `${styles.header} ${styles["header--small"]}`
+          : `${styles.header}`
+      }
+    >
       <Image image={banner} className={styles.header__image} sizes={"100vw"} />
 
       <div className={styles.header__content}>
@@ -53,7 +55,7 @@ export default function Header({ banner }: HeaderProps) {
         </p> */}
       </div>
 
-      <Waves className={styles.header__waves} />
+      <Waves className={styles.header__waves} small={small} />
     </header>
   );
 }

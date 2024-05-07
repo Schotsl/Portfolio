@@ -19,7 +19,14 @@ export default async function Page() {
 
   return (
     <main className={styles.main}>
-      <Header banner={banner} />
+      <Header
+        banner={banner}
+        sentences={[
+          "A great developer, a pretty good designer",
+          "Being laughed at while playing VR outside",
+          "Creating yet another GitHub repository",
+        ]}
+      />
       <Carousel projects={projects} />
 
       <Button href="#main" label="View all my projects" icon={faArrowDown} />

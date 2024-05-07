@@ -37,4 +37,13 @@
       }
     }
   }
+
+  &--small {
+    .waves__wave {
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        margin-top: -20rem;
+      }
+    }
+  }
 }

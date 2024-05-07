@@ -5,12 +5,19 @@ import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import styles from "./Waves.module.scss";
 
 type WavesProps = {
+  small?: boolean;
   className?: string;
 };
 
-export default function Waves({ className }: WavesProps) {
+export default function Waves({ small, className }: WavesProps) {
   return (
-    <div className={`${styles.waves} ${className}`}>
+    <div
+      className={
+        small
+          ? `${styles.waves} ${className} ${styles["waves--small"]}`
+          : `${styles.waves} ${className}`
+      }
+    >
       <ParallaxProvider>
         <Parallax speed={-4} className={styles.waves__wave}>
           <svg
