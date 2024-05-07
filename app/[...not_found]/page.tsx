@@ -7,7 +7,7 @@ import styles from "./page.module.scss";
 import Button from "@/component/Button";
 
 export default async function Page() {
-  const banner = await getImage("/images/banner.png", "Me");
+  const banner = await getImage({ src: "/images/banner.png", alt: "Me" });
 
   return (
     <main className={styles.main}>
