@@ -22,11 +22,7 @@ export default async function Page() {
       <Header banner={banner} />
       <Carousel projects={projects} />
 
-      <Button
-        href="#main"
-        label="View all my projects"
-        icon={faArrowDown}
-      />
+      <Button href="#main" label="View all my projects" icon={faArrowDown} />
 
       <About />
       <Project projects={projects} />
