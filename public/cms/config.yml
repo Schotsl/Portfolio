@@ -41,7 +41,7 @@ collections:
               - name: "projects"
                 label: "Projects"
                 widget: "list"
-                summary: "{{fields.project.title}}"
+                summary: "{{fields.project}}"
                 fields:
                   - {
                       name: "project",
