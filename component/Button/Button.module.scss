@@ -2,9 +2,9 @@
   gap: 0.75rem;
   color: #fff;
   cursor: pointer;
+  z-index: 1;
   outline: none;
   display: inline-flex;
-  z-index: 1;
   padding: 1.25rem 2rem;
   position: relative;
   align-items: center;
@@ -27,37 +27,41 @@
 
   &:before {
     background-color: rgba(86, 204, 242, 0.32);
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+
     content: "";
     display: block;
-    height: 100%;
-    left: 0;
     overflow: hidden;
     position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -2;
   }
 
   &:after {
     background-color: initial;
     background-image: linear-gradient(92.83deg, #3eb6de 0, #2f80ed 100%);
+
+    top: 4px;
+    left: 4px;
+    right: 4px;
     bottom: 4px;
+    z-index: -1;
+
     content: "";
     display: block;
-    left: 4px;
     overflow: hidden;
     position: absolute;
-    right: 4px;
-    top: 4px;
     transition: all 100ms ease-out;
-    z-index: -1;
   }
 
   &:hover:not(:disabled):after {
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
-    top: 0;
+    bottom: 0;
     transition-timing-function: ease-in;
   }
 
@@ -71,11 +75,12 @@
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.2)
       ),
-      linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
-    bottom: 4px;
+      linear-gradient(92.83deg, #3eb6de 0, #2f80ed 100%);
+
+    top: 4px;
     left: 4px;
     right: 4px;
-    top: 4px;
+    bottom: 4px;
   }
 
   &:disabled {
