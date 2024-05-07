@@ -1,5 +1,6 @@
 import { getImage } from "@/helper";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { marked } from "marked";
 
 import Header from "@/component/Header";
 import Button from "@/component/Button";
@@ -25,7 +26,10 @@ export default async function Page() {
       />
 
       <h2 className={styles.main__title}>{content.title}</h2>
-      <p className={styles.main__content}>{content.content}</p>
+      <div
+        className={styles.main__content}
+        dangerouslySetInnerHTML={{ __html: marked(content.content) }}
+      ></div>
 
       <Button
         className={styles.main__button}

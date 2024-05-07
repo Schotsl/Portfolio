@@ -20,6 +20,7 @@
     "@types/simple-oauth2": "^5.0.7",
     "autoprefixer": "10.4.19",
     "encoding": "^0.1.13",
+    "marked": "^12.0.2",
     "next": "14.1.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",

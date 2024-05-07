@@ -3,6 +3,7 @@ import header from "@/public/content/shared/banner.json";
 
 import { getCollection, getImage } from "@/helper";
 import { Project } from "@/types";
+import { marked } from "marked";
 
 import Header from "@/component/Header";
 import Carousel from "@/component/Carousel";
@@ -48,7 +49,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       <h2>{title}</h2>
       <p>{intro}</p>
 
-      <p>{content}</p>
+      <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
     </main>
   );
 }

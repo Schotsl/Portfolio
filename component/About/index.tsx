@@ -3,6 +3,7 @@ import styles from "./About.module.scss";
 import Image from "@/component/Image";
 import Button from "../Button";
 
+import { marked } from "marked";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { Image as ImageType } from "@/types";
 
@@ -20,7 +21,10 @@ export default async function About({ image, title, content }: AboutProps) {
       <section className={styles.about__section}>
         <h2 className={styles.about__section__title}>{title}</h2>
 
-        {content}
+        <div
+          className={styles.about__section__content}
+          dangerouslySetInnerHTML={{ __html: marked(content) }}
+        ></div>
 
         <Button href="/contact" label="Download my CV" icon={faDownload} />
       </section>

@@ -9,6 +9,7 @@ import { getCollection, getImage } from "@/helper";
 
 import About from "@/component/About";
 
+import marked from "marked";
 import styles from "./page.module.scss";
 import banner from "@/public/content/shared/banner.json";
 import content from "@/public/content/pages/home/index.json";

@@ -6,6 +6,7 @@ import Waves from "../Waves";
 import ProjectItem from "./Item";
 
 import { Project } from "@/types";
+import { marked } from "marked";
 
 type ProjectProps = {
   title: string;
@@ -18,7 +19,10 @@ export default function Projects({ title, content, projects }: ProjectProps) {
     <section className={styles.project}>
       <h2 className={styles.project__title}>{title}</h2>
 
-      {content}
+      <div
+        className={styles.project__content}
+        dangerouslySetInnerHTML={{ __html: marked(content) }}
+      ></div>
 
       <Waves className={styles.project__waves} />
 
