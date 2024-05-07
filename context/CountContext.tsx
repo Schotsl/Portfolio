@@ -88,7 +88,7 @@ export const CountProvider = ({ initial, children }: CountProviderProps) => {
           const pageviewsOld = smoothRef.current;
 
           scheduleSmooth(pageviewsNew, pageviewsOld);
-        }
+        },
       )
       .subscribe();
 
