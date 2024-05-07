@@ -25,7 +25,7 @@ collections:
     editor: { preview: false }
     files:
       - name: "home"
-        file: "public/content/home/pages/index.json"
+        file: "public/content/pages/home/index.json"
         label: "Home"
         extension: "json"
         fields:
