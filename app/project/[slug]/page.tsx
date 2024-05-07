@@ -20,6 +20,7 @@ import Carousel from "@/component/Carousel";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const bannerImage = await getImage(header.image);
+  const bannerTitle = header.title;
 
   const projects = await getCollection<Project>("project");
   const project = projects.find((project) => project.slug === params.slug)!;
@@ -40,10 +41,11 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <main className={styles.main}>
-      <Header title={title} banner={bannerImage} sentences={[tagline]} />
+      <Header title={bannerTitle} banner={bannerImage} sentences={[tagline]} />
 
       <Carousel items={items} />
 
+      <h2>{title}</h2>
       <p>{intro}</p>
 
       <p>{content}</p>

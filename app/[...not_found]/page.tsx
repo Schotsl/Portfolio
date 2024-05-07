@@ -6,10 +6,14 @@ import Button from "@/component/Button";
 
 import styles from "./page.module.scss";
 import banner from "@/public/content/shared/banner.json";
+import content from "@/public/content/pages/404/index.json";
 
 export default async function Page() {
   const bannerImage = await getImage(banner.image);
   const bannerTitle = banner.title;
+  const bannerTaglines = content.banner.taglines.map(
+    (tagline) => tagline.tagline
+  );
 
   return (
     <main className={styles.main}>
@@ -17,14 +21,11 @@ export default async function Page() {
         small={true}
         title={bannerTitle}
         banner={bannerImage}
-        sentences={["Looking for this page"]}
+        sentences={bannerTaglines}
       />
 
-      <h2 className={styles.main__title}>This page could not be found</h2>
-      <p className={styles.main__content}>
-        It appears that this page doesn&apos;t exist. The link you followed may
-        be broken, or the page may have been removed.
-      </p>
+      <h2 className={styles.main__title}>{content.title}</h2>
+      <p className={styles.main__content}>{content.content}</p>
 
       <Button
         className={styles.main__button}

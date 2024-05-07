@@ -25,7 +25,7 @@ collections:
     editor: { preview: false }
     files:
       - name: "home"
-        file: "public/content/home/index.json"
+        file: "public/content/home/pages/index.json"
         label: "Home"
         extension: "json"
         fields:
@@ -69,8 +69,8 @@ collections:
                       label: "Image",
                       widget: "image",
                       choose_url: false,
-                      media_folder: "/public/content/home/images",
-                      public_folder: "/content/home/images",
+                      media_folder: "/public/content/pages/home/images",
+                      public_folder: "/content/pages/home/images",
                     }
           - name: "project"
             label: "Project"
@@ -80,7 +80,7 @@ collections:
               - { name: "content", label: "Content", widget: "markdown" }
 
       - name: "404"
-        file: "public/content/pages/404.json"
+        file: "public/content/pages/404/index.json"
         label: "404"
         extension: "json"
         fields:
