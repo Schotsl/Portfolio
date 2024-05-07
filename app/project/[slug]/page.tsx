@@ -23,7 +23,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   const { video, image, title, tagline, intro, content } = project;
 
-  const banner = await getImage("/images/banner.png", "Me");
+  const banner = await getImage({ src: "/images/banner.png", alt: "Me" });
   const images = project.images.map((image) => ({
     image,
   }));

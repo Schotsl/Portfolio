@@ -8,17 +8,17 @@ import ProjectItem from "./Item";
 import { Project } from "@/types";
 
 type ProjectProps = {
+  title: string;
+  content: string;
   projects: Project[];
 };
 
-export default function Projects({ projects }: ProjectProps) {
+export default function Projects({ title, content, projects }: ProjectProps) {
   return (
     <section className={styles.project}>
-      <h2 className={styles.project__title}>All my projects</h2>
-      <p className={styles.project__content}>
-        You&apos;ve already seen my most recent and favorite work at the top of
-        the website, here are more projects worth sharing!
-      </p>
+      <h2 className={styles.project__title}>{title}</h2>
+
+      {content}
 
       <Waves className={styles.project__waves} />
 

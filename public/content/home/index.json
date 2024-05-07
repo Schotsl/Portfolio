@@ -1,26 +1,28 @@
 {
-  "taglines": [
-    {
-      "tagline": "A great developer, a pretty good designer"
-    },
-    {
-      "tagline": "Being laughed at while playing VR outside"
-    },
-    {
-      "tagline": "Creating yet another GitHub repository"
-    }
-  ],
-  "projects": [
-    {
-      "project": "Presently"
-    },
-    {
-      "project": "Uwuifier"
-    },
-    {
-      "project": "ZonneVeranda"
-    }
-  ],
+  "banner": {
+    "taglines": [
+      {
+        "tagline": "A great developer, a pretty good designer"
+      },
+      {
+        "tagline": "Being laughed at while playing VR outside"
+      },
+      {
+        "tagline": "Creating yet another GitHub repository"
+      }
+    ],
+    "projects": [
+      {
+        "project": "presently"
+      },
+      {
+        "project": "uwuifier"
+      },
+      {
+        "project": "zonneveranda"
+      }
+    ]
+  },
   "about": {
     "title": "About me",
     "content": "Hey! I'm Sjors van Holst, an experienced web developer and a learning web designer. I absolutely love creating websites and mobile apps for a wide variety of use cases—from a fun, simple website to check the swimming weather, to a fully-fledged, complex workout app. I love learning and using new technologies, which is confirmed by the fact that I probably refactor old projects a bit too often...\n\nI'm confident that I can help you with many technical and design challenges, from creating a mobile app or company website, to improving UX and consulting on an offer or project. Don't hesitate to contact me.\n\nI've got a broad knowledge of frameworks and tools; I currently prefer working with TypeScript and React in Next.js and Supabase, although I've also spent a lot of time with Vue, PHP, WordPress, MySQL, and more!",

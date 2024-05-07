@@ -29,24 +29,28 @@ collections:
         label: "Home"
         extension: "json"
         fields:
-          - name: taglines
-            label: Taglines
-            widget: list
+          - name: "banner"
+            label: "Banner"
+            widget: "object"
             fields:
-              - { name: "tagline", label: "Tagline", widget: "string" }
-          - name: "projects"
-            label: "Projects"
-            widget: "list"
-            fields:
-              - {
-                  name: "project",
-                  label: "Project",
-                  widget: "relation",
-                  collection: "project",
-                  value_field: "title",
-                  search_fields: ["title"],
-                  display_fields: ["title"],
-                }
+              - name: taglines
+                label: Taglines
+                widget: list
+                fields:
+                  - { name: "tagline", label: "Tagline", widget: "string" }
+              - name: "projects"
+                label: "Projects"
+                widget: "list"
+                fields:
+                  - {
+                      name: "project",
+                      label: "Project",
+                      widget: "relation",
+                      collection: "project",
+                      value_field: "slug",
+                      search_fields: ["title"],
+                      display_fields: ["title"],
+                    }
           - name: "about"
             label: "About"
             widget: "object"
@@ -73,6 +77,31 @@ collections:
             fields:
               - { name: "title", label: "Title", widget: "string" }
               - { name: "content", label: "Content", widget: "markdown" }
+
+  - name: "shared"
+    label: "Shared"
+    editor: { preview: false }
+    files:
+      - name: "banner"
+        file: "public/content/shared/banner.json"
+        label: "Banner"
+        extension: "json"
+        fields:
+          - { name: "title", label: "Title", widget: "string" }
+          - name: "image"
+            label: "Image"
+            widget: "object"
+            summary: "{{fields.alt}}"
+            fields:
+              - { name: "alt", label: "Alt", widget: "string" }
+              - {
+                  name: "src",
+                  label: "Image",
+                  widget: "image",
+                  choose_url: false,
+                  media_folder: "/public/content/shared/images",
+                  public_folder: "/content/shared/images",
+                }
 
   - name: "project"
     label: "Projects"

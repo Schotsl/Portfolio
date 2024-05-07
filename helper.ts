@@ -19,13 +19,13 @@ export async function getCollection<T>(path: string): Promise<T[]> {
     const { image, images, categories } = itemParsed;
 
     if (image) {
-      itemParsed.image = await getImage(image.src, image.alt);
+      itemParsed.image = await getImage(image);
     }
 
     if (images) {
       const imagesPromises = images.map((imageObject: any) => {
         const image = imageObject.image;
-        const imagePromise = getImage(image.src, image.alt);
+        const imagePromise = getImage(image);
 
         return imagePromise;
       });
@@ -50,7 +50,7 @@ export async function getCollection<T>(path: string): Promise<T[]> {
   return collectionResolved;
 }
 
-export async function getImage(src: string, alt: string): Promise<Image> {
+export async function getImage({ src, alt }: {src: string, alt: string}): Promise<Image> {
   const imagePath = `${process.cwd()}/public/${src}`;
   const imageBuffer = fs.readFileSync(imagePath);
 

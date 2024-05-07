@@ -1,5 +1,3 @@
-import styles from "./page.module.scss";
-
 import Header from "@/component/Header";
 import Button from "@/component/Button";
 import Carousel from "@/component/Carousel";
@@ -11,28 +9,43 @@ import { getCollection, getImage } from "@/helper";
 
 import About from "@/component/About";
 
+import styles from "./page.module.scss";
+import content from "@/public/content/home/index.json";
+
 export const dynamic = "force-static";
 
 export default async function Page() {
-  const banner = await getImage("/images/banner.png", "Me");
+  const about = await getImage(content.about.image);
   const projects = await getCollection<ProjectType>("project");
+
+  const bannerImage = await getImage({ src: "/images/banner.png", alt: "Me" });
+  const bannerTaglines = content.banner.taglines.map(
+    (tagline) => tagline.tagline
+  );
+
+  const bannerSlugs = content.banner.projects.map((project) => project.project);
+  const bannerProjects = projects.filter((project) =>
+    bannerSlugs.includes(project.slug)
+  );
 
   return (
     <main className={styles.main}>
-      <Header
-        banner={banner}
-        sentences={[
-          "A great developer, a pretty good designer",
-          "Being laughed at while playing VR outside",
-          "Creating yet another GitHub repository",
-        ]}
-      />
-      <Carousel items={projects} />
+      <Header banner={bannerImage} sentences={bannerTaglines} />
+      <Carousel items={bannerProjects} />
 
       <Button href="#main" label="View all my projects" icon={faArrowDown} />
 
-      <About />
-      <Project projects={projects} />
+      <About
+        title={content.about.title}
+        content={content.about.content}
+        image={about}
+      />
+
+      <Project
+        title={content.project.title}
+        content={content.project.content}
+        projects={projects}
+      />
     </main>
   );
 }
