@@ -20,6 +20,7 @@ const title = "Sjors van Holst";
 const description = "Ik ben Sjors van Holst";
 
 export const dynamic = "force-dynamic";
+export const runtime = "edge";
 export const preferredRegion = "fra1";
 
 export const metadata: Metadata = {
