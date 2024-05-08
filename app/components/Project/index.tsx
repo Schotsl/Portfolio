@@ -18,7 +18,7 @@ export default function RootProject({
   projects,
 }: RootProjectProps) {
   return (
-    <section className={styles.project}>
+    <section className={styles.project} id="project">
       <h2 className={styles.project__title}>{title}</h2>
 
       <div

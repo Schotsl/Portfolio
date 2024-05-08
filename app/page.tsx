@@ -43,12 +43,12 @@ export default async function RootPage() {
   const bannerImage = await getImage(banner.image);
   const bannerTitle = banner.title;
   const bannerTaglines = content.banner.taglines.map(
-    (tagline) => tagline.tagline,
+    (tagline) => tagline.tagline
   );
 
   const bannerSlugs = content.banner.projects.map((project) => project.project);
   const bannerProjects = projects.filter((project) =>
-    bannerSlugs.includes(project.slug),
+    bannerSlugs.includes(project.slug)
   );
 
   return (
@@ -61,7 +61,7 @@ export default async function RootPage() {
 
       <Carousel items={bannerProjects} />
 
-      <Button href="#main" label="View all my projects" icon={faArrowDown} />
+      <Button href="#project" label="View all my projects" icon={faArrowDown} />
 
       <RootAbout
         title={content.about.title}

@@ -19,6 +19,10 @@
   --padding: var(--padding-vertical) var(--padding-horizontal);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #000;
   margin: 0;
