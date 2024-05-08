@@ -7,9 +7,9 @@ import Button from "@/component/Button";
 
 import styles from "./page.module.scss";
 import banner from "@/public/content/shared/banner.json";
-import content from "@/public/content/pages/404/index.json";
+import content from "@/public/content/pages/not_found/index.json";
 
-export default async function Page() {
+export default async function NotFoundPage() {
   const bannerImage = await getImage(banner.image);
   const bannerTitle = banner.title;
   const bannerTaglines = content.banner.taglines.map(
@@ -17,7 +17,7 @@ export default async function Page() {
   );
 
   return (
-    <main className={styles.main}>
+    <main className={styles.not_found}>
       <Header
         small={true}
         title={bannerTitle}
@@ -25,14 +25,14 @@ export default async function Page() {
         taglines={bannerTaglines}
       />
 
-      <h2 className={styles.main__title}>{content.title}</h2>
+      <h2 className={styles.not_found__title}>{content.title}</h2>
       <div
-        className={styles.main__content}
+        className={styles.not_found__content}
         dangerouslySetInnerHTML={{ __html: marked(content.content) }}
       ></div>
 
       <Button
-        className={styles.main__button}
+        className={styles.not_found__button}
         icon={faHome}
         href="/"
         label="Go back to the homepage"

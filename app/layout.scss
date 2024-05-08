@@ -22,36 +22,8 @@ h4,
 h5,
 h6 {
   margin: 0px;
-
-  font-weight: 400;
+  font-weight: 700;
   font-family: var(--font-open-sans);
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-p {
-  margin: 0.25rem 0;
-  max-width: 80ch;
-}
-
-section > p {
-  margin: 1rem 0;
-
-  &:first-of-type {
-    margin-top: 0.5rem;
-  }
-
-  &:last-of-type {
-    margin-bottom: 1.5rem;
-  }
 }
 
 button {

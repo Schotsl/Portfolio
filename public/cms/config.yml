@@ -79,8 +79,8 @@ collections:
               - { name: "title", label: "Title", widget: "string" }
               - { name: "content", label: "Content", widget: "markdown" }
 
-      - name: "404"
-        file: "public/content/pages/404/index.json"
+      - name: "not_found"
+        file: "public/content/pages/not_found/index.json"
         label: "404"
         extension: "json"
         fields:

@@ -30,7 +30,12 @@ export default async function RootAbout({
           dangerouslySetInnerHTML={{ __html: marked(content) }}
         ></div>
 
-        <Button href="/contact" label="Download my CV" icon={faDownload} />
+        <Button
+          href="/contact"
+          icon={faDownload}
+          label="Download my CV"
+          className={styles.about__section__button}
+        />
       </section>
     </div>
   );
