@@ -1,6 +1,24 @@
 @import "@/styles/variables.scss";
 @import "@/styles/mixins.scss";
 
+// I think I wanna move this to variables.scss but I'm not sure
+:root {
+  --padding-vertical: 1rem;
+  --padding-horizontal: 2rem;
+
+  @include respond-to-md {
+    --padding-vertical: 2rem;
+    --padding-horizontal: 4rem;
+  }
+
+  @include respond-to-lg {
+    --padding-vertical: 4rem;
+    --padding-horizontal: 8rem;
+  }
+
+  --padding: var(--padding-vertical) var(--padding-horizontal);
+}
+
 body {
   color: #000;
   margin: 0;
@@ -11,6 +29,7 @@ body {
 
 main {
   display: flex;
+  padding: var(--padding);
   align-items: start;
   flex-direction: column;
 }

@@ -1,19 +1,8 @@
 @import "@/styles/mixins";
 
 .not_found {
-  padding: 1rem 2rem;
-
-  @include respond-to-md {
-    padding: 2rem 4rem;
-  }
-
-  @include respond-to-lg {
-    padding: 4rem 8rem;
-  }
-
   &__title {
     margin: 3rem 0 0;
-    // font-size: 2.5rem;
   }
 
   &__button {

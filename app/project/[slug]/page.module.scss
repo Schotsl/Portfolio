@@ -1,13 +1,4 @@
 @import "@/styles/mixins";
 
 .project {
-  padding: 1rem 2rem;
-
-  @include respond-to-md {
-    padding: 2rem 4rem;
-  }
-
-  @include respond-to-lg {
-    padding: 4rem 8rem;
-  }
 }
