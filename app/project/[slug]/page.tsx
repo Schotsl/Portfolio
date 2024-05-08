@@ -43,7 +43,7 @@ export default async function ProjectPage({
   ];
 
   return (
-    <main className={styles.main}>
+    <main className={styles.project}>
       <Header title={bannerTitle} banner={bannerImage} taglines={[tagline]} />
 
       <Carousel items={items} />

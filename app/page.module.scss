@@ -1,6 +1,6 @@
 @import "@/styles/mixins";
 
-.main {
+.root {
   padding: 1rem 2rem;
 
   @include respond-to-md {

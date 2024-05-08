@@ -52,7 +52,7 @@ export default async function RootPage() {
   );
 
   return (
-    <main className={styles.main}>
+    <main className={styles.root}>
       <Header
         title={bannerTitle}
         banner={bannerImage}
