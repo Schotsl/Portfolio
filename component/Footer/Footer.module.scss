@@ -1,0 +1,39 @@
+.footer {
+  width: 100%;
+  color: #000;
+  padding: var(--padding);
+  background: #0099ff;
+
+  &__columns {
+    display: flex;
+    justify-content: space-between;
+
+    &__column {
+      max-width: 20rem;
+
+      &__title {
+        margin-bottom: 0.5rem;
+      }
+
+      &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+
+        &__item {
+          display: flex;
+          gap: 0.5rem;
+
+          &__icon {
+            margin: 2px 0 0 0;
+          }
+
+          &__copyright {
+            margin: 0.5rem 0 0 0;
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+  }
+}

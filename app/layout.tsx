@@ -1,5 +1,6 @@
 import "./layout.scss";
 
+import Footer from "@/component/Footer";
 import PlausibleProvider from "next-plausible";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -102,7 +103,10 @@ export default async function RootLayout({
           <meta name="theme-color" content="#ffffff" />
         </head>
 
-        <body>{children}</body>
+        <body>
+          {children}
+          <Footer />
+        </body>
       </html>
     </PlausibleProvider>
   );

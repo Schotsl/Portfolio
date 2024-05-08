@@ -26,7 +26,7 @@ export default function RootProject({
         dangerouslySetInnerHTML={{ __html: marked(content) }}
       ></div>
 
-      <Waves className={styles.project__waves} />
+      {/* <Waves className={styles.project__waves} /> */}
 
       <ul className={styles.project__list}>
         {projects.map((project, index) => (
