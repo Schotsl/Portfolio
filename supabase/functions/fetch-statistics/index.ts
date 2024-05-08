@@ -43,7 +43,10 @@ serve(async (req: Request) => {
   }
 
   if (totalData && totalData.pageviews === pageviews) {
-    return;
+    return new Response(JSON.stringify({}), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 200,
+    });
   }
 
   const { error: updateError } = await adminClient
