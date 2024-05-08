@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
 import supabase from "@/utils/supabase";
+import styles from "./RootCount.module.scss";
+
+import { useEffect, useRef, useState } from "react";
 
 type CountProps = {
   initial: number;
@@ -66,7 +67,7 @@ export default function RootCount({ initial }: CountProps) {
           const pageviewsOld = smoothRef.current;
 
           scheduleSmooth(pageviewsNew, pageviewsOld);
-        }
+        },
       )
       .subscribe();
 
@@ -81,8 +82,21 @@ export default function RootCount({ initial }: CountProps) {
   }, []);
 
   return (
-    <div>
-      <h1>Count {smooth}</h1>
+    <div className={styles.count}>
+      <h2 className={styles.count__title}>
+        This month, my services have assisted or entertained over {smooth}{" "}
+        individuals
+      </h2>
+
+      <p className={styles.count__content}>
+        These statistics are collected from{" "}
+        <a href="https://overworked.app/">Overworked</a>,{" "}
+        <a href="https://presently.dev/">Presently</a>,{" "}
+        <a href="https://uwuifier.com/">Uwuifier</a> and{" "}
+        <a href="https://toolenburgerplas.nl/">Toolenburger plas</a> using
+        Plausible Analytics. They are updated every 10 seconds with a 10 second
+        delay.
+      </p>
     </div>
   );
 }

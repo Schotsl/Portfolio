@@ -53,3 +53,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+p {
+  max-width: 50ch;
+
+  > a {
+    color: #0099ff;
+  }
+}
