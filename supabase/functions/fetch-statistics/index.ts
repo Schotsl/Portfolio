@@ -15,17 +15,12 @@ serve(async (req: Request) => {
   );
 
   const domains = [
-    "kruidenpower.nl",
-    "lxframes.com",
-    "meesterproef.sjorsvanholst.nl",
-    "nicoletrompetter.nl",
-    "overworked.app",
+    "uwuifier.com",
     "presently.dev",
+    "overworked.app",
     "sjorsvanholst.nl",
     "toolenburgerplas.nl",
-    "uwuifier.com",
     "wanneer-naar-terschelling.nl",
-    "zonneveranda.nl",
   ];
 
   const domainsPromises = domains.map((domain) => fetchPlausible(domain));
