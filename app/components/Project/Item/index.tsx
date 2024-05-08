@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./ProjectItem.module.scss";
+import styles from "./RootProjectItem.module.scss";
 
 import { Project } from "@/types";
 import { useEffect, useRef, useState } from "react";
@@ -8,15 +8,15 @@ import { useEffect, useRef, useState } from "react";
 import Image from "@/component/Image";
 import Categories from "@/component/Categories";
 
-type ProjectItemProps = {
+type RootProjectItemProps = {
   index: number;
   project: Project;
 };
 
-export default function ProjectItem({
+export default function RootProjectItem({
   index,
   project: { slug, title, video, image, categories },
-}: ProjectItemProps) {
+}: RootProjectItemProps) {
   const player = useRef<HTMLVideoElement>(null);
   const container = useRef<HTMLLIElement>(null);
 

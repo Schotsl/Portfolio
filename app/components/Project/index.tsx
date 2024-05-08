@@ -1,18 +1,22 @@
-import styles from "./Project.module.scss";
+import styles from "./RootProject.module.scss";
 
-import Waves from "../Waves";
-import ProjectItem from "./Item";
+import Waves from "@/component/Waves";
+import RootProjectItem from "./Item";
 
 import { Project } from "@/types";
 import { marked } from "marked";
 
-type ProjectProps = {
+type RootProjectProps = {
   title: string;
   content: string;
   projects: Project[];
 };
 
-export default function Projects({ title, content, projects }: ProjectProps) {
+export default function RootProject({
+  title,
+  content,
+  projects,
+}: RootProjectProps) {
   return (
     <section className={styles.project}>
       <h2 className={styles.project__title}>{title}</h2>
@@ -26,7 +30,7 @@ export default function Projects({ title, content, projects }: ProjectProps) {
 
       <ul className={styles.project__list}>
         {projects.map((project, index) => (
-          <ProjectItem key={index} index={index} project={project} />
+          <RootProjectItem key={index} index={index} project={project} />
         ))}
       </ul>
     </section>

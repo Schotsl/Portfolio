@@ -17,7 +17,11 @@ export async function generateStaticParams() {
   return projectsSlug;
 }
 
-export default async function Page({ params }: { params: { slug: string } }) {
+export default async function ProjectPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const bannerImage = await getImage(header.image);
   const bannerTitle = header.title;
 

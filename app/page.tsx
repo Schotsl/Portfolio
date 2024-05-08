@@ -1,8 +1,10 @@
-import About from "@/component/About";
+import RootAbout from "./components/About";
+import RootCount from "./components/Count";
+import RootProject from "./components/Project";
+
 import Header from "@/component/Header";
 import Button from "@/component/Button";
 import Carousel from "@/component/Carousel";
-import Project from "@/component/Project";
 
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Project as ProjectType } from "@/types";
@@ -12,7 +14,6 @@ import styles from "./page.module.scss";
 import banner from "@/public/content/shared/banner.json";
 import content from "@/public/content/pages/home/index.json";
 import supabase from "@/utils/supabase";
-import Count from "@/component/Count";
 
 export const revalidate = 3600;
 
@@ -34,7 +35,7 @@ async function loadCount() {
   return data.pageviews;
 }
 
-export default async function Page() {
+export default async function RootPage() {
   const count = await loadCount();
   const about = await getImage(content.about.image);
   const projects = await getCollection<ProjectType>("project");
@@ -62,15 +63,15 @@ export default async function Page() {
 
       <Button href="#main" label="View all my projects" icon={faArrowDown} />
 
-      <About
+      <RootAbout
         title={content.about.title}
         content={content.about.content}
         image={about}
       />
 
-      <Count initial={count} />
+      <RootCount initial={count} />
 
-      <Project
+      <RootProject
         title={content.project.title}
         content={content.project.content}
         projects={projects}

@@ -1,19 +1,23 @@
-import styles from "./About.module.scss";
+import styles from "./RootAbout.module.scss";
 
 import Image from "@/component/Image";
-import Button from "../Button";
+import Button from "@/component/Button";
 
 import { marked } from "marked";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import { Image as ImageType } from "@/types";
 
-type AboutProps = {
+type RootAboutProps = {
   image: ImageType;
   title: string;
   content: string;
 };
 
-export default async function About({ image, title, content }: AboutProps) {
+export default async function RootAbout({
+  image,
+  title,
+  content,
+}: RootAboutProps) {
   return (
     <div className={styles.about}>
       <Image className={styles.about__image} image={image} sizes={"24rem"} />

@@ -10,7 +10,7 @@ type CountProps = {
 
 const UPDATE_INTERVAL = 10000;
 
-export default function Count({ initial }: CountProps) {
+export default function RootCount({ initial }: CountProps) {
   const [smooth, setSmooth] = useState(0);
   const [smoothInterval, setSmoothInterval] = useState<NodeJS.Timeout | null>();
 
