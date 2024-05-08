@@ -1,38 +1,16 @@
 "use client";
 
-import {
-  createContext,
-  useContext,
-  ReactNode,
-  useState,
-  useEffect,
-  useRef,
-} from "react";
+import { useEffect, useRef, useState } from "react";
 
 import supabase from "@/utils/supabase";
 
-type CountContextType = {
-  smooth: number;
-  length: number;
-};
-
-const CountContext = createContext<CountContextType>({
-  smooth: 0,
-  length: 0,
-});
-
-export const useCount = () => {
-  return useContext(CountContext);
-};
-
-type CountProviderProps = {
+type CountProps = {
   initial: number;
-  children: ReactNode;
 };
 
 const UPDATE_INTERVAL = 10000;
 
-export const CountProvider = ({ initial, children }: CountProviderProps) => {
+export default function Count({ initial }: CountProps) {
   const [smooth, setSmooth] = useState(0);
   const [smoothInterval, setSmoothInterval] = useState<NodeJS.Timeout | null>();
 
@@ -88,7 +66,7 @@ export const CountProvider = ({ initial, children }: CountProviderProps) => {
           const pageviewsOld = smoothRef.current;
 
           scheduleSmooth(pageviewsNew, pageviewsOld);
-        },
+        }
       )
       .subscribe();
 
@@ -102,12 +80,9 @@ export const CountProvider = ({ initial, children }: CountProviderProps) => {
     subscribeCount();
   }, []);
 
-  const lengthString = initial.toString();
-  const length = lengthString.length;
-
   return (
-    <CountContext.Provider value={{ smooth, length }}>
-      {children}
-    </CountContext.Provider>
+    <div>
+      <h1>Count {smooth}</h1>
+    </div>
   );
-};
+}
