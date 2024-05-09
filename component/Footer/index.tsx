@@ -58,7 +58,13 @@ export default function Footer() {
         },
         {
           icon: faMapLocation,
-          content: <>Splinterstraat 10<br />2134 LX Hoofddorp</>,
+          content: (
+            <>
+              Splinterstraat 10
+              <br />
+              2134 LX Hoofddorp
+            </>
+          ),
         },
       ],
     },

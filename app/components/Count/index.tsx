@@ -12,12 +12,18 @@ type CountProps = {
 const UPDATE_INTERVAL = 10000;
 
 export default function RootCount({ initial }: CountProps) {
+  const [hidden, setHidden] = useState(initial);
+  const [visible, setVisible] = useState(false);
+
   const [smooth, setSmooth] = useState(0);
   const [smoothInterval, setSmoothInterval] = useState<NodeJS.Timeout | null>();
 
   const smoothRef = useRef(smooth);
+  const visibleRef = useRef(visible);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   smoothRef.current = smooth;
+  visibleRef.current = visible;
 
   const scheduleSmooth = (updated: number, old: number) => {
     if (smoothInterval) {
@@ -66,7 +72,11 @@ export default function RootCount({ initial }: CountProps) {
           const pageviewsNew = payload.new.pageviews;
           const pageviewsOld = smoothRef.current;
 
-          scheduleSmooth(pageviewsNew, pageviewsOld);
+          if (visibleRef.current) {
+            scheduleSmooth(pageviewsNew, pageviewsOld);
+          } else {
+            setHidden(pageviewsNew);
+          }
         },
       )
       .subscribe();
@@ -77,12 +87,26 @@ export default function RootCount({ initial }: CountProps) {
   };
 
   useEffect(() => {
-    scheduleSmooth(initial, 0);
     subscribeCount();
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      const entry = entries[0];
+
+      if (!entry.isIntersecting || visible) {
+        return;
+      }
+
+      setVisible(true);
+
+      // If the element is visible start the smooth transition
+      scheduleSmooth(hidden, 0);
+    });
+
+    observer.observe(containerRef.current!);
   }, []);
 
   return (
-    <div className={styles.count}>
+    <div className={styles.count} ref={containerRef}>
       <h2 className={styles.count__title}>
         This month, my services have assisted or entertained over {smooth}{" "}
         individuals
