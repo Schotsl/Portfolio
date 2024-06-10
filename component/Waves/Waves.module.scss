@@ -46,4 +46,24 @@
       }
     }
   }
+
+  &--reverse {
+    .waves__wave {
+      .waves__wave__bottom {
+        background: #fff;
+      }
+
+      &:nth-of-type(2) {
+        .waves__wave__bottom {
+          background: #a2d9ff;
+        }
+      }
+
+      &:nth-of-type(3) {
+        .waves__wave__bottom {
+          background: #0099ff;
+        }
+      }
+    }
+  }
 }

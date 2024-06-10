@@ -38,6 +38,7 @@
 
   &__overlay {
     top: 0;
+    gap: 0.5rem;
     color: #fff;
     width: 100%;
     height: 100%;
@@ -48,16 +49,20 @@
     position: absolute;
     background: rgba(0, 0, 0, 0.75);
     transition: opacity 0.2s ease-in-out;
-
     flex-direction: column;
-    justify-content: flex-end;
 
     &__categories {
       margin-bottom: auto;
     }
 
     &__content {
+      margin: 0;
       max-width: 80%;
+      display: none;
+
+      @include respond-to-sm {
+        display: block;
+      }
     }
   }
 

@@ -12,6 +12,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { ReactNode } from "react";
+import Waves from "../Waves";
 
 type FooterItem = {
   icon?: any;
@@ -101,6 +102,7 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
+      <Waves reverse className={styles.footer__waves} />
       <ul className={styles.footer__columns}>
         {columns.map((column, index) => (
           <li key={index} className={styles.footer__columns__column}>

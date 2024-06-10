@@ -4,7 +4,21 @@
   width: 100%;
   color: rgb(234, 234, 234);
   padding: var(--padding);
+  padding-top: calc(var(--padding-vertical) / 2);
   background: #0099ff;
+  position: relative;
+
+  &__waves {
+    bottom: 26rem;
+
+    @include respond-to-md {
+      bottom: 31rem;
+    }
+
+    @include respond-to-lg {
+      bottom: 10rem;
+    }
+  }
 
   &__columns {
     gap: 2rem;
@@ -50,10 +64,6 @@
     gap: 1rem;
     display: grid;
     grid-template-columns: 1fr 2rem 2rem 2rem;
-
-    @include respond-to-lg {
-      grid-template-columns: 1fr 2rem 2rem 2rem 1fr;
-    }
 
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-width: 2px 0 0 0;

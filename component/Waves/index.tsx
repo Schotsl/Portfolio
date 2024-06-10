@@ -6,32 +6,50 @@ import styles from "./Waves.module.scss";
 
 type WavesProps = {
   small?: boolean;
+  reverse?: boolean;
   className?: string;
 };
 
-export default function Waves({ small, className }: WavesProps) {
+export default function Waves({ small, reverse, className }: WavesProps) {
+  let classNameCombined = `${styles.waves} ${className}`;
+
+  if (small) {
+    classNameCombined += ` ${styles["waves--small"]}`;
+  }
+
+  if (reverse) {
+    classNameCombined += ` ${styles["waves--reverse"]}`;
+  }
+
   return (
-    <div
-      className={
-        small
-          ? `${styles.waves} ${className} ${styles["waves--small"]}`
-          : `${styles.waves} ${className}`
-      }
-    >
+    <div className={classNameCombined}>
       <ParallaxProvider>
         <Parallax speed={-4} className={styles.waves__wave}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            className={styles.waves__wave__svg}
-            preserveAspectRatio="none"
-          >
-            <path
-              fill="#0099ff"
-              d="M0,0L48,5.3C96,11,192,21,288,48C384,75,480,117,576,149.3C672,181,768,203,864,202.7C960,203,1056,181,1152,160C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-            ></path>
-          </svg>
-
+          {(reverse && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1440 320"
+              className={styles.waves__wave__svg}
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="#ffffff"
+                d="M0,128L80,133.3C160,139,320,149,480,165.3C640,181,800,203,960,181.3C1120,160,1280,96,1360,64L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+              ></path>
+            </svg>
+          )) || (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1440 320"
+              className={styles.waves__wave__svg}
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="#0099ff"
+                d="M0,0L48,5.3C96,11,192,21,288,48C384,75,480,117,576,149.3C672,181,768,203,864,202.7C960,203,1056,181,1152,160C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          )}
           <div className={styles.waves__wave__bottom}></div>
         </Parallax>
 
@@ -52,17 +70,31 @@ export default function Waves({ small, className }: WavesProps) {
         </Parallax>
 
         <Parallax speed={-12} className={styles.waves__wave}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            className={styles.waves__wave__svg}
-            preserveAspectRatio="none"
-          >
-            <path
-              fill="#ffffff"
-              d="M0,128L80,133.3C160,139,320,149,480,165.3C640,181,800,203,960,181.3C1120,160,1280,96,1360,64L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-            ></path>
-          </svg>
+          {(reverse && (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1440 320"
+              className={styles.waves__wave__svg}
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="#0099ff"
+                d="M0,0L48,5.3C96,11,192,21,288,48C384,75,480,117,576,149.3C672,181,768,203,864,202.7C960,203,1056,181,1152,160C1248,139,1344,117,1392,106.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          )) || (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1440 320"
+              className={styles.waves__wave__svg}
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="#ffffff"
+                d="M0,128L80,133.3C160,139,320,149,480,165.3C640,181,800,203,960,181.3C1120,160,1280,96,1360,64L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+              ></path>
+            </svg>
+          )}
 
           <div className={styles.waves__wave__bottom}></div>
         </Parallax>

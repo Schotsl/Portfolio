@@ -35,12 +35,29 @@
   &__content {
     top: var(--padding-vertical);
     left: var(--padding-horizontal);
+    width: calc(100% - var(--padding-horizontal) * 2);
+
+    gap: 1rem;
     z-index: 1;
+    display: flex;
     position: absolute;
+    flex-direction: column;
 
     &__title {
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: 800;
+
+      @include respond-to-md {
+        font-size: 3.5rem;
+      }
+
+      @include respond-to-lg {
+        font-size: 4rem;
+      }
+    }
+
+    &__subtitle {
+      width: 70%;
     }
   }
 
