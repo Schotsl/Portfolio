@@ -37,10 +37,6 @@ export default function Footer() {
           content:
             "Ontdek de kracht van vormgeving en fotografie met LXFrames. Neem vandaag nog contact met mij op om jouw project te bespreken en samen iets unieks te creëren. Ik kijk er naar uit om van je te horen!",
         },
-        {
-          content: `© ${currentYear} Sjors van Holst`,
-          className: styles.footer__columns__column__list__item__copyright,
-        },
       ],
     },
     {
@@ -79,27 +75,29 @@ export default function Footer() {
         },
       ],
     },
-    {
-      title: "Social",
-      list: [
-        {
-          icon: faTwitter,
-          link: "https://twitter.com/sjorsvanholst",
-          content: "Twitter",
-        },
-        {
-          icon: faLinkedin,
-          link: "https://linkedin.com/in/sjorsvanholst",
-          content: "LinkedIn",
-        },
-        {
-          icon: faInstagram,
-          link: "https://www.instagram.com/schotsl/",
-          content: "Instagram",
-        },
-      ],
-    },
   ];
+
+  const contact = {
+    title: undefined,
+    list: [
+      {
+        content: `© ${currentYear} Sjors van Holst`,
+        link: "https://sjorsvanholst.nl",
+      },
+      {
+        icon: faTwitter,
+        link: "https://twitter.com/sjorsvanholst",
+      },
+      {
+        icon: faLinkedin,
+        link: "https://linkedin.com/in/sjorsvanholst",
+      },
+      {
+        icon: faInstagram,
+        link: "https://www.instagram.com/schotsl/",
+      },
+    ],
+  };
 
   return (
     <footer className={styles.footer}>
@@ -144,6 +142,23 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+          </li>
+        ))}
+      </ul>
+
+      <ul className={styles.footer__socials}>
+        {contact.list.map((item, index) => (
+          <li key={index} className={styles.footer__socials__item}>
+            <a href={item.link} className={styles.footer__socials__item__link}>
+              {item.icon && (
+                <FontAwesomeIcon
+                  className={styles.footer__socials__item__icon}
+                  icon={item.icon}
+                />
+              )}
+
+              {item.content}
+            </a>
           </li>
         ))}
       </ul>

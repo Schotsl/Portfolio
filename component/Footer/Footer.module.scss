@@ -1,17 +1,26 @@
+@import "@/styles/mixins.scss";
+
 .footer {
   width: 100%;
-  color: #fff;
+  color: rgb(234, 234, 234);
   padding: var(--padding);
   background: #0099ff;
 
   &__columns {
+    gap: 2rem;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+
+    @include respond-to-lg {
+      flex-direction: row;
+    }
 
     &__column {
       max-width: 20rem;
 
       &__title {
+        color: #fff;
         margin: 0 0 0.5rem;
       }
 
@@ -32,6 +41,43 @@
             margin: 0.5rem 0 0 0;
             font-size: 0.85rem;
           }
+        }
+      }
+    }
+  }
+
+  &__socials {
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 2rem 2rem 2rem;
+
+    @include respond-to-lg {
+      grid-template-columns: 1fr 2rem 2rem 2rem 1fr;
+    }
+
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-width: 2px 0 0 0;
+    margin-top: 2rem;
+    padding: 2rem 0;
+
+    &__item {
+      height: 2rem;
+      border-radius: 100%;
+      border: 2px solid #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:first-of-type {
+        width: auto;
+        border: none;
+        justify-content: flex-start;
+      }
+
+      &__link {
+        &__icon {
+          font-size: 1rem;
         }
       }
     }
