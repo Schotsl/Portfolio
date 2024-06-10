@@ -17,11 +17,9 @@ const policies = `
   upgrade-insecure-requests;
 `;
 
-module.exports = withPlausibleProxy(
-  {
-    customDomain: "https://plausible.hedium.nl"
-  }
-)(
+module.exports = withPlausibleProxy({
+  customDomain: "https://plausible.hedium.nl",
+})(
   withSentryConfig(
     {
       async headers() {
