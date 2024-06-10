@@ -70,12 +70,7 @@ export default async function RootLayout({
   children: ReactNode;
 }) {
   return (
-    <PlausibleProvider
-      domain="sjorsvanholst.nl"
-      enabled={true}
-      selfHosted={true}
-      customDomain="https://plausible.hedium.nl"
-    >
+    <PlausibleProvider domain="sjorsvanholst.nl">
       <html lang="en" className={`${openSans.variable} ${montserrat.variable}`}>
         <head>
           <link
