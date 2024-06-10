@@ -1,10 +1,13 @@
+@import "@/styles/mixins.scss";
+
 .header {
   width: 100vw;
   color: #fff;
   z-index: -1;
   position: relative;
-  margin-left: -8rem;
-  margin-top: -4rem;
+
+  margin-top: calc(var(--padding-vertical) * -1);
+  margin-left: calc(var(--padding-horizontal) * -1);
 
   &--small {
     .header__image {
@@ -21,12 +24,17 @@
     height: 32rem;
     z-index: -1;
     overflow: hidden;
-    object-position: 0 calc(-10vw + 5rem);
+
+    object-position: 80% 0;
+
+    @include respond-to-lg {
+      object-position: 0 calc(-10vw + 5rem);
+    }
   }
 
   &__content {
-    top: 4rem;
-    left: 8rem;
+    top: var(--padding-vertical);
+    left: var(--padding-horizontal);
     z-index: 1;
     position: absolute;
 

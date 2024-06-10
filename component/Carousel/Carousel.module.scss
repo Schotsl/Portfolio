@@ -9,7 +9,7 @@
 
   gap: var(--carousel-item-gap);
   width: 100vw;
-  margin: -20rem 0 0 -8rem;
+  margin: -20rem 0 0 calc(var(--padding-horizontal) * -1);
   display: flex;
   min-height: 36rem;
   align-items: center;

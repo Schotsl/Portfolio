@@ -1,7 +1,9 @@
 @import "@/styles/mixins";
 
 .item {
-  --carousel-item-width: 80vw;
+  --carousel-item-width: calc(
+    (100vw - var(--padding-horizontal) * 2) * 100 / 105
+  );
   --carousel-item-margin: 10vw;
 
   @include respond-to-md {
