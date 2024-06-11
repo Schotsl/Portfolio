@@ -48,7 +48,7 @@
     }
   ],
   "content": "This is a test",
-  "video": "/videos/presently.mp4?v=22df4305",
+  "video": "/videos/presently-min.mp4?v=22df4305",
   "image": {
     "alt": "Presently",
     "src": "/content/project/images/presently-cover.png"
