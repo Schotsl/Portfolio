@@ -7,15 +7,21 @@
     {
       "image": {
         "alt": "Uwuifier",
-        "src": "/content/project/images/uwuifier.png"
+        "src": "/content/project/images/uwuifier-1.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Test",
+        "src": "/content/project/images/uwuifier-2.png"
       }
     }
   ],
   "content": "Test",
-  "video": "/videos/uwuifier-min.mp4?v=3c2382a3",
+  "video": "/videos/uwuifier.mp4?v=3c2992a3",
   "image": {
     "alt": "Uwuifier",
-    "src": "/content/project/images/uwuifier.png"
+    "src": "/content/project/images/uwuifier-cover.png"
   },
   "categories": [
     {
