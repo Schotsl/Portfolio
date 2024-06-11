@@ -1,0 +1,20 @@
+{
+  "title": "Typografie",
+  "slug": "typografie",
+  "intro": "Typografie",
+  "tagline": "Typografie",
+  "content": "Typografie",
+  "video": "/videos/typografie.mp4?v=25df4305",
+  "image": {
+    "alt": "Test",
+    "src": "/content/project/images/typografie-cover.png"
+  },
+  "categories": [
+    {
+      "category": "Design"
+    },
+    {
+      "category": "Development"
+    }
+  ]
+}
