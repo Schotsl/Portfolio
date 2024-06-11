@@ -16,8 +16,9 @@ import Waves from "../Waves";
 
 type FooterItem = {
   icon?: any;
+  aria?: string;
   link?: string;
-  content: ReactNode;
+  content?: ReactNode;
   className?: string;
 };
 
@@ -86,14 +87,17 @@ export default function Footer() {
         link: "https://sjorsvanholst.nl",
       },
       {
+        aria: "Twitter",
         icon: faTwitter,
         link: "https://twitter.com/sjorsvanholst",
       },
       {
+        aria: "LinkedIn",
         icon: faLinkedin,
         link: "https://linkedin.com/in/sjorsvanholst",
       },
       {
+        aria: "Instagram",
         icon: faInstagram,
         link: "https://www.instagram.com/schotsl/",
       },
@@ -151,7 +155,11 @@ export default function Footer() {
       <ul className={styles.footer__socials}>
         {contact.list.map((item, index) => (
           <li key={index} className={styles.footer__socials__item}>
-            <a href={item.link} className={styles.footer__socials__item__link}>
+            <a
+              href={item.link}
+              aria-label={item.aria}
+              className={styles.footer__socials__item__link}
+            >
               {item.icon && (
                 <FontAwesomeIcon
                   className={styles.footer__socials__item__icon}
