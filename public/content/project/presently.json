@@ -9,13 +9,61 @@
         "src": "/content/project/images/presently.png",
         "alt": "Presently"
       }
+    },
+    {
+      "image": {
+        "src": "/content/project/images/foto-1.jpg",
+        "alt": "Presently landing page"
+      }
+    },
+    {
+      "image": {
+        "src": "/content/project/images/foto-2.jpg",
+        "alt": "Presently home page"
+      }
+    },
+    {
+      "image": {
+        "src": "/content/project/images/foto-3.jpg",
+        "alt": "Presently model"
+      }
+    },
+    {
+      "image": {
+        "src": "/content/project/images/foto-4.jpg",
+        "alt": "Test"
+      }
+    },
+    {
+      "image": {
+        "alt": "Test",
+        "src": "/content/project/images/foto-5.jpg"
+      }
+    },
+    {
+      "image": {
+        "alt": "Test",
+        "src": "/content/project/images/foto-6.jpg"
+      }
+    },
+    {
+      "image": {
+        "alt": "Test",
+        "src": "/content/project/images/foto-7.jpg"
+      }
+    },
+    {
+      "image": {
+        "alt": "Test",
+        "src": "/content/project/images/foto-8.jpg"
+      }
     }
   ],
   "content": "This is a test",
   "video": "/videos/presently-min.mp4?v=22df4306",
   "image": {
     "alt": "Presently",
-    "src": "/content/project/images/presently.png"
+    "src": "/content/project/images/video-cover.png"
   },
   "categories": [
     {
