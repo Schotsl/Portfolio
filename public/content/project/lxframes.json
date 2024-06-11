@@ -1,0 +1,49 @@
+{
+  "slug": "lxframes",
+  "intro": "Blablabla",
+  "tagline": "Blablabla",
+  "title": "Lxframes",
+  "images": [
+    {
+      "image": {
+        "alt": "Blablabla",
+        "src": "/content/project/images/lxframes-1.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Blablabla",
+        "src": "/content/project/images/lxframes-2.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Blablabla",
+        "src": "/content/project/images/lxframes-3.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Blablabla",
+        "src": "/content/project/images/lxframes-4.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Blablabla",
+        "src": "/content/project/images/lxframes-5.png"
+      }
+    }
+  ],
+  "content": "Blablabla",
+  "video": "/videos/lxframes.mp4?v=11df4305",
+  "image": {
+    "alt": "Test",
+    "src": "/content/project/images/lxframes-cover.png"
+  },
+  "categories": [
+    {
+      "category": "Development"
+    }
+  ]
+}
