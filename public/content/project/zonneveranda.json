@@ -7,15 +7,33 @@
     {
       "image": {
         "alt": "Test",
-        "src": "/content/project/images/zonneveranda.png"
+        "src": "/content/project/images/zonneveranda -1.jpg"
+      }
+    },
+    {
+      "image": {
+        "alt": "Test",
+        "src": "/content/project/images/zonneveranda-2.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Test",
+        "src": "/content/project/images/zonneveranda-3.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Test",
+        "src": "/content/project/images/zonneveranda-4.png"
       }
     }
   ],
   "content": "Test",
-  "video": "/videos/zonneveranda-min.mp4?v=863d9ecc",
+  "video": "/videos/zonneveranda.mp4?v=863d8ecc",
   "image": {
     "alt": "ZonneVeranda",
-    "src": "/content/project/images/zonneveranda.png"
+    "src": "/content/project/images/zonneveranda-cover.png"
   },
   "categories": [
     {
