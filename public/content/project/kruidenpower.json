@@ -1,0 +1,37 @@
+{
+  "slug": "kruidenpower",
+  "intro": "Kruidenpower",
+  "tagline": "Kruidenpower",
+  "title": "Kruidenpower",
+  "images": [
+    {
+      "image": {
+        "alt": "Kruidenpower",
+        "src": "/content/project/images/kruidenpower-1.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Kruidenpower",
+        "src": "/content/project/images/kruidenpower-2.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Kruidenpower",
+        "src": "/content/project/images/kruidenpower-3.png"
+      }
+    }
+  ],
+  "content": "Kruidenpower",
+  "video": "/videos/kruidenpower.mp4?v=25df4305",
+  "image": {
+    "alt": "Kruidenpower",
+    "src": "/content/project/images/kruidenpower-cover.png"
+  },
+  "categories": [
+    {
+      "category": "Development"
+    }
+  ]
+}
