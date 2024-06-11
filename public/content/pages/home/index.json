@@ -13,13 +13,13 @@
     ],
     "projects": [
       {
+        "project": "toolenburgerplas"
+      },
+      {
         "project": "presently"
       },
       {
         "project": "uwuifier"
-      },
-      {
-        "project": "zonneveranda"
       }
     ]
   },
