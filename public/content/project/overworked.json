@@ -1,0 +1,28 @@
+{
+  "slug": "overworked",
+  "intro": "Overworked",
+  "tagline": "Overworked",
+  "title": "Overworked",
+  "images": [
+    {
+      "image": {
+        "alt": "Overworked",
+        "src": "/content/project/images/overworked-1.png"
+      }
+    }
+  ],
+  "content": "Overworked",
+  "video": "/videos/overworked.mp4?v=25df4305",
+  "image": {
+    "alt": "Overworked",
+    "src": "/content/project/images/overworked-cover.png"
+  },
+  "categories": [
+    {
+      "category": "Design"
+    },
+    {
+      "category": "Development"
+    }
+  ]
+}
