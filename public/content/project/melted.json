@@ -1,0 +1,23 @@
+{
+  "title": "Melted",
+  "slug": "melted",
+  "intro": "Melted",
+  "tagline": "Melted",
+  "content": "Melted",
+  "video": "/videos/melted.mp4?v=11zc5d05",
+  "image": {
+    "alt": "Melted",
+    "src": "/content/project/images/melted-cover.png"
+  },
+  "categories": [
+    {
+      "category": "Design"
+    },
+    {
+      "category": "Development"
+    },
+    {
+      "category": "Entertainment"
+    }
+  ]
+}
