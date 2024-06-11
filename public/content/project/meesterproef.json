@@ -1,0 +1,52 @@
+{
+  "slug": "meesterproef",
+  "intro": "Meesterproef",
+  "tagline": "Meesterproef",
+  "title": "Meesterproef",
+  "images": [
+    {
+      "image": {
+        "alt": "Meesterproef",
+        "src": "/content/project/images/meesterproef-1.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Meesterproef",
+        "src": "/content/project/images/meesterproef-2.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Meesterproef",
+        "src": "/content/project/images/meesterproef-3.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Meesterproef",
+        "src": "/content/project/images/meesterproef-4.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Meesterproef",
+        "src": "/content/project/images/meesterproef-5.png"
+      }
+    }
+  ],
+  "content": "Meesterproef",
+  "video": "/videos/meesterproef.mp4?v=25df4305",
+  "image": {
+    "alt": "Meesterproef",
+    "src": "/content/project/images/meesterproef-cover.png"
+  },
+  "categories": [
+    {
+      "category": "Design"
+    },
+    {
+      "category": "Development"
+    }
+  ]
+}
