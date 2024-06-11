@@ -30,9 +30,10 @@ export default async function ProjectPage({
 
   const { video, image, title, tagline, intro, content } = project;
 
-  const images = project.images.map((image) => ({
-    image,
-  }));
+  const images =
+    project.images?.map((image) => ({
+      image,
+    })) || [];
 
   const items = [
     {

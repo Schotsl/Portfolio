@@ -12,7 +12,7 @@ export type Project = {
   intro: string;
   video: string;
   image: Image;
-  images: Image[];
+  images?: Image[];
   content: string;
   tagline: string;
   categories?: string[];
