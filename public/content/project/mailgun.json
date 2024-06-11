@@ -1,0 +1,17 @@
+{
+  "title": "Mailgun",
+  "slug": "mailgun",
+  "intro": "Mailgun",
+  "tagline": "Mailgun",
+  "content": "Mailgun",
+  "video": "/videos/mailgun.mp4?v=55df4305",
+  "image": {
+    "alt": "Test",
+    "src": "/content/project/images/mailgun-cover.png"
+  },
+  "categories": [
+    {
+      "category": "Development"
+    }
+  ]
+}
