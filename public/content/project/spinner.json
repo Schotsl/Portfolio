@@ -1,0 +1,40 @@
+{
+  "slug": "spinner",
+  "intro": "Test",
+  "tagline": "Test",
+  "title": "Spinner",
+  "images": [
+    {
+      "image": {
+        "src": "/content/project/images/spinner-1.png",
+        "alt": "Test"
+      }
+    },
+    {
+      "image": {
+        "alt": "Test",
+        "src": "/content/project/images/spinner-2.png"
+      }
+    },
+    {
+      "image": {
+        "alt": "Test",
+        "src": "/content/project/images/spinner-3.png"
+      }
+    }
+  ],
+  "content": "Test",
+  "video": "/videos/spinner.mp4?v=25df4323",
+  "image": {
+    "alt": "Test",
+    "src": "/content/project/images/spinner-cover.png"
+  },
+  "categories": [
+    {
+      "category": "Design"
+    },
+    {
+      "category": "Development"
+    }
+  ]
+}
