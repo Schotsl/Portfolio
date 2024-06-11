@@ -155,7 +155,7 @@ collections:
                   media_folder: "/public/content/project/images",
                   public_folder: "/content/project/images",
                 }
-      - { name: "video", label: "Cover image", widget: "string" }
+      - { name: "video", label: "Cover video", widget: "string" }
       - name: "image"
         label: "Cover image"
         widget: "object"
