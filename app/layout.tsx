@@ -92,10 +92,10 @@ export default async function RootLayout({
           />
 
           <link rel="manifest" href="/site.webmanifest" />
-          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0099ff" />
 
-          <meta name="msapplication-TileColor" content="#ffffff" />
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="msapplication-TileColor" content="#F1F7FC" />
+          <meta name="theme-color" content="#F1F7FC" />
         </head>
 
         <body>
