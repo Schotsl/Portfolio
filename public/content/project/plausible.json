@@ -1,0 +1,25 @@
+{
+  "slug": "plausible",
+  "intro": "Plausible",
+  "tagline": "Plausible",
+  "title": "Plausible",
+  "images": [
+    {
+      "image": {
+        "alt": "Plausible",
+        "src": "/content/project/images/plausible-1.png"
+      }
+    }
+  ],
+  "content": "Plausible",
+  "video": "/videos/plausible.mp4?v=55cc4305",
+  "image": {
+    "alt": "Test",
+    "src": "/content/project/images/plausible-cover.png"
+  },
+  "categories": [
+    {
+      "category": "Development"
+    }
+  ]
+}
