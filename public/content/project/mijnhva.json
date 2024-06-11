@@ -1,0 +1,25 @@
+{
+  "slug": "mijnhva",
+  "intro": "MijnHvA",
+  "tagline": "MijnHvA",
+  "title": "MijnHvA",
+  "images": [
+    {
+      "image": {
+        "alt": "MijnHvA",
+        "src": "/content/project/images/mijnhva-1.png"
+      }
+    }
+  ],
+  "content": "MijnHvA",
+  "video": "/videos/mijnhva.mp4?v=25df4305",
+  "image": {
+    "alt": "MijnHvA",
+    "src": "/content/project/images/mijnhva-cover.png"
+  },
+  "categories": [
+    {
+      "category": "Design"
+    }
+  ]
+}
