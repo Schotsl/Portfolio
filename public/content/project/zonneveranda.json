@@ -29,7 +29,7 @@
       }
     }
   ],
-  "content": "Test",
+  "content": "ZonneVeranda is a website that showcases the products of ZonneVeranda, including the [ZonneVeranda](https://zonneveranda.nl/zonneveranda), [PowerPort](https://zonneveranda.nl/powerport), and [solar panels](https://zonneveranda.nl/zonnepanelen). I used my go-to technology stack for ‘non-interactive’ sites at the time, which included [Nuxt 3](https://nuxt.com/), and hosted it on [Netlify’s platform](https://www.netlify.com/), with the addition of [Decap](https://decapcms.org/) for content management. If I were to redo this project, I would strongly prefer using [Next](https://nextjs.org/).\n\nOne of the most exciting aspects of this project was having the opportunity to help ZonneVeranda demonstrate and promote its products to a wider audience. By creating a website that emphasizes the advantages of their products, ZonneVeranda can attract potential customers and show how their offerings can improve their lives.\n\nThis project was brought to me through [Raphael Kurun](https://www.linkedin.com/in/raphael-kurun-776766161), a friend and the owner of Corvus Consultancy. While the client had a design from a previous website, I was able to make the necessary modifications to accommodate their new requirements.\n\nZonneVeranda is live, although we’re planning on further expanding and improving the site as I’ve learned a lot since its launch. Overall, it was a fun and interesting project to work on, and I’m happy with the outcome.",
   "video": "/videos/zonneveranda-min.mp4?v=863d8ecc",
   "image": {
     "alt": "ZonneVeranda",
