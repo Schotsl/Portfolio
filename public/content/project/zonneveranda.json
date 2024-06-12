@@ -1,6 +1,6 @@
 {
   "slug": "zonneveranda",
-  "intro": "The ZonneVeranda website, which I designed, effectively presents their solar energy solutions through a user-friendly and visually appealing interface. It highlights key products like the solar-equipped PowerPort and various installations for enhancing residential spaces sustainably.",
+  "intro": "A website showcasing solar energy products for ZonneVeranda, developed using Nuxt 3 and Decap CMS, hosted on Netlify.",
   "tagline": "Shining a light on solar solutions",
   "title": "ZonneVeranda",
   "images": [

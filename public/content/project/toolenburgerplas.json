@@ -1,6 +1,6 @@
 {
   "slug": "toolenburgerplas",
-  "intro": "The ZonneVeranda website, which I designed, effectively presents their solar energy solutions through a user-friendly and visually appealing interface. It highlights key products like the solar-equipped PowerPort and various installations for enhancing residential spaces sustainably.",
+  "intro": "A website displaying real-time swimming conditions for Toolenburgerplas lake, using a custom temperature sensor, OpenAI API, and OpenWeather API, built with Next.js, SCSS, TypeScript, and Supabase.",
   "tagline": "Do we really need that wetsuit?",
   "title": "Toolenburgerplas",
   "images": [

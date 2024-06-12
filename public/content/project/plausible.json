@@ -1,6 +1,6 @@
 {
   "slug": "plausible",
-  "intro": "Plausible",
+  "intro": "A Deno-native Plausible API wrapper for integrating website analytics into Discord bots and live stat counters.",
   "tagline": "If you want something done...",
   "title": "Plausible",
   "images": [

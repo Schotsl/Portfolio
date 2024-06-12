@@ -1,6 +1,6 @@
 {
   "slug": "spinner",
-  "intro": "Test",
+  "intro": "A personalized gift website featuring spinner wheels for planning activities, built with Next.js, SCSS, TypeScript, Supabase, and Formspree.",
   "tagline": "The wheel of dates!",
   "title": "Spinner",
   "images": [

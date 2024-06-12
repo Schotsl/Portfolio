@@ -1,6 +1,6 @@
 {
   "slug": "presently",
-  "intro": "Presently is a simple digital signage tool for schools that allows easy management of information displays. It's designed to be straightforward and affordable, helping schools keep their communities updated efficiently.",
+  "intro": "A display software for schools to upload and display PowerPoints, running on Raspberry Pi with a frontend built using the IBM Carbon System and Next.js, and backend using Supabase and CloudConvert.",
   "tagline": "Affordable narrowcasting screens that actually work!",
   "title": "Presently",
   "images": [

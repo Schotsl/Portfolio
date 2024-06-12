@@ -1,6 +1,6 @@
 {
   "slug": "meesterproef",
-  "intro": "Meesterproef",
+  "intro": "Meesterproef is a website prototype that guides users through creating a business design based on their preferences, developed using Next.js, SCSS, TypeScript, and the OpenAI API.",
   "tagline": "Your business, your adventure, my code",
   "title": "Meesterproef",
   "images": [
