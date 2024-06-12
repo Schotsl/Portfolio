@@ -49,8 +49,10 @@ export default async function ProjectPage({
 
       <Carousel items={items} />
 
-      <h2>{title}</h2>
-      <p>{intro}</p>
+      <section className={styles.project__content}>
+        <h2>{title}</h2>
+        <p>{intro}</p>
+      </section>
 
       <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
     </main>

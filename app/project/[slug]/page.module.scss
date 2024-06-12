@@ -1,4 +1,7 @@
 @import "@/styles/mixins";
 
 .project {
+  &__content {
+    padding: var(--padding-vertical) 0;
+  }
 }
