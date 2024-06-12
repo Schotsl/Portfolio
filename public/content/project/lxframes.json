@@ -35,7 +35,7 @@
       }
     }
   ],
-  "content": "Blablabla",
+  "content": "Lxframes is a website I developed for my partner, [Lanxiang Vermeulen](https://www.linkedin.com/in/lanxiang-vermeulen-498471185/). She needed a portfolio to showcase her school and professional work while searching for internships, as well as her professional work as a photographer.\n\nLanxiang provided her own designs, which I then turned into a website. I also created the mobile design and made final adjustments. This website was created using [Next](https://nextjs.org/), [SCSS](https://sass-lang.com/), [TypeScript](https://www.typescriptlang.org/), and [Decap CMS](https://decapcms.org/) for content management. Her portfolio successfully helped her find an internship, which was very rewarding.",
   "video": "/videos/lxframes-min.mp4?v=11df4305",
   "image": {
     "alt": "Test",
