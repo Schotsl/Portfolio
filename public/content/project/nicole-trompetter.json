@@ -2,7 +2,7 @@
   "title": "Nicole Trompetter",
   "slug": "nicoletrompetter",
   "intro": "Test",
-  "tagline": "Test",
+  "tagline": "First things first",
   "content": "I developed [Nicole Trompetter's](https://nicoletrompetter.nl/) portfolio along with her business website, [Kruidenpower](https://sjorsvanholst.nl/project/kruidenpower). This website was also designed by [Lanxiang Vermeulen](https://www.linkedin.com/in/lanxiang-vermeulen-498471185/), and I expanded the designs to include mobile devices. Once again special thanks to [Raphael Kurun](https://www.linkedin.com/in/raphael-kurun-776766161/) for connecting me with Nicole Trompetter.\n\nLike Kruidenpower, I used [Nuxt 3](https://nuxt.com/) and [Decap CMS](https://decapcms.org/). Although I've since moved on to [React](https://react.dev/) and [Next](https://nextjs.org/), this project was a good experience in working with clients and colleagues, and it was surprisingly easy since it was a one-pager.",
   "video": "/videos/nicoletrompetter-min.mp4?v=25zf4312",
   "image": {
