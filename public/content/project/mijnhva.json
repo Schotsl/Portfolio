@@ -11,7 +11,7 @@
       }
     }
   ],
-  "content": "MijnHvA",
+  "content": "During my second minor in UXD (User Experience Design) in [CMD](https://cmd-amsterdam.nl/), I was asked by the product owner of [MijnHvA](https://mijn.hva.nl) to find a way to give students new insights into their study progress. The current progress page of MijnHvA consists of just a list of subjects and grades.\n\nMy concept introduced a new design where everything is structured into a timeline. I interviewed experts and students to identify what was missing. Students wanted to view their ESCPs and have clearer insights into what was missing. The organizer of year 3 wanted to give students the freedom to plan the order of minors and internships.\n\nMy solution features a timeline with clear grades indicating if students have sufficient, insufficient, pending grades, or need to start. This ensures students don’t discover missing grades a year later. I included ESCPs and functionality allowing students to drag minors, internships, and more around in blocks to explore different study orders.\n\nI learned a lot about client communication and prototyping in general during this project! I used Figma to create my Lo-Fi, Mi-Fi, and Hi-Fi.",
   "video": "/videos/mijnhva-min.mp4?v=25df4305",
   "image": {
     "alt": "MijnHvA",
