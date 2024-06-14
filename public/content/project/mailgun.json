@@ -1,8 +1,16 @@
 {
-  "title": "Mailgun",
+  "technologies": [
+    {
+      "technology": "Deno"
+    },
+    {
+      "technology": "TypeScript"
+    }
+  ],
   "slug": "mailgun",
   "intro": "A Mailgun API wrapper for Deno, created to send emails from Deno Deploy instances, providing typed support for the mail-sending endpoint.",
   "tagline": "If you want something done...",
+  "title": "Mailgun",
   "content": "I’m a big fan of [Deno](https://deno.com/) and [Deno Deploy](https://deno.com/deploy). I encountered a problem when attempting to send emails from my deploy instances due to Deno Deploy blocking commonly used SMTP ports. Initially, I tried setting up a relay, but I prefer to avoid server management at all costs. This led me to use [Mailgun](https://www.mailgun.com/) for sending emails.\n\nThe NPM Mailgun package didn’t support Deno at the time, so I created a Mailgun API wrapper native to Deno. This package only covers the mail-sending API, is fully typed, and supports the entire endpoint. I’m glad I limited the Mailgun package to this essential part, as I can consider it “done.”. The package has a few GitHub stars, and it’s nice to know my code is helping someone. I know all too well the feeling of finding the right package when you thought you’d have to do it yourself.",
   "video": "/videos/mailgun-min.mp4?v=55df4305",
   "image": {
