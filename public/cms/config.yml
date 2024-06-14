@@ -180,3 +180,26 @@ collections:
               widget: "select",
               options: ["Design", "Development", "Entertainment"],
             }
+      - name: "technologies"
+        label: "Technologies"
+        widget: "list"
+        fields:
+          - {
+              label: "Technology",
+              name: "technology",
+              widget: "select",
+              options: [
+                "Vue",
+                "React",
+                "Next",
+                "Nuxt",
+                "TypeScript",
+                "JavaScript",
+                "SCSS",
+                "Expo",
+                "React Native",
+                "Figma",
+                "Adobe XD",
+                "Node",
+                "Deno",
+          }
