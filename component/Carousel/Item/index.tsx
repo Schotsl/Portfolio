@@ -76,10 +76,10 @@ function CarouselItemInner({
       }, 1000);
     };
 
-    playerCurrent.addEventListener("ended", handleVideoEnd);
+    playerCurrent?.addEventListener("ended", handleVideoEnd);
 
     return () => {
-      playerCurrent.removeEventListener("ended", handleVideoEnd);
+      playerCurrent?.removeEventListener("ended", handleVideoEnd);
     };
   }, []);
 

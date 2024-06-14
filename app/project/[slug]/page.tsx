@@ -51,6 +51,11 @@ export default async function ProjectPage({
 
       <section className={styles.project__content}>
         <h2>{title}</h2>
+        <ul>
+          {project.technologies?.map((technology) => (
+            <li key={technology}>{technology}</li>
+          ))}
+        </ul>
         <b>{intro}</b>
         <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       </section>
