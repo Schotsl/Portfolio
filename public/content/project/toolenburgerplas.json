@@ -20,6 +20,9 @@
     },
     {
       "technology": "TypeScript"
+    },
+    {
+      "technology": "Vercel"
     }
   ],
   "slug": "toolenburgerplas",

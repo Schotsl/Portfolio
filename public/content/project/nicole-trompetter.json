@@ -4,13 +4,19 @@
       "technology": "Vue"
     },
     {
-      "technology": "Next"
+      "technology": "Nuxt"
     },
     {
       "technology": "TypeScript"
     },
     {
       "technology": "SCSS"
+    },
+    {
+      "technology": "Decap"
+    },
+    {
+      "technology": "Netlify"
     }
   ],
   "slug": "nicoletrompetter",

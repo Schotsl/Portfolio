@@ -29,6 +29,9 @@
     },
     {
       "technology": "SCSS"
+    },
+    {
+      "technology": "Netlify"
     }
   ],
   "slug": "uwuifier",

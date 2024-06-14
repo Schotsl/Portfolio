@@ -11,6 +11,12 @@
     },
     {
       "technology": "SCSS"
+    },
+    {
+      "technology": "Netlify"
+    },
+    {
+      "technology": "Decap"
     }
   ],
   "slug": "zonneveranda",

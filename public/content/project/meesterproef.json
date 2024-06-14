@@ -14,6 +14,9 @@
     },
     {
       "technology": "OpenAI API"
+    },
+    {
+      "technology": "Vercel"
     }
   ],
   "slug": "meesterproef",
