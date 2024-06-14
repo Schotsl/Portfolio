@@ -11,6 +11,9 @@
     },
     {
       "technology": "Deno"
+    },
+    {
+      "technology": "React"
     }
   ],
   "slug": "overworked",
