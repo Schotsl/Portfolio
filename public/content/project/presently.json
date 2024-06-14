@@ -17,6 +17,9 @@
     },
     {
       "technology": "CloudConvert API"
+    },
+    {
+      "technology": "SCSS"
     }
   ],
   "slug": "presently",
