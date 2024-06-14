@@ -5,6 +5,9 @@
     },
     {
       "technology": "TypeScript"
+    },
+    {
+      "technology": "Mailgun API"
     }
   ],
   "slug": "mailgun",
