@@ -1,4 +1,27 @@
 {
+  "technologies": [
+    {
+      "technology": "Next"
+    },
+    {
+      "technology": "React"
+    },
+    {
+      "technology": "SCSS"
+    },
+    {
+      "technology": "Arduino"
+    },
+    {
+      "technology": "OpenAI API"
+    },
+    {
+      "technology": "OpenWeather API"
+    },
+    {
+      "technology": "TypeScript"
+    }
+  ],
   "slug": "toolenburgerplas",
   "intro": "A website displaying real-time swimming conditions for Toolenburgerplas lake, using a custom temperature sensor, OpenAI API, and OpenWeather API, built with Next.js, SCSS, TypeScript, and Supabase.",
   "tagline": "Do we really need that wetsuit?",
