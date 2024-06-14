@@ -1,4 +1,18 @@
 {
+  "technologies": [
+    {
+      "technology": "Expo"
+    },
+    {
+      "technology": "React Native"
+    },
+    {
+      "technology": "Supabase"
+    },
+    {
+      "technology": "Deno"
+    }
+  ],
   "slug": "overworked",
   "intro": "A social workout tracking app developed with Expo and Supabase, enabling users to track their progress and stay motivated through social features.",
   "tagline": "If at first you don't succeed, try, try again",
