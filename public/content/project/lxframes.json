@@ -1,4 +1,21 @@
 {
+  "technologies": [
+    {
+      "technology": "React"
+    },
+    {
+      "technology": "Next"
+    },
+    {
+      "technology": "TypeScript"
+    },
+    {
+      "technology": "Decap"
+    },
+    {
+      "technology": "SCSS"
+    }
+  ],
   "slug": "lxframes",
   "intro": "Lxframes is a portfolio website for Lanxiang Vermeulen, showcasing her school and professional work, built with Next.js, SCSS, TypeScript, and Decap CMS.",
   "tagline": "Programming my way into her heart",
