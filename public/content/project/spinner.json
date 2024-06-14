@@ -1,4 +1,21 @@
 {
+  "technologies": [
+    {
+      "technology": "React"
+    },
+    {
+      "technology": "Next"
+    },
+    {
+      "technology": "Supabase"
+    },
+    {
+      "technology": "Formspree API"
+    },
+    {
+      "technology": "SCSS"
+    }
+  ],
   "slug": "spinner",
   "intro": "A personalized gift website featuring spinner wheels for planning activities, built with Next.js, SCSS, TypeScript, Supabase, and Formspree.",
   "tagline": "The wheel of dates!",
