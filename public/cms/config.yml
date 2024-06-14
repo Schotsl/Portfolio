@@ -205,5 +205,9 @@ collections:
                   "Node",
                   "Deno",
                   "Decap",
+                  "Mailgun API",
+                  "OpenAI API",
+                  "OpenWeather API",
+                  "Plausible API",
                 ],
             }
