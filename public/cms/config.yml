@@ -142,15 +142,20 @@ collections:
         widget: "list"
         summary: "{{fields.alt}}"
         fields:
-          - { name: "alt", label: "Alt", widget: "string" }
-          - {
-              name: "src",
-              label: "Image",
-              widget: "image",
-              choose_url: false,
-              media_folder: "/public/content/project/images",
-              public_folder: "/content/project/images",
-            }
+          - name: "image"
+            label: "Image"
+            widget: "object"
+            summary: "{{fields.alt}}"
+            fields:
+              - { name: "alt", label: "Alt", widget: "string" }
+              - {
+                  name: "src",
+                  label: "Image",
+                  widget: "image",
+                  choose_url: false,
+                  media_folder: "/public/content/project/images",
+                  public_folder: "/content/project/images",
+                }
       - { name: "video", label: "Cover video", widget: "string" }
       - name: "image"
         label: "Cover image"

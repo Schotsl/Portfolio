@@ -51,10 +51,9 @@ export default async function ProjectPage({
 
       <section className={styles.project__content}>
         <h2>{title}</h2>
-        <p>{intro}</p>
+        <b>{intro}</b>
+        <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       </section>
-
-      <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
     </main>
   );
 }

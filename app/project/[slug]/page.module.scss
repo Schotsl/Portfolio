@@ -2,6 +2,11 @@
 
 .project {
   &__content {
-    padding: var(--padding-vertical) 0;
+    padding: calc(var(--padding-vertical) / 2) 0
+      calc(var(--padding-vertical) * 4);
+
+    p {
+      max-width: 100ch;
+    }
   }
 }
