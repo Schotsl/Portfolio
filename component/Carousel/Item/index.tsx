@@ -67,16 +67,26 @@ function CarouselItemInner({
     updatePlay();
   }, [active, video, updating]);
 
+  useEffect(() => {
+    const playerCurrent = player.current!;
+
+    const handleVideoEnd = () => {
+      setTimeout(() => {
+        playerCurrent.play();
+      }, 1000);
+    };
+
+    playerCurrent.addEventListener("ended", handleVideoEnd);
+
+    return () => {
+      playerCurrent.removeEventListener("ended", handleVideoEnd);
+    };
+  }, []);
+
   return (
     <>
       {video && (
-        <video
-          ref={player}
-          loop
-          muted
-          preload="none"
-          className={styles.item__video}
-        >
+        <video ref={player} muted preload="none" className={styles.item__video}>
           <source src={video} type="video/mp4" />
         </video>
       )}

@@ -39,12 +39,22 @@ export default function RootProjectItem({
       playerCurrent.currentTime = 0;
     };
 
+    const handleVideoEnd = () => {
+      setTimeout(() => {
+        playerCurrent.play();
+      }, 1000);
+    };
+
     containerCurrent.addEventListener("mouseenter", handleMouseEnter);
     containerCurrent.addEventListener("mouseleave", handleMouseLeave);
+
+    playerCurrent.addEventListener("ended", handleVideoEnd);
 
     return () => {
       containerCurrent.removeEventListener("mouseenter", handleMouseEnter);
       containerCurrent.removeEventListener("mouseleave", handleMouseLeave);
+
+      playerCurrent.removeEventListener("ended", handleVideoEnd);
     };
   }, []);
 
@@ -59,7 +69,6 @@ export default function RootProjectItem({
       <a href={`/project/${slug}`}>
         <video
           ref={player}
-          loop
           muted
           autoPlay
           preload="none"
