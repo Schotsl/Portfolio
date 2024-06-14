@@ -1,4 +1,18 @@
 {
+  "technologies": [
+    {
+      "technology": "Nuxt"
+    },
+    {
+      "technology": "Vue"
+    },
+    {
+      "technology": "TypeScript"
+    },
+    {
+      "technology": "SCSS"
+    }
+  ],
   "slug": "zonneveranda",
   "intro": "A website showcasing solar energy products for ZonneVeranda, developed using Nuxt 3 and Decap CMS, hosted on Netlify.",
   "tagline": "Shining a light on solar solutions",
