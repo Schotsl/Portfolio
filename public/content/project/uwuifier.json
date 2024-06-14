@@ -26,6 +26,9 @@
     },
     {
       "technology": "Deno"
+    },
+    {
+      "technology": "SCSS"
     }
   ],
   "slug": "uwuifier",
