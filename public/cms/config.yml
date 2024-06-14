@@ -209,6 +209,7 @@ collections:
                   "OpenAI API",
                   "OpenWeather API",
                   "Plausible API",
+                  "CloudConvert API",
                   "Unity",
                   "Deno Deploy",
                   "Supabase",
