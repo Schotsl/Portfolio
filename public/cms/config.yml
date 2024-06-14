@@ -202,6 +202,7 @@ collections:
                   "React Native",
                   "Figma",
                   "Adobe XD",
+                  "Arduino",
                   "Node",
                   "Deno",
                   "Decap",
@@ -214,5 +215,7 @@ collections:
                   "Unity",
                   "Deno Deploy",
                   "Supabase",
+                  "Vercel",
+                  "Netlify",
                 ],
             }
