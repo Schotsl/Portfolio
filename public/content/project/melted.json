@@ -8,6 +8,9 @@
     },
     {
       "technology": "TypeScript"
+    },
+    {
+      "technology": "Deno Deploy"
     }
   ],
   "slug": "melted",
