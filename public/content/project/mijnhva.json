@@ -1,4 +1,9 @@
 {
+  "technologies": [
+    {
+      "technology": "Figma"
+    }
+  ],
   "slug": "mijnhva",
   "intro": "MijnHvA is a redesigned student progress tracker for a university, featuring a timeline view of grades and study planning, created using Figma.",
   "tagline": "Dragging your way through CMD",
