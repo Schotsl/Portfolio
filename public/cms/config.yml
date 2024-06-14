@@ -140,7 +140,7 @@ collections:
       - name: "images"
         label: "Images"
         widget: "list"
-        summary: "{{fields.alt}}"
+        summary: "Image"
         fields:
           - name: "image"
             label: "Image"
@@ -204,5 +204,6 @@ collections:
                   "Adobe XD",
                   "Node",
                   "Deno",
+                  "Decap",
                 ],
             }
