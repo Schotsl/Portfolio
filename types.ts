@@ -16,6 +16,8 @@ export type Project = {
   content: string;
   tagline: string;
   categories?: string[];
+  technologies?: string[];
+
 };
 
 export type CarouselItem = {

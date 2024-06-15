@@ -7,6 +7,7 @@ import { marked } from "marked";
 
 import Header from "@/component/Header";
 import Carousel from "@/component/Carousel";
+import Technologies from "./components/Technologies";
 
 export async function generateStaticParams() {
   const projects = await getCollection<Project>("project");
@@ -28,7 +29,8 @@ export default async function ProjectPage({
   const projects = await getCollection<Project>("project");
   const project = projects.find((project) => project.slug === params.slug)!;
 
-  const { video, image, title, tagline, intro, content } = project;
+  const { video, image, title, tagline, intro, content, technologies } =
+    project;
 
   const images =
     project.images?.map((image) => ({
@@ -50,12 +52,9 @@ export default async function ProjectPage({
       <Carousel items={items} />
 
       <section className={styles.project__content}>
+        {technologies && <Technologies technologies={technologies} />}
+
         <h2>{title}</h2>
-        <ul>
-          {project.technologies?.map((technology) => (
-            <li key={technology}>{technology}</li>
-          ))}
-        </ul>
         <b>{intro}</b>
         <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       </section>

@@ -16,7 +16,7 @@ export async function getCollection<T>(path: string): Promise<T[]> {
     const itemObject = fs.readFileSync(itemPath, "utf8");
     const itemParsed = JSON.parse(itemObject);
 
-    const { image, images, categories } = itemParsed;
+    const { image, images, categories, technologies } = itemParsed;
 
     if (image) {
       itemParsed.image = await getImage(image);
@@ -41,6 +41,15 @@ export async function getCollection<T>(path: string): Promise<T[]> {
       });
 
       itemParsed.categories = categoriesMapped.sort();
+    }
+
+    if (technologies) {
+      const technologiesMapped = technologies.map((technologyObject: any) => {
+        const technology = technologyObject.technology;
+        return technology;
+      });
+
+      itemParsed.technologies = technologiesMapped.sort();
     }
 
     return itemParsed as T;
