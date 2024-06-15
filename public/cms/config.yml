@@ -125,6 +125,18 @@ collections:
                   public_folder: "/content/shared/images",
                 }
 
+  - name: "technologies"
+    label: "Technologies"
+    create: true
+    editor: { preview: false }
+    folder: "public/content/technology"
+    extension: "json"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "slug", label: "Slug", widget: "string" }
+      - { name: "url", label: "URL", widget: "string" }
+      - { name: "color", label: "Color", widget: "color" }
+
   - name: "project"
     label: "Projects"
     create: true
