@@ -14,5 +14,12 @@
     {
       "category": "Development"
     }
+  ],
+  "call-to-actions": [
+    {
+      "url": "https://github.com/Schotsl/Mailgun/",
+      "icon": "github",
+      "title": "View the project on GitHub"
+    }
   ]
 }

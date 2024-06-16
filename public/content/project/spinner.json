@@ -45,5 +45,12 @@
     {
       "category": "Development"
     }
+  ],
+  "call-to-actions": [
+    {
+      "url": "https://spinner.sjorsvanholst.nl/",
+      "icon": "globe",
+      "title": "View the website"
+    }
   ]
 }

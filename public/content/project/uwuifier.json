@@ -43,5 +43,17 @@
     {
       "category": "Development"
     }
+  ],
+  "call-to-actions": [
+    {
+      "url": "https://uwuifier.com/",
+      "icon": "globe",
+      "title": "View the website"
+    },
+    {
+      "url": "https://github.com/Schotsl/Uwuifier",
+      "icon": "github",
+      "title": "View the project on GitHub"
+    }
   ]
 }

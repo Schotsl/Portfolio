@@ -43,5 +43,12 @@
     {
       "category": "Development"
     }
+  ],
+  "call-to-actions": [
+    {
+      "url": "https://zonneveranda.nl",
+      "icon": "globe",
+      "title": "View the website"
+    }
   ]
 }

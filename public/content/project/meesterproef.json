@@ -62,5 +62,17 @@
     {
       "category": "Development"
     }
+  ],
+  "call-to-actions": [
+    {
+      "url": "https://meesterproef.sjorsvanholst.nl/",
+      "icon": "globe",
+      "title": "View the website"
+    },
+    {
+      "url": "https://github.com/Schotsl/Meesterproef-next",
+      "icon": "github",
+      "title": "View the project on GitHub"
+    }
   ]
 }

@@ -22,5 +22,12 @@
     {
       "category": "Development"
     }
+  ],
+  "call-to-actions": [
+    {
+      "url": "https://github.com/Schotsl/Plausible/",
+      "icon": "github",
+      "title": "View the project on GitHub"
+    }
   ]
 }

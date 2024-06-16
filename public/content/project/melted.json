@@ -20,5 +20,12 @@
     {
       "category": "Entertainment"
     }
+  ],
+  "call-to-actions": [
+    {
+      "url": "https://github.com/Schotsl/HvG",
+      "icon": "github",
+      "title": "View the project on GitHub"
+    }
   ]
 }

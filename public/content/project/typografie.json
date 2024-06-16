@@ -24,5 +24,12 @@
     {
       "category": "Development"
     }
+  ],
+  "call-to-actions": [
+    {
+      "url": "https://typografie.sjorsvanholst.nl/",
+      "icon": "globe",
+      "title": "View the website"
+    }
   ]
 }

@@ -40,5 +40,17 @@
     {
       "category": "Development"
     }
+  ],
+  "call-to-actions": [
+    {
+      "url": "https://toolenburgerplas.nl/",
+      "icon": "globe",
+      "title": "View the website"
+    },
+    {
+      "url": "https://github.com/Schotsl/Toolenburgerplas",
+      "icon": "github",
+      "title": "View the project on GitHub"
+    }
   ]
 }

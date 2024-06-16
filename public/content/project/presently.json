@@ -69,5 +69,12 @@
     {
       "category": "Development"
     }
+  ],
+  "call-to-actions": [
+    {
+      "url": "https://presently.dev/",
+      "icon": "globe",
+      "title": "View the website"
+    }
   ]
 }

@@ -14,5 +14,12 @@
     {
       "category": "Development"
     }
+  ],
+  "call-to-actions": [
+    {
+      "url": "https://nicoletrompetter.nl/",
+      "icon": "globe",
+      "title": "View the website"
+    }
   ]
 }
