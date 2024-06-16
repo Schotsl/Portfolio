@@ -196,13 +196,13 @@ collections:
       - name: "technologies"
         label: "Technologies"
         widget: "list"
-        fields:
-          - {
-              label: "Technology",
-              name: "technology",
-              widget: "relation",
-              collection: "technologies",
-              value_field: "slug",
-              search_fields: ["title"],
-              display_fields: ["title"],
-            }
+        field:
+          {
+            label: "Technology",
+            name: "technology",
+            widget: "relation",
+            collection: "technologies",
+            value_field: "slug",
+            search_fields: ["title"],
+            display_fields: ["title"],
+          }
