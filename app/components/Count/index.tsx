@@ -77,7 +77,7 @@ export default function RootCount({ initial }: CountProps) {
           } else {
             setHidden(pageviewsNew);
           }
-        },
+        }
       )
       .subscribe();
 
@@ -96,10 +96,11 @@ export default function RootCount({ initial }: CountProps) {
         return;
       }
 
+      // If the element is visible start the smooth transition and disconnect the observer
       setVisible(true);
-
-      // If the element is visible start the smooth transition
       scheduleSmooth(hidden, 0);
+
+      observer.disconnect();
     });
 
     observer.observe(containerRef.current!);

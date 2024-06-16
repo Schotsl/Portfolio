@@ -1,7 +1,9 @@
 import styles from "./Categories.module.scss";
 
+import { Category } from "@/types";
+
 type CategoriesProps = {
-  categories: string[];
+  categories: Category[];
   className?: string;
 };
 
@@ -10,7 +12,7 @@ export default function Categories({ categories, className }: CategoriesProps) {
     <ul className={`${styles.categories} ${className}`}>
       {categories.map((category, index) => (
         <li className={styles.categories__category} key={index}>
-          {category}
+          {category.title}
         </li>
       ))}
     </ul>

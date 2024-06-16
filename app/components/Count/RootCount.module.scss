@@ -1,10 +1,31 @@
+@import "@/styles/mixins.scss";
+
 .count {
+  width: 100%;
   margin: 0 0 8rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
   &__title {
-    font-size: 2.5rem;
+    max-width: 48rem;
+    font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
+
+    @include respond-to-sm {
+      max-width: 28rem;
+    }
+
+    @include respond-to-md {
+      max-width: 38rem;
+      font-size: 2rem;
+    }
+
+    @include respond-to-lg {
+      max-width: 46rem;
+      font-size: 2.5rem;
+    }
 
     &::after {
       content: " *";
@@ -12,7 +33,7 @@
   }
 
   &__content {
-    margin: 4rem 0 0;
+    margin: 4rem auto 0 0;
     padding: 0 0 0 0.5rem;
     position: relative;
     font-size: 0.85rem;
