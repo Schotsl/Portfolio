@@ -205,4 +205,12 @@ collections:
             value_field: "slug",
             search_fields: ["title"],
             display_fields: ["title"],
-          }
+      - name: "call-to-actions"
+        label: "Call to actions"
+        widget: "list"
+        fields:
+          - { name: "url", label: "URL", widget: "string" }
+          - { name: "icon", label: "Icon", widget: "string" }
+          - { name: "title", label: "Title", widget: "string" }
+
+          
