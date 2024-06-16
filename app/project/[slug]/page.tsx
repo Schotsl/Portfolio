@@ -70,9 +70,11 @@ export default async function ProjectPage({
       <section className={styles.project__content}>
         {technologies && <Technologies technologies={technologies} />}
 
-        <h2>{title}</h2>
-        <b>{intro}</b>
-        <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+        <div className={styles.project__content__inner}>
+          <h2>{title}</h2>
+          <b>{intro}</b>
+          <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+        </div>
 
         <Links links={links} />
       </section>

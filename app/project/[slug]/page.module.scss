@@ -3,15 +3,36 @@
 .project {
   &__content {
     width: 100%;
-    padding: calc(var(--padding-vertical) / 2) 0
-      calc(var(--padding-vertical) * 4);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 
-    p {
-      max-width: 100ch;
+    padding-top: calc(var(--padding-vertical) / 2);
+    padding-bottom: calc(var(--padding-vertical) * 8);
+
+    @include respond-to-md {
+      gap: 1.5rem;
+      padding-top: calc(var(--padding-vertical) / 2);
+      padding-bottom: calc(var(--padding-vertical) * 4);
     }
 
-    h2 {
-      font-size: 2rem;
+    &__inner {
+      p {
+        max-width: 100ch;
+      }
+
+      b {
+        display: block;
+      }
+
+      h2 {
+        margin: 0 0 0.5rem;
+        font-size: 2rem;
+      }
+
+      div {
+        margin: 0 0 -1rem;
+      }
     }
   }
 }
