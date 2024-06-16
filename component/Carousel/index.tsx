@@ -4,7 +4,7 @@ import styles from "./Carousel.module.scss";
 
 import CarouselItem from "./Item";
 
-import { Image, CarouselItem as CarouselItemType } from "@/types";
+import { CarouselItem as CarouselItemType } from "@/types";
 import { useEffect, useRef, useState } from "react";
 
 type CarouselProps = {
