@@ -137,6 +137,16 @@ collections:
       - { name: "url", label: "URL", widget: "string" }
       - { name: "color", label: "Color", widget: "color" }
 
+  - name: "categories"
+    label: "Categories"
+    create: true
+    editor: { preview: false }
+    folder: "public/content/category"
+    extension: "json"
+    fields:
+      - { name: "slug", label: "Slug", widget: "string" }
+      - { name: "title", label: "Title", widget: "string" }
+
   - name: "project"
     label: "Projects"
     create: true
