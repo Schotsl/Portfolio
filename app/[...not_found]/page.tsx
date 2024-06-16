@@ -13,7 +13,7 @@ export default async function NotFoundPage() {
   const bannerImage = await getImage(banner.image);
   const bannerTitle = banner.title;
   const bannerTaglines = content.banner.taglines.map(
-    (tagline) => tagline.tagline,
+    (tagline) => tagline.tagline
   );
 
   return (
@@ -32,10 +32,10 @@ export default async function NotFoundPage() {
       ></div>
 
       <Button
-        className={styles.not_found__button}
         icon={faHome}
         href="/"
         label="Go back to the homepage"
+        className={styles.not_found__button}
       />
     </main>
   );

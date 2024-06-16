@@ -13,9 +13,9 @@ type ButtonProps = {
 export default function Button({ href, label, icon, className }: ButtonProps) {
   return (
     <a href={href} className={`${styles.button} ${className}`}>
-      <label className={styles.button__label}>{label}</label>
-
       {icon && <FontAwesomeIcon className={styles.button__icon} icon={icon} />}
+
+      <label className={styles.button__label}>{label}</label>
     </a>
   );
 }

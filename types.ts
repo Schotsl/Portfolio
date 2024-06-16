@@ -1,3 +1,5 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+
 export type Image = {
   src: string;
   alt: string;
@@ -6,12 +8,19 @@ export type Image = {
   height: number;
 };
 
+export type Link = {
+  url: string;
+  icon: string;
+  title: string;
+}
+
 export type Project = {
   slug: string;
   title: string;
   intro: string;
   video: string;
   image: Image;
+  links: Link[];
   images?: Image[];
   content: string;
   tagline: string;

@@ -8,6 +8,7 @@ import { marked } from "marked";
 import Header from "@/component/Header";
 import Carousel from "@/component/Carousel";
 import Technologies from "./components/Technologies";
+import Links from "./components/Links";
 
 export async function generateStaticParams() {
   const projects = await getCollection<Project>("project");
@@ -29,7 +30,7 @@ export default async function ProjectPage({
   const projects = await getCollection<Project>("project");
   const project = projects.find((project) => project.slug === params.slug)!;
 
-  const { video, image, title, tagline, intro, content, technologies } =
+  const { video, image, title, tagline, intro, content, technologies, links } =
     project;
 
   const images =
@@ -57,6 +58,8 @@ export default async function ProjectPage({
         <h2>{title}</h2>
         <b>{intro}</b>
         <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+
+        <Links links={links} />
       </section>
     </main>
   );

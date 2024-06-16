@@ -1,4 +1,5 @@
 import styles from "./Technologies.module.scss";
+
 import Image from "next/image";
 
 import { Technology } from "@/types";
