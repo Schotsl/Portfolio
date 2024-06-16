@@ -1,15 +1,5 @@
 {
-  "technologies": [
-    {
-      "technology": "Deno"
-    },
-    {
-      "technology": "TypeScript"
-    },
-    {
-      "technology": "Plausible API"
-    }
-  ],
+  "technologies": ["deno", "typescript", "plausible-api"],
   "slug": "plausible",
   "intro": "A Deno-native Plausible API wrapper for integrating website analytics into Discord bots and live stat counters.",
   "tagline": "If you want something done...",

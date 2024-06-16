@@ -1,26 +1,12 @@
 {
   "technologies": [
-    {
-      "technology": "React"
-    },
-    {
-      "technology": "Next"
-    },
-    {
-      "technology": "Supabase"
-    },
-    {
-      "technology": "Formspree API"
-    },
-    {
-      "technology": "SCSS"
-    },
-    {
-      "technology": "TypeScript"
-    },
-    {
-      "technology": "Vercel"
-    }
+    "react",
+    "next",
+    "supabase",
+    "formspree-api",
+    "scss",
+    "typescript",
+    "vercel"
   ],
   "slug": "spinner",
   "intro": "A personalized gift website featuring spinner wheels for planning activities, built with Next.js, SCSS, TypeScript, Supabase, and Formspree.",

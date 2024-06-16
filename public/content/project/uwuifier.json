@@ -1,38 +1,16 @@
 {
   "technologies": [
-    {
-      "technology": "React"
-    },
-    {
-      "technology": "React Native"
-    },
-    {
-      "technology": "Expo"
-    },
-    {
-      "technology": "Vue"
-    },
-    {
-      "technology": "Nuxt"
-    },
-    {
-      "technology": "Supabase"
-    },
-    {
-      "technology": "Node"
-    },
-    {
-      "technology": "TypeScript"
-    },
-    {
-      "technology": "Deno"
-    },
-    {
-      "technology": "SCSS"
-    },
-    {
-      "technology": "Netlify"
-    }
+    "react",
+    "react-native",
+    "expo",
+    "vue",
+    "nuxt",
+    "supabase",
+    "node",
+    "typescript",
+    "deno",
+    "scss",
+    "netlify"
   ],
   "slug": "uwuifier",
   "intro": "A translator for fun text transformations, available as an NPM package, Deno package, Android app, and website, created with Vue 3 and Expo.",

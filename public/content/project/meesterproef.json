@@ -1,23 +1,11 @@
 {
   "technologies": [
-    {
-      "technology": "React"
-    },
-    {
-      "technology": "Next"
-    },
-    {
-      "technology": "TypeScript"
-    },
-    {
-      "technology": "SCSS"
-    },
-    {
-      "technology": "OpenAI API"
-    },
-    {
-      "technology": "Vercel"
-    }
+    "react",
+    "next",
+    "typescript",
+    "scss",
+    "openai-api",
+    "vercel"
   ],
   "slug": "meesterproef",
   "intro": "Meesterproef is a website prototype that guides users through creating a business design based on their preferences, developed using Next.js, SCSS, TypeScript, and the OpenAI API.",

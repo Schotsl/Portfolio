@@ -1,18 +1,5 @@
 {
-  "technologies": [
-    {
-      "technology": "Unity"
-    },
-    {
-      "technology": "Deno"
-    },
-    {
-      "technology": "TypeScript"
-    },
-    {
-      "technology": "Deno Deploy"
-    }
-  ],
+  "technologies": ["unity", "deno", "typescript", "deno-deploy"],
   "slug": "melted",
   "intro": "A 2D multiplayer puzzle game developed in Unity using C#, featuring custom movement, collision, and multiplayer protocols with WebSockets and Deno Deploy.",
   "tagline": "I'll just fix one more bug before I go to bed",

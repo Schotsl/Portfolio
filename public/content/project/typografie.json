@@ -1,23 +1,11 @@
 {
   "technologies": [
-    {
-      "technology": "Next"
-    },
-    {
-      "technology": "React"
-    },
-    {
-      "technology": "TypeScript"
-    },
-    {
-      "technology": "OpenAI API"
-    },
-    {
-      "technology": "SCSS"
-    },
-    {
-      "technology": "Vercel"
-    }
+    "next",
+    "react",
+    "typescript",
+    "openai-api",
+    "scss",
+    "vercel"
   ],
   "slug": "typografie",
   "intro": "A website showcasing the history of the Futura font with interactive styling features, developed using Next.js, SCSS, TypeScript, and OpenAI API.",
