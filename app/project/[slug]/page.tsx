@@ -4,6 +4,7 @@ import header from "@/public/content/shared/banner.json";
 import { getCollection, getImage } from "@/helper";
 import { Project } from "@/types";
 import { marked } from "marked";
+import { Metadata } from "next";
 
 import Header from "@/component/Header";
 import Carousel from "@/component/Carousel";
@@ -17,6 +18,20 @@ export async function generateStaticParams() {
   }));
 
   return projectsSlug;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const projects = await getCollection<Project>("project");
+  const project = projects.find((project) => project.slug === params.slug)!;
+
+  return {
+    title: `${header.title} - Sjors van Holst`,
+    description: project.intro,
+  };
 }
 
 export default async function ProjectPage({
