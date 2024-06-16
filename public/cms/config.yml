@@ -206,7 +206,7 @@ collections:
             search_fields: ["title"],
             display_fields: ["title"],
           }
-      - name: "call-to-actions"
+      - name: "links"
         label: "Call to actions"
         widget: "list"
         fields:
