@@ -80,7 +80,7 @@ export default function RootCount({ initial }: CountProps) {
           } else {
             setHidden(pageviewsNew);
           }
-        },
+        }
       )
       .subscribe();
 
@@ -110,7 +110,7 @@ export default function RootCount({ initial }: CountProps) {
   }, []);
 
   return (
-    <div className={styles.count} ref={containerRef}>
+    <div ref={containerRef} className={styles.count}>
       <h2 className={styles.count__title}>
         <Image
           alt=""
@@ -134,7 +134,7 @@ export default function RootCount({ initial }: CountProps) {
           className={styles.count__title__upwards}
         />
         This month, my services have assisted or entertained over {smooth}{" "}
-        individuals
+        individuals!
       </h2>
 
       <p className={styles.count__content}>

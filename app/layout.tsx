@@ -6,7 +6,7 @@ import PlausibleProvider from "next-plausible";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import { Metadata } from "next";
 import { ReactNode } from "react";
-import { Open_Sans, Montserrat } from "next/font/google";
+import { Open_Sans, Montserrat, Merriweather } from "next/font/google";
 
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
@@ -64,6 +64,12 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
+const merriweather = Merriweather({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--font-merriweather",
+});
+
 export default async function RootLayout({
   children,
 }: {
@@ -71,7 +77,10 @@ export default async function RootLayout({
 }) {
   return (
     <PlausibleProvider domain="sjorsvanholst.nl">
-      <html lang="en" className={`${openSans.variable} ${montserrat.variable}`}>
+      <html
+        lang="en"
+        className={`${openSans.variable} ${montserrat.variable} ${merriweather.variable}`}
+      >
         <head>
           <link
             rel="apple-touch-icon"

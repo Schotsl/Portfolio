@@ -37,7 +37,7 @@
     left: var(--padding-horizontal);
     width: calc(100% - var(--padding-horizontal) * 2);
 
-    gap: 1rem;
+    gap: 0rem;
     z-index: 1;
     display: flex;
     position: absolute;
@@ -58,6 +58,8 @@
 
     &__subtitle {
       width: 70%;
+      opacity: 0.75;
+      font-family: var(--font-merriweather);
     }
   }
 
