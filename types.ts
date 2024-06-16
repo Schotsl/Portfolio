@@ -12,12 +12,12 @@ export type Link = {
   url: string;
   icon: string;
   title: string;
-}
+};
 
 export type Category = {
   slug: string;
   title: string;
-}
+};
 
 export type Project = {
   slug: string;
@@ -38,7 +38,7 @@ export type Technology = {
   slug: string;
   title: string;
   color: string;
-}
+};
 
 export type CarouselItem = {
   image: Image;
