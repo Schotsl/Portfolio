@@ -16,9 +16,15 @@ export type Project = {
   content: string;
   tagline: string;
   categories?: string[];
-  technologies?: string[];
-
+  technologies?: Technology[];
 };
+
+export type Technology = {
+  url: string;
+  slug: string;
+  title: string;
+  color: string;
+}
 
 export type CarouselItem = {
   image: Image;

@@ -44,9 +44,12 @@ export async function getCollection<T>(path: string): Promise<T[]> {
     }
 
     if (technologies) {
-      const technologiesMapped = technologies.map((technologyObject: any) => {
-        const technology = technologyObject.technology;
-        return technology;
+      const technologiesMapped = technologies.map((technology: string) => {
+        const technologyPath = `${process.cwd()}/public/content/technology/${technology}.json`;
+        const technologyObject = fs.readFileSync(technologyPath, "utf8");
+        const technologyParsed = JSON.parse(technologyObject);
+
+        return technologyParsed;
       });
 
       itemParsed.technologies = technologiesMapped.sort();

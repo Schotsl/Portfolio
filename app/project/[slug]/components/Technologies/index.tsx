@@ -1,10 +1,10 @@
 import styles from "./Technologies.module.scss";
-import { technologies as technologiesVariable } from "@/variables";
-
 import Image from "next/image";
 
+import { Technology } from "@/types";
+
 type TechnologiesProps = {
-  technologies: string[];
+  technologies: Technology[];
 };
 
 export default function Technologies({ technologies }: TechnologiesProps) {
@@ -18,34 +18,30 @@ export default function Technologies({ technologies }: TechnologiesProps) {
 
   return (
     <ul className={styles.technologies}>
-      {technologies?.map((technology: string) => {
-        const technologySpaced = technology.replace(/\s/g, "_");
-        const technologyLowered = technologySpaced.toLowerCase();
-        const technologyKey =
-          technologyLowered as keyof typeof technologiesVariable;
-        const technologyVariable = technologiesVariable[technologyKey];
+      {technologies.map((technology) => {
+        const { url, slug, color, title } = technology;
 
         return (
-          <li className={styles.technologies__technology} key={technology}>
+          <li className={styles.technologies__technology} key={slug}>
             <a
-              href={technologyVariable.url}
+              href={url}
               target="_blank"
               className={styles.technologies__technology__link}
             >
               <div
-                style={{ backgroundColor: technologyVariable.color }}
+                style={{ backgroundColor: color }}
                 className={styles.technologies__technology__link__background}
               ></div>
 
               <Image
-                src={getIcon(technology)}
-                alt={technology}
+                src={getIcon(slug)}
+                alt={title}
                 width={16}
                 height={16}
                 className={styles.technologies__technology__link__icon}
               />
 
-              {technology}
+              {title}
             </a>
           </li>
         );
