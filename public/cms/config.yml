@@ -196,7 +196,8 @@ collections:
       - name: "categories"
         label: "Categories"
         widget: "list"
-        field: {
+        field:
+          {
             name: "category",
             label: "Category",
             widget: "relation",

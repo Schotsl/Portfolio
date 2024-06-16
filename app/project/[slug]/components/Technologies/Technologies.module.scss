@@ -1,5 +1,5 @@
 .technologies {
-  gap: 1rem;
+  gap: 0.75rem;
   margin: 0 0 1rem;
   display: flex;
   flex-wrap: wrap;
@@ -7,40 +7,45 @@
   &__technology {
     &__link {
       display: flex;
-      padding: 0.5rem 0.75rem;
+      padding: 0.75rem 1.25rem;
       overflow: hidden;
       position: relative;
-      transition: all 0.25s ease;
+      transition: all 100ms ease;
 
       font-weight: bold;
-      align-items: center;
-      justify-content: center;
-
-      gap: 0.25rem;
-      border: 2px solid #000;
       border-radius: 2.5rem;
 
-      &__icon {
-        width: 1rem;
-        height: 1rem;
-      }
-
-      &__background {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        opacity: 0.25;
-        z-index: -1;
+      &::after {
+        top: 4px;
+        left: 4px;
+        right: 4px;
+        bottom: 4px;
+        content: "";
+        opacity: 0.5;
         position: absolute;
+        background: #fff;
+        transition: all 100ms ease;
+        border-radius: 2.5rem;
       }
 
       &:hover {
-        scale: 1.05;
-        background: #fff;
+        &::after {
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
 
-        .technologies__technology__link__background {
-          opacity: 0.5;
+      &__inner {
+        gap: 0.5rem;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+
+        &__icon {
+          width: 1rem;
+          height: 1rem;
         }
       }
     }

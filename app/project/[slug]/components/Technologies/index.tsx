@@ -18,23 +18,21 @@ export default function Technologies({ technologies }: TechnologiesProps) {
           <li className={styles.technologies__technology} key={slug}>
             <a
               href={url}
+              style={{ backgroundColor: color }}
               target="_blank"
               className={styles.technologies__technology__link}
             >
-              <div
-                style={{ backgroundColor: color }}
-                className={styles.technologies__technology__link__background}
-              ></div>
+              <div className={styles.technologies__technology__link__inner}>
+                <Image
+                  src={`/icons/${slug}.svg`}
+                  alt={title}
+                  width={16}
+                  height={16}
+                  className={styles.technologies__technology__link__inner__icon}
+                />
 
-              <Image
-                src={`/icons/${slug}.svg`}
-                alt={title}
-                width={16}
-                height={16}
-                className={styles.technologies__technology__link__icon}
-              />
-
-              {title}
+                {title}
+              </div>
             </a>
           </li>
         );
