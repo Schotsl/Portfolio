@@ -196,20 +196,22 @@ collections:
       - name: "categories"
         label: "Categories"
         widget: "list"
-        fields:
-          - {
-              label: "Category",
-              name: "category",
-              widget: "select",
-              options: ["Design", "Development", "Entertainment"],
-            }
+        field: {
+            name: "category",
+            label: "Category",
+            widget: "relation",
+            collection: "categories",
+            value_field: "slug",
+            search_fields: ["title"],
+            display_fields: ["title"],
+          }
       - name: "technologies"
         label: "Technologies"
         widget: "list"
         field:
           {
-            label: "Technology",
             name: "technology",
+            label: "Technology",
             widget: "relation",
             collection: "technologies",
             value_field: "slug",

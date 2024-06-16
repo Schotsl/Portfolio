@@ -36,14 +36,7 @@
     "alt": "ZonneVeranda",
     "src": "/content/project/images/zonneveranda-cover.png"
   },
-  "categories": [
-    {
-      "category": "Design"
-    },
-    {
-      "category": "Development"
-    }
-  ],
+  "categories": ["design", "development"],
   "links": [
     {
       "url": "https://zonneveranda.nl",

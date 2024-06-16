@@ -9,6 +9,7 @@
     "typescript",
     "vercel"
   ],
+  "categories": ["design", "development"],
   "slug": "toolenburgerplas",
   "intro": "A website displaying real-time swimming conditions for Toolenburgerplas lake, using a custom temperature sensor, OpenAI API, and OpenWeather API, built with Next.js, SCSS, TypeScript, and Supabase.",
   "tagline": "Do we really need that wetsuit?",
@@ -33,14 +34,6 @@
     "alt": "Test",
     "src": "/content/project/images/toolenburgerplas-cover.png"
   },
-  "categories": [
-    {
-      "category": "Design"
-    },
-    {
-      "category": "Development"
-    }
-  ],
   "links": [
     {
       "url": "https://toolenburgerplas.nl/",

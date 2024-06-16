@@ -1,5 +1,6 @@
 {
   "technologies": ["expo", "react-native", "supabase", "deno", "react"],
+  "categories": ["design", "development"],
   "slug": "overworked",
   "intro": "A social workout tracking app developed with Expo and Supabase, enabling users to track their progress and stay motivated through social features.",
   "tagline": "If at first you don't succeed, try, try again",
@@ -18,14 +19,6 @@
     "alt": "Overworked",
     "src": "/content/project/images/overworked-cover.png"
   },
-  "categories": [
-    {
-      "category": "Design"
-    },
-    {
-      "category": "Development"
-    }
-  ],
   "links": [
     {
       "url": "https://play.google.com/store/apps/details?id=com.sjorsvanholst.overworked",

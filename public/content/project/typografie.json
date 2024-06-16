@@ -7,6 +7,7 @@
     "scss",
     "vercel"
   ],
+  "categories": ["design", "development"],
   "slug": "typografie",
   "intro": "A website showcasing the history of the Futura font with interactive styling features, developed using Next.js, SCSS, TypeScript, and OpenAI API.",
   "tagline": "Bold. Timeless. Futura.",
@@ -17,14 +18,6 @@
     "alt": "Test",
     "src": "/content/project/images/typografie-cover.png"
   },
-  "categories": [
-    {
-      "category": "Design"
-    },
-    {
-      "category": "Development"
-    }
-  ],
   "links": [
     {
       "url": "https://typografie.sjorsvanholst.nl/",

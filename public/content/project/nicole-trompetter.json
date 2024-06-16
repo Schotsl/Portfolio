@@ -1,5 +1,6 @@
 {
   "technologies": ["vue", "nuxt", "typescript", "scss", "decap", "netlify"],
+  "categories": ["development"],
   "slug": "nicoletrompetter",
   "intro": "A portfolio and business website for Nicole Trompetter’s herbal medicine practice, designed for mobile and desktop, using Nuxt 3 and Decap CMS.",
   "tagline": "First things first",
@@ -10,11 +11,6 @@
     "alt": "Test",
     "src": "/content/project/images/nicoletrompetter-cover.png"
   },
-  "categories": [
-    {
-      "category": "Development"
-    }
-  ],
   "links": [
     {
       "url": "https://nicoletrompetter.nl/",

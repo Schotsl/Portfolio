@@ -1,5 +1,6 @@
 {
   "technologies": ["unity", "deno", "typescript", "deno-deploy"],
+  "categories": ["design", "development", "entertainment"],
   "slug": "melted",
   "intro": "A 2D multiplayer puzzle game developed in Unity using C#, featuring custom movement, collision, and multiplayer protocols with WebSockets and Deno Deploy.",
   "tagline": "I'll just fix one more bug before I go to bed",
@@ -10,17 +11,6 @@
     "alt": "Melted",
     "src": "/content/project/images/melted-cover.png"
   },
-  "categories": [
-    {
-      "category": "Design"
-    },
-    {
-      "category": "Development"
-    },
-    {
-      "category": "Entertainment"
-    }
-  ],
   "links": [
     {
       "url": "https://github.com/Schotsl/HvG",

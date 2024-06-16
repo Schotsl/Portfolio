@@ -12,6 +12,7 @@
     "scss",
     "netlify"
   ],
+  "categories": ["design", "development"],
   "slug": "uwuifier",
   "intro": "A translator for fun text transformations, available as an NPM package, Deno package, Android app, and website, created with Vue 3 and Expo.",
   "tagline": "We create our own demons...",
@@ -36,14 +37,6 @@
     "alt": "Uwuifier",
     "src": "/content/project/images/uwuifier-cover.png"
   },
-  "categories": [
-    {
-      "category": "Design"
-    },
-    {
-      "category": "Development"
-    }
-  ],
   "links": [
     {
       "url": "https://uwuifier.com/",

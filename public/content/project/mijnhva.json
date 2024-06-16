@@ -1,5 +1,6 @@
 {
   "technologies": ["figma"],
+  "categories": ["design"],
   "slug": "mijnhva",
   "intro": "MijnHvA is a redesigned student progress tracker for a university, featuring a timeline view of grades and study planning, created using Figma.",
   "tagline": "Dragging your way through CMD",
@@ -18,11 +19,6 @@
     "alt": "MijnHvA",
     "src": "/content/project/images/mijnhva-cover.png"
   },
-  "categories": [
-    {
-      "category": "Design"
-    }
-  ],
   "links": [
     {
       "url": "https://www.figma.com/design/wIQtz4xPvY7hqfXuF17bdq/Project-2?node-id=154-120079&t=2r9dyi4Kqbl2UAtt-1",

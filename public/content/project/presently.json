@@ -8,6 +8,7 @@
     "cloudconvert-api",
     "scss"
   ],
+  "categories": ["design", "development"],
   "slug": "presently",
   "intro": "A display software for schools to upload and display PowerPoints, running on Raspberry Pi with a frontend built using the IBM Carbon System and Next.js, and backend using Supabase and CloudConvert.",
   "tagline": "Affordable narrowcasting screens that actually work!",
@@ -62,14 +63,6 @@
     "alt": "Presently",
     "src": "/content/project/images/presently-cover.png"
   },
-  "categories": [
-    {
-      "category": "Design"
-    },
-    {
-      "category": "Development"
-    }
-  ],
   "links": [
     {
       "url": "https://presently.dev/",

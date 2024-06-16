@@ -34,10 +34,12 @@ export async function getCollection<T>(path: string): Promise<T[]> {
     }
 
     if (categories) {
-      const categoriesMapped = categories.map((categoryObject: any) => {
-        const category = categoryObject.category;
-        const categoryLower = category.toLowerCase();
-        return categoryLower;
+      const categoriesMapped = categories.map((category: string) => {
+        const categoryPath = `${process.cwd()}/public/content/category/${category}.json`;
+        const categoryObject = fs.readFileSync(categoryPath, "utf8");
+        const categoryParsed = JSON.parse(categoryObject);
+
+        return categoryParsed;
       });
 
       itemParsed.categories = categoriesMapped.sort();

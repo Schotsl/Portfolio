@@ -14,6 +14,11 @@ export type Link = {
   title: string;
 }
 
+export type Category = {
+  slug: string;
+  title: string;
+}
+
 export type Project = {
   slug: string;
   title: string;
@@ -24,7 +29,7 @@ export type Project = {
   images?: Image[];
   content: string;
   tagline: string;
-  categories?: string[];
+  categories?: Category[];
   technologies?: Technology[];
 };
 

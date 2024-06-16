@@ -8,6 +8,7 @@
     "typescript",
     "vercel"
   ],
+  "categories": ["design", "development"],
   "slug": "spinner",
   "intro": "A personalized gift website featuring spinner wheels for planning activities, built with Next.js, SCSS, TypeScript, Supabase, and Formspree.",
   "tagline": "The wheel of dates!",
@@ -38,14 +39,6 @@
     "alt": "Test",
     "src": "/content/project/images/spinner-cover.png"
   },
-  "categories": [
-    {
-      "category": "Design"
-    },
-    {
-      "category": "Development"
-    }
-  ],
   "links": [
     {
       "url": "https://spinner.sjorsvanholst.nl/",
