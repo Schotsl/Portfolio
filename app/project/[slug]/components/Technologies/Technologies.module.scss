@@ -1,10 +1,11 @@
 .technologies {
   gap: 1rem;
+  margin: 0 0 1rem;
   display: flex;
+  flex-wrap: wrap;
 
   &__technology {
     &__link {
-      margin: 0 0 1rem;
       display: flex;
       padding: 0.5rem 0.75rem;
       overflow: hidden;

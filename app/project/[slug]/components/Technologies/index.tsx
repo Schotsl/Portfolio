@@ -8,14 +8,6 @@ type TechnologiesProps = {
 };
 
 export default function Technologies({ technologies }: TechnologiesProps) {
-  const getIcon = (technologies: string) => {
-    const iconSpaced = technologies.replace(/\s/g, "-");
-    const iconLowered = iconSpaced.toLowerCase();
-    const iconPath = `/icons/${iconLowered}.svg`;
-
-    return iconPath;
-  };
-
   return (
     <ul className={styles.technologies}>
       {technologies.map((technology) => {
@@ -34,7 +26,7 @@ export default function Technologies({ technologies }: TechnologiesProps) {
               ></div>
 
               <Image
-                src={getIcon(slug)}
+                src={`/icons/${slug}.svg`}
                 alt={title}
                 width={16}
                 height={16}
