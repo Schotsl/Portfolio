@@ -1,0 +1,15 @@
+{
+  "title": "Test",
+  "slug": "test",
+  "intro": "test",
+  "tagline": "test",
+  "content": "test",
+  "video": "test",
+  "image": {
+    "alt": "test",
+    "src": "/content/project/images/kruidenpower-1.png"
+  },
+  "technologies": [
+    "arduino"
+  ]
+}
