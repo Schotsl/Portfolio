@@ -1,6 +1,9 @@
 "use client";
 
 import supabase from "@/utils/supabase";
+
+import Image from "next/image";
+
 import styles from "./RootCount.module.scss";
 
 import { useEffect, useRef, useState } from "react";
@@ -109,6 +112,27 @@ export default function RootCount({ initial }: CountProps) {
   return (
     <div className={styles.count} ref={containerRef}>
       <h2 className={styles.count__title}>
+        <Image
+          alt=""
+          src="/doodles/exclamation.svg"
+          width={145}
+          height={127}
+          className={styles.count__title__exclamation}
+        />
+        <Image
+          alt=""
+          src="/doodles/garlands.svg"
+          width={444}
+          height={112}
+          className={styles.count__title__garlands}
+        />
+        <Image
+          alt=""
+          src="/doodles/upwards.svg"
+          width={117}
+          height={131}
+          className={styles.count__title__upwards}
+        />
         This month, my services have assisted or entertained over {smooth}{" "}
         individuals
       </h2>
