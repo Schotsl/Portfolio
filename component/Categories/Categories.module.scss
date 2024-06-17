@@ -1,6 +1,7 @@
 .categories {
   gap: 0.5rem;
   display: flex;
+  flex-wrap: wrap;
 
   &__category {
     color: #2f80ed;
@@ -16,6 +17,12 @@
     &:last-of-type {
       &::after {
         content: "";
+      }
+    }
+
+    &:nth-last-child(2) {
+      &::after {
+        content: " &";
       }
     }
   }
