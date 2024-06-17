@@ -1,15 +1,16 @@
 import styles from "./page.module.scss";
 import header from "@/public/content/shared/banner.json";
 
-import { getCollection, getImage } from "@/helper";
 import { Project } from "@/types";
-import { marked } from "marked";
-import { Metadata } from "next";
+import { getCollection, getImage } from "@/helper";
 
 import Header from "@/component/Header";
 import Carousel from "@/component/Carousel";
-import Technologies from "./components/Technologies";
+
 import Links from "./components/Links";
+import Content from "./components/Content";
+import Breadcrumb from "./components/Breadcrumb";
+import Technologies from "./components/Technologies";
 
 export async function generateStaticParams() {
   const projects = await getCollection<Project>("project");
@@ -68,13 +69,20 @@ export default async function ProjectPage({
       <Carousel items={items} />
 
       <section className={styles.project__content}>
+        <Breadcrumb
+          items={[
+            { title: "Projects", href: "/projects" },
+            { title, href: `/project/${params.slug}` },
+          ]}
+        />
+
+        <h2>{title}</h2>
+
         {technologies && <Technologies technologies={technologies} />}
 
-        <div className={styles.project__content__inner}>
-          <h2>{title}</h2>
-          <b>{intro}</b>
-          <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
-        </div>
+        <b>{intro}</b>
+
+        <Content html={content} />
 
         <Links links={links} />
       </section>

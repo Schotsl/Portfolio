@@ -16,23 +16,34 @@
       padding-bottom: calc(var(--padding-vertical) * 4);
     }
 
-    &__inner {
+    h2 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    &__header {
+      gap: 3rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    b {
+      display: block;
+    }
+
+    div {
       p {
         max-width: 100ch;
-      }
 
-      b {
-        display: block;
-      }
+        &:first-of-type {
+          margin-top: 0;
+        }
 
-      h2 {
-        margin: 0 0 0.5rem;
-        font-size: 2rem;
-      }
-
-      div {
-        margin: 0 0 -1rem;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
       }
     }
+    // }
   }
 }
