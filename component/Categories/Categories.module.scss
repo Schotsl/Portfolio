@@ -1,5 +1,4 @@
 .categories {
-  gap: 0.5rem;
   display: flex;
   flex-wrap: wrap;
 
@@ -11,7 +10,7 @@
     text-transform: uppercase;
 
     &::after {
-      content: ",";
+      content: ",\00a0";
     }
 
     &:last-of-type {
@@ -22,7 +21,7 @@
 
     &:nth-last-child(2) {
       &::after {
-        content: " &";
+        content: "\00a0&\00a0";
       }
     }
   }
