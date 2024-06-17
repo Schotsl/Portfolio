@@ -2,34 +2,38 @@
 
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
-import styles from "./Waves.module.scss";
+import styles from "./WavesPartial.module.scss";
 
-type WavesProps = {
+type WavesPartialProps = {
   small?: boolean;
   reverse?: boolean;
   className?: string;
 };
 
-export default function Waves({ small, reverse, className }: WavesProps) {
-  let classNameCombined = `${styles.waves} ${className}`;
+export default function WavesPartial({
+  small,
+  reverse,
+  className,
+}: WavesPartialProps) {
+  let classNameCombined = `${styles.partial} ${className}`;
 
   if (small) {
-    classNameCombined += ` ${styles["waves--small"]}`;
+    classNameCombined += ` ${styles["partial--small"]}`;
   }
 
   if (reverse) {
-    classNameCombined += ` ${styles["waves--reverse"]}`;
+    classNameCombined += ` ${styles["partial--reverse"]}`;
   }
 
   return (
     <div className={classNameCombined}>
       <ParallaxProvider>
-        <Parallax speed={-4} className={styles.waves__wave}>
+        <Parallax speed={-4} className={styles.partial__wave}>
           {(reverse && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
-              className={styles.waves__wave__svg}
+              className={styles.partial__wave__svg}
               preserveAspectRatio="none"
             >
               <path
@@ -41,7 +45,7 @@ export default function Waves({ small, reverse, className }: WavesProps) {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
-              className={styles.waves__wave__svg}
+              className={styles.partial__wave__svg}
               preserveAspectRatio="none"
             >
               <path
@@ -50,14 +54,14 @@ export default function Waves({ small, reverse, className }: WavesProps) {
               ></path>
             </svg>
           )}
-          <div className={styles.waves__wave__bottom}></div>
+          <div className={styles.partial__wave__bottom}></div>
         </Parallax>
 
-        <Parallax speed={-8} className={styles.waves__wave}>
+        <Parallax speed={-8} className={styles.partial__wave}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 320"
-            className={styles.waves__wave__svg}
+            className={styles.partial__wave__svg}
             preserveAspectRatio="none"
           >
             <path
@@ -66,15 +70,15 @@ export default function Waves({ small, reverse, className }: WavesProps) {
             ></path>
           </svg>
 
-          <div className={styles.waves__wave__bottom}></div>
+          <div className={styles.partial__wave__bottom}></div>
         </Parallax>
 
-        <Parallax speed={-12} className={styles.waves__wave}>
+        <Parallax speed={-12} className={styles.partial__wave}>
           {(reverse && (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
-              className={styles.waves__wave__svg}
+              className={styles.partial__wave__svg}
               preserveAspectRatio="none"
             >
               <path
@@ -86,7 +90,7 @@ export default function Waves({ small, reverse, className }: WavesProps) {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 1440 320"
-              className={styles.waves__wave__svg}
+              className={styles.partial__wave__svg}
               preserveAspectRatio="none"
             >
               <path
@@ -96,7 +100,7 @@ export default function Waves({ small, reverse, className }: WavesProps) {
             </svg>
           )}
 
-          <div className={styles.waves__wave__bottom}></div>
+          <div className={styles.partial__wave__bottom}></div>
         </Parallax>
       </ParallaxProvider>
     </div>

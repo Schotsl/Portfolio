@@ -1,6 +1,6 @@
 import styles from "./RootProject.module.scss";
 
-import Waves from "@/component/Waves";
+import Waves from "@/component/WavesPartial";
 import RootProjectItem from "./Item";
 
 import { Project } from "@/types";

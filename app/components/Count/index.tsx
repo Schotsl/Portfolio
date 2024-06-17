@@ -7,6 +7,7 @@ import Image from "next/image";
 import styles from "./RootCount.module.scss";
 
 import { useEffect, useRef, useState } from "react";
+import WavesFull from "@/component/WavesFull";
 
 type CountProps = {
   initial: number;
@@ -111,6 +112,8 @@ export default function RootCount({ initial }: CountProps) {
 
   return (
     <div ref={containerRef} className={styles.count}>
+      <WavesFull className={styles.count__waves} />
+      
       <h2 className={styles.count__title}>
         <Image
           alt=""
@@ -139,12 +142,39 @@ export default function RootCount({ initial }: CountProps) {
 
       <p className={styles.count__content}>
         These statistics are collected from{" "}
-        <a href="https://overworked.app/">Overworked</a>,{" "}
-        <a href="https://presently.dev/">Presently</a>,{" "}
-        <a href="https://uwuifier.com/">Uwuifier</a> and{" "}
-        <a href="https://toolenburgerplas.nl/">Toolenburger plas</a> using
-        Plausible Analytics. They are updated every 10 seconds with a 10 second
-        delay.
+        <a
+          href="https://overworked.app/"
+          target="_blank"
+          className={styles.count__content__link}
+        >
+          Overworked
+        </a>
+        ,{" "}
+        <a
+          href="https://presently.dev/"
+          target="_blank"
+          className={styles.count__content__link}
+        >
+          Presently
+        </a>
+        ,{" "}
+        <a
+          href="https://uwuifier.com/"
+          target="_blank"
+          className={styles.count__content__link}
+        >
+          Uwuifier
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://toolenburgerplas.nl/"
+          target="_blank"
+          className={styles.count__content__link}
+        >
+          Toolenburger plas
+        </a>{" "}
+        using Plausible Analytics. They are updated every 10 seconds with a 10
+        second delay.
       </p>
     </div>
   );

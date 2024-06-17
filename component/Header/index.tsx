@@ -2,7 +2,7 @@
 
 import styles from "./Header.module.scss";
 
-import Waves from "../Waves";
+import Waves from "../WavesPartial";
 import Image from "@/component/Image";
 import useTypewriter from "react-typewriter-hook";
 

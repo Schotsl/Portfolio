@@ -12,7 +12,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { ReactNode } from "react";
-import Waves from "../Waves";
+import Waves from "../WavesPartial";
 
 type FooterItem = {
   icon?: any;

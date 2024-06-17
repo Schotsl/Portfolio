@@ -14,6 +14,7 @@ import styles from "./page.module.scss";
 import banner from "@/public/content/shared/banner.json";
 import content from "@/public/content/pages/home/index.json";
 import supabase from "@/utils/supabase";
+import Waves from "@/component/WavesPartial";
 
 export const revalidate = 3600;
 
@@ -43,12 +44,12 @@ export default async function RootPage() {
   const bannerImage = await getImage(banner.image);
   const bannerTitle = banner.title;
   const bannerTaglines = content.banner.taglines.map(
-    (tagline) => tagline.tagline,
+    (tagline) => tagline.tagline
   );
 
   const bannerSlugs = content.banner.projects.map((project) => project.project);
   const bannerProjects = projects.filter((project) =>
-    bannerSlugs.includes(project.slug),
+    bannerSlugs.includes(project.slug)
   );
 
   return (
