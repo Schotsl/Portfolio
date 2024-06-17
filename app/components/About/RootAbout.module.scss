@@ -16,10 +16,14 @@
   }
 
   &__image {
-    width: 22rem;
-    height: 22rem;
+    width: 100%;
     overflow: hidden;
     border-radius: 100%;
+
+    @include respond-to-sm {
+      width: 22rem;
+      height: 22rem;
+    }
 
     @include respond-to-lg {
       min-width: 22rem;
