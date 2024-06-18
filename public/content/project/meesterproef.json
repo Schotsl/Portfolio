@@ -7,7 +7,6 @@
     "openai-api",
     "vercel"
   ],
-  "categories": ["design", "development"],
   "slug": "meesterproef",
   "intro": "Meesterproef is a website prototype that guides users through creating a business design based on their preferences, developed using Next.js, SCSS, TypeScript, and the OpenAI API.",
   "tagline": "Your business, your adventure, my code",
@@ -15,47 +14,42 @@
   "images": [
     {
       "image": {
-        "alt": "Meesterproef",
+        "alt": "Meesterproef's first question.",
         "src": "/content/project/images/meesterproef-1.png"
       }
     },
     {
       "image": {
-        "alt": "Meesterproef",
+        "alt": "Meesterproef's second question.",
         "src": "/content/project/images/meesterproef-2.png"
       }
     },
     {
       "image": {
-        "alt": "Meesterproef",
+        "alt": "Meesterproef's third question.",
         "src": "/content/project/images/meesterproef-3.png"
       }
     },
     {
       "image": {
-        "alt": "Meesterproef",
+        "alt": "A question about sustainable hosting in Meesterproef.",
         "src": "/content/project/images/meesterproef-4.png"
       }
     },
     {
       "image": {
-        "alt": "Meesterproef",
+        "alt": "A question about expanding to international markets in Meesterproef.",
         "src": "/content/project/images/meesterproef-5.png"
       }
     },
     {
       "image": {
-        "alt": "Meesterproef",
+        "alt": "Meesterproef's results page.",
         "src": "/content/project/images/meesterproef-cover.png"
       }
     }
   ],
   "content": "During my first minor, VID (Visual Interface Design) in [CMD](https://cmd-amsterdam.nl/), we concluded the minor with a project called Meesterproef. The assignment was broad: design and develop a website or prototype to inform people about something you care about based on a selection of articles, videos, or podcasts.\n\nAt that time, I was experimenting with [OpenAI’s API](https://platform.openai.com/). My website informs people about different business designs, such as worker-owned businesses. Users enter their hypothetical business name, activity, and mission and then answer six questions about decision-making, creating a “choose your own adventure” experience.\n\nAs users progress through their story, the website layout changes to reflect their current path. Islands move up or down, and doodles in the background change to relevant items. Once all questions have been answered, the user learns what type of business they run, making them reflect on how other for-profit companies make their decisions and informing them about their type of business. I created this website using [Next](https://nextjs.org/), [SCSS](https://sass-lang.com/), [TypeScript](https://www.typescriptlang.org/), and the OpenAI API.",
-  "video": "/videos/meesterproef-min.mp4?v=25df4305",
-  "image": {
-    "alt": "Meesterproef",
-    "src": "/content/project/images/meesterproef-cover.png"
-  },
   "links": [
     {
       "url": "https://meesterproef.sjorsvanholst.nl/",
@@ -67,5 +61,14 @@
       "icon": "github",
       "title": "View the project on GitHub"
     }
+  ],
+  "video": "/videos/meesterproef-min.mp4?v=25df4305",
+  "image": {
+    "alt": "Meesterproef's results page.",
+    "src": "/content/project/images/meesterproef-cover.png"
+  },
+  "categories": [
+    "design",
+    "development"
   ]
 }
