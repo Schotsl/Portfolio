@@ -3,7 +3,7 @@ import styles from "./Links.module.scss";
 import Button from "@/component/Button";
 
 import { Link } from "@/types";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faGlobe, faHome } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faAppStore,
@@ -17,6 +17,8 @@ type LinksProps = {
 export default function Links({ links }: LinksProps) {
   const getIcon = (icon: string) => {
     switch (icon) {
+      case "home":
+        return faHome;
       case "globe":
         return faGlobe;
       case "github":

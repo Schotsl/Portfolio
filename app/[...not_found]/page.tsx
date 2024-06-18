@@ -5,6 +5,9 @@ import { marked } from "marked";
 import Header from "@/component/Header";
 import Button from "@/component/Button";
 
+import Breadcrumb from "../project/[slug]/components/Breadcrumb";
+import Content from "../project/[slug]/components/Content";
+import Links from "../project/[slug]/components/Links";
 import styles from "./page.module.scss";
 import banner from "@/public/content/shared/banner.json";
 import content from "@/public/content/pages/not_found/index.json";
@@ -13,11 +16,11 @@ export default async function NotFoundPage() {
   const bannerImage = await getImage(banner.image);
   const bannerTitle = banner.title;
   const bannerTaglines = content.banner.taglines.map(
-    (tagline) => tagline.tagline,
+    (tagline) => tagline.tagline
   );
 
   return (
-    <main className={styles.not_found}>
+    <main className={styles.found}>
       <Header
         small={true}
         title={bannerTitle}
@@ -25,18 +28,27 @@ export default async function NotFoundPage() {
         taglines={bannerTaglines}
       />
 
-      <h2 className={styles.not_found__title}>{content.title}</h2>
-      <div
-        className={styles.not_found__content}
-        dangerouslySetInnerHTML={{ __html: marked(content.content) }}
-      ></div>
+      <section className={styles.found__content}>
+        <Breadcrumb items={[{ title: "Not found", href: "#" }]} />
 
-      <Button
-        icon={faHome}
-        href="/"
-        label="Go back to the homepage"
-        className={styles.not_found__button}
-      />
+        <h2>Not found</h2>
+
+        <Content
+          intro={
+            "It appears that this page doesn't exist. The link you followed may be broken, or the page may have been removed."
+          }
+        />
+
+        <Links
+          links={[
+            {
+              url: "/",
+              icon: "home",
+              title: "Homepage",
+            },
+          ]}
+        />
+      </section>
     </main>
   );
 }
