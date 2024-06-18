@@ -7,22 +7,25 @@
     "scss",
     "vercel"
   ],
-  "categories": ["design", "development"],
   "slug": "typografie",
   "intro": "A website showcasing the history of the Futura font with interactive styling features, developed using Next.js, SCSS, TypeScript, and OpenAI API.",
   "tagline": "Bold. Timeless. Futura.",
   "title": "Typografie",
   "content": "For my first minor VID (Visual Interface Design) in [CMD](https://cmd-amsterdam.nl/), I had a subject called Typografie. One of our end deliverables for this project was to create a website showcasing the history of a font. The font I chose was Futura.\n\nOn my website, I provided users with information about Futura, including its creation, general details, history, and a showcase of famous use cases, such as its use on the moon! I also implemented a section called ‘Try it yourself.’ In this section, users can enter commands like ‘Make it bolder and curved,’ and it will use Futura and [OpenAI’s API](https://platform.openai.com/) to style the text accordingly, allowing users to easily experiment with Futura.\n\nI created this website using [Next](https://nextjs.org/), [SCSS](https://sass-lang.com/), and [TypeScript](https://www.typescriptlang.org/), along with OpenAI API for styling the text. This project was also my first time experimenting with [react-scroll-parallax](https://www.npmjs.com/package/react-scroll-parallax), and it was a great experience!",
-  "video": "/videos/typografie-min.mp4?v=25df4305",
-  "image": {
-    "alt": "Test",
-    "src": "/content/project/images/typografie-cover.png"
-  },
   "links": [
     {
       "url": "https://typografie.sjorsvanholst.nl/",
       "icon": "globe",
       "title": "View the website"
     }
+  ],
+  "video": "/videos/typografie-min.mp4?v=25df4305",
+  "image": {
+    "alt": "Typografie's project header",
+    "src": "/content/project/images/typografie-cover.png"
+  },
+  "categories": [
+    "design",
+    "development"
   ]
 }
