@@ -8,7 +8,6 @@
     "typescript",
     "vercel"
   ],
-  "categories": ["design", "development"],
   "slug": "spinner",
   "intro": "A personalized gift website featuring spinner wheels for planning activities, built with Next.js, SCSS, TypeScript, Supabase, and Formspree.",
   "tagline": "The wheel of dates!",
@@ -17,33 +16,37 @@
     {
       "image": {
         "src": "/content/project/images/spinner-1.png",
-        "alt": "Test"
+        "alt": "Spinner's landing page"
       }
     },
     {
       "image": {
-        "alt": "Test",
+        "alt": "Spinner's spinner page.",
         "src": "/content/project/images/spinner-2.png"
       }
     },
     {
       "image": {
-        "alt": "Test",
+        "alt": "Spinner’s success page.",
         "src": "/content/project/images/spinner-3.png"
       }
     }
   ],
   "content": "For my girlfriend’s birthday, I decided to create a unique and personalized gift. I developed a website where she can sign in to see two spinner wheels. She has three spins to use. When she spins the wheels, they pair a group with an activity, such as ‘Going bowling with the two of us.’\n\nAfter the initial spin, she has 10 seconds to re-spin either wheel if desired, allowing her to change either the group or the activity. Once the final choice is made, confetti pops, and I receive an email notification, at which point I’ll schedule and organize the date!\n\nI built this website using [Next](https://nextjs.org/), [SCSS](https://sass-lang.com/), [TypeScript](https://www.typescriptlang.org/), [Supabase](https://supabase.com/) for authentication and database, and [Formspree](https://formspree.io/) for the email service. I’m thrilled with how this gift turned out and love the colorful look.",
-  "video": "/videos/spinner.mov?v=25df4323",
-  "image": {
-    "alt": "Test",
-    "src": "/content/project/images/spinner-cover.png"
-  },
   "links": [
     {
       "url": "https://spinner.sjorsvanholst.nl/",
       "icon": "globe",
       "title": "View the website"
     }
+  ],
+  "video": "/videos/spinner.mov?v=25df4323",
+  "image": {
+    "alt": "Spinner's spinner page.",
+    "src": "/content/project/images/spinner-cover.png"
+  },
+  "categories": [
+    "design",
+    "development"
   ]
 }
