@@ -1,7 +1,7 @@
 # Portfolio
 
 <img
-  src="https://raw.githubusercontent.com/Schotsl/Portfolio/main/public/favicon-431x431.png"
+  src="https://raw.githubusercontent.com/Schotsl/Portfolio/main/public/favicon-600x600.png"
   width="64"
   height="64"
 />

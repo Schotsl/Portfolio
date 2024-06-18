@@ -17,7 +17,7 @@ media_folder: "/content/images"
 public_folder: "/content/images"
 
 site_url: "https://portfolio-two-mu-45.vercel.app/"
-logo_url: "https://portfolio-two-mu-45.vercel.app/favicon-431x431.png"
+logo_url: "https://portfolio-two-mu-45.vercel.app/favicon-600x600.png"
 
 collections:
   - name: "pages"
