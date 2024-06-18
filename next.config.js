@@ -40,7 +40,7 @@ module.exports = withPlausibleProxy({
           {
             source: "/downloads/:path*",
             destination:
-              "https://gqdzsrtumnxtfwgryfmj.supabase.co/storage/v1/object/public/portfolio/:path*",
+              "https://lvtcbaciaiiugsdwmcgi.supabase.co/storage/v1/object/public/files/:path*",
           },
           {
             source: "/videos/:path*",
