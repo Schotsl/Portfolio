@@ -5,6 +5,7 @@ import Button from "@/component/Button";
 import { Link } from "@/types";
 import { faGlobe, faHome } from "@fortawesome/free-solid-svg-icons";
 import {
+  faFigma,
   faGithub,
   faAppStore,
   faGooglePlay,
@@ -19,6 +20,8 @@ export default function Links({ links }: LinksProps) {
     switch (icon) {
       case "home":
         return faHome;
+      case "figma":
+        return faFigma;
       case "globe":
         return faGlobe;
       case "github":
