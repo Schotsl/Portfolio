@@ -1,12 +1,5 @@
 {
-  "technologies": [
-    "vue",
-    "nuxt",
-    "typescript",
-    "decap",
-    "scss",
-    "netlify"
-  ],
+  "technologies": ["vue", "nuxt", "typescript", "decap", "scss", "netlify"],
   "slug": "kruidenpower",
   "intro": "Kruidenpower is a website for Nicole Trompetter's herbal medicine business, optimized for both desktop and mobile, developed using Nuxt 3 and Decap CMS.",
   "tagline": "Let me just brew some tea first",
@@ -44,7 +37,5 @@
     "alt": "Kruidenpower's landing page banner.",
     "src": "/content/project/images/kruidenpower-cover.png"
   },
-  "categories": [
-    "development"
-  ]
+  "categories": ["development"]
 }
