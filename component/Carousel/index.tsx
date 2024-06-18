@@ -55,7 +55,7 @@ export default function Carousel({ items, center }: CarouselProps) {
     }
 
     const scrollLeft = carousel.current.scrollLeft;
-    const scrollItem = carousel.current.scrollWidth / items.length;
+    const scrollItem = carousel.current.children[0].clientWidth;
     const scrollIndex = Math.round(scrollLeft / scrollItem);
 
     return scrollIndex;
