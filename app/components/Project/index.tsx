@@ -17,6 +17,29 @@ export default function RootProject({
   content,
   projects,
 }: RootProjectProps) {
+  const projectOrder = [
+    "Overworked",
+    "Presently",
+    "Toolenburgerplas",
+    "MijnHvA",
+    "Meesterproef",
+    "Spinner",
+    "Typografie",
+    "Melted",
+    "Lxframes",
+    "Kruidenpower",
+    "Nicole Trompetter",
+    "ZonneVeranda",
+    "Uwuifier",
+    "Mailgun",
+    "Plausible",
+  ];
+
+  // Sort based on the title
+  projects.sort((a, b) => {
+    return projectOrder.indexOf(a.title) - projectOrder.indexOf(b.title);
+  });
+
   return (
     <section className={styles.project} id="project">
       <h2 className={styles.project__title}>{title}</h2>
