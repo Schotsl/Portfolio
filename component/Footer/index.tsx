@@ -136,6 +136,7 @@ export default function Footer() {
                   {item.link ? (
                     <a
                       href={item.link}
+                      target="_blank"
                       className={
                         styles.footer__columns__column__list__item__link
                       }
@@ -157,8 +158,9 @@ export default function Footer() {
           <li key={index} className={styles.footer__socials__item}>
             <a
               href={item.link}
-              aria-label={item.aria}
+              target="_blank"
               className={styles.footer__socials__item__link}
+              aria-label={item.aria}
             >
               {item.icon && (
                 <FontAwesomeIcon

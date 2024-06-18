@@ -113,7 +113,7 @@ export default function RootCount({ initial }: CountProps) {
   return (
     <div ref={containerRef} className={styles.count}>
       <WavesFull className={styles.count__waves} />
-      
+
       <h2 className={styles.count__title}>
         <Image
           alt=""
@@ -136,7 +136,8 @@ export default function RootCount({ initial }: CountProps) {
           height={131}
           className={styles.count__title__upwards}
         />
-        This month, my services have assisted or entertained over {smooth}{" "}
+        This month, my services have assisted or entertained over{" "}
+        <span className={styles.count__title__value}>{smooth}</span>{" "}
         individuals!
       </h2>
 

@@ -25,6 +25,11 @@
 
     position: relative;
 
+    &__value {
+      font-family: var(--font-open-sans);
+      font-weight: 600;
+    }
+
     &__upwards,
     &__garlands,
     &__exclamation {
