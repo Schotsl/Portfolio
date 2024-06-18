@@ -1,14 +1,14 @@
 @import "@/styles/mixins";
 
 .item {
+  --carousel-item-margin: 10vw;
   --carousel-item-width: calc(
     (100vw - var(--padding-horizontal) * 2) * 100 / 105
   );
-  --carousel-item-margin: 10vw;
 
   @include respond-to-md {
-    --carousel-item-width: 46rem;
     --carousel-item-margin: calc((100vw - var(--carousel-item-width)) / 2);
+    --carousel-item-width: 46rem;
   }
 
   position: relative;
@@ -44,7 +44,7 @@
     height: 100%;
     z-index: 2;
     opacity: 0;
-    padding: 2rem;
+    padding: 1.25rem 1.5rem;
     display: flex;
     position: absolute;
     background: rgba(0, 0, 0, 0.75);
@@ -63,6 +63,10 @@
       @include respond-to-sm {
         display: block;
       }
+    }
+
+    @include respond-to-sm {
+      padding: 2rem;
     }
   }
 
