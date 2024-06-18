@@ -37,7 +37,7 @@ export default function Footer() {
       list: [
         {
           content:
-            "Ontdek de kracht van vormgeving en fotografie met LXFrames. Neem vandaag nog contact met mij op om jouw project te bespreken en samen iets unieks te creëren. Ik kijk er naar uit om van je te horen!",
+            "Hey! I'm Sjors van Holst, a web developer and aspiring designer passionate about creating websites and apps. I excel in TypeScript, React, Next.js, Supabase, and design tools like Figma and Photoshop!",
         },
       ],
     },

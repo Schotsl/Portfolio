@@ -14,7 +14,7 @@ import styles from "./page.module.scss";
 import banner from "@/public/content/shared/banner.json";
 import content from "@/public/content/pages/home/index.json";
 import supabase from "@/utils/supabase";
-import Waves from "@/component/WavesPartial";
+import { Metadata } from "next";
 
 export const revalidate = 3600;
 
@@ -35,6 +35,12 @@ async function loadCount() {
 
   return data.pageviews;
 }
+
+export const metadata: Metadata = {
+  title: "Sjors van Holst",
+  description:
+    "Hey! I'm Sjors van Holst, a web developer and aspiring designer passionate about creating websites and apps. I excel in TypeScript, React, Next.js, Supabase, and design tools like Figma and Photoshop!",
+};
 
 export default async function RootPage() {
   const count = await loadCount();
