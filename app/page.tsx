@@ -45,7 +45,13 @@ export const metadata: Metadata = {
 export default async function RootPage() {
   const count = await loadCount();
   const about = await getImage(content.about.image);
+
   const projects = await getCollection<ProjectType>("project");
+  const projectsOrder = ["Presently", "Toolenburgerplas", "Overworked"];
+
+  projects.sort((a, b) => {
+    return projectsOrder.indexOf(a.title) - projectsOrder.indexOf(b.title);
+  });
 
   const bannerImage = await getImage(banner.image);
   const bannerTitle = banner.title;

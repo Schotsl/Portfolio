@@ -64,13 +64,10 @@
       "title": "View the website"
     }
   ],
-  "video": "/videos/presently-min.mp4?v=dddf4322",
+  "video": "/videos/presently-min.mp4?v=dxdf4322",
   "image": {
     "alt": "Presently's landing page.",
     "src": "/content/project/images/presently-cover.png"
   },
-  "categories": [
-    "design",
-    "development"
-  ]
+  "categories": ["design", "development"]
 }
