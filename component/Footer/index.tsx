@@ -46,8 +46,8 @@ export default function Footer() {
       list: [
         {
           icon: faEnvelope,
-          link: "mailto:sjorsvanholst@gmail.com",
-          content: "sjorsvanholst@gmail.com",
+          link: "mailto:contact@sjorsvanholst.nl",
+          content: "contact@sjorsvanholst.nl",
         },
         {
           icon: faPhone,
