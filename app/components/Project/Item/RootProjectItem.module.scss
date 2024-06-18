@@ -1,17 +1,6 @@
 @import "@/styles/mixins";
 
 .item {
-  --carousel-item-gap: 2rem;
-  --carousel-item-width: 100%;
-
-  @include respond-to-md {
-    --carousel-item-width: calc(50% - (var(--carousel-item-gap) / 2));
-  }
-
-  @include respond-to-xxl {
-    --carousel-item-width: calc(33.3333% - (var(--carousel-item-gap) / 1.5));
-  }
-
   width: var(--carousel-item-width);
   position: relative;
   transition: transform 0.2s ease-in-out;
@@ -32,7 +21,7 @@
     width: 100%;
     height: 100%;
     opacity: 1;
-    padding: 2rem;
+    padding: 1.25rem 1.5rem;
     display: flex;
     position: absolute;
     background: rgba(0, 0, 0, 0.75);
@@ -43,6 +32,10 @@
 
     &__content {
       max-width: 80%;
+    }
+
+    @include respond-to-sm {
+      padding: 2rem;
     }
   }
 

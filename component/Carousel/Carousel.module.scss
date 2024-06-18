@@ -2,17 +2,13 @@
 
 .carousel {
   --carousel-item-gap: 2rem;
-
-  @include respond-to-md {
-    --carousel-item-gap: 4rem;
-  }
-
   --carousel-item-margin: 10vw;
   --carousel-item-width: calc(
     (100vw - var(--padding-horizontal) * 2) * 100 / 105
   );
 
   @include respond-to-md {
+    --carousel-item-gap: 4rem;
     --carousel-item-margin: calc((100vw - var(--carousel-item-width)) / 2);
     --carousel-item-width: 46rem;
   }

@@ -4,6 +4,17 @@
   width: 100%;
   position: relative;
 
+  --carousel-item-gap: 2rem;
+  --carousel-item-width: 100%;
+
+  @include respond-to-md {
+    --carousel-item-width: calc(50% - (var(--carousel-item-gap) / 2));
+  }
+
+  @include respond-to-xxl {
+    --carousel-item-width: calc(33.3333% - (var(--carousel-item-gap) / 1.5));
+  }
+
   &__waves {
     top: 8rem;
     margin: 0 -8rem;

@@ -20,7 +20,11 @@ export default async function RootAbout({
 }: RootAboutProps) {
   return (
     <div className={styles.about}>
-      <Image className={styles.about__image} image={image} sizes={"24rem"} />
+      <Image
+        image={image}
+        sizes="(min-width: 1024px) 22rem, (min-width: 768px) 22rem, 100vw"
+        className={styles.about__image}
+      />
 
       <section className={styles.about__section}>
         <h2 className={styles.about__section__title}>{title}</h2>
