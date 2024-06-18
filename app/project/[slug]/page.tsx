@@ -71,7 +71,7 @@ export default async function ProjectPage({
       <section className={styles.project__content}>
         <Breadcrumb
           items={[
-            { title: "Projects", href: "/projects" },
+            { title: "Projects", href: "/#project" },
             { title, href: `/project/${params.slug}` },
           ]}
         />
