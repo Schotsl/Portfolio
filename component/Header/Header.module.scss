@@ -46,6 +46,7 @@
     &__title {
       font-size: 3rem;
       font-weight: 800;
+      line-height: 1.25;
 
       @include respond-to-md {
         font-size: 3.5rem;
@@ -58,6 +59,7 @@
 
     &__subtitle {
       width: 70%;
+      margin: 0.5rem 0 0;
       opacity: 0.75;
       font-family: var(--font-merriweather);
     }
