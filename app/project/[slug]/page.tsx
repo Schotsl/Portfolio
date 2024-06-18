@@ -80,9 +80,7 @@ export default async function ProjectPage({
 
         {technologies && <Technologies technologies={technologies} />}
 
-        <b>{intro}</b>
-
-        <Content html={content} />
+        <Content html={content} intro={intro} />
 
         <Links links={links} />
       </section>

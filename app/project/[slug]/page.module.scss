@@ -2,10 +2,10 @@
 
 .project {
   &__content {
+    gap: 3rem;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
 
     padding-top: calc(var(--padding-vertical) / 2);
     padding-bottom: calc(var(--padding-vertical) * 8);
@@ -27,10 +27,6 @@
       flex-direction: column;
     }
 
-    b {
-      display: block;
-    }
-
     div {
       p {
         max-width: 100ch;
@@ -44,6 +40,5 @@
         }
       }
     }
-    // }
   }
 }

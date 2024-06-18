@@ -1,13 +1,20 @@
 .content {
-  p {
-    max-width: 100ch;
+  &__intro {
+    margin: 0 0 1rem;
+    display: block;
+  }
 
-    &:first-of-type {
-      margin-top: 0;
-    }
+  &__html {
+    p {
+      max-width: 100ch;
 
-    &:last-of-type {
-      margin-bottom: 0;
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 }

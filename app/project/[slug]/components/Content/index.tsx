@@ -4,13 +4,17 @@ import { marked } from "marked";
 
 type ContentProps = {
   html: string;
+  intro: string;
 };
 
-export default function Content({ html }: ContentProps) {
+export default function Content({ html, intro }: ContentProps) {
   return (
-    <div
-      className={styles.content}
-      dangerouslySetInnerHTML={{ __html: marked(html) }}
-    ></div>
+    <div className={styles.content}>
+      <b className={styles.content__intro}>{intro}</b>
+      <div
+        className={styles.content__html}
+        dangerouslySetInnerHTML={{ __html: marked(html) }}
+      ></div>
+    </div>
   );
 }
