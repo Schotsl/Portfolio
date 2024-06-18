@@ -1,6 +1,12 @@
 {
-  "technologies": ["vue", "nuxt", "typescript", "decap", "scss", "netlify"],
-  "categories": ["development"],
+  "technologies": [
+    "vue",
+    "nuxt",
+    "typescript",
+    "decap",
+    "scss",
+    "netlify"
+  ],
   "slug": "kruidenpower",
   "intro": "Kruidenpower is a website for Nicole Trompetter’s herbal medicine business, optimized for both desktop and mobile, developed using Nuxt 3 and Decap CMS.",
   "tagline": "Let me just brew some tea first",
@@ -8,34 +14,37 @@
   "images": [
     {
       "image": {
-        "alt": "Kruidenpower",
+        "alt": "Kruidenpower's Kruidenconsult page.",
         "src": "/content/project/images/kruidenpower-1.png"
       }
     },
     {
       "image": {
-        "alt": "Kruidenpower",
+        "alt": "Kruidenpower's Kruidenconsult explanation.",
         "src": "/content/project/images/kruidenpower-2.png"
       }
     },
     {
       "image": {
-        "alt": "Kruidenpower",
+        "alt": "Kruidenpower's workshop introduction.",
         "src": "/content/project/images/kruidenpower-3.png"
       }
     }
   ],
   "content": "Kruidenpower is a website showcasing the herbal medicine business of Nicole Trompetter, designed by [Lanxiang Vermeulen](https://www.linkedin.com/in/lanxiang-vermeulen-498471185/). I expanded the designs to include mobile devices. Special thanks to [Raphael Kurun](https://www.linkedin.com/in/raphael-kurun-776766161/) for connecting me with [Nicole Trompetter](https://nicoletrompetter.nl/). This project taught me a lot about web development and client communication, despite alternative medicine not being my usual area of interest.\n\nKruidenpower was my first job as a freelancer. I used [Nuxt 3](https://nuxt.com/) and [Decap CMS](https://decapcms.org/) to create the website. Although I have since transitioned from [Vue](https://vuejs.org/) to [React](https://react.dev/) and from Nuxt to [Next](https://nextjs.org/), this project was a valuable learning experience, and I am pleased that the website is still in use.",
-  "video": "/videos/kruidenpower-min.mp4?v=25df4305",
-  "image": {
-    "alt": "Kruidenpower",
-    "src": "/content/project/images/kruidenpower-cover.png"
-  },
   "links": [
     {
       "url": "https://kruidenpower.nl/",
       "icon": "globe",
       "title": "View the website"
     }
+  ],
+  "video": "/videos/kruidenpower-min.mp4?v=25df4305",
+  "image": {
+    "alt": "Kruidenpower's landing page banner.",
+    "src": "/content/project/images/kruidenpower-cover.png"
+  },
+  "categories": [
+    "development"
   ]
 }
