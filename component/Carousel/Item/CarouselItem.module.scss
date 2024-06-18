@@ -1,16 +1,7 @@
 @import "@/styles/mixins";
 
 .item {
-  --carousel-item-margin: 10vw;
-  --carousel-item-width: calc(
-    (100vw - var(--padding-horizontal) * 2) * 100 / 105
-  );
-
-  @include respond-to-md {
-    --carousel-item-margin: calc((100vw - var(--carousel-item-width)) / 2);
-    --carousel-item-width: 46rem;
-  }
-
+  display: inline-block;
   position: relative;
   min-width: var(--carousel-item-width);
   transition: transform 0.2s ease-in-out;
@@ -20,10 +11,6 @@
 
   &:first-of-type {
     margin-left: var(--carousel-item-margin);
-  }
-
-  &:last-of-type {
-    margin-right: var(--carousel-item-margin);
   }
 
   &__video {

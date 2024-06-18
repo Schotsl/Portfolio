@@ -3,6 +3,7 @@ import styles from "./CarouselItem.module.scss";
 import { CarouselItem as CarouselItemType } from "@/types";
 import { useEffect, useRef, useState } from "react";
 
+import Link from "next/link";
 import Image from "@/component/Image";
 import Categories from "@/component/Categories";
 
@@ -27,9 +28,9 @@ export default function CarouselItem({
       }
     >
       {slug ? (
-        <a className={styles.item__link} href={`/project/${slug}`}>
+        <Link className={styles.item__link} href={`/project/${slug}`}>
           <CarouselItemInner index={index} active={active} item={item} />
-        </a>
+        </Link>
       ) : (
         <CarouselItemInner index={index} active={active} item={item} />
       )}
