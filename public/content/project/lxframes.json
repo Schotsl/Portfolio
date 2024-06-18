@@ -1,6 +1,12 @@
 {
-  "technologies": ["react", "next", "typescript", "decap", "scss", "vercel"],
-  "categories": ["development"],
+  "technologies": [
+    "react",
+    "next",
+    "typescript",
+    "decap",
+    "scss",
+    "vercel"
+  ],
   "slug": "lxframes",
   "intro": "Lxframes is a portfolio website for Lanxiang Vermeulen, showcasing her school and professional work, built with Next.js, SCSS, TypeScript, and Decap CMS.",
   "tagline": "Programming my way into her heart",
@@ -8,46 +14,49 @@
   "images": [
     {
       "image": {
-        "alt": "Blablabla",
+        "alt": "Lxframes' landing page.",
         "src": "/content/project/images/lxframes-1.png"
       }
     },
     {
       "image": {
-        "alt": "Blablabla",
+        "alt": "Lxframes' 'Breng een boek tot leven' project.",
         "src": "/content/project/images/lxframes-2.png"
       }
     },
     {
       "image": {
-        "alt": "Blablabla",
+        "alt": "Lxframes' photography overview page.",
         "src": "/content/project/images/lxframes-3.png"
       }
     },
     {
       "image": {
-        "alt": "Blablabla",
+        "alt": "Lxframes' about me page.",
         "src": "/content/project/images/lxframes-4.png"
       }
     },
     {
       "image": {
-        "alt": "Blablabla",
+        "alt": "Lxframes' contact page.",
         "src": "/content/project/images/lxframes-5.png"
       }
     }
   ],
   "content": "Lxframes is a website I developed for my partner, [Lanxiang Vermeulen](https://www.linkedin.com/in/lanxiang-vermeulen-498471185/). She needed a portfolio to showcase her school and professional work while searching for internships, as well as her professional work as a photographer.\n\nLanxiang provided her own designs, which I then turned into a website. I also created the mobile design and made final adjustments. This website was created using [Next](https://nextjs.org/), [SCSS](https://sass-lang.com/), [TypeScript](https://www.typescriptlang.org/), and [Decap CMS](https://decapcms.org/) for content management. Her portfolio successfully helped her find an internship, which was very rewarding.",
-  "video": "/videos/lxframes-min.mp4?v=11df4305",
-  "image": {
-    "alt": "Test",
-    "src": "/content/project/images/lxframes-cover.png"
-  },
   "links": [
     {
       "url": "https://www.lxframes.com/",
       "icon": "globe",
       "title": "View the website"
     }
+  ],
+  "video": "/videos/lxframes-min.mp4?v=11df4305",
+  "image": {
+    "alt": "Lxframes' project overview page",
+    "src": "/content/project/images/lxframes-cover.png"
+  },
+  "categories": [
+    "development"
   ]
 }
