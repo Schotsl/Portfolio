@@ -1,14 +1,7 @@
 {
-  "technologies": [
-    "vue",
-    "nuxt",
-    "typescript",
-    "scss",
-    "decap",
-    "netlify"
-  ],
+  "technologies": ["vue", "nuxt", "typescript", "scss", "decap", "netlify"],
   "slug": "nicoletrompetter",
-  "intro": "A portfolio and business website for Nicole Trompetter’s herbal medicine practice, designed for mobile and desktop, using Nuxt 3 and Decap CMS.",
+  "intro": "A portfolio and business website for Nicole Trompetter's herbal medicine practice, designed for mobile and desktop, using Nuxt 3 and Decap CMS.",
   "tagline": "First things first",
   "title": "Nicole Trompetter",
   "content": "I developed [Nicole Trompetter's](https://nicoletrompetter.nl/) portfolio along with her business website, [Kruidenpower](https://sjorsvanholst.nl/project/kruidenpower). This website was also designed by [Lanxiang Vermeulen](https://www.linkedin.com/in/lanxiang-vermeulen-498471185/), and I expanded the designs to include mobile devices. Once again special thanks to [Raphael Kurun](https://www.linkedin.com/in/raphael-kurun-776766161/) for connecting me with Nicole Trompetter.\n\nLike Kruidenpower, I used [Nuxt 3](https://nuxt.com/) and [Decap CMS](https://decapcms.org/). Although I've since moved on to [React](https://react.dev/) and [Next](https://nextjs.org/), this project was a good experience in working with clients and colleagues, and it was surprisingly easy since it was a one-pager.",
@@ -21,10 +14,8 @@
   ],
   "video": "/videos/nicoletrompetter-min.mp4?v=25zf4312",
   "image": {
-    "alt": "Nicole Trompetter’s landing page.",
+    "alt": "Nicole Trompetter's landing page.",
     "src": "/content/project/images/nicoletrompetter-cover.png"
   },
-  "categories": [
-    "development"
-  ]
+  "categories": ["development"]
 }

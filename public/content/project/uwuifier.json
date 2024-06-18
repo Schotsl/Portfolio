@@ -19,18 +19,18 @@
   "images": [
     {
       "image": {
-        "alt": "Uwuifier's Play Store page",
+        "alt": "Uwuifier's Play Store page.",
         "src": "/content/project/images/uwuifier-1.png"
       }
     },
     {
       "image": {
-        "alt": "Uwuifier’s App Store page.",
+        "alt": "Uwuifier's App Store page.",
         "src": "/content/project/images/uwuifier-2.png"
       }
     }
   ],
-  "content": "In high school, I used to see a lot of memes around UwU. This trend involves changing a sentence to sound ‘cuter’ or more anime-like, so ‘Hello, how are you today?’ would become ‘Hewwo how awe you today?’. For fun, I decided to create an NPM package that would automate this transformation, inspired by a Chrome extension created by leafysweetsgarden that no longer exists. Once I got the package up and running, a few friends of mine [David Brands](https://www.linkedin.com/in/david-b-128612132/), [Wouter de Bruijn](https://www.linkedin.com/in/wouter-de-bruijn-b1a20115b/), and [Kerim Demirci](https://github.com/drunkwinter) joined the project.\n\nOne thing led to another, and before we knew it, we had published both an [NPM](https://www.npmjs.com/package/uwuifier) and [Deno package](https://deno.land/x/uwuifier@v4.0.6). We also released a Uwuifier Android app on the [Play Store](https://play.google.com/store/apps/details?id=com.sjorsvanholst.uwuifier&hl=en_US) and [App Store](https://apps.apple.com/us/app/uwuifier/id1623454749) and launched the [Uwuifier website](https://uwuifier.com/). The app has over 10K downloads with an average rating of 5 stars, and the website has more than 250K views!\n\nI find it amusing that my most ‘successful’ project is a translator for a niche community that I’m not even a part of. I created the package itself in [Deno](https://deno.com/), the website uses [Vue 3](https://vuejs.org/), and the apps are created using [Expo](https://expo.dev/), all of which use [TypeScript](https://www.typescriptlang.org/). I’m very grateful to be surrounded by friends with such a passion for programming, who are always there to help me out with anything!",
+  "content": "In high school, I used to see a lot of memes around UwU. This trend involves changing a sentence to sound ‘cuter' or more anime-like, so ‘Hello, how are you today?' would become ‘Hewwo how awe you today?'. For fun, I decided to create an NPM package that would automate this transformation, inspired by a Chrome extension created by leafysweetsgarden that no longer exists. Once I got the package up and running, a few friends of mine [David Brands](https://www.linkedin.com/in/david-b-128612132/), [Wouter de Bruijn](https://www.linkedin.com/in/wouter-de-bruijn-b1a20115b/), and [Kerim Demirci](https://github.com/drunkwinter) joined the project.\n\nOne thing led to another, and before we knew it, we had published both an [NPM](https://www.npmjs.com/package/uwuifier) and [Deno package](https://deno.land/x/uwuifier@v4.0.6). We also released a Uwuifier Android app on the [Play Store](https://play.google.com/store/apps/details?id=com.sjorsvanholst.uwuifier&hl=en_US) and [App Store](https://apps.apple.com/us/app/uwuifier/id1623454749) and launched the [Uwuifier website](https://uwuifier.com/). The app has over 10K downloads with an average rating of 5 stars, and the website has more than 250K views!\n\nI find it amusing that my most ‘successful' project is a translator for a niche community that I'm not even a part of. I created the package itself in [Deno](https://deno.com/), the website uses [Vue 3](https://vuejs.org/), and the apps are created using [Expo](https://expo.dev/), all of which use [TypeScript](https://www.typescriptlang.org/). I'm very grateful to be surrounded by friends with such a passion for programming, who are always there to help me out with anything!",
   "links": [
     {
       "url": "https://uwuifier.com/",
@@ -45,11 +45,8 @@
   ],
   "video": "/videos/uwuifier-min.mp4?v=3dd392a3",
   "image": {
-    "alt": "Uwuifier’s website.",
+    "alt": "Uwuifier's website.",
     "src": "/content/project/images/uwuifier-cover.png"
   },
-  "categories": [
-    "design",
-    "development"
-  ]
+  "categories": ["design", "development"]
 }

@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     ],
   },
 
-  authors: [{ name: "Sjors van Holst", url: "https://sjorsvanholst" }],
+  authors: [{ name: "Sjors van Holst", url: "https://sjorsvanholst.nl/" }],
 };
 
 const openSans = Open_Sans({

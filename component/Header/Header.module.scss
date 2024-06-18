@@ -25,7 +25,7 @@
     z-index: -1;
     overflow: hidden;
 
-    object-position: 80% 0;
+    object-position: 75% 0;
 
     @include respond-to-lg {
       object-position: 0 calc(-10vw + 5rem);

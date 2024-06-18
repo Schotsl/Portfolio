@@ -1,9 +1,5 @@
 {
-  "technologies": [
-    "deno",
-    "typescript",
-    "plausible-api"
-  ],
+  "technologies": ["deno", "typescript", "plausible-api"],
   "slug": "plausible",
   "intro": "A Deno-native Plausible API wrapper for integrating website analytics into Discord bots and live stat counters.",
   "tagline": "If you want something done...",
@@ -11,12 +7,12 @@
   "images": [
     {
       "image": {
-        "alt": "Plausible",
+        "alt": "Plausible's Deno Third Party Modules page.",
         "src": "/content/project/images/plausible-1.png"
       }
     }
   ],
-  "content": "I am a big fan of [Plausible](https://plausible.io/), a website analytics service that respects user privacy, and I use it on all of my websites. The best part is that it’s free when self-hosted, which in my case means asking [Wouter de Bruijn](https://wouterdebruijn.nl/) to host it for me. Plausible released an [API](https://plausible.io/docs/stats-api), which got me excited about integrating it into my Discord bot and live stat counter for the [Uwuifier](sjorsvanholst.nl/project/uwuifier) website.\n\nAs a [Deno](https://deno.com/) enthusiast, I encountered a problem that I encounter all too often: no Plausible package for Deno existed. So, I wrote one myself. The Plausible API is simple, so I was able to cover the stats reference completely. With [David Brands](https://www.linkedin.com/in/david-b-128612132/)’ assistance, I fully typed the API. At some point, I would like to also implement the [Events API](https://plausible.io/docs/events-api) and [Site provisioning API](https://plausible.io/docs/sites-api).\n\nI would also like to give a shoutout to NPM for releasing the Plausible package name to me, as the previous owner had reserved it nine years prior and had not used it since then.",
+  "content": "I am a big fan of [Plausible](https://plausible.io/), a website analytics service that respects user privacy, and I use it on all of my websites. The best part is that it's free when self-hosted, which in my case means asking [Wouter de Bruijn](https://wouterdebruijn.nl/) to host it for me. Plausible released an [API](https://plausible.io/docs/stats-api), which got me excited about integrating it into my Discord bot and live stat counter for the [Uwuifier](sjorsvanholst.nl/project/uwuifier) website.\n\nAs a [Deno](https://deno.com/) enthusiast, I encountered a problem that I encounter all too often: no Plausible package for Deno existed. So, I wrote one myself. The Plausible API is simple, so I was able to cover the stats reference completely. With [David Brands](https://www.linkedin.com/in/david-b-128612132/)' assistance, I fully typed the API. At some point, I would like to also implement the [Events API](https://plausible.io/docs/events-api) and [Site provisioning API](https://plausible.io/docs/sites-api).\n\nI would also like to give a shoutout to NPM for releasing the Plausible package name to me, as the previous owner had reserved it nine years prior and had not used it since then.",
   "links": [
     {
       "url": "https://github.com/Schotsl/Plausible/",
@@ -26,10 +22,8 @@
   ],
   "video": "/videos/plausible-min.mp4?v=55cc4305",
   "image": {
-    "alt": "Plausible's Deno Third Party Modules page",
+    "alt": "Plausible's Deno Third Party Modules page.",
     "src": "/content/project/images/plausible-cover.png"
   },
-  "categories": [
-    "development"
-  ]
+  "categories": ["development"]
 }
