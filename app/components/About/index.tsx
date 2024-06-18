@@ -35,7 +35,7 @@ export default async function RootAbout({
         ></div>
 
         <Button
-          href="/downloads/cv.pdf"
+          href="/downloads/CV.pdf"
           icon={faDownload}
           label="Download my CV"
           className={styles.about__section__button}
