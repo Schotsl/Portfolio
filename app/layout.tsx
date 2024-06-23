@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     title,
     locale: "nl_NL",
+    siteName: title,
     images: [
       {
         url,
