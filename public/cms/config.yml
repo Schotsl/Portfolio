@@ -178,7 +178,7 @@ collections:
                   media_folder: "/public/content/project/images",
                   public_folder: "/content/project/images",
                 }
-      - { name: "video", label: "Cover video", widget: "string" }
+      - { name: "bunny", label: "Bunny ID", widget: "string" }
       - name: "image"
         label: "Cover image"
         widget: "object"
