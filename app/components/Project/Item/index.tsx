@@ -17,6 +17,7 @@ export default function RootProjectItem({
   index,
   project: { slug, title, video, image, categories },
 }: RootProjectItemProps) {
+  const source = `/video/${video}/play_480p.mp4`;
   const player = useRef<HTMLVideoElement>(null);
   const container = useRef<HTMLLIElement>(null);
 
@@ -74,7 +75,7 @@ export default function RootProjectItem({
           preload="none"
           className={styles.item__video}
         >
-          <source src={video} type="video/mp4" />
+          <source src={source} type="video/mp4" />
         </video>
 
         <Image

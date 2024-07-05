@@ -43,6 +43,7 @@ function CarouselItemInner({
   index,
   active,
 }: CarouselItemProps) {
+  const source = `/video/${video}/play_720p.mp4`;
   const player = useRef<HTMLVideoElement>(null);
 
   const [updating, setUpdating] = useState(false);
@@ -88,7 +89,7 @@ function CarouselItemInner({
     <>
       {video && (
         <video ref={player} muted preload="none" className={styles.item__video}>
-          <source src={video} type="video/mp4" />
+          <source src={source} type="video/mp4" />
         </video>
       )}
 

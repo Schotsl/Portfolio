@@ -38,13 +38,13 @@ module.exports = withPlausibleProxy({
       async rewrites() {
         return [
           {
-            source: "/downloads/:path*",
+            source: "/download/:path*",
             destination:
               "https://lvtcbaciaiiugsdwmcgi.supabase.co/storage/v1/object/public/files/:path*",
           },
           {
-            source: "/videos/:path*",
-            destination: "https://portfolio-686e22ba.b-cdn.net/:path*",
+            source: "/video/:path*",
+            destination: "https://vz-4b14b223-cf9.b-cdn.net/:path*",
           },
         ];
       },
