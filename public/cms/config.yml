@@ -2,7 +2,7 @@ backend:
   name: github
   repo: schotsl/portfolio
 
-  base_url: https://portfolio-two-mu-45.vercel.app/
+  base_url: https://sjorsvanholst.nl/
   auth_endpoint: api/auth
 
   commit_messages:
@@ -16,8 +16,8 @@ backend:
 media_folder: "/content/images"
 public_folder: "/content/images"
 
-site_url: "https://portfolio-two-mu-45.vercel.app/"
-logo_url: "https://portfolio-two-mu-45.vercel.app/favicon-600x600.png"
+site_url: "https://sjorsvanholst.nl/"
+logo_url: "https://sjorsvanholst.nl/favicon-600x600.png"
 
 collections:
   - name: "pages"
