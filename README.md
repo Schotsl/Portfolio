@@ -35,6 +35,10 @@ bun run dev
 
 Any commits to the main branch will automatically be deployed to https://sjorsvanholst.nl through Vercel.
 
+## Video
+
+I recorded the videos shown on my portfolio using [ScrollCapture](https://chromewebstore.google.com/detail/scroll-capture/egmhoeaacclmanaimofoooiamhpkimkk) with a scroll speed of 600 px/s and `linear.ease` for the easing setting. The first frame was extracted and used as a thumbnail. The images are hosted and transcoded on [Bunny CDN](https://bunny.net).
+
 ## License
 
 This project is licensed under the MIT License - see the
