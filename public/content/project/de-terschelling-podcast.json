@@ -1,0 +1,38 @@
+{
+  "bunny": "585a6628-c177-4928-b38b-318920e4c0c0",
+  "technologies": [
+    "decap",
+    "next",
+    "react",
+    "scss"
+  ],
+  "slug": "de-terschelling-podcast",
+  "intro": "Inspired by many chats about Terschelling during my stay with my nephew Timo Steenmeijer, we launched “De Terschelling Podcast.” Despite not being locals, we share stories and interviews about the island.",
+  "tagline": "We’ll just re-record that one more time",
+  "title": "De Terschelling Podcast",
+  "images": [
+    {
+      "image": {
+        "src": "/content/project/images/de-terschelling-podcast-2.png",
+        "alt": "A webpage showcasing the ‘Eilandliefde Terschelling’ episode"
+      }
+    }
+  ],
+  "content": "Me and my nephew Timo Steenmeijer talked a lot about Terschelling while I lived with him and his family for a few months. So we decided to create our own podcast around this subject, which also became an excuse to hang out. Our podcast, “De Terschelling Podcast,” is a bi-weekly journey where we share stories, interview locals, and talk about our personal experiences. The joke is, we’re not from Terschelling and don’t actually know much, which hopefully makes for a fun and humorous take on the island.\n\nAfter recording our first four episodes, I decided to build a website to showcase our work. The website is created using Next.js, TypeScript, SCSS, and Decap CMS, and is passed through Bunny CDN to reduce the load on Vercel. It’s completely statically generated, so it’s very fast. The site includes metadata and a custom-made RSS feed that hosts our podcast on Spotify, Apple Podcast, and Podimo.",
+  "links": [
+    {
+      "icon": "globe",
+      "title": "View the website",
+      "url": "https://de-terschelling-podcast.nl"
+    }
+  ],
+  "image": {
+    "alt": "The landing page of De Terschelling Podcast",
+    "src": "/content/project/images/de-terschelling-podcast-1.png"
+  },
+  "categories": [
+    "design",
+    "development",
+    "entertainment"
+  ]
+}
