@@ -21,7 +21,7 @@ export type Project = {
   slug: string;
   title: string;
   intro: string;
-  video: string;
+  bunny: string;
   image: Image;
   links: Link[];
   images?: Image[];
@@ -43,6 +43,6 @@ export type CarouselItem = {
   slug?: string;
   title?: string;
   intro?: string;
-  video?: string;
+  bunny?: string;
   categories?: Category[];
 };

@@ -46,7 +46,7 @@ export default async function ProjectPage({
   const projects = await getCollection<Project>("project");
   const project = projects.find((project) => project.slug === params.slug)!;
 
-  const { video, image, title, tagline, intro, content, technologies, links } =
+  const { bunny, image, title, tagline, intro, content, technologies, links } =
     project;
 
   const images =
@@ -57,7 +57,7 @@ export default async function ProjectPage({
   const items = [
     {
       image,
-      video,
+      bunny,
     },
     ...images,
   ];

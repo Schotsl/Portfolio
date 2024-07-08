@@ -39,17 +39,17 @@ export default function CarouselItem({
 }
 
 function CarouselItemInner({
-  item: { title, intro, video, image, categories },
+  item: { title, intro, bunny, image, categories },
   index,
   active,
 }: CarouselItemProps) {
-  const source = `/video/${video}/play_720p.mp4`;
+  const source = `/video/${bunny}/play_720p.mp4`;
   const player = useRef<HTMLVideoElement>(null);
 
   const [updating, setUpdating] = useState(false);
 
   useEffect(() => {
-    if (!player.current || !video || updating) {
+    if (!player.current || !bunny || updating) {
       return;
     }
 
@@ -67,7 +67,7 @@ function CarouselItemInner({
     };
 
     updatePlay();
-  }, [active, video, updating]);
+  }, [active, bunny, updating]);
 
   useEffect(() => {
     const playerCurrent = player.current!;
@@ -87,7 +87,7 @@ function CarouselItemInner({
 
   return (
     <>
-      {video && (
+      {bunny && (
         <video ref={player} muted preload="none" className={styles.item__video}>
           <source src={source} type="video/mp4" />
         </video>
