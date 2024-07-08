@@ -117,7 +117,7 @@ export default function Footer() {
             <ul className={styles.footer__columns__column__list}>
               {column.list.map((item, index) => (
                 <li
-                  key={index}
+                  key={`${index}-${item.content}`}
                   className={
                     item.className
                       ? item.className

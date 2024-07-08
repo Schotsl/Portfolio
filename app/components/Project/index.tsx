@@ -49,8 +49,6 @@ export default function RootProject({
         dangerouslySetInnerHTML={{ __html: marked(content) }}
       ></div>
 
-      {/* <Waves className={styles.project__waves} /> */}
-
       <ul className={styles.project__list}>
         {projects.map((project, index) => (
           <RootProjectItem key={index} index={index} project={project} />

@@ -13,7 +13,7 @@ export default function Breadcrumb({
   return (
     <nav className={styles.breadcrumb}>
       <ul className={styles.breadcrumb__list}>
-        <li className={styles.breadcrumb__list__item}>
+        <li className={styles.breadcrumb__list__item} key="/">
           <Link className={styles.breadcrumb__list__item__link} href="/">
             <FontAwesomeIcon
               icon={faHome}
@@ -24,7 +24,7 @@ export default function Breadcrumb({
           </Link>
         </li>
 
-        <li className={styles.breadcrumb__list__item}>
+        <li className={styles.breadcrumb__list__item} key="separator">
           <FontAwesomeIcon icon={faChevronRight} />
         </li>
 
@@ -32,15 +32,18 @@ export default function Breadcrumb({
           <>
             <li className={styles.breadcrumb__list__item} key={item.href}>
               <Link
-                className={styles.breadcrumb__list__item__link}
                 href={item.href}
+                className={styles.breadcrumb__list__item__link}
               >
                 {item.title}
               </Link>
             </li>
 
             {index !== items.length - 1 && (
-              <li className={styles.breadcrumb__list__item}>
+              <li
+                key={`${item.href}-seperator`}
+                className={styles.breadcrumb__list__item}
+              >
                 <FontAwesomeIcon
                   icon={faChevronRight}
                   className={styles.breadcrumb__list__item__icon}
