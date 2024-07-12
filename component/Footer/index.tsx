@@ -70,10 +70,10 @@ export default function Footer() {
       title: "KvK",
       list: [
         {
-          content: "12345678",
+          content: "87500337",
         },
         {
-          content: "NL123456789B01",
+          content: "NL004426461B18",
         },
       ],
     },
