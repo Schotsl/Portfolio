@@ -12,6 +12,8 @@ import styles from "./page.module.scss";
 import banner from "@/public/content/shared/banner.json";
 import content from "@/public/content/pages/not_found/index.json";
 
+export const dynamic = 'force-static'
+
 export default async function NotFoundPage() {
   const bannerImage = await getImage(banner.image);
   const bannerTitle = banner.title;
