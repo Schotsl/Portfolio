@@ -12,6 +12,8 @@ import Content from "./components/Content";
 import Breadcrumb from "./components/Breadcrumb";
 import Technologies from "./components/Technologies";
 
+export const dynamic = "force-static";
+
 export async function generateStaticParams() {
   const projects = await getCollection<Project>("project");
   const projectsSlug = projects.map((project) => ({
