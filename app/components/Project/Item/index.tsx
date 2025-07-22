@@ -74,6 +74,8 @@ export default function RootProjectItem({
           autoPlay
           preload="none"
           className={styles.item__video}
+          playsInline
+          webkit-playsinline
         >
           <source src={source} type="video/mp4" />
         </video>

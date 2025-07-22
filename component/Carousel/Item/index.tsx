@@ -88,7 +88,14 @@ function CarouselItemInner({
   return (
     <>
       {bunny && (
-        <video ref={player} muted preload="none" className={styles.item__video}>
+        <video
+          ref={player}
+          muted
+          preload="none"
+          className={styles.item__video}
+          playsInline
+          webkit-playsinline
+        >
           <source src={source} type="video/mp4" />
         </video>
       )}
