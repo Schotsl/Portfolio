@@ -28,6 +28,7 @@ export default function Technologies({ technologies }: TechnologiesProps) {
                   alt={title}
                   width={16}
                   height={16}
+                  sizes="1rem"
                   className={styles.technologies__technology__link__inner__icon}
                 />
 

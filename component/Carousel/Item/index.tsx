@@ -102,7 +102,7 @@ function CarouselItemInner({
 
       <Image
         image={image}
-        sizes={"(min-width: 1200px) 30%, (min-width: 768px) 48%, 100vw"}
+        sizes={"(min-width: 1400px) 32%, (min-width: 768px) 48%, 100vw"}
         priority={index === 0}
         className={styles.item__image}
       />

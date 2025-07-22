@@ -81,7 +81,7 @@ export default function RootCount({ initial }: CountProps) {
           } else {
             setHidden(pageviewsNew);
           }
-        },
+        }
       )
       .subscribe();
 
@@ -120,6 +120,7 @@ export default function RootCount({ initial }: CountProps) {
           src="/doodles/exclamation.svg"
           width={145}
           height={127}
+          sizes="10rem"
           className={styles.count__title__exclamation}
         />
         <Image
@@ -127,6 +128,7 @@ export default function RootCount({ initial }: CountProps) {
           src="/doodles/garlands.svg"
           width={444}
           height={112}
+          sizes="(min-width: 768px) 21rem, 14rem"
           className={styles.count__title__garlands}
         />
         <Image
@@ -134,6 +136,7 @@ export default function RootCount({ initial }: CountProps) {
           src="/doodles/upwards.svg"
           width={117}
           height={131}
+          sizes="6rem"
           className={styles.count__title__upwards}
         />
         This month, my services have assisted or entertained over{" "}
