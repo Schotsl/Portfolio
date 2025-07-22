@@ -84,6 +84,11 @@ export default async function RootLayout({
       >
         <head>
           <link
+            rel="preconnect"
+            href="https://o4505897577414656.ingest.us.sentry.io"
+            crossOrigin="anonymous"
+          />
+          <link
             rel="apple-touch-icon"
             sizes="180x180"
             href="/apple-touch-icon.png"
@@ -102,7 +107,7 @@ export default async function RootLayout({
           />
 
           <link rel="manifest" href="/site.webmanifest" />
-          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0099ff" />
+          <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2f80ed" />
 
           <meta name="msapplication-TileColor" content="#F1F7FC" />
           <meta name="theme-color" content="#F1F7FC" />
