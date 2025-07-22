@@ -92,7 +92,7 @@ export default function Carousel({ items, center }: CarouselProps) {
           item={item}
           index={itemIndex}
           active={itemIndex === index}
-          onItemClick={handleClick}
+          onClick={handleClick}
         />
       ))}
     </ul>

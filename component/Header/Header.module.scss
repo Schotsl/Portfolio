@@ -7,7 +7,6 @@
   position: relative;
 
   margin-top: calc(var(--padding-vertical) * -1);
-  margin-left: calc(var(--padding-horizontal) * -1);
 
   &--small {
     .header__image {
@@ -24,6 +23,7 @@
     height: 32rem;
     z-index: -1;
     overflow: hidden;
+    margin-left: var(--margin-horizontal-responsive);
 
     object-position: 75% 0;
 
@@ -33,11 +33,10 @@
   }
 
   &__content {
-    top: var(--padding-vertical);
-    left: var(--padding-horizontal);
-    width: calc(100% - var(--padding-horizontal) * 2);
-
     gap: 0rem;
+    top: var(--padding-vertical);
+    width: 100%;
+
     z-index: 1;
     display: flex;
     position: absolute;
@@ -67,5 +66,6 @@
 
   &__waves {
     top: 20rem;
+    margin-left: var(--margin-horizontal-responsive);
   }
 }

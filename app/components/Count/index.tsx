@@ -6,7 +6,7 @@ import Image from "next/image";
 
 import styles from "./RootCount.module.scss";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import WavesFull from "@/component/WavesFull";
 
 type CountProps = {
@@ -20,18 +20,18 @@ export default function RootCount({ initial }: CountProps) {
   const [visible, setVisible] = useState(false);
 
   const [smooth, setSmooth] = useState(0);
-  const [smoothInterval, setSmoothInterval] = useState<NodeJS.Timeout | null>();
 
   const smoothRef = useRef(smooth);
   const visibleRef = useRef(visible);
   const containerRef = useRef<HTMLDivElement>(null);
+  const smoothIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   smoothRef.current = smooth;
   visibleRef.current = visible;
 
-  const scheduleSmooth = (updated: number, old: number) => {
-    if (smoothInterval) {
-      clearInterval(smoothInterval);
+  const scheduleSmooth = useCallback((updated: number, old: number) => {
+    if (smoothIntervalRef.current) {
+      clearInterval(smoothIntervalRef.current);
     }
 
     const timestamp = Date.now();
@@ -57,12 +57,10 @@ export default function RootCount({ initial }: CountProps) {
       });
     }, 10);
 
-    setSmoothInterval(interval);
+    smoothIntervalRef.current = interval;
+  }, []);
 
-    return () => clearInterval(interval);
-  };
-
-  const subscribeCount = () => {
+  const subscribeCount = useCallback(() => {
     const channel = supabase
       .channel("schema-db-changes")
       .on(
@@ -88,11 +86,12 @@ export default function RootCount({ initial }: CountProps) {
     return () => {
       channel.unsubscribe();
     };
-  };
+  }, [scheduleSmooth]);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
-    subscribeCount();
+    const unsubscribe = subscribeCount();
+    const element = containerRef.current;
 
     const observer = new IntersectionObserver((entries, observer) => {
       const entry = entries[0];
@@ -108,7 +107,21 @@ export default function RootCount({ initial }: CountProps) {
       observer.disconnect();
     });
 
-    observer.observe(containerRef.current!);
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      unsubscribe();
+
+      if (element) {
+        observer.unobserve(element);
+      }
+
+      if (smoothIntervalRef.current) {
+        clearInterval(smoothIntervalRef.current);
+      }
+    };
   }, [hidden, scheduleSmooth, visible, subscribeCount]);
 
   return (

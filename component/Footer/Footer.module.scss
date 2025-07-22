@@ -3,7 +3,7 @@
 .footer {
   width: 100%;
   color: rgb(234, 234, 234);
-  padding: var(--padding);
+  padding: var(--padding-vertical) var(--padding-horizontal-responsive);
   padding-top: calc(var(--padding-vertical) / 2);
   background: #2f80ed;
   position: relative;
@@ -84,7 +84,7 @@
         border: none;
         justify-content: flex-start;
 
-        &__link {
+        .footer__socials__item__link {
           width: unset;
           height: unset;
         }
@@ -93,6 +93,9 @@
       &__link {
         width: 16px;
         height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         &__icon {
           font-size: 1rem;

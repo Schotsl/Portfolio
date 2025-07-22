@@ -13,7 +13,7 @@
 
   &__waves {
     margin-top: -24rem;
-    margin-left: calc(var(--padding-horizontal) * -1);
+    margin-left: var(--margin-horizontal-responsive);
   }
 
   &__title {

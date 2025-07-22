@@ -16,7 +16,14 @@
     --padding-horizontal: 8rem;
   }
 
-  --padding: var(--padding-vertical) var(--padding-horizontal);
+  --padding-horizontal-responsive: max(
+    var(--padding-horizontal),
+    calc((100vw - 1600px) / 2)
+  );
+
+  --margin-horizontal-responsive: calc(
+    var(--padding-horizontal-responsive) * -1
+  );
 }
 
 html {
@@ -27,14 +34,18 @@ html {
 body {
   color: #000;
   margin: 0;
+  display: flex;
 
   overflow-x: hidden;
   font-family: var(--font-montserrat);
+  flex-direction: column;
 }
 
 main {
+  width: 100%;
   display: flex;
-  padding: var(--padding);
+  padding: var(--padding-vertical) var(--padding-horizontal-responsive);
+
   align-items: start;
   flex-direction: column;
 }
