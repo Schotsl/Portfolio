@@ -35,7 +35,7 @@ export default function WavesFull({ className }: WavesFullProps) {
             preserveAspectRatio="none"
           >
             <path
-              fill="#0099ff"
+              fill="#2f80ed"
               d="M0,32L80,37.3C160,43,320,53,480,80C640,107,800,149,960,154.7C1120,160,1280,128,1360,112L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
             ></path>
           </svg>
@@ -51,7 +51,7 @@ export default function WavesFull({ className }: WavesFullProps) {
             preserveAspectRatio="none"
           >
             <path
-              fill="#0099ff"
+              fill="#2f80ed"
               d="M0,32L80,37.3C160,43,320,53,480,80C640,107,800,149,960,154.7C1120,160,1280,128,1360,112L1440,96L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
             ></path>
           </svg>
