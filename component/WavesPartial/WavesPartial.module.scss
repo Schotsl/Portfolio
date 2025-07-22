@@ -10,31 +10,12 @@
 
     &__svg {
       width: 100%;
-      height: 12rem;
-    }
-
-    &__bottom {
-      width: 100%;
-      height: 10rem;
-      margin: -8px 0 0;
-      background: #2f80ed;
+      height: 22rem;
     }
 
     &:nth-of-type(2),
     &:nth-of-type(3) {
       margin-top: -15rem;
-    }
-
-    &:nth-of-type(2) {
-      .partial__wave__bottom {
-        background: #a2d9ff;
-      }
-    }
-
-    &:nth-of-type(3) {
-      .partial__wave__bottom {
-        background: #fff;
-      }
     }
   }
 
@@ -48,22 +29,5 @@
   }
 
   &--reverse {
-    .partial__wave {
-      .partial__wave__bottom {
-        background: #fff;
-      }
-
-      &:nth-of-type(2) {
-        .partial__wave__bottom {
-          background: #a2d9ff;
-        }
-      }
-
-      &:nth-of-type(3) {
-        .partial__wave__bottom {
-          background: #2f80ed;
-        }
-      }
-    }
   }
 }

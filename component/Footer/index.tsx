@@ -106,6 +106,45 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
+      <svg
+        className={styles.footer__background}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <rect id="footer-bg-shape" width="100%" height="100%"></rect>
+          <filter id="noise-footer">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="19.5"
+              numOctaves="10"
+              result="turbulence"
+            />
+            <feComposite
+              operator="in"
+              in="turbulence"
+              in2="SourceAlpha"
+              result="composite"
+            />
+            <feColorMatrix in="composite" type="luminanceToAlpha" />
+            <feBlend in="SourceGraphic" in2="composite" mode="color-burn" />
+          </filter>
+          <linearGradient id="fade-footer" x1="1" y1="0" x2="0" y2="0">
+            <stop offset="0%" stop-color="white" stop-opacity="0.2" />
+            <stop offset="50%" stop-color="white" stop-opacity="0.4" />
+            <stop offset="100%" stop-color="white" stop-opacity="0.6" />
+          </linearGradient>
+          <mask id="gradient-footer">
+            <use href="#footer-bg-shape" fill="url('#fade-footer')" />
+          </mask>
+        </defs>
+        <use href="#footer-bg-shape" fill="#2f80ed" />
+        <use
+          href="#footer-bg-shape"
+          fill="#2f80ed"
+          mask="url(#gradient-footer)"
+          filter="url(#noise-footer)"
+        />
+      </svg>
       <Waves reverse className={styles.footer__waves} />
       <ul className={styles.footer__columns}>
         {columns.map((column, index) => (
