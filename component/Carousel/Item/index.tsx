@@ -11,12 +11,14 @@ type CarouselItemProps = {
   item: CarouselItemType;
   index: number;
   active: boolean;
+  onClick: (index: number) => void;
 };
 
 export default function CarouselItem({
   item,
   index,
   active,
+  onClick,
 }: CarouselItemProps) {
   const { slug } = item;
 
@@ -26,6 +28,7 @@ export default function CarouselItem({
       className={
         active ? `${styles.item} ${styles["item--active"]}` : `${styles.item}`
       }
+      onClick={() => onClick(index)}
     >
       {slug ? (
         <Link className={styles.item__link} href={`/project/${slug}`}>

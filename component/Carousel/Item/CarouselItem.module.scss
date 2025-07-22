@@ -1,6 +1,7 @@
 @import "@/styles/mixins";
 
 .item {
+  cursor: pointer;
   display: inline-block;
   position: relative;
   min-width: var(--carousel-item-width);

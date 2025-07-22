@@ -70,6 +70,20 @@ export default function Carousel({ items, center }: CarouselProps) {
     }
   }
 
+  function handleClick(itemIndex: number) {
+    if (!carousel.current) {
+      return;
+    }
+
+    const itemElement = carousel.current.children[itemIndex] as HTMLElement;
+    const itemWidth = itemElement.offsetWidth;
+
+    carousel.current.scrollTo({
+      left: itemIndex * itemWidth,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <ul className={styles.carousel} ref={carousel} onScroll={onScroll}>
       {items.map((item, itemIndex) => (
@@ -78,6 +92,7 @@ export default function Carousel({ items, center }: CarouselProps) {
           item={item}
           index={itemIndex}
           active={itemIndex === index}
+          onItemClick={handleClick}
         />
       ))}
     </ul>
