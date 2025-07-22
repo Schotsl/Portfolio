@@ -10,6 +10,7 @@ import {
   faTwitter,
   faInstagram,
   faLinkedin,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { ReactNode } from "react";
 import Waves from "../WavesPartial";
@@ -100,6 +101,11 @@ export default function Footer() {
         aria: "Instagram",
         icon: faInstagram,
         link: "https://www.instagram.com/schotsl/",
+      },
+      {
+        aria: "GitHub",
+        icon: faGithub,
+        link: "https://github.com/Schotsl",
       },
     ],
   };
