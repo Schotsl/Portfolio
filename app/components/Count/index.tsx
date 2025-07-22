@@ -90,6 +90,7 @@ export default function RootCount({ initial }: CountProps) {
     };
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     subscribeCount();
 
@@ -108,7 +109,7 @@ export default function RootCount({ initial }: CountProps) {
     });
 
     observer.observe(containerRef.current!);
-  }, []);
+  }, [hidden, scheduleSmooth, visible, subscribeCount]);
 
   return (
     <div ref={containerRef} className={styles.count}>
