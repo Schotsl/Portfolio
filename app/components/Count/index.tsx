@@ -140,12 +140,14 @@ export default function RootCount({ initial }: CountProps) {
           className={styles.count__title__upwards}
         />
         This month, my services have assisted or entertained over{" "}
-        <span className={styles.count__title__value}>{smooth}</span>{" "}
+        <span className={styles.count__title__value}>
+          {smooth.toLocaleString()}
+        </span>{" "}
         individuals!
       </h2>
 
       <p className={styles.count__content}>
-        These statistics are collected from{" "}
+        These statitistics are collect from projects I fully manage like{" "}
         <a
           href="https://overworked.app/"
           target="_blank"
@@ -176,9 +178,8 @@ export default function RootCount({ initial }: CountProps) {
           className={styles.count__content__link}
         >
           Toolenburger plas
-        </a>{" "}
-        using Plausible Analytics. They are updated every 10 seconds with a 10
-        second delay.
+        </a>
+        . They are updated every 10 seconds with a 10 second delay.
       </p>
     </div>
   );
