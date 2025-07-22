@@ -41,11 +41,13 @@ export default function CarouselItem({
   );
 }
 
+type CarouselItemInnerProps = Omit<CarouselItemProps, "onClick">;
+
 function CarouselItemInner({
   item: { title, intro, bunny, image, categories },
   index,
   active,
-}: CarouselItemProps) {
+}: CarouselItemInnerProps) {
   const source = `/video/${bunny}/play_720p.mp4`;
   const player = useRef<HTMLVideoElement>(null);
 
