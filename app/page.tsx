@@ -6,6 +6,7 @@ import Header from "@/component/Header";
 import Button from "@/component/Button";
 import Carousel from "@/component/Carousel";
 
+import { Metadata } from "next";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Project as ProjectType } from "@/types";
 import { getCollection, getImage } from "@/helper";
@@ -14,7 +15,6 @@ import styles from "./page.module.scss";
 import banner from "@/public/content/shared/banner.json";
 import content from "@/public/content/pages/home/index.json";
 import supabase from "@/utils/supabase";
-import { Metadata } from "next";
 
 export const revalidate = 3600;
 
@@ -53,22 +53,24 @@ export default async function RootPage() {
     return projectsOrder.indexOf(a.title) - projectsOrder.indexOf(b.title);
   });
 
-  const bannerImage = await getImage(banner.image);
+  const bannerBack = await getImage(banner.back);
+  const bannerFront = await getImage(banner.front);
   const bannerTitle = banner.title;
   const bannerTaglines = content.banner.taglines.map(
-    (tagline) => tagline.tagline,
+    (tagline) => tagline.tagline
   );
 
   const bannerSlugs = content.banner.projects.map((project) => project.project);
   const bannerProjects = projects.filter((project) =>
-    bannerSlugs.includes(project.slug),
+    bannerSlugs.includes(project.slug)
   );
 
   return (
     <main className={styles.root}>
       <Header
+        back={bannerBack}
+        front={bannerFront}
         title={bannerTitle}
-        banner={bannerImage}
         taglines={bannerTaglines}
       />
 

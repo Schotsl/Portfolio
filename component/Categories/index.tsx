@@ -11,7 +11,7 @@ export default function Categories({ categories, className }: CategoriesProps) {
   return (
     <ul className={`${styles.categories} ${className}`}>
       {categories.map((category, index) => (
-        <li className={styles.categories__category} key={index}>
+        <li key={index} className={styles.categories__item}>
           {category.title}
         </li>
       ))}

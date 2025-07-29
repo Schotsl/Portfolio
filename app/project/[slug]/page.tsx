@@ -42,7 +42,8 @@ export default async function ProjectPage({
 }: {
   params: { slug: string };
 }) {
-  const bannerImage = await getImage(header.image);
+  const bannerBack = await getImage(header.back);
+  const bannerFront = await getImage(header.front);
   const bannerTitle = header.title;
 
   const projects = await getCollection<Project>("project");
@@ -66,7 +67,12 @@ export default async function ProjectPage({
 
   return (
     <main className={styles.project}>
-      <Header title={bannerTitle} banner={bannerImage} taglines={[tagline]} />
+      <Header
+        back={bannerBack}
+        front={bannerFront}
+        title={bannerTitle}
+        taglines={[tagline]}
+      />
 
       <Carousel items={items} />
 

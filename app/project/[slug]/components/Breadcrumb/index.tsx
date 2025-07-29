@@ -4,6 +4,7 @@ import { faChevronRight, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import styles from "./Breadcrumb.module.scss";
+import { Fragment } from "react";
 
 export default function Breadcrumb({
   items,
@@ -29,8 +30,8 @@ export default function Breadcrumb({
         </li>
 
         {items.map((item, index) => (
-          <>
-            <li className={styles.breadcrumb__list__item} key={item.href}>
+          <Fragment key={item.href}>
+            <li className={styles.breadcrumb__list__item}>
               <Link
                 href={item.href}
                 className={styles.breadcrumb__list__item__link}
@@ -40,17 +41,14 @@ export default function Breadcrumb({
             </li>
 
             {index !== items.length - 1 && (
-              <li
-                key={`${item.href}-seperator`}
-                className={styles.breadcrumb__list__item}
-              >
+              <li className={styles.breadcrumb__list__item}>
                 <FontAwesomeIcon
                   icon={faChevronRight}
                   className={styles.breadcrumb__list__item__icon}
                 />
               </li>
             )}
-          </>
+          </Fragment>
         ))}
       </ul>
     </nav>

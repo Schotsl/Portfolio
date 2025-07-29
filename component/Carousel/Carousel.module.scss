@@ -4,7 +4,7 @@
   --carousel-item-gap: 2rem;
   --carousel-item-margin: 10vw;
   --carousel-item-width: calc(
-    (100vw - var(--padding-horizontal) * 2) * 100 / 105
+    (100vw - var(--padding-horizontal-responsive) * 2) * 100 / 105
   );
 
   @include respond-to-md {
@@ -15,7 +15,7 @@
 
   gap: var(--carousel-item-gap);
   width: 100vw;
-  margin: -14rem 0 0 calc(var(--padding-horizontal) * -1);
+  margin: -22rem 0 0 var(--margin-horizontal-responsive);
   display: flex;
   padding: 4rem var(--carousel-item-margin) 4rem 0;
   align-items: center;

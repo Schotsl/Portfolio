@@ -1,7 +1,11 @@
 {
   "title": "Sjors van Holst",
-  "image": {
+  "back": {
+    "alt": "A picture of nature",
+    "src": "/content/shared/images/banner_back.png"
+  },
+  "front": {
     "alt": "A picture of Sjors van Holst playing VR in nature",
-    "src": "/content/shared/images/banner.png"
+    "src": "/content/shared/images/banner_front.png"
   }
 }

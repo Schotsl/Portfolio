@@ -3,8 +3,8 @@
 
 // I think I wanna move this to variables.scss but I'm not sure
 :root {
-  --padding-vertical: 2rem;
-  --padding-horizontal: 2rem;
+  --padding-vertical: 3rem;
+  --padding-horizontal: 3rem;
 
   @include respond-to-md {
     --padding-vertical: 4rem;

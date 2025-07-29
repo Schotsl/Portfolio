@@ -135,9 +135,9 @@ export default function Footer() {
             <feBlend in="SourceGraphic" in2="composite" mode="color-burn" />
           </filter>
           <linearGradient id="fade-footer" x1="1" y1="0" x2="0" y2="0">
-            <stop offset="0%" stop-color="white" stop-opacity="0.2" />
-            <stop offset="50%" stop-color="white" stop-opacity="0.4" />
-            <stop offset="100%" stop-color="white" stop-opacity="0.6" />
+            <stop offset="0%" stopColor="white" stopOpacity="0.2" />
+            <stop offset="50%" stopColor="white" stopOpacity="0.2" />
+            <stop offset="100%" stopColor="white" stopOpacity="0.2" />
           </linearGradient>
           <mask id="gradient-footer">
             <use href="#footer-bg-shape" fill="url('#fade-footer')" />
@@ -151,7 +151,7 @@ export default function Footer() {
           filter="url(#noise-footer)"
         />
       </svg>
-      <Waves reverse className={styles.footer__waves} />
+      <Waves reverse solid className={styles.footer__waves} />
       <ul className={styles.footer__columns}>
         {columns.map((column, index) => (
           <li key={index} className={styles.footer__columns__column}>

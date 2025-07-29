@@ -110,8 +110,8 @@ collections:
         extension: "json"
         fields:
           - { name: "title", label: "Title", widget: "string" }
-          - name: "image"
-            label: "Image"
+          - name: "front"
+            label: "Front"
             widget: "object"
             summary: "{{fields.alt}}"
             fields:
@@ -124,6 +124,21 @@ collections:
                   media_folder: "/public/content/shared/images",
                   public_folder: "/content/shared/images",
                 }
+          - name: "back"
+            label: "Back"
+            widget: "object"
+            summary: "{{fields.alt}}"
+            fields:
+              - { name: "alt", label: "Alt", widget: "string" }
+              - {
+                  name: "src",
+                  label: "Image",
+                  widget: "image",
+                  choose_url: false,
+                  media_folder: "/public/content/shared/images",
+                  public_folder: "/content/shared/images",
+                }
+
 
   - name: "technologies"
     label: "Technologies"

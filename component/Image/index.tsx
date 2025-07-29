@@ -11,6 +11,7 @@ type ImageProps = {
   image: ImageType;
   sizes: string;
   quality?: number;
+  preview?: boolean;
   priority?: boolean;
   className?: string;
 };
@@ -19,6 +20,7 @@ export default function Image({
   image: { src, alt, blur, width, height },
   sizes,
   quality = 75,
+  preview = true,
   priority = false,
   className,
 }: ImageProps) {
@@ -45,7 +47,7 @@ export default function Image({
         className={styles.image__image}
       />
 
-      {loading && (
+      {loading && preview && (
         <div className={styles.image__overlay}>
           <div className={styles.image__overlay__image}>
             {/* eslint-disable-next-line */}

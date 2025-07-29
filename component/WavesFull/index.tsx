@@ -12,7 +12,7 @@ export default function WavesFull({ className }: WavesFullProps) {
   return (
     <div className={`${styles.full} ${className}`}>
       <ParallaxProvider>
-        <Parallax speed={-4} className={styles.full__wave}>
+        <Parallax speed={-4} className={styles.full__wave} rotate={[-1, 1]}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 520"
@@ -41,25 +41,30 @@ export default function WavesFull({ className }: WavesFullProps) {
                 <feBlend in="SourceGraphic" in2="composite" mode="color-burn" />
               </filter>
               <linearGradient id="fade-1" x1="1" y1="0" x2="0" y2="0">
-                <stop offset="0%" stop-color="white" stop-opacity="0.2" />
-                <stop offset="50%" stop-color="white" stop-opacity="0.4" />
-                <stop offset="100%" stop-color="white" stop-opacity="0.6" />
+                <stop offset="0%" stopColor="white" stopOpacity="0.2" />
+                <stop offset="50%" stopColor="white" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="white" stopOpacity="0.8" />
+              </linearGradient>
+              <linearGradient id="wave-gradient-1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#FFB366" />
+                <stop offset="30%" stopColor="#66b3ff" />
+                <stop offset="100%" stopColor="#a2d9ff" />
               </linearGradient>
               <mask id="gradient-1">
                 <use href="#wave-path-1" fill="url('#fade-1')" />
               </mask>
             </defs>
-            <use href="#wave-path-1" fill="#a2d9ff" />
+            <use href="#wave-path-1" fill="url(#wave-gradient-1)" />
             <use
               href="#wave-path-1"
-              fill="#a2d9ff"
+              fill="url(#wave-gradient-1)"
               mask="url('#gradient-1')"
               filter="url('#noise-1')"
             />
           </svg>
         </Parallax>
 
-        <Parallax speed={-8} className={styles.full__wave}>
+        <Parallax speed={-8} className={styles.full__wave} rotate={[1, -1]}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 520"
@@ -88,9 +93,9 @@ export default function WavesFull({ className }: WavesFullProps) {
                 <feBlend in="SourceGraphic" in2="composite" mode="color-burn" />
               </filter>
               <linearGradient id="fade-2" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="white" stop-opacity="0.2" />
-                <stop offset="50%" stop-color="white" stop-opacity="0.4" />
-                <stop offset="100%" stop-color="white" stop-opacity="0.6" />
+                <stop offset="0%" stopColor="white" stopOpacity="0.2" />
+                <stop offset="50%" stopColor="white" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="white" stopOpacity="0.8" />
               </linearGradient>
               <mask id="gradient-2">
                 <use href="#wave-path-2" fill="url('#fade-2')" />
@@ -106,7 +111,7 @@ export default function WavesFull({ className }: WavesFullProps) {
           </svg>
         </Parallax>
 
-        <Parallax speed={-8} className={styles.full__wave} rotate={[180, 180]}>
+        <Parallax speed={-8} className={styles.full__wave} rotate={[179, 181]}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 520"
@@ -135,9 +140,9 @@ export default function WavesFull({ className }: WavesFullProps) {
                 <feBlend in="SourceGraphic" in2="composite" mode="color-burn" />
               </filter>
               <linearGradient id="fade-3" x1="1" y1="0" x2="0" y2="0">
-                <stop offset="0%" stop-color="white" stop-opacity="0.2" />
-                <stop offset="50%" stop-color="white" stop-opacity="0.4" />
-                <stop offset="100%" stop-color="white" stop-opacity="0.6" />
+                <stop offset="0%" stopColor="white" stopOpacity="0.2" />
+                <stop offset="50%" stopColor="white" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="white" stopOpacity="0.8" />
               </linearGradient>
               <mask id="gradient-3">
                 <use href="#wave-path-3" fill="url('#fade-3')" />
@@ -153,7 +158,7 @@ export default function WavesFull({ className }: WavesFullProps) {
           </svg>
         </Parallax>
 
-        <Parallax speed={-4} className={styles.full__wave} rotate={[180, 180]}>
+        <Parallax speed={-4} className={styles.full__wave} rotate={[181, 179]}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 1440 520"
@@ -168,7 +173,7 @@ export default function WavesFull({ className }: WavesFullProps) {
               <filter id="noise-4">
                 <feTurbulence
                   type="fractalNoise"
-                  baseFrequency="19.5"
+                  baseFrequency="24"
                   numOctaves="10"
                   result="turbulence"
                 />
@@ -181,19 +186,24 @@ export default function WavesFull({ className }: WavesFullProps) {
                 <feColorMatrix in="composite" type="luminanceToAlpha" />
                 <feBlend in="SourceGraphic" in2="composite" mode="color-burn" />
               </filter>
-              <linearGradient id="fade-4" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="white" stop-opacity="0.2" />
-                <stop offset="50%" stop-color="white" stop-opacity="0.4" />
-                <stop offset="100%" stop-color="white" stop-opacity="0.6" />
+              <linearGradient id="fade-4" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="white" stopOpacity="0.2" />
+                <stop offset="50%" stopColor="white" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="white" stopOpacity="0.8" />
+              </linearGradient>
+              <linearGradient id="wave-gradient-4" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#FF9966" />
+                <stop offset="50%" stopColor="#66b3ff" />
+                <stop offset="100%" stopColor="#a2d9ff" />
               </linearGradient>
               <mask id="gradient-4">
                 <use href="#wave-path-4" fill="url('#fade-4')" />
               </mask>
             </defs>
-            <use href="#wave-path-4" fill="#a2d9ff" />
+            <use href="#wave-path-4" fill="url(#wave-gradient-4)" />
             <use
               href="#wave-path-4"
-              fill="#a2d9ff"
+              fill="url(#wave-gradient-4)"
               mask="url('#gradient-4')"
               filter="url('#noise-4')"
             />

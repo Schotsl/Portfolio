@@ -8,18 +8,21 @@ import useTypewriter from "react-typewriter-hook";
 
 import { Image as ImageType } from "@/types";
 import { useEffect, useState } from "react";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 type HeaderProps = {
   small?: boolean;
   title?: string;
-  banner: ImageType;
+  back?: ImageType;
+  front?: ImageType;
   taglines: string[];
 };
 
 export default function Header({
   small,
   title = "Sjors van Holst",
-  banner,
+  back,
+  front,
   taglines,
 }: HeaderProps) {
   const [index, setIndex] = useState(0);
@@ -38,29 +41,49 @@ export default function Header({
     }, 10000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [taglines.length]);
 
   return (
-    <header
-      className={
-        small
-          ? `${styles.header} ${styles["header--small"]}`
-          : `${styles.header}`
-      }
-    >
-      <Image
-        image={banner}
-        sizes={"100vw"}
-        priority={true}
-        className={styles.header__image}
-      />
+    <ParallaxProvider>
+      <header
+        className={
+          small
+            ? `${styles.header} ${styles["header--small"]}`
+            : `${styles.header}`
+        }
+      >
+        {back && front && (
+          <div className={styles.header__image}>
+            <Parallax speed={-15} className={styles.header__image__parallax}>
+              <Image
+                image={front}
+                sizes={"100vw"}
+                quality={100}
+                preview={false}
+                priority={true}
+                className={styles.header__image__parallax__front}
+              />
+            </Parallax>
 
-      <div className={styles.header__content}>
-        <h1 className={styles.header__content__title}>{title}</h1>
-        <h2 className={styles.header__content__subtitle}>{subtitle}</h2>
-      </div>
+            <Parallax speed={-30} className={styles.header__image__parallax}>
+              <Image
+                image={back}
+                sizes={"100vw"}
+                quality={100}
+                priority={true}
+                className={styles.header__image__parallax__back}
+              />
+            </Parallax>
+          </div>
+        )}
 
-      <Waves className={styles.header__waves} small={small} />
-    </header>
+        <div className={styles.header__content}>
+          <h1 className={styles.header__content__title}>{title}</h1>
+          <h2 className={styles.header__content__subtitle}>{subtitle}</h2>
+        </div>
+
+        <Waves className={styles.header__waves} small={small} />
+      </header>
+    </ParallaxProvider>
   );
 }

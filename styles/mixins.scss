@@ -35,3 +35,9 @@
     @content;
   }
 }
+
+@mixin respond-to-xxxl {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}

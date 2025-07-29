@@ -15,18 +15,20 @@ import content from "@/public/content/pages/not_found/index.json";
 export const dynamic = "force-static";
 
 export default async function NotFoundPage() {
-  const bannerImage = await getImage(banner.image);
+  const bannerBack = await getImage(banner.back);
+  const bannerFront = await getImage(banner.front);
   const bannerTitle = banner.title;
   const bannerTaglines = content.banner.taglines.map(
-    (tagline) => tagline.tagline,
+    (tagline) => tagline.tagline
   );
 
   return (
     <main className={styles.found}>
       <Header
+        back={bannerBack}
+        front={bannerFront}
         small={true}
         title={bannerTitle}
-        banner={bannerImage}
         taglines={bannerTaglines}
       />
 

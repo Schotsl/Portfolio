@@ -99,7 +99,7 @@ function CarouselItemInner({
           preload="none"
           className={styles.item__video}
           playsInline
-          webkit-playsinline
+          webkit-playsinline="true"
         >
           <source src={source} type="video/mp4" />
         </video>

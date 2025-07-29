@@ -14,7 +14,7 @@
     --carousel-item-width: calc(50% - (var(--carousel-item-gap) / 2));
   }
 
-  @include respond-to-xxl {
+  @include respond-to-xxxl {
     --carousel-item-width: calc(33.3333% - (var(--carousel-item-gap) / 1.5));
   }
 
