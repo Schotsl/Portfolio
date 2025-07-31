@@ -5,23 +5,17 @@ import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import styles from "./WavesPartial.module.scss";
 
 type WavesPartialProps = {
-  small?: boolean;
   solid?: boolean;
   reverse?: boolean;
   className?: string;
 };
 
 export default function WavesPartial({
-  small,
   solid = false,
   reverse,
   className,
 }: WavesPartialProps) {
   let classNameCombined = `${styles.partial} ${className}`;
-
-  if (small) {
-    classNameCombined += ` ${styles["partial--small"]}`;
-  }
 
   if (reverse) {
     classNameCombined += ` ${styles["partial--reverse"]}`;

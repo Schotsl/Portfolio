@@ -12,7 +12,6 @@ import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import Link from "next/link";
 
 type HeaderProps = {
-  small?: boolean;
   title?: string;
   back?: ImageType;
   front?: ImageType;
@@ -20,7 +19,6 @@ type HeaderProps = {
 };
 
 export default function Header({
-  small,
   title = "Sjors van Holst",
   back,
   front,
@@ -47,13 +45,7 @@ export default function Header({
 
   return (
     <ParallaxProvider>
-      <header
-        className={
-          small
-            ? `${styles.header} ${styles["header--small"]}`
-            : `${styles.header}`
-        }
-      >
+      <header className={styles.header}>
         {back && front && (
           <div className={styles.header__image}>
             <Parallax
@@ -98,7 +90,7 @@ export default function Header({
           <h2 className={styles.header__content__subtitle}>{subtitle}</h2>
         </div>
 
-        <Waves className={styles.header__waves} small={small} />
+        <Waves className={styles.header__waves} />
       </header>
     </ParallaxProvider>
   );

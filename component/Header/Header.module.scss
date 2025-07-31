@@ -10,20 +10,6 @@
   margin-top: calc(var(--padding-vertical) * -1);
   margin-left: var(--margin-horizontal-responsive);
 
-  &--small {
-    .header__image {
-      height: 27rem;
-    }
-
-    .header__banner {
-      height: 27rem;
-    }
-
-    .header__waves {
-      top: 15rem;
-    }
-  }
-
   &__image {
     width: 100%;
     height: auto;

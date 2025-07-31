@@ -27,7 +27,6 @@ export default async function NotFoundPage() {
       <Header
         back={bannerBack}
         front={bannerFront}
-        small={true}
         title={bannerTitle}
         taglines={bannerTaglines}
       />
