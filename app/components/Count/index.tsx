@@ -122,7 +122,7 @@ export default function RootCount({ initial }: CountProps) {
         clearInterval(smoothIntervalRef.current);
       }
     };
-  }, [hidden, scheduleSmooth, visible, subscribeCount]);
+  }, []);
 
   return (
     <div ref={containerRef} className={styles.count}>
