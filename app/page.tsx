@@ -39,7 +39,7 @@ async function loadCount() {
 export const metadata: Metadata = {
   title: "Sjors van Holst",
   description:
-    "Hey! I'm Sjors van Holst, a web developer and aspiring designer passionate about creating websites and apps. I excel in TypeScript, React, Next.js, Supabase, and design tools like Figma and Photoshop!",
+    "Hey! I'm Sjors van Holst, a web developer and designer who loves building websites and apps from scratch. I work with TypeScript, React, Next.js, Supabase, Expo, and design tools like Figma and Photoshop!",
 };
 
 export default async function RootPage() {
