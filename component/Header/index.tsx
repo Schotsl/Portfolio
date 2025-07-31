@@ -26,6 +26,7 @@ export default function Header({
   taglines,
 }: HeaderProps) {
   const [index, setIndex] = useState(0);
+  const [loaded, setLoaded] = useState(false);
 
   const sentence = taglines[index];
   const subtitle = useTypewriter(sentence);
@@ -54,24 +55,35 @@ export default function Header({
       >
         {back && front && (
           <div className={styles.header__image}>
-            <Parallax speed={-15} className={styles.header__image__parallax}>
+            <Parallax
+              translateY={[-12, 30]}
+              className={styles.header__image__parallax}
+            >
               <Image
                 image={front}
                 sizes={"100vw"}
                 quality={100}
                 preview={false}
                 priority={true}
-                className={styles.header__image__parallax__front}
+                className={
+                  loaded
+                    ? `${styles.header__image__parallax__front}`
+                    : `${styles.header__image__parallax__front} ${styles["header__image__parallax__front--transparent"]}`
+                }
               />
             </Parallax>
 
-            <Parallax speed={-30} className={styles.header__image__parallax}>
+            <Parallax
+              translateY={[-9, 20]}
+              className={styles.header__image__parallax}
+            >
               <Image
                 image={back}
                 sizes={"50vw"}
                 quality={100}
                 priority={true}
                 className={styles.header__image__parallax__back}
+                onLoad={() => setLoaded(true)}
               />
             </Parallax>
           </div>

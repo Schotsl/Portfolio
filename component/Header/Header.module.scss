@@ -71,6 +71,10 @@
         height: auto;
         position: absolute;
         object-fit: cover;
+
+        &--transparent {
+          opacity: 0;
+        }
       }
     }
 
@@ -143,7 +147,6 @@
     position: relative;
     margin-top: 0rem;
 
-
     &__image {
       top: 0;
       left: 0;
@@ -198,14 +201,13 @@
       width: 70%;
       margin: 0.5rem 0 0;
       font-size: 1.5rem;
+      font-weight: 400;
       max-width: 24rem;
       opacity: 0.75;
-      // font-family: var(--font-merriweather);
     }
   }
 
   &__waves {
     top: 19rem;
-    // margin-left: var(--margin-horizontal-responsive);
   }
 }

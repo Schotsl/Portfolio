@@ -14,6 +14,7 @@ type ImageProps = {
   preview?: boolean;
   priority?: boolean;
   className?: string;
+  onLoad?: () => void;
 };
 
 export default function Image({
@@ -23,11 +24,14 @@ export default function Image({
   preview = true,
   priority = false,
   className,
+  onLoad: onLoadProps,
 }: ImageProps) {
   const [loading, setLoading] = useState(true);
 
   function onLoad() {
     setLoading(false);
+
+    onLoadProps?.();
   }
 
   return (
