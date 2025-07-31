@@ -2,16 +2,19 @@
   "banner": {
     "taglines": [
       {
-        "tagline": "A great developer, a learning designer"
+        "tagline": "Admiring my GitHub contribution graph"
       },
       {
-        "tagline": "Looking at my GitHub contribution graph"
+        "tagline": "Considering whether or not to refactor another project"
       },
       {
-        "tagline": "Being laughed at while playing VR outside"
+        "tagline": "Asking ChatGPT to please fix my grammar"
       },
       {
         "tagline": "Creating yet another GitHub repository"
+      },
+      {
+        "tagline": "Wondering what Jira did to my projects"
       }
     ],
     "projects": [
