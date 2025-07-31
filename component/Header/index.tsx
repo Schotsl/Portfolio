@@ -74,7 +74,7 @@ export default function Header({
             </Parallax>
 
             <Parallax
-              translateY={[-9, 20]}
+              translateY={[-9.6, 24]}
               className={styles.header__image__parallax}
             >
               <Image
