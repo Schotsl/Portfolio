@@ -74,7 +74,7 @@ export default async function RootPage() {
         taglines={bannerTaglines}
       />
 
-      <Carousel items={bannerProjects} />
+      <Carousel items={bannerProjects} overlay={0} />
 
       <Button href="#project" label="View all my projects" icon={faArrowDown} />
 

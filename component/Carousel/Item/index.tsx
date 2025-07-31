@@ -11,6 +11,7 @@ type CarouselItemProps = {
   item: CarouselItemType;
   index: number;
   active: boolean;
+  overlay?: boolean;
   onClick: (index: number) => void;
 };
 
@@ -18,6 +19,7 @@ export default function CarouselItem({
   item,
   index,
   active,
+  overlay,
   onClick,
 }: CarouselItemProps) {
   const { slug } = item;
@@ -32,6 +34,15 @@ export default function CarouselItem({
     >
       {slug ? (
         <Link className={styles.item__link} href={`/project/${slug}`}>
+          {overlay && (
+            /* eslint-disable-next-line */
+            <img
+              src="/doodles/overlay.svg"
+              alt="A doodle overlay stating that this is my latest project"
+              className={styles.item__link__doodle}
+            />
+          )}
+
           <CarouselItemInner index={index} active={active} item={item} />
         </Link>
       ) : (

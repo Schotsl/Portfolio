@@ -10,9 +10,10 @@ import { useEffect, useRef, useState } from "react";
 type CarouselProps = {
   items: CarouselItemType[];
   center?: boolean;
+  overlay?: number;
 };
 
-export default function Carousel({ items, center }: CarouselProps) {
+export default function Carousel({ items, center, overlay }: CarouselProps) {
   const [index, setIndex] = useState(0);
 
   const carousel = useRef<HTMLUListElement>(null);
@@ -92,6 +93,7 @@ export default function Carousel({ items, center }: CarouselProps) {
           item={item}
           index={itemIndex}
           active={itemIndex === index}
+          overlay={itemIndex === overlay}
           onClick={handleClick}
         />
       ))}

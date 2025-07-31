@@ -72,7 +72,25 @@
   }
 
   &__link {
+    &__doodle {
+      width: 103%;
+      height: auto;
+      z-index: 2;
+      position: absolute;
+
+      top: calc(50% - 3px);
+      left: calc(50% + 2px);
+      transform: translate(-50%, -50%);
+      transition: opacity 0.2s ease-in-out;
+      
+      pointer-events: none;
+    }
+
     &:hover {
+      .item__link__doodle {
+        opacity: 0;
+      }
+
       .item__overlay {
         opacity: 1;
       }
