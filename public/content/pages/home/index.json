@@ -16,13 +16,13 @@
     ],
     "projects": [
       {
+        "project": "swiftbite"
+      },
+      {
+        "project": "swiftbite-icons"
+      },
+      {
         "project": "presently"
-      },
-      {
-        "project": "toolenburgerplas"
-      },
-      {
-        "project": "overworked"
       }
     ]
   },

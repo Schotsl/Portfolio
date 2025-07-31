@@ -47,7 +47,7 @@ export default async function RootPage() {
   const about = await getImage(content.about.image);
 
   const projects = await getCollection<ProjectType>("project");
-  const projectsOrder = ["Presently", "Toolenburgerplas", "Overworked"];
+  const projectsOrder = ["Swiftbite", "Swiftbite Icons", "Presently"];
 
   projects.sort((a, b) => {
     return projectsOrder.indexOf(a.title) - projectsOrder.indexOf(b.title);

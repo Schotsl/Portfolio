@@ -1,0 +1,34 @@
+{
+  "technologies": ["expo", "react-native", "supabase", "deno", "react"],
+  "slug": "swiftbite-icons",
+  "intro": "A social workout tracking app developed with Expo and Supabase, enabling users to track their progress and stay motivated through social features.",
+  "tagline": "If at first you don't succeed, try, try again",
+  "title": "Swiftbite Icons",
+  "images": [
+    {
+      "image": {
+        "alt": "Swiftbite Icons App Stores page.",
+        "src": "/content/project/images/swiftbite-icons-1.png"
+      }
+    }
+  ],
+  "content": "My friend Martin Goes and I used to track our workout weights in a spreadsheet, which was cumbersome and didn't allow us to track our progress. I asked a good friend of mine, [Wouter de Bruijn](https://wouterdebruijn.nl/), if he would like to create an app for this together. Wouter, being ever enthusiastic and reliable, agreed, and we spent a week in Terschelling working on this project.\n\nInitially, we developed the app using [Ionic Vue](https://ionicframework.com/docs/vue/overview) and my old Uberdeno framework as the backend. This turned out to be a nightmare, as the custom-made framework wasn't up to the task, and Ionic Vue had many random bugs.\n\nThere's nothing a week of Terschelling can't fix, so at the end of 2023, we headed back to Terschelling. We restarted the project using [Expo](https://expo.dev/) and [Supabase](https://supabase.com/) for authentication, storage, database, and edge functions, along with many other smaller packages. The app is available in the [Play Store](https://play.google.com/store/apps/details?id=com.sjorsvanholst.overworked) and [App Store](https://apps.apple.com/us/app/overworked-workout-tracker/id6472886729) and is in active development. I'm very proud of what we've created and use the app every other day!\n\nThe app's social aspect is its most significant selling point. I find motivation in the social element of working out, much like Strava and Apple Activities. This vision drives Overworked, which informs users when their friends achieve personal bests or have workout streaks.",
+  "links": [
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.sjorsvanholst.overworked",
+      "icon": "google-play",
+      "title": "View the app on the Play Store"
+    },
+    {
+      "url": "https://apps.apple.com/us/app/overworked-workout-tracker/id6472886729",
+      "icon": "app-store",
+      "title": "View the app on the App Store"
+    }
+  ],
+  "bunny": "2c890d31-a4f4-4e1e-8bf7-76ac9b29d5fa",
+  "image": {
+    "alt": "Overworked Play Store pages.",
+    "src": "/content/project/images/swiftbite-icons-1.png"
+  },
+  "categories": ["design", "development"]
+}
