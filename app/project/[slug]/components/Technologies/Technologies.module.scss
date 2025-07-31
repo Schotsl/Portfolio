@@ -5,47 +5,29 @@
 
   &__technology {
     &__link {
+      gap: 0.5rem;
       display: flex;
-      padding: 0.75rem 1.25rem;
-      overflow: hidden;
+      padding: 0.5rem 1rem;
       position: relative;
-      transition: all 100ms ease;
+      overflow: hidden;
 
-      font-weight: bold;
-      border-radius: 2.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      align-items: center;
+      border-radius: 9999px;
 
-      &::after {
-        top: 4px;
-        left: 4px;
-        right: 4px;
-        bottom: 4px;
-        content: "";
-        opacity: 0.5;
+      &__icon {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      &__background {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.15;
         position: absolute;
-        background: #fff;
-        transition: all 100ms ease;
-        border-radius: 2.5rem;
-      }
-
-      &:hover {
-        &::after {
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-        }
-      }
-
-      &__inner {
-        gap: 0.5rem;
-        z-index: 1;
-        display: flex;
-        align-items: center;
-
-        &__icon {
-          width: 1rem;
-          height: 1rem;
-        }
       }
     }
   }
