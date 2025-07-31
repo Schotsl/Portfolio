@@ -19,7 +19,7 @@ export default async function NotFoundPage() {
   const bannerFront = await getImage(banner.front);
   const bannerTitle = banner.title;
   const bannerTaglines = content.banner.taglines.map(
-    (tagline) => tagline.tagline
+    (tagline) => tagline.tagline,
   );
 
   return (

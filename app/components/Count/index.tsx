@@ -79,7 +79,7 @@ export default function RootCount({ initial }: CountProps) {
           } else {
             setHidden(pageviewsNew);
           }
-        }
+        },
       )
       .subscribe();
 

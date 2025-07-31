@@ -8,5 +8,5 @@ export default createClient(
       persistSession: false,
       autoRefreshToken: false,
     },
-  }
+  },
 );

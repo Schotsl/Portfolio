@@ -57,12 +57,12 @@ export default async function RootPage() {
   const bannerFront = await getImage(banner.front);
   const bannerTitle = banner.title;
   const bannerTaglines = content.banner.taglines.map(
-    (tagline) => tagline.tagline
+    (tagline) => tagline.tagline,
   );
 
   const bannerSlugs = content.banner.projects.map((project) => project.project);
   const bannerProjects = projects.filter((project) =>
-    bannerSlugs.includes(project.slug)
+    bannerSlugs.includes(project.slug),
   );
 
   return (

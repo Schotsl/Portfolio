@@ -139,7 +139,6 @@ collections:
                   public_folder: "/content/shared/images",
                 }
 
-
   - name: "technologies"
     label: "Technologies"
     create: true
