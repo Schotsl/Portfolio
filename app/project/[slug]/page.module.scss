@@ -12,7 +12,7 @@
 
     @include respond-to-md {
       padding-top: calc(var(--padding-vertical) / 2);
-      padding-bottom: calc(var(--padding-vertical) * 4);
+      padding-bottom: calc(var(--padding-vertical) * 5);
     }
 
     h2 {

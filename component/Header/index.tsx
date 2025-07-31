@@ -9,6 +9,7 @@ import useTypewriter from "react-typewriter-hook";
 import { Image as ImageType } from "@/types";
 import { useEffect, useState } from "react";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import Link from "next/link";
 
 type HeaderProps = {
   small?: boolean;
@@ -90,7 +91,10 @@ export default function Header({
         )}
 
         <div className={styles.header__content}>
-          <h1 className={styles.header__content__title}>{title}</h1>
+          <Link className={styles.header__content__link} href="/">
+            <h1 className={styles.header__content__link__title}>{title}</h1>
+          </Link>
+
           <h2 className={styles.header__content__subtitle}>{subtitle}</h2>
         </div>
 
