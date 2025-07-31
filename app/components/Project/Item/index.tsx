@@ -71,7 +71,6 @@ export default function RootProjectItem({
         <video
           ref={player}
           muted
-          autoPlay
           preload="none"
           className={styles.item__video}
           playsInline
