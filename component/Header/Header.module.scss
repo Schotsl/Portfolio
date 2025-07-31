@@ -6,8 +6,10 @@
   height: 42rem;
   z-index: -1;
   position: relative;
+  overflow: hidden;
 
   margin-top: calc(var(--padding-vertical) * -1);
+  margin-left: var(--margin-horizontal-responsive);
 
   &--small {
     .header__image {
@@ -31,7 +33,6 @@
     z-index: -1;
     overflow: hidden;
     position: relative;
-    margin-left: var(--margin-horizontal-responsive);
 
     &__parallax {
       left: 0;
@@ -126,7 +127,6 @@
       &__parallax {
         &__back,
         &__front {
-          // Set image size larger
           left: 0%;
           top: 0;
           width: 100%;
@@ -142,14 +142,7 @@
     overflow: hidden;
     position: relative;
     margin-top: 0rem;
-    margin-left: var(--margin-horizontal-responsive);
 
-    // Show banner on mobile, hide on larger screens
-    display: block;
-
-    @include respond-to-md {
-      display: none;
-    }
 
     &__image {
       top: 0;
@@ -184,6 +177,7 @@
     display: flex;
     position: absolute;
     flex-direction: column;
+    margin-left: var(--padding-horizontal-responsive);
 
     &__title {
       font-size: 3rem;
@@ -212,6 +206,6 @@
 
   &__waves {
     top: 19rem;
-    margin-left: var(--margin-horizontal-responsive);
+    // margin-left: var(--margin-horizontal-responsive);
   }
 }

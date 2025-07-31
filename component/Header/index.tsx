@@ -68,7 +68,7 @@ export default function Header({
             <Parallax speed={-30} className={styles.header__image__parallax}>
               <Image
                 image={back}
-                sizes={"100vw"}
+                sizes={"50vw"}
                 quality={100}
                 priority={true}
                 className={styles.header__image__parallax__back}
