@@ -1,8 +1,19 @@
 {
-  "technologies": ["expo", "react-native", "supabase", "deno", "react"],
+  "bunny": "d6040881-b684-444f-83cf-ee53b8045ce8",
+  "technologies": [
+    "deno",
+    "expo",
+    "figma",
+    "next",
+    "openai-api",
+    "react-native",
+    "react",
+    "scss",
+    "supabase"
+  ],
   "slug": "swiftbite",
-  "intro": "A social workout tracking app developed with Expo and Supabase, enabling users to track their progress and stay motivated through social features.",
-  "tagline": "If at first you don't succeed, try, try again",
+  "intro": "Swiftbite is my latest project, a food-tracking app researched, designed, and developed by me using Figma, Expo, Supabase, Next, AI-agents, and lots of APIs.",
+  "tagline": "I prefer not to think about the number of tokens that have been burned",
   "title": "Swiftbite",
   "images": [
     {
@@ -12,23 +23,21 @@
       }
     }
   ],
-  "content": "My friend Martin Goes and I used to track our workout weights in a spreadsheet, which was cumbersome and didn't allow us to track our progress. I asked a good friend of mine, [Wouter de Bruijn](https://wouterdebruijn.nl/), if he would like to create an app for this together. Wouter, being ever enthusiastic and reliable, agreed, and we spent a week in Terschelling working on this project.\n\nInitially, we developed the app using [Ionic Vue](https://ionicframework.com/docs/vue/overview) and my old Uberdeno framework as the backend. This turned out to be a nightmare, as the custom-made framework wasn't up to the task, and Ionic Vue had many random bugs.\n\nThere's nothing a week of Terschelling can't fix, so at the end of 2023, we headed back to Terschelling. We restarted the project using [Expo](https://expo.dev/) and [Supabase](https://supabase.com/) for authentication, storage, database, and edge functions, along with many other smaller packages. The app is available in the [Play Store](https://play.google.com/store/apps/details?id=com.sjorsvanholst.overworked) and [App Store](https://apps.apple.com/us/app/overworked-workout-tracker/id6472886729) and is in active development. I'm very proud of what we've created and use the app every other day!\n\nThe app's social aspect is its most significant selling point. I find motivation in the social element of working out, much like Strava and Apple Activities. This vision drives Overworked, which informs users when their friends achieve personal bests or have workout streaks.",
+  "content": "For my scriptie at CMD I had to pick a project to research, design, and prototype. I landed on the idea of creating a food-tracking app, as I felt that the existing solutions fell short on very obvious problems. So I researched the target demographic, using methods like interviews, card sorting, diary & probes, competitor analysis, desk research, trend analysis, and much more.\n\nWith this information I moved on to the design phase, where I created Lo-Fi, Mi-Fi, and Hi-Fi designs in Figma to test with users. Although CMD doesn't require you to actually program, I already had a background in development, so I went the extra mile and implemented the app using Expo and built the back-end using Supabase and Next. I ended up getting a 9 for my entire project.\n\n> I had a very tight deadline for developing the app, so I focused only on iOS since I could run it on my own phone, and I knew one of the beoordelaars had an iPhone, so they'd be able to try it. I think you can guess how the rest went. I added more and more features, and now it's a lot more work to get the Android version working. It's a high priority for me, so I hope to release the Android version soon-ish™.\n\nAfter I finished my studies I continued working on Swiftbite to really make it a usable app, and at the time of writing I'm still working on it. I've improved and debugged a lot of features, and also started implementing AI agents and scrapers to keep the database clean. I hope to split this into its own microservice, like I did for Swiftbite Icons, as I feel that getting the database right is the hardest problem.\n\nFor now I'm focusing on the Dutch market because it's quite complicated to get the language, measurement system, and the database right. I've already burned a lot of tokens and compute power setting up the Dutch database, so switching to worldwide would cost a lot more compute and time on my part. Right now I'm focusing on improving the UX.",
   "links": [
     {
-      "url": "https://play.google.com/store/apps/details?id=com.sjorsvanholst.overworked",
-      "icon": "google-play",
-      "title": "View the app on the Play Store"
-    },
-    {
-      "url": "https://apps.apple.com/us/app/overworked-workout-tracker/id6472886729",
+      "url": "https://apps.apple.com/nl/app/swiftbite/id6744180873",
       "icon": "app-store",
       "title": "View the app on the App Store"
     }
   ],
-  "bunny": "d6040881-b684-444f-83cf-ee53b8045ce8",
   "image": {
     "alt": "Overworked Play Store pages.",
     "src": "/content/project/images/swiftbite-1.png"
   },
-  "categories": ["design", "development"]
+  "categories": [
+    "design",
+    "development",
+    "design"
+  ]
 }
