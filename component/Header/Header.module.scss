@@ -63,7 +63,9 @@
       }
     }
 
-    margin-top: calc(-10rem - (100vw - 768px) * 0.124);
+    & {
+      margin-top: calc(-10rem - (100vw - 768px) * 0.124);
+    }
 
     &__parallax {
       &__back,

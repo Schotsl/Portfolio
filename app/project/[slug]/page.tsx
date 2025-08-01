@@ -27,10 +27,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params;
-  
+  const { slug } = await params;
+
   const projects = await getCollection<Project>("project");
   const project = projects.find((project) => project.slug === slug);
 
@@ -47,7 +47,7 @@ export async function generateMetadata({
 export default async function ProjectPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   const bannerBack = await getImage(header.back);
