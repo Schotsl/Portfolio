@@ -1,4 +1,5 @@
 {
+  "bunny": "af58385a-3e90-4d98-9702-6bf1c9cd128a",
   "technologies": [
     "next",
     "react",
@@ -27,7 +28,7 @@
       }
     }
   ],
-  "content": "I often go swimming with [Wouter de Bruijn](https://wouterdebruijn.nl/) in a local lake near our homes called [Toolenburgerplas](https://toolenburgerplas.nl/). For years, Wouter and I have been thinking about creating a website to show the water temperature and whether or not it's comfortable for swimming.\n\nThis year, we finally created a temperature sensor. It consists of a 3D-printed enclosure with an antenna, Arduino 3G, internal and external temperature sensors, and batteries with a wireless charging circuit, ensuring we can charge it while underwater. This device, called ‘The Buoy,' is installed in the Toolenburgerplas.\n\nI then created the website, which receives hourly data about the temperature. I use [OpenAI API](https://platform.openai.com) and [OpenWeather's API](https://openweathermap.org/api) to generate a short summary of the current swimming conditions. I've designed variants for the ‘No' and ‘Yes' pages with different doodles and colors to reflect the weather.\n\nWouter connected and programmed the electronics, while we both worked on the enclosure. I created the website using [Next](https://nextjs.org/), [SCSS](https://sass-lang.com/), [TypeScript](https://www.typescriptlang.org/), and [Supabase](https://supabase.com/) for the database and edge functions. I've also used the aforementioned APIs to create the website. Working on this project took a while as I'm unfamiliar with hardware production, but I'm very happy and proud of the results!",
+  "content": "I often go swimming with [Wouter de Bruijn](https://wouterdebruijn.nl/) in a local lake near our homes called [Toolenburgerplas](https://toolenburgerplas.nl/). For years, Wouter and I have been thinking about creating a website to show the water temperature and whether or not it's comfortable for swimming.\n\nLast year, we finally created a temperature sensor. It consists of a 3D-printed enclosure with an antenna, Arduino 3G, internal and external temperature sensors, and batteries with a wireless charging circuit, ensuring we can charge it while underwater. This device, called ‘The Buoy,' is installed in the Toolenburgerplas.\n\nI then created the website, which receives hourly data about the temperature. I use [OpenAI API](https://platform.openai.com) and [OpenWeather's API](https://openweathermap.org/api) to generate a short summary of the current swimming conditions. I've designed variants for the ‘No' and ‘Yes' pages with different doodles and colors to reflect the weather.\n\nWouter connected and programmed the electronics, while we both worked on the enclosure. I created the website using [Next](https://nextjs.org/), [SCSS](https://sass-lang.com/), [TypeScript](https://www.typescriptlang.org/), and [Supabase](https://supabase.com/) for the database and edge functions. I've also used the aforementioned APIs to create the website. Working on this project took a while as I'm unfamiliar with hardware production.\n\nAnd you could tell we're not hardware pro's. It didn't take long for The Buoy to break down, which led to a series of bad decisions that ended The Buoy. We ended up going with an off-the-shelf LoraWAN-powered sensor, but for the whole saga you can check out [this](https://wouterdebruijn.nl/projects/toolenburgerplas) blog post about it from Wouter.\n\nI'm very proud of the project as it's been running for more than a year now. We also launched and installed another sensor for the [Haarlemeersebos](https://haarlemmermeersebos.nl/) in Hoofddorp. During the peak of the summer, the sites attracted thousands of views. It's very exciting knowing people actually use your services.",
   "links": [
     {
       "url": "https://toolenburgerplas.nl/",
@@ -40,10 +41,12 @@
       "title": "View the project on GitHub"
     }
   ],
-  "bunny": "af58385a-3e90-4d98-9702-6bf1c9cd128a",
   "image": {
     "alt": "Toolenburgerplas' header.",
     "src": "/content/project/images/toolenburgerplas-cover.png"
   },
-  "categories": ["design", "development"]
+  "categories": [
+    "design",
+    "development"
+  ]
 }
