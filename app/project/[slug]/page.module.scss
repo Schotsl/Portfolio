@@ -5,6 +5,8 @@
     gap: 1.5rem;
     width: 100%;
     display: flex;
+    max-width: 100ch;
+
     flex-direction: column;
 
     padding-top: calc(var(--padding-vertical) / 2);
@@ -15,9 +17,16 @@
       padding-bottom: calc(var(--padding-vertical) * 5);
     }
 
-    h2 {
-      margin: 0;
-      font-size: 2rem;
+    &__intro {
+      gap: 0.5rem;
+      display: flex;
+      margin-bottom: 2rem;
+      flex-direction: column;
+
+      &__title {
+        margin: 0;
+        font-size: 3rem;
+      }
     }
 
     &__header {

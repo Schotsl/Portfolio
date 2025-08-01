@@ -84,11 +84,14 @@ export default async function ProjectPage({
           ]}
         />
 
-        <h2>{title}</h2>
+        <div className={styles.project__content__intro}>
+          <h2 className={styles.project__content__intro__title}>{title}</h2>
+          <b className={styles.project__content__intro__content}>{intro}</b>
 
-        {technologies && <Technologies technologies={technologies} />}
+          {technologies && <Technologies technologies={technologies} />}
+        </div>
 
-        <Content html={content} intro={intro} />
+        <Content html={content} />
 
         <Links links={links} />
       </section>
