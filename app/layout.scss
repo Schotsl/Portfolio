@@ -1,29 +1,27 @@
-@import "@/styles/variables.scss";
-@import "@/styles/mixins.scss";
+@use "@/styles/variables";
+@use "@/styles/mixins";
 
 // I think I wanna move this to variables.scss but I'm not sure
 :root {
   --padding-vertical: 3rem;
   --padding-horizontal: 3rem;
-
-  @include respond-to-md {
-    --padding-vertical: 4rem;
-    --padding-horizontal: 4rem;
-  }
-
-  @include respond-to-lg {
-    --padding-vertical: 4rem;
-    --padding-horizontal: 8rem;
-  }
-
   --padding-horizontal-responsive: max(
     var(--padding-horizontal),
     calc((100vw - 1600px) / 2)
   );
-
   --margin-horizontal-responsive: calc(
     var(--padding-horizontal-responsive) * -1
   );
+
+  @include mixins.respond-to-md {
+    --padding-vertical: 4rem;
+    --padding-horizontal: 4rem;
+  }
+
+  @include mixins.respond-to-lg {
+    --padding-vertical: 4rem;
+    --padding-horizontal: 8rem;
+  }
 }
 
 html {

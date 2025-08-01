@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .about {
   gap: 3rem;
@@ -11,7 +11,7 @@
     max-width: 100ch;
   }
 
-  @include respond-to-lg {
+  @include mixins.respond-to-lg {
     flex-direction: row;
   }
 
@@ -20,12 +20,12 @@
     overflow: hidden;
     border-radius: 100%;
 
-    @include respond-to-sm {
+    @include mixins.respond-to-sm {
       width: 22rem;
       height: 22rem;
     }
 
-    @include respond-to-lg {
+    @include mixins.respond-to-lg {
       min-width: 22rem;
     }
   }

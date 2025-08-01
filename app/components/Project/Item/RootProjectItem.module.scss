@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .item {
   width: var(--carousel-item-width);
@@ -42,7 +42,7 @@
       flex-wrap: wrap;
     }
 
-    @include respond-to-sm {
+    @include mixins.respond-to-sm {
       padding: 2rem;
     }
   }

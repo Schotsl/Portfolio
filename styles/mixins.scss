@@ -1,37 +1,37 @@
-@import "variables";
+@use "variables";
 
 @mixin respond-to-xs {
-  @media (min-width: $breakpoint-xs) {
+  @media (min-width: variables.$breakpoint-xs) {
     @content;
   }
 }
 
 @mixin respond-to-sm {
-  @media (min-width: $breakpoint-sm) {
+  @media (min-width: variables.$breakpoint-sm) {
     @content;
   }
 }
 
 @mixin respond-to-md {
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: variables.$breakpoint-md) {
     @content;
   }
 }
 
 @mixin respond-to-lg {
-  @media (min-width: $breakpoint-lg) {
+  @media (min-width: variables.$breakpoint-lg) {
     @content;
   }
 }
 
 @mixin respond-to-xl {
-  @media (min-width: $breakpoint-xl) {
+  @media (min-width: variables.$breakpoint-xl) {
     @content;
   }
 }
 
 @mixin respond-to-xxl {
-  @media (min-width: $breakpoint-xxl) {
+  @media (min-width: variables.$breakpoint-xxl) {
     @content;
   }
 }

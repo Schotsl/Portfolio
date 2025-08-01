@@ -1,4 +1,4 @@
-@import "@/styles/mixins.scss";
+@use "@/styles/mixins";
 
 .count {
   width: 100%;
@@ -73,12 +73,12 @@
       }
     }
 
-    @include respond-to-sm {
+    @include mixins.respond-to-sm {
       max-width: 28rem;
       font-size: 2rem;
     }
 
-    @include respond-to-md {
+    @include mixins.respond-to-md {
       max-width: 38rem;
 
       .count__title__upwards {
@@ -90,7 +90,7 @@
       }
     }
 
-    @include respond-to-lg {
+    @include mixins.respond-to-lg {
       max-width: 46rem;
       font-size: 2.5rem;
     }

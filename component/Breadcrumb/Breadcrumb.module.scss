@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .breadcrumb {
   margin: 0 0 2rem;
@@ -21,7 +21,7 @@
       }
     }
 
-    @include respond-to-sm {
+    @include mixins.respond-to-sm {
       font-size: 1rem;
     }
   }

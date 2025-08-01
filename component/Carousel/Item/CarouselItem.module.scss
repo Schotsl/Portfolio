@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .item {
   cursor: pointer;
@@ -53,12 +53,12 @@
       max-width: 80%;
       display: none;
 
-      @include respond-to-sm {
+      @include mixins.respond-to-sm {
         display: block;
       }
     }
 
-    @include respond-to-sm {
+    @include mixins.respond-to-sm {
       padding: 2rem;
     }
   }

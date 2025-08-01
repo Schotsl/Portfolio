@@ -1,4 +1,4 @@
-@import "@/styles/mixins.scss";
+@use "@/styles/mixins";
 
 .header {
   width: 100vw;
@@ -63,7 +63,7 @@
       }
     }
 
-    @include respond-to-sm {
+    @include mixins.respond-to-sm {
       margin-top: calc(-6rem - (100vw - 768px) * 0.124);
 
       &__parallax {
@@ -75,7 +75,7 @@
       }
     }
 
-    @include respond-to-md {
+    @include mixins.respond-to-md {
       margin-top: calc(-5.5rem - (100vw - 992px) * 0.124);
 
       &__parallax {
@@ -87,7 +87,7 @@
       }
     }
 
-    @include respond-to-lg {
+    @include mixins.respond-to-lg {
       margin-top: calc(-5.5rem - (100vw - 1200px) * 0.124);
 
       &__parallax {
@@ -99,7 +99,7 @@
       }
     }
 
-    @include respond-to-xl {
+    @include mixins.respond-to-xl {
       margin-top: calc(-6rem - (100vw - 1200px) * 0.124);
 
       &__parallax {
@@ -110,7 +110,7 @@
       }
     }
 
-    @include respond-to-xxl {
+    @include mixins.respond-to-xxl {
       margin-top: calc(-2rem - (100vw - 1400px) * 0.124);
 
       &__parallax {
@@ -174,11 +174,11 @@
         line-height: 1.25;
         text-shadow: 4px 4px 24px rgba(0, 0, 0, 0.75);
 
-        @include respond-to-md {
+        @include mixins.respond-to-md {
           font-size: 3.5rem;
         }
 
-        @include respond-to-xxxl {
+        @include mixins.respond-to-xxxl {
           font-size: 4rem;
         }
       }

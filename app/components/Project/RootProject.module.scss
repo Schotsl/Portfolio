@@ -1,4 +1,4 @@
-@import "@/styles/mixins";
+@use "@/styles/mixins";
 
 .project {
   width: 100%;
@@ -10,11 +10,11 @@
   --carousel-item-gap: 2rem;
   --carousel-item-width: 100%;
 
-  @include respond-to-md {
+  @include mixins.respond-to-md {
     --carousel-item-width: calc(50% - (var(--carousel-item-gap) / 2));
   }
 
-  @include respond-to-xxxl {
+  @include mixins.respond-to-xxxl {
     --carousel-item-width: calc(33.3333% - (var(--carousel-item-gap) / 1.5));
   }
 
