@@ -2,19 +2,13 @@
   "banner": {
     "taglines": [
       {
-        "tagline": "Admiring my GitHub contribution graph"
-      },
-      {
         "tagline": "Considering whether or not to refactor another project"
       },
       {
-        "tagline": "Asking ChatGPT to please fix my grammar"
+        "tagline": "Admiring my GitHub contribution graph"
       },
       {
         "tagline": "Creating yet another GitHub repository"
-      },
-      {
-        "tagline": "Wondering what Jira did to my projects"
       }
     ],
     "projects": [
