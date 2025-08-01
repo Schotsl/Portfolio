@@ -1,14 +1,10 @@
 import { getImage } from "@/helper";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
-import { marked } from "marked";
 
 import Header from "@/component/Header";
-import Button from "@/component/Button";
+import Links from "../component/Links";
+import Breadcrumb from "../component/Breadcrumb";
 
-import Breadcrumb from "../project/[slug]/components/Breadcrumb";
-import Content from "../project/[slug]/components/Content";
-import Links from "../project/[slug]/components/Links";
-import styles from "./page.module.scss";
+import styles from "./not-found.module.scss";
 import banner from "@/public/content/shared/banner.json";
 import content from "@/public/content/pages/not_found/index.json";
 
@@ -19,7 +15,7 @@ export default async function NotFoundPage() {
   const bannerFront = await getImage(banner.front);
   const bannerTitle = banner.title;
   const bannerTaglines = content.banner.taglines.map(
-    (tagline) => tagline.tagline,
+    (tagline) => tagline.tagline
   );
 
   return (
@@ -34,13 +30,13 @@ export default async function NotFoundPage() {
       <section className={styles.found__content}>
         <Breadcrumb items={[{ title: "Not found", href: "#" }]} />
 
-        <h2>Not found</h2>
-
-        <Content
-          intro={
-            "It appears that this page doesn't exist. The link you followed may be broken, or the page may have been removed."
-          }
-        />
+        <div className={styles.found__content__intro}>
+          <h2 className={styles.found__content__intro__title}>Not found</h2>
+          <b className={styles.found__content__intro__content}>
+            It appears that this page doesn&apos;t exist. The link you followed
+            may be broken, or the page may have been removed.
+          </b>
+        </div>
 
         <Links
           links={[

@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import styles from "./page.module.scss";
 import header from "@/public/content/shared/banner.json";
 
@@ -7,9 +8,9 @@ import { getCollection, getImage } from "@/helper";
 import Header from "@/component/Header";
 import Carousel from "@/component/Carousel";
 
-import Links from "./components/Links";
+import Links from "../../../component/Links";
 import Content from "./components/Content";
-import Breadcrumb from "./components/Breadcrumb";
+import Breadcrumb from "../../../component/Breadcrumb";
 import Technologies from "./components/Technologies";
 
 export const dynamic = "force-static";
@@ -29,7 +30,11 @@ export async function generateMetadata({
   params: { slug: string };
 }) {
   const projects = await getCollection<Project>("project");
-  const project = projects.find((project) => project.slug === params.slug)!;
+  const project = projects.find((project) => project.slug === params.slug);
+
+  if (!project) {
+    notFound();
+  }
 
   return {
     title: `${project.title} - Sjors van Holst`,
@@ -47,7 +52,11 @@ export default async function ProjectPage({
   const bannerTitle = header.title;
 
   const projects = await getCollection<Project>("project");
-  const project = projects.find((project) => project.slug === params.slug)!;
+  const project = projects.find((project) => project.slug === params.slug);
+
+  if (!project) {
+    notFound();
+  }
 
   const { bunny, image, title, tagline, intro, content, technologies, links } =
     project;

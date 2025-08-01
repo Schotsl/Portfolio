@@ -1,0 +1,31 @@
+@import "@/styles/mixins";
+
+.found {
+  &__content {
+    gap: 1.5rem;
+    width: 100%;
+    display: flex;
+    max-width: 100ch;
+
+    flex-direction: column;
+
+    margin-top: calc(var(--padding-vertical) * 0.5);
+    margin-bottom: calc(var(--padding-vertical) * 5);
+
+    &__intro {
+      gap: 0.5rem;
+      display: flex;
+      margin-bottom: 2rem;
+      flex-direction: column;
+
+      &__title {
+        margin: 0;
+        font-size: 3rem;
+      }
+
+      &__content {
+        max-width: 50ch;
+      }
+    }
+  }
+}
