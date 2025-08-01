@@ -18,6 +18,10 @@
     --carousel-item-width: calc(33.3333% - (var(--carousel-item-gap) / 1.5));
   }
 
+  &__title {
+    font-size: 2rem;
+  }
+
   &__waves {
     top: 8rem;
     margin: 0 -8rem;

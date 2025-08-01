@@ -18,8 +18,10 @@ export default function RootProject({
   projects,
 }: RootProjectProps) {
   const projectOrder = [
-    "Overworked",
+    "Swiftbite",
+    "Swiftbite Icons",
     "Presently",
+    "Overworked",
     "Toolenburgerplas",
     "De Terschelling Podcast",
     "MijnHvA",
