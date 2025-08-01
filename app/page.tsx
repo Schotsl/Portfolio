@@ -76,7 +76,12 @@ export default async function RootPage() {
 
       <Carousel items={bannerProjects} overlay={0} />
 
-      <Button href="#project" label="View all my projects" icon={faArrowDown} />
+      <Button
+        href="#project"
+        icon={faArrowDown}
+        label="View all my projects"
+        className={styles.root__button}
+      />
 
       <RootAbout
         title={content.about.title}

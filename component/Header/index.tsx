@@ -54,7 +54,7 @@ export default function Header({
             >
               <Image
                 image={front}
-                sizes={"100vw"}
+                sizes={"200vw"}
                 quality={100}
                 preview={false}
                 priority={true}

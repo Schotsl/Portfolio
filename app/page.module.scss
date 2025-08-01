@@ -1,4 +1,7 @@
 @use "@/styles/mixins";
 
 .root {
+  &__button {
+    margin-top: 1rem;
+  }
 }
