@@ -6,9 +6,10 @@
   --carousel-item-width: calc(
     (100vw - var(--padding-horizontal-responsive) * 2) * 100 / 105
   );
+
   gap: var(--carousel-item-gap);
   width: 100vw;
-  margin: -22rem 0 0 var(--margin-horizontal-responsive);
+  margin: -26rem 0 0 var(--margin-horizontal-responsive);
   display: flex;
   padding: 4rem var(--carousel-item-margin) 4rem 0;
   align-items: center;

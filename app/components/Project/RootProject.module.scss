@@ -4,13 +4,13 @@
   width: 100%;
   position: relative;
 
-  margin-top: calc(var(--padding-horizontal) * -1 + 4rem);
-  padding-top: var(--padding-horizontal);
+  margin-top: calc(var(--padding-vertical) * 0.5);
+  margin-bottom: calc(var(--padding-vertical) * 5);
 
   --carousel-item-gap: 2rem;
   --carousel-item-width: 100%;
 
-  @include mixins.respond-to-md {
+  @include mixins.respond-to-lg {
     --carousel-item-width: calc(50% - (var(--carousel-item-gap) / 2));
   }
 

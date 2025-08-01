@@ -29,7 +29,8 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
-  const { slug } = await params;
+  const { slug } = params;
+  
   const projects = await getCollection<Project>("project");
   const project = projects.find((project) => project.slug === slug);
 

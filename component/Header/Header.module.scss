@@ -63,20 +63,30 @@
       }
     }
 
+    margin-top: calc(-10rem - (100vw - 768px) * 0.124);
+
+    &__parallax {
+      &__back,
+      &__front {
+        left: -50vw;
+        width: 220vw;
+      }
+    }
+
     @include mixins.respond-to-sm {
-      margin-top: calc(-6rem - (100vw - 768px) * 0.124);
+      margin-top: calc(-8rem - (100vw - 768px) * 0.124);
 
       &__parallax {
         &__back,
         &__front {
-          left: -32.5vw;
+          left: -25vw;
           width: 180vw;
         }
       }
     }
 
     @include mixins.respond-to-md {
-      margin-top: calc(-5.5rem - (100vw - 992px) * 0.124);
+      margin-top: calc(-16rem - (100vw - 992px) * 0.124);
 
       &__parallax {
         &__back,
@@ -88,7 +98,7 @@
     }
 
     @include mixins.respond-to-lg {
-      margin-top: calc(-5.5rem - (100vw - 1200px) * 0.124);
+      margin-top: calc(-16rem - (100vw - 1200px) * 0.124);
 
       &__parallax {
         &__back,
@@ -100,7 +110,7 @@
     }
 
     @include mixins.respond-to-xl {
-      margin-top: calc(-6rem - (100vw - 1200px) * 0.124);
+      margin-top: calc(-15.5rem - (100vw - 1200px) * 0);
 
       &__parallax {
         &__back,
@@ -111,7 +121,7 @@
     }
 
     @include mixins.respond-to-xxl {
-      margin-top: calc(-2rem - (100vw - 1400px) * 0.124);
+      margin-top: calc(-9rem - (100vw - 1400px) * -0.124);
 
       &__parallax {
         &__back,

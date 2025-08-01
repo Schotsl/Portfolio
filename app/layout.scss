@@ -42,7 +42,7 @@ body {
 main {
   width: 100%;
   display: flex;
-  padding: var(--padding-vertical) var(--padding-horizontal-responsive);
+  padding: var(--padding-vertical) var(--padding-horizontal-responsive) 0;
 
   align-items: start;
   flex-direction: column;
