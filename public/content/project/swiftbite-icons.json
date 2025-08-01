@@ -1,8 +1,15 @@
 {
-  "technologies": ["expo", "react-native", "supabase", "deno", "react"],
+  "bunny": "2c890d31-a4f4-4e1e-8bf7-76ac9b29d5fa",
+  "technologies": [
+    "next",
+    "openai-api",
+    "react",
+    "scss",
+    "supabase"
+  ],
   "slug": "swiftbite-icons",
-  "intro": "A social workout tracking app developed with Expo and Supabase, enabling users to track their progress and stay motivated through social features.",
-  "tagline": "If at first you don't succeed, try, try again",
+  "intro": "An easy-to-use API that allows users and companies to easily add consistent and good-looking food icons to their platforms or apps, battle-tested in my own app, Swiftbite!",
+  "tagline": "Another microservice couldn't hurt right..?",
   "title": "Swiftbite Icons",
   "images": [
     {
@@ -12,7 +19,7 @@
       }
     }
   ],
-  "content": "My friend Martin Goes and I used to track our workout weights in a spreadsheet, which was cumbersome and didn't allow us to track our progress. I asked a good friend of mine, [Wouter de Bruijn](https://wouterdebruijn.nl/), if he would like to create an app for this together. Wouter, being ever enthusiastic and reliable, agreed, and we spent a week in Terschelling working on this project.\n\nInitially, we developed the app using [Ionic Vue](https://ionicframework.com/docs/vue/overview) and my old Uberdeno framework as the backend. This turned out to be a nightmare, as the custom-made framework wasn't up to the task, and Ionic Vue had many random bugs.\n\nThere's nothing a week of Terschelling can't fix, so at the end of 2023, we headed back to Terschelling. We restarted the project using [Expo](https://expo.dev/) and [Supabase](https://supabase.com/) for authentication, storage, database, and edge functions, along with many other smaller packages. The app is available in the [Play Store](https://play.google.com/store/apps/details?id=com.sjorsvanholst.overworked) and [App Store](https://apps.apple.com/us/app/overworked-workout-tracker/id6472886729) and is in active development. I'm very proud of what we've created and use the app every other day!\n\nThe app's social aspect is its most significant selling point. I find motivation in the social element of working out, much like Strava and Apple Activities. This vision drives Overworked, which informs users when their friends achieve personal bests or have workout streaks.",
+  "content": "After I finished my studies and continued work on Swiftbite, I was looking through the user feedback and noticed that a lot of users were very impressed with the icon set the app contained. I was glad to hear this, of course, as I had spent quite a lot of time setting this up.\n\n> When I first created the icon flow for Swiftbite, the image generation models were way worse. So, I had to run a Docker container with an image processing pipeline and validation of the icons to ensure they looked good, which required a lot of work to set up. During my assignment, OpenAI released GPT-image-1, which made this whole pipeline redundant as it generated natively transparent images at very high quality.\n\nI figured other food-tracking apps or services might want to add something similar. The setup I created wouldn't be very hard to recreate for another service, but generating all the icons I already had does cost some money, so I thought I might as well make it available to other people. This way, they only had to add an img tag with the right URLs, and they'd be off to the races.\n\nSo, I turned the icon logic of Swiftbite into a standalone microservice. I created a landing page with some examples, a demo, and very simple API documentation. For now, I consider the service to be in beta, so to obtain an API key, users can contact me and I will provide it!",
   "links": [
     {
       "url": "https://play.google.com/store/apps/details?id=com.sjorsvanholst.overworked",
@@ -25,10 +32,12 @@
       "title": "View the app on the App Store"
     }
   ],
-  "bunny": "2c890d31-a4f4-4e1e-8bf7-76ac9b29d5fa",
   "image": {
     "alt": "Overworked Play Store pages.",
     "src": "/content/project/images/swiftbite-icons-1.png"
   },
-  "categories": ["design", "development"]
+  "categories": [
+    "design",
+    "development"
+  ]
 }
