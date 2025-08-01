@@ -5,7 +5,8 @@
     "openai-api",
     "react",
     "scss",
-    "supabase"
+    "supabase",
+    "typescript"
   ],
   "slug": "swiftbite-icons",
   "intro": "An easy-to-use API that allows users and companies to easily add consistent and good-looking food icons to their platforms or apps, battle-tested in my own app, Swiftbite!",
@@ -31,8 +32,5 @@
     "alt": "Overworked Play Store pages.",
     "src": "/content/project/images/swiftbite-icons-1.png"
   },
-  "categories": [
-    "design",
-    "development"
-  ]
+  "categories": ["design", "development"]
 }

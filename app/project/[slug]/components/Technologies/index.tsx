@@ -9,9 +9,13 @@ type TechnologiesProps = {
 };
 
 export default function Technologies({ technologies }: TechnologiesProps) {
+  const sorted = technologies.sort((a, b) => {
+    return a.title.localeCompare(b.title);
+  });
+
   return (
     <ul className={styles.technologies}>
-      {technologies.map((technology) => {
+      {sorted.map((technology) => {
         const { url, slug, color, title } = technology;
 
         return (

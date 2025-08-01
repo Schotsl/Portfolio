@@ -1,6 +1,6 @@
 {
   "bunny": "3856e1c9-71c8-4903-9926-1054869e14d6",
-  "technologies": ["decap", "next", "react", "scss"],
+  "technologies": ["decap", "next", "react", "scss", "typescript"],
   "slug": "de-terschelling-podcast",
   "intro": "Inspired by many chats about Terschelling during my stay with my nephew Timo Steenmeijer, we launched “De Terschelling Podcast.” Despite not being locals, we share stories and interviews about the island.",
   "tagline": "We’ll just re-record that one more time",

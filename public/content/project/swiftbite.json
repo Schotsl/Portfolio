@@ -9,7 +9,8 @@
     "react-native",
     "react",
     "scss",
-    "supabase"
+    "supabase",
+    "typescript"
   ],
   "slug": "swiftbite",
   "intro": "Swiftbite is my latest project, a food-tracking app researched, designed, and developed by me using Figma, Expo, Supabase, Next, AI-agents, and lots of APIs.",
@@ -35,9 +36,5 @@
     "alt": "Overworked Play Store pages.",
     "src": "/content/project/images/swiftbite-1.png"
   },
-  "categories": [
-    "design",
-    "development",
-    "design"
-  ]
+  "categories": ["design", "development", "research"]
 }
