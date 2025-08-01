@@ -29,8 +29,9 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
+  const { slug } = await params;
   const projects = await getCollection<Project>("project");
-  const project = projects.find((project) => project.slug === params.slug);
+  const project = projects.find((project) => project.slug === slug);
 
   if (!project) {
     notFound();
@@ -47,12 +48,13 @@ export default async function ProjectPage({
 }: {
   params: { slug: string };
 }) {
+  const { slug } = await params;
   const bannerBack = await getImage(header.back);
   const bannerFront = await getImage(header.front);
   const bannerTitle = header.title;
 
   const projects = await getCollection<Project>("project");
-  const project = projects.find((project) => project.slug === params.slug);
+  const project = projects.find((project) => project.slug === slug);
 
   if (!project) {
     notFound();
@@ -89,7 +91,7 @@ export default async function ProjectPage({
         <Breadcrumb
           items={[
             { title: "Projects", href: "/#project" },
-            { title, href: `/project/${params.slug}` },
+            { title, href: `/project/${slug}` },
           ]}
         />
 

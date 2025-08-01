@@ -21,6 +21,7 @@
     "@types/simple-oauth2": "^5.0.7",
     "autoprefixer": "^10.4.21",
     "encoding": "^0.1.13",
+    "import-in-the-middle": "1.14.2",
     "marked": "^16.1.1",
     "next": "15.4.5",
     "react": "19.1.1",
