@@ -1,3 +1,5 @@
+@use "@/styles/mixins";
+
 .partial {
   left: 0;
   z-index: -1;
@@ -11,6 +13,15 @@
     &__svg {
       width: 100%;
       height: 22rem;
+      transform: scaleX(2.5);
+
+      @include mixins.respond-to-md {
+        transform: scaleX(1.5);
+      }
+
+      @include mixins.respond-to-lg {
+        transform: scaleX(1);
+      }
     }
 
     &:nth-of-type(2),
