@@ -12,7 +12,8 @@ type CarouselItemProps = {
   index: number;
   active: boolean;
   overlay?: boolean;
-  onClick: (index: number) => void;
+  onFocus: (index: number) => void;
+  onLeave: (index: number) => void;
 };
 
 export default function CarouselItem({
@@ -20,7 +21,8 @@ export default function CarouselItem({
   index,
   active,
   overlay,
-  onClick,
+  onFocus,
+  onLeave,
 }: CarouselItemProps) {
   const { slug } = item;
 
@@ -30,10 +32,24 @@ export default function CarouselItem({
       className={
         active ? `${styles.item} ${styles["item--active"]}` : `${styles.item}`
       }
-      onClick={() => onClick(index)}
+      onMouseEnter={() => {
+        if (!active) {
+          onFocus(index);
+        }
+      }}
+      onMouseLeave={() => onLeave(index)}
     >
       {slug ? (
-        <Link className={styles.item__link} href={`/project/${slug}`}>
+        <Link
+          className={styles.item__link}
+          href={`/project/${slug}`}
+          onClick={(event) => {
+            if (!active) {
+              event.preventDefault();
+              onFocus(index);
+            }
+          }}
+        >
           {overlay && (
             /* eslint-disable-next-line */
             <img
@@ -52,7 +68,7 @@ export default function CarouselItem({
   );
 }
 
-type CarouselItemInnerProps = Omit<CarouselItemProps, "onClick">;
+type CarouselItemInnerProps = Omit<CarouselItemProps, "onFocus" | "onLeave">;
 
 function CarouselItemInner({
   item: { title, intro, bunny, image, categories },

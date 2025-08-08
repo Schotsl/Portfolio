@@ -14,8 +14,11 @@ type CarouselProps = {
 };
 
 export default function Carousel({ items, center, overlay }: CarouselProps) {
+  const [lock, setLock] = useState(false);
   const [index, setIndex] = useState(0);
 
+  const locked = useRef<number | null>(null);
+  const timeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const carousel = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
@@ -71,7 +74,7 @@ export default function Carousel({ items, center, overlay }: CarouselProps) {
     }
   }
 
-  function handleClick(itemIndex: number) {
+  function focusItem(itemIndex: number) {
     if (!carousel.current) {
       return;
     }
@@ -85,6 +88,36 @@ export default function Carousel({ items, center, overlay }: CarouselProps) {
     });
   }
 
+  function handleFocus(itemIndex: number) {
+    if (lock) {
+      return;
+    }
+
+    setLock(true);
+    locked.current = itemIndex;
+    focusItem(itemIndex);
+  }
+
+  function handleLeave(itemIndex: number) {
+    if (locked.current !== itemIndex) {
+      return;
+    }
+
+    if (timeout.current) {
+      clearTimeout(timeout.current);
+      
+      timeout.current = null;
+    }
+
+    // Delay unlock to avoid unfocus during ongoing scroll
+    timeout.current = setTimeout(() => {
+      setLock(false);
+
+      locked.current = null;
+      timeout.current = null;
+    }, 200);
+  }
+
   return (
     <ul className={styles.carousel} ref={carousel} onScroll={onScroll}>
       {items.map((item, itemIndex) => (
@@ -94,7 +127,8 @@ export default function Carousel({ items, center, overlay }: CarouselProps) {
           index={itemIndex}
           active={itemIndex === index}
           overlay={itemIndex === overlay}
-          onClick={handleClick}
+          onFocus={handleFocus}
+          onLeave={handleLeave}
         />
       ))}
     </ul>
