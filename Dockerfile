@@ -9,7 +9,7 @@ RUN apt-get update \
 COPY package*.json ./
 
 RUN bun install
-RUN bun sharp
+RUN bun install sharp
 
 COPY . .
 
